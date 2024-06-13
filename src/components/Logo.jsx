@@ -1,15 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ light = true }) => {
   return (
     <div>
       <Image
-        src="/logo.svg"
+        src={light ? "/logo.svg" : "/logo-dark.svg"}
         alt="logo"
         width={500}
         height={100}
-        className="h-[40px] w-max"
+        className="md:h-[40px] h-[27px] w-max"
       />
     </div>
   );

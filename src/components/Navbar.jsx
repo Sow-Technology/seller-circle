@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { cn } from "@/lib/utils";
 import {
@@ -13,6 +13,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "./ui/button";
 import { ChevronDown, MenuIcon } from "lucide-react";
+import { FaLocationDot, FaMailchimp } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+
 import {
   Sheet,
   SheetClose,
@@ -23,21 +26,82 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  FaFacebook,
+  FaLocationArrow,
+  FaPhone,
+  FaPhoneAlt,
+  FaPhoneVolume,
+} from "react-icons/fa";
+import Link from "next/link";
+import { useWindowScroll } from "@uidotdev/usehooks";
 
 const Navbar = () => {
+  const [isSecNav, setIsSecNav] = useState(false);
+  const [{ y }] = useWindowScroll();
+  useEffect(() => {
+    if (y > 200) {
+      setIsSecNav(true);
+    } else {
+      setIsSecNav(false);
+    }
+    console.log(window.scrollY);
+  }, [y]);
   return (
-    <div className="w-full sticky top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max">
-      <div className="max-w-7xl mx-auto flex items-center px-[80px] pt-[50px] pb-4  flex-row justify-between">
-        <div>
-          <Logo />
+    <>
+      <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max">
+        <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between ">
+          <div className="text-white flex gap-5 items-center">
+            <div>About Us</div>
+            <div>
+              <FaFacebook />
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <Link href="tel:+9108041688315">
+              <div className="flex text-white items-center gap-2">
+                <FaPhoneAlt className="text-xl" />
+                +9108041688315
+              </div>
+            </Link>
+            <div className="flex text-white items-center gap-2">
+              <FaLocationDot className="text-xl" />
+              Kalyan Nagar, Bangalore
+            </div>
+            <Link href="mailto:contact@sellercircle.in">
+              {" "}
+              <div className="flex text-white items-center gap-2">
+                <IoMail className="text-xl" />
+                contact@sellercircle.in
+              </div>
+            </Link>
+          </div>
         </div>
-        <div className="flex gap-5 items-center">
-          <DesktopNav />
-          <Button variant="cta">LET&#39;S TALK</Button>
-          <MobileNav />
+        <div className="max-w-7xl mx-auto flex items-center px-5 md:px-[80px] pt-[20px] pb-4  flex-row justify-between">
+          <div>
+            <Logo />
+          </div>
+          <div className="flex gap-5 items-center">
+            <DesktopNav />
+            <Button variant="cta">LET&#39;S TALK</Button>
+            <MobileNav />
+          </div>
         </div>
       </div>
-    </div>
+      {isSecNav && (
+        <div className="w-full fixed slide-in-from-top-4 transition-all ease-in-out top-0 bg-white z-40 backdrop-blur-3xl  max-h-max text-black">
+          <div className="max-w-7xl mx-auto flex items-center px-5 md:px-[80px] pt-[20px] pb-4  flex-row justify-between">
+            <div>
+              <Logo light={false} />
+            </div>
+            <div className="flex gap-5 items-center">
+              <SecDesktopNav />
+              <Button variant="cta">LET&#39;S TALK</Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 const NavItems = [
@@ -83,7 +147,47 @@ const DesktopNav = () => {
           {NavItems.map((item) =>
             item.subItems ? (
               <NavigationMenuItem key={item.name} className="relative">
-                <NavigationMenuTrigger className="text-white font-bold text-base uppercase">
+                <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
+                  {item.name}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className=" font-bold text-base uppercase ">
+                  <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
+                    {item.subItems.map((subItem) => (
+                      <NavigationMenuItem key={subItem.name}>
+                        <ListItem
+                          href={subItem.link}
+                          title={subItem.name}
+                        ></ListItem>
+                      </NavigationMenuItem>
+                    ))}
+                  </NavigationMenuList>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            ) : (
+              <NavigationMenuItem
+                key={item.name}
+                className="hover:-translate-y-1 transition-transform ease-in-out hover:drop-shadow-xl"
+              >
+                <NavigationMenuLink href={item.link}>
+                  {item.name}
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            )
+          )}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+  );
+};
+const SecDesktopNav = () => {
+  return (
+    <div className="lg:block hidden">
+      <NavigationMenu>
+        <NavigationMenuList className="gap-5 text-black font-bold text-base uppercase">
+          {NavItems.map((item) =>
+            item.subItems ? (
+              <NavigationMenuItem key={item.name} className="relative">
+                <NavigationMenuTrigger className="text-black bg-transparent font-bold text-base uppercase">
                   {item.name}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className=" font-bold text-base uppercase ">
@@ -157,7 +261,7 @@ const MobileNav = () => {
                   <NavigationMenuItem key={item.name} className="relative">
                     <div
                       onClick={() => setIsActive(!isActive)}
-                      className="text-white font-bold text-base  uppercase flex gap-2"
+                      className="text-white font-bold text-base cursor-pointer uppercase flex gap-2"
                     >
                       {item.name}
                       <ChevronDown />

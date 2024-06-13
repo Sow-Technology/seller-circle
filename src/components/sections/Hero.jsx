@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import {
@@ -7,21 +8,25 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="max-w-7xl mx-auto flex items-center justify-center flex-col ">
+    <div className="max-w-7xl mx-auto flex items-center justify-center flex-col px-20 overflow-hidden">
       <div className=" flex flex-row flex-wrap items-center justify-center gap-6 py-20 ">
         <div className="max-w-[42%] flex flex-col items-center  min-w-[300px]">
           <video src="/hero.mp4" autoPlay muted loop></video>
         </div>
-        <div className="max-w-[55%] flex flex-col items-center min-w-[300px] text-center">
+        <motion.div
+          initial={{ x: "500px" }}
+          whileInView={{ x: "0" }}
+          className="max-w-[55%] flex flex-col items-center min-w-[300px] text-center "
+        >
           <h3 className="uppercase text-[21px] font-bold">seller circle</h3>
-          <h2 className="font-extrabold text-2xl md:text-4xl lg:text-6xl uppercase text-center">
+          <h2 className="font-extrabold text-2xl md:text-4xl lg:text-5xl uppercase text-center max-w-xl">
             driving growth with a{" "}
             <span className="text-[#039BE4]">proven holistic approach</span>
           </h2>
-          <p>
+          <p className="mt-5">
             With over 7 years of expertise, we&#39;ve empowered 1000+ brands
             with highly optimized campaigns and creatives that maximize
             visibility, conversions, and ROI. Experience our award-winning
@@ -31,7 +36,7 @@ const Hero = () => {
             <Button variant="cta">Get Started </Button>
             <Button variant="cta">Our story </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex gap-7 flex-row mx-auto mb-16 flex-wrap items-center justify-center">
         <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">

@@ -46,25 +46,25 @@ const items = [
 ];
 const Growth = () => {
   return (
-    <div className="mx-auto max-w-7xl flex flex-col">
+    <div className="mx-auto max-w-7xl flex flex-col lg:px-20 px-8 relative z-10">
       {" "}
       <h3 className="font-bold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto">
         Your growth partner{" "}
       </h3>
-      <h2 className="nunito font-extrabold text-6xl text-center my-7">
+      <h2 className="nunito font-extrabold text-3xl lg:text-5xl text-center my-7">
         Leveraging Talent + Tech to scale your brand and{" "}
         <span className="text-[#039BE4]">
           capture audiences effectively, letting you focus on what matters.
         </span>
       </h2>
-      <div className="flex flex-row flex-wrap justify-between gap-10 ">
+      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 ">
         {items.map((item, index) => (
           <div
             key={index}
-            className="min-w-[280px] max-w-[370px] p-10 flex flex-col gap-7 rounded-2xl cshad "
+            className="min-w-[280px] max-w-[330px] p-10 flex flex-col gap-7 rounded-2xl cshad justify-between relative z-10 bg-white "
           >
-            <h4 className="nunito font-extrabold text-3xl">{item.title}</h4>
-            <p className="nunito text-base text-justify">{item.description}</p>
+            <h4 className="nunito font-extrabold text-2xl">{item.title}</h4>
+            <p className="nunito text-xs text-justify">{item.description}</p>
             <div className="flex items-center justify-between">
               <div>
                 <Image src={item.icon} height={50} width={50} alt="" />

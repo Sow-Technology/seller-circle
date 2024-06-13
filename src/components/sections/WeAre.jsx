@@ -17,8 +17,8 @@ const antonio = Antonio({
 });
 const WeAre = () => {
   return (
-    <div className="mx-auto max-w-7xl  flex items-center w-full flex-col flex-wrap">
-      <h2 className="nsans text-7xl font-extrabold mx-auto text-center text-wrap ">
+    <div className="mx-auto max-w-7xl  flex items-center w-full flex-col flex-wrap lg:px-20 px-8">
+      <h2 className="nsans text-4xl lg:text-7xl font-extrabold mx-auto text-center text-wrap ">
         &quot;We are one circle of growth, succeeding like a flywheel”
       </h2>
       <div className="my-20">
@@ -41,7 +41,7 @@ const WeAre = () => {
         <div
           className={`flex flex-row items-center justify-between flex-wrap gap-8 mt-14`}
         >
-          <div className="flex flex-col items-center text-center justify-between">
+          <div className="flex flex-col items-center text-center lg:justify-between justify-center">
             <div className={`${antonio.className}`}>
               <span className="font-bold text-8xl text-white stroke stroke-black stroke-2 outline-black block">
                 $2.5
