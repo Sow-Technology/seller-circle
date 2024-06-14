@@ -23,7 +23,7 @@ const WeAre = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nsans text-4xl lg:text-7xl font-extrabold mx-auto text-center text-wrap "
+        className="nsans text-3xl lg:text-7xl font-extrabold mx-auto text-center text-wrap "
       >
         &quot;We are one circle of growth, succeeding like a flywheel”
       </motion.h2>
@@ -44,7 +44,7 @@ const WeAre = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
           viewport={{ once: true }}
-          className="font-bold lg:text-3xl text-2xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+          className="font-bold lg:text-3xl text-xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
         >
           working together, growing together, and riding the momentum to
           success.

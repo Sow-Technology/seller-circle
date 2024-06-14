@@ -19,7 +19,7 @@ const Creative = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-4xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
       >
         Elevating Creativity to Success:{" "}
         <span className="text-[#039BE4]">Your Roadmap to Achievements! </span>

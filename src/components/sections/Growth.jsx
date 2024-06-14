@@ -62,7 +62,7 @@ const Growth = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-3xl lg:text-5xl text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-5xl text-center my-7"
       >
         Leveraging Talent + Tech to scale your brand and{" "}
         <span className="text-[#039BE4]">

@@ -36,14 +36,14 @@ const Approach = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-4xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
       >
         No one-size-fits-all here,{" "}
         <span className="text-[#039BE4]">only tailored strategies.  </span>
       </motion.h2>
       <div className="flex flex-row flex-wrap gap-16 mt-16">
         <div className="lg:max-w-[40%] min-w-[300px]">
-          <div className="rounded-r-full p-10 bg-[#039BE4] text-white px-20">
+          <div className="rounded-r-full p-10 bg-[#039BE4] text-white lg:px-20 px-8">
             Adopting a holistic approach to your entire account, not just
             individual ads, crafting strategies for increased visibility and
             optimized search flow.
@@ -83,7 +83,7 @@ const Approach = () => {
                     height={100}
                     width={100}
                     alt=""
-                    className="min-h-[100px] min-w-[100px]"
+                    className="lg:min-h-[100px] min-h-[50px] min-w-[50px] lg:min-w-[100px]"
                   />
                 </div>
                 <div className="h-[70px] w-[70px] flex items-center justify-center text-6xl bg-clip-text from-[#755AFF] to-[#9B88FF] bg-gradient-to-r text-transparent font-extrabold">

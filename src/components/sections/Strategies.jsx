@@ -47,7 +47,7 @@ const Strategies = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-4xl lg:text-6xl max-w-3xl mx-auto text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-6xl max-w-3xl mx-auto text-center my-7"
       >
         &quot;Crafting strategies as{" "}
         <span className="text-[#039BE4]"> unique as your business. </span>{" "}
@@ -62,7 +62,7 @@ const Strategies = () => {
             onMouseLeave={() => setHoverIndex(undefined)}
           >
             {index == hoverIndex ? (
-              <div className=" bg-white py-8 px-5 w-[230px] group rounded-[43px] h-[580px]">
+              <div className=" bg-white py-8 px-5 lg:w-[230px] w-[85%] group rounded-[43px] h-[580px]">
                 <motion.div
                   initial={{ height: "20%" }}
                   animate={{ height: "480px" }}
@@ -81,7 +81,7 @@ const Strategies = () => {
                 </motion.div>
               </div>
             ) : (
-              <div className=" bg-white py-8 px-5 w-[230px] group rounded-[43px] h-[580px]">
+              <div className=" bg-white py-8 px-5 lg:w-[230px] w-[85%] group rounded-[43px] h-[580px]">
                 <div className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative">
                   <Image
                     src={item.icon}
