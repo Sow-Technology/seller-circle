@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 const clientLogos = [
   "/images/51.svg",
   "/images/52.svg",
@@ -22,19 +24,31 @@ const Client = () => {
   return (
     <div className="mx-auto max-w-7xl flex flex-col my-20">
       {" "}
-      <h2 className="nunito font-extrabold text-4xl lg:text-6xl text-center my-14">
+      <motion.h2
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="nunito font-extrabold text-4xl lg:text-6xl text-center my-14"
+      >
         Our <span className="text-[#039BE4]">Client List</span>
-      </h2>
+      </motion.h2>
       <div className="flex flex-wrap gap-5 items-center justify-center">
         {clientLogos.map((item, index) => (
-          <Image
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 * index }}
             key={index}
-            src={item}
-            width={280}
-            height={130}
-            alt=""
-            className="object-contain lg:w-[280px] lg:h-[130px] w-[140px] h-[70px]"
-          />
+          >
+            <Image
+              src={item}
+              width={280}
+              height={130}
+              alt=""
+              className="object-contain lg:w-[280px] lg:h-[130px] w-[140px] h-[70px]"
+            />
+          </motion.div>
         ))}
       </div>
     </div>

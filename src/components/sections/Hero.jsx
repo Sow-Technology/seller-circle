@@ -40,25 +40,54 @@ const Hero = () => {
         </motion.div>
       </div>
       <div className="flex gap-7 flex-row mx-auto mb-16 flex-wrap items-center justify-center">
-        <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
+        >
           <FaLinkedin className="text-[#0762C8] text-xl" />
           LinkedIn
-        </div>
-        <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
+        >
           <FaInstagram className=" text-xl" />
           Instagram
-        </div>
-        <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
+        >
           <FaFacebook className="text-[#0762C8] text-xl" />
           Facebook
-        </div>
-        <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8 }}
+          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
+        >
           <FaPinterest className="text-[#E60023] text-xl" />
           LinkedIn
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ delay: 1 }}
+        >
           <Image src="/images/1.svg" alt="" width={150} height={150} />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
