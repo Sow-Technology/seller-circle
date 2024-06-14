@@ -11,16 +11,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="max-w-7xl mx-auto flex items-center justify-center flex-col px-20 overflow-hidden">
+    <div className="max-w-7xl mx-auto flex items-center justify-center flex-col lg:px-20 px-8 overflow-hidden">
       <div className=" flex flex-row flex-wrap items-center justify-center gap-6 py-20 ">
-        <div className="max-w-[42%] flex flex-col items-center  min-w-[300px]">
+        <div className="lg:max-w-[42%] flex flex-col items-center  min-w-[300px]">
           <video src="/hero.mp4" autoPlay muted loop></video>
         </div>
         <motion.div
           initial={{ x: "500px", opacity: 0 }}
           animate={{ x: "0", opacity: 100 }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          className="max-w-[55%] flex flex-col items-center min-w-[300px] text-center "
+          className="lg:max-w-[55%] flex flex-col items-center min-w-[300px] text-center "
         >
           <h3 className="uppercase text-[21px] font-bold">seller circle</h3>
           <h2 className="font-extrabold text-2xl md:text-4xl lg:text-5xl uppercase text-center max-w-xl">
