@@ -17,8 +17,9 @@ const Hero = () => {
           <video src="/hero.mp4" autoPlay muted loop></video>
         </div>
         <motion.div
-          initial={{ x: "500px" }}
-          whileInView={{ x: "0" }}
+          initial={{ x: "500px", opacity: 0 }}
+          animate={{ x: "0", opacity: 100 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className="max-w-[55%] flex flex-col items-center min-w-[300px] text-center "
         >
           <h3 className="uppercase text-[21px] font-bold">seller circle</h3>
@@ -56,7 +57,7 @@ const Hero = () => {
           LinkedIn
         </div>
         <div>
-          <Image src="/images/1.svg" alt="" width={250} height={250} />
+          <Image src="/images/1.svg" alt="" width={150} height={150} />
         </div>
       </div>
     </div>

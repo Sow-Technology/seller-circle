@@ -45,33 +45,32 @@ const Navbar = () => {
     } else {
       setIsSecNav(false);
     }
-    console.log(window.scrollY);
   }, [y]);
   return (
     <>
       <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max">
-        <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between ">
-          <div className="text-white flex gap-5 items-center">
-            <div>About Us</div>
-            <div>
+        <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between text-sm ">
+          <div className="text-white flex gap-5 items-center justify-center">
+            <div className="text-sm">About Us</div>
+            <div className="text-lg">
               <FaFacebook />
             </div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 text-sm items-center">
             <Link href="tel:+9108041688315">
               <div className="flex text-white items-center gap-2">
-                <FaPhoneAlt className="text-xl" />
+                <FaPhoneAlt className="text-lg" />
                 +9108041688315
               </div>
             </Link>
             <div className="flex text-white items-center gap-2">
-              <FaLocationDot className="text-xl" />
+              <FaLocationDot className="text-lg" />
               Kalyan Nagar, Bangalore
             </div>
             <Link href="mailto:contact@sellercircle.in">
               {" "}
               <div className="flex text-white items-center gap-2">
-                <IoMail className="text-xl" />
+                <IoMail className="text-lg" />
                 contact@sellercircle.in
               </div>
             </Link>

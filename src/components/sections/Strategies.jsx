@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Marquee from "../ui/marquee";
+import { easeIn, easeInOut, motion } from "framer-motion";
 const strategiesItem = [
   {
     icon: "/images/31.svg",
@@ -42,11 +43,16 @@ const Strategies = () => {
   };
   return (
     <div className="mx-auto max-w-7xl flex flex-col my-20 px-8">
-      <h2 className="nunito font-extrabold text-4xl lg:text-6xl max-w-3xl mx-auto text-center my-7">
+      <motion.h2
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="nunito font-extrabold text-4xl lg:text-6xl max-w-3xl mx-auto text-center my-7"
+      >
         &quot;Crafting strategies as{" "}
         <span className="text-[#039BE4]"> unique as your business. </span>{" "}
         &quot;
-      </h2>
+      </motion.h2>
       <div className="flex flex-row flex-wrap items-center justify-center lg:justify-between gap-3">
         {strategiesItem.map((item, index) => (
           <div
@@ -57,11 +63,22 @@ const Strategies = () => {
           >
             {index == hoverIndex ? (
               <div className=" bg-white py-8 px-5 w-[230px] group rounded-[43px] h-[580px]">
-                <div className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative h-[480px] text-white">
-                  <p>{item.description}</p>
+                <motion.div
+                  initial={{ height: "10%" }}
+                  animate={{ height: "480px" }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative h-[480px] text-white "
+                >
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 100 }}
+                    transition={{ duration: 2, ease: easeIn, delay: 1 }}
+                  >
+                    {item.description}
+                  </motion.p>
                   <div className="bg-[#039BE4] -bottom-11 h-[140%] max-h-[200px] w-1/2 absolute right-0 -z-10 rounded-[40px]" />
                   <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[87px] absolute right-1 -z-10 rounded-[21px]" />
-                </div>
+                </motion.div>
               </div>
             ) : (
               <div className=" bg-white py-8 px-5 w-[230px] group rounded-[43px] h-[580px]">

@@ -28,7 +28,7 @@ const WeAre = () => {
         >
           {marqueeItem.map((item, index) => (
             <div className="max-w-[300px] flex items-center " key={index}>
-              <Image src={item} alt="" width={300} height={200} />
+              <Image src={item} alt="" width={150} height={150} />
             </div>
           ))}
         </Marquee>
@@ -42,12 +42,12 @@ const WeAre = () => {
           className={`flex flex-row items-center justify-between flex-wrap gap-8 mt-14`}
         >
           <div className="flex flex-col items-center text-center lg:justify-between justify-center">
-            <div className={`${antonio.className}`}>
-              <span className="font-bold text-8xl text-white stroke stroke-black stroke-2 outline-black block">
+            <div className={`${antonio.className} group stroke`}>
+              <span className="font-bold text-8xl text-white group:stroke  stroke stroke-black stroke-2 outline-black block">
                 $2.5
               </span>{" "}
               <br />
-              <span className="font-bold stroke text-5xl text-white text-center">
+              <span className="font-bold stroke group:stroke text-5xl text-white text-center">
                 {" "}
                 Billion+
               </span>{" "}

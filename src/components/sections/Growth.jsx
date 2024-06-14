@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { easeIn, motion } from "framer-motion";
 const items = [
   {
     title: "Growth & Scale up Management",
@@ -48,22 +50,38 @@ const Growth = () => {
   return (
     <div className="mx-auto max-w-7xl flex flex-col lg:px-20 px-8 relative z-10">
       {" "}
-      <h3 className="font-bold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto">
+      <motion.h3
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="font-bold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+      >
         Your growth partner{" "}
-      </h3>
-      <h2 className="nunito font-extrabold text-3xl lg:text-5xl text-center my-7">
+      </motion.h3>
+      <motion.h2
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="nunito font-extrabold text-3xl lg:text-5xl text-center my-7"
+      >
         Leveraging Talent + Tech to scale your brand and{" "}
         <span className="text-[#039BE4]">
           capture audiences effectively, letting you focus on what matters.
         </span>
-      </h2>
+      </motion.h2>
       <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 ">
         {items.map((item, index) => (
-          <div
+          <motion.div
             key={index}
-            className="min-w-[280px] max-w-[330px] p-10 flex flex-col gap-7 rounded-2xl cshad justify-between relative z-10 bg-white "
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: easeIn }}
+            className="min-w-[280px] lg:max-w-[330px] p-10 flex flex-col gap-7 rounded-2xl cshad justify-between relative z-10 bg-white flex-1"
           >
-            <h4 className="nunito font-extrabold text-2xl">{item.title}</h4>
+            <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
+              {item.title}
+            </h4>
             <p className="nunito text-xs text-justify">{item.description}</p>
             <div className="flex items-center justify-between">
               <div>
@@ -74,7 +92,7 @@ const Growth = () => {
                 <Image src="/images/10.svg" height={50} width={50} alt="" />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
         <div className="flex items-center justify-center mr-auto ml-10 gap-2 flex-col font-bold">
           {" "}

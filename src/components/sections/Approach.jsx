@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 const approchItems = [
   {
     icon: "/images/21.svg",
@@ -22,13 +24,23 @@ const Approach = () => {
   return (
     <div className="mx-auto max-w-7xl flex flex-col my-20 lg:px-20 px-8">
       {" "}
-      <h3 className="font-bold text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto">
+      <motion.h3
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="font-bold text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+      >
         Our approach{" "}
-      </h3>
-      <h2 className="nunito font-extrabold text-4xl lg:text-6xl max-w-5xl mx-auto text-center my-7">
+      </motion.h3>
+      <motion.h2
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="nunito font-extrabold text-4xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
+      >
         No one-size-fits-all here,{" "}
         <span className="text-[#039BE4]">only tailored strategies.  </span>
-      </h2>
+      </motion.h2>
       <div className="flex flex-row flex-wrap gap-16 mt-16">
         <div className="lg:max-w-[40%] min-w-[300px]">
           <div className="rounded-r-full p-10 bg-[#039BE4] text-white px-20">
@@ -36,12 +48,17 @@ const Approach = () => {
             individual ads, crafting strategies for increased visibility and
             optimized search flow.
           </div>
-          <div className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5"
+          >
             <div>
               {" "}
               <Image src="/images/17.svg" alt="" width={500} height={700} />
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-row lg:max-w-[45%]">
           <div>
@@ -49,7 +66,10 @@ const Approach = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-5">
             {approchItems.map((item, index) => (
-              <div
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
                 key={index}
                 className="flex items-center justify-center  gap-5 flex-row font-bold relative "
               >
@@ -70,7 +90,7 @@ const Approach = () => {
                   {index + 1}
                 </div>
                 {item.text}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
