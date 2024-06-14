@@ -53,12 +53,12 @@ const WeAre = () => {
           <div className="flex flex-col items-center text-center lg:justify-between justify-center">
             <div className={`${antonio.className} group text-white  stroke`}>
               <span className="font-bold text-8xl group:stroke   stroke-black stroke-2 outline-black block">
-                $2.5
+                $100
               </span>{" "}
               <br />
               <span className="font-bold  group:stroke text-5xl  text-center">
                 {" "}
-                Billion+
+                MILLION +
               </span>{" "}
             </div>
             <div className={`font-semibold text-3xl `}>
