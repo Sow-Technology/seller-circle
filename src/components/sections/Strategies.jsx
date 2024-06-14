@@ -64,7 +64,7 @@ const Strategies = () => {
             {index == hoverIndex ? (
               <div className=" bg-white py-8 px-5 w-[230px] group rounded-[43px] h-[580px]">
                 <motion.div
-                  initial={{ height: "10%" }}
+                  initial={{ height: "20%" }}
                   animate={{ height: "480px" }}
                   transition={{ duration: 2, ease: "easeInOut" }}
                   className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative h-[480px] text-white "
