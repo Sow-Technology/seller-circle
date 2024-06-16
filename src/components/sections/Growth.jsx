@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { easeIn, motion } from "framer-motion";
+import Audit from "../forms/Audit";
 const items = [
   {
     title: "Growth & Scale up Management",
@@ -54,7 +55,7 @@ const Growth = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="font-bold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+        className="font-extrabold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
       >
         Your growth partner{" "}
       </motion.h3>
@@ -62,14 +63,14 @@ const Growth = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-2xl lg:text-5xl text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-4xl text-center my-7"
       >
         Leveraging Talent + Tech to scale your brand and{" "}
         <span className="text-[#039BE4]">
           capture audiences effectively, letting you focus on what matters.
         </span>
       </motion.h2>
-      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 ">
+      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20 ">
         {items.map((item, index) => (
           <motion.div
             key={index}
@@ -102,6 +103,14 @@ const Growth = () => {
           </div>
           VIEW ALL
         </div>
+        <motion.div
+          className=""
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 100 }}
+          transition={{ ease: "easeIn", duration: 1, type: "tween" }}
+        >
+          <Audit />
+        </motion.div>
       </div>
     </div>
   );

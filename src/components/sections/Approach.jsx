@@ -28,7 +28,7 @@ const Approach = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="font-bold text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+        className="font-extrabold text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
       >
         Our approach{" "}
       </motion.h3>
@@ -36,7 +36,7 @@ const Approach = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-2xl lg:text-6xl max-w-5xl mx-auto text-center my-7"
+        className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
       >
         No one-size-fits-all here,{" "}
         <span className="text-[#039BE4]">only tailored strategies.  </span>

@@ -47,11 +47,10 @@ const Strategies = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-2xl lg:text-6xl max-w-3xl mx-auto text-center my-7"
+        className=" font-extrabold text-2xl lg:text-5xl max-w-4xl mx-auto text-center my-7 uppercase"
       >
-        &quot;Crafting strategies as{" "}
+        Crafting strategies as{" "}
         <span className="text-[#039BE4]"> unique as your business. </span>{" "}
-        &quot;
       </motion.h2>
       <div className="flex flex-row flex-wrap items-center justify-center lg:justify-between gap-3">
         {strategiesItem.map((item, index) => (

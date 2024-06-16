@@ -8,6 +8,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { MdOutlineFacebook } from "react-icons/md";
 import { RiPinterestFill } from "react-icons/ri";
 import "../styles.css";
+import Audit from "./forms/Audit";
 const Footer = () => {
   return (
     <div className="bg-background">
@@ -39,59 +40,18 @@ const Footer = () => {
           </div>
         </div> */}
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
-          <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:w-auto gap-16">
-            <div className=" h-[80%] lg:w-[55%] p-4 bg-[#0ea5e9] flex-row flex-wrap text-white font-bold flex custom-shadow shadow-lg rounded-[19px]  responsive-box m-2">
-              <div className="flex flex-col gap-3 min-w-[300px]">
-                <div className="  text-white flex-col flex text-3xl">
-                  Our Contacts
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  Give us a call or drop by anytime, we endeavor to answer all
-                  enquiries within 24 hours on business days. We will be happy
-                  to answer your questions.
-                </div>
-                <div className=" text-white flex-col flex text-base ">
-                  <div className="text-white flex-row flex text-base ">
-                    {/* <Image src="/images/globe.png" alt="" height={30} width={30} class="mr-2"/> */}
-                    <div className="mr-2 my-1">
-                      <FaMapLocationDot />
-                    </div>
-                    OUR ADDRESS:
-                  </div>
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  304,2nd floor, 7th Main Rd,HBBR Layout 1st Block,HBBR Layout,
-                  Kalyan Nagar, Bengaluru, Karnataka 560043
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  <div className="text-white flex-row flex text-base ">
-                    <div className="mr-2 my-1">
-                      <BiMailSend />
-                    </div>
-                    OUR MAILBOX:
-                  </div>
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  contact@sellercircle.in
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  <div className="text-white flex-row flex text-base ">
-                    <div className="mr-2 my-1">
-                      <BsFillTelephoneInboundFill />
-                    </div>
-                    OUR PHONE:
-                  </div>
-                </div>
-                <div className=" text-white flex-col flex text-base">
-                  +91 080 4168 8315
-                </div>
-              </div>
+          <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-auto gap-8">
+            <div className="lg:w-[60%]">
+              {" "}
+              <Audit />
             </div>
-            <div className=" h-[90%] lg:w-[45%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
-              <div className="flex flex-row justify-items-start mb-2">
-                <div className="basis-1/2 mr-4">
+            <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
+              <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
+                <div className=" mr-4">
                   <div className="flex flex-wrap flex-col ">
-                    <div className="basis-1/2 text-2xl mb-2">Services</div>
+                    <div className="basis-1/2 text-3xl font-bold mb-2">
+                      Services
+                    </div>
                     <div className="basis-1/2  text-base mb-2">Training</div>
                     <div className="basis-1/2  text-base mb-2">Cataloging</div>
                     <div className="basis-1/2 text-base mb-2">
@@ -111,7 +71,9 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="flex  flex-wrap flex-col">
-                    <div className="basis-1/3 text-2xl mb-2">Quick Links</div>
+                    <div className="basis-1/3 text-3xl font-bold mb-2">
+                      Quick Links
+                    </div>
                     <div className="basis-1/3 text-base mb-2">About Us</div>
                     <div className="basis-1/3 text-base mb-2">Our Services</div>
                     <div className="basis-1/3 text-base mb-2">Careers</div>
@@ -119,20 +81,100 @@ const Footer = () => {
                     <div className="basis-1/3 text-base mb-2">Pricing</div>
                   </div>
                 </div>
+                <div className="flex w-auto  flex-row">
+                  <div className="">
+                    <div className="basis-1/4  flex flex-wrap flex-col">
+                      <div className="basis-1/4 text-3xl font-bold mb-2">
+                        More
+                      </div>
+                      <div className="basis-1/4 text-base mb-2">
+                        Terms & Conditions
+                      </div>
+                      <div className="basis-1/4 text-base mb-2">
+                        Privacy Policy
+                      </div>
+                      <div className="basis-1/4 text-base mb-2">
+                        EBC Example
+                      </div>
+                      <div className="basis-1/4 text-base mb-2">
+                        Brand Stores Examples
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex  flex-row">
-                <div className="basis-1/2">
-                  <div className="basis-1/4  flex flex-wrap flex-col">
-                    <div className="basis-1/4 text-2xl mb-2">More</div>
-                    <div className="basis-1/4 text-base mb-2">
-                      Terms & Conditions
+
+              <div className="flex flex-col gap-3 min-w-[300px]">
+                <div className="  text-white text-center w-full flex-col font-bold flex text-3xl">
+                  Our Contacts
+                </div>
+                <div className=" text-white flex-col flex text-sm">
+                  Give us a call or drop by anytime, we endeavor to answer all
+                  enquiries within 24 hours on business days. We will be happy
+                  to answer your questions.
+                </div>
+
+                <div className="flex flex-row flex-wrap">
+                  <div className="flex flex-col lg:w-[30%]">
+                    {" "}
+                    <div className=" text-white flex-col justify-center flex text-sm">
+                      <div className="text-white flex-row items-center flex text-base  font-bold">
+                        <div className="mr-2 my-1 text-2xl">
+                          <BiMailSend />
+                        </div>
+                        OUR MAILBOX:
+                      </div>
                     </div>
-                    <div className="basis-1/4 text-base mb-2">
-                      Privacy Policy
+                    <div className=" text-white flex-col flex text-base">
+                      contact@sellercircle.in
                     </div>
-                    <div className="basis-1/4 text-base mb-2">EBC Example</div>
-                    <div className="basis-1/4 text-base mb-2">
-                      Brand Stores Examples
+                    <div className=" text-white flex-col flex text-sm font-bold">
+                      <div className="text-white flex-row flex text-base ">
+                        <div className="mr-2 my-1 text-2xl">
+                          <BsFillTelephoneInboundFill />
+                        </div>
+                        OUR PHONE:
+                      </div>
+                    </div>
+                    <div className=" text-white flex-col flex text-base">
+                      +91 080 4168 8315
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap flex-row gap-10 lg:w-[65%] items-center justify-center">
+                    <div className="">
+                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                        <div className=" text-3xl">
+                          <AiOutlineLinkedin />
+                        </div>
+                        <div className="">Linkedin</div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                        {" "}
+                        <div className="text-3xl">
+                          <AiOutlineInstagram />
+                        </div>
+                        <div className="">Instagram</div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                        {" "}
+                        <div className="text-3xl">
+                          <MdOutlineFacebook />
+                        </div>
+                        <div className="">Facebook</div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                        {" "}
+                        <div className=" text-3xl">
+                          <RiPinterestFill />
+                        </div>
+                        <div className="">Pinterest</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -149,42 +191,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="basis-1/3">
-            <div className="flex flex-wrap flex-row">
-              <div className="basis-1/5">
-                <div className="text-white flex-row flex text-base mr-1">
-                  <div className="mr-1 my-1">
-                    <AiOutlineLinkedin />
-                  </div>
-                  <div className="h-0.5">Linkedin</div>
-                </div>
-              </div>
-              <div className="basis-1/5">
-                <div className="text-white flex-row flex text-base mr-1">
-                  <div className="mr-1 my-1">
-                    <AiOutlineInstagram />
-                  </div>
-                  <div className="h-0.5">Instagram</div>
-                </div>
-              </div>
-              <div className="basis-1/5">
-                <div className="text-white flex-row flex text-base mr-1 ">
-                  <div className="mr-1 my-1">
-                    <MdOutlineFacebook />
-                  </div>
-                  <div className="h-0.5">Facebook</div>
-                </div>
-              </div>
-              <div className="basis-1/5">
-                <div className="text-white flex-row flex text-base mr-1">
-                  <div className="mr-1 my-1">
-                    <RiPinterestFill />
-                  </div>
-                  <div className="h-0.5">Pinterest</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="basis-1/3"></div>
         </div>
       </div>
     </div>

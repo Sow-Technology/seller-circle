@@ -46,6 +46,7 @@ const Client = () => {
               width={280}
               height={130}
               alt=""
+              loading="lazy"
               className="object-contain lg:w-[280px] lg:h-[130px] w-[140px] h-[70px]"
             />
           </motion.div>
