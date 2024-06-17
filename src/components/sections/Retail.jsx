@@ -18,11 +18,14 @@ const Retail = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        src="/retail.mp4"
         autoPlay
         muted
         loop
-      ></motion.video>
+      >
+        {" "}
+        <source src="/retail.webm" type="video/webm" />
+        <source src="/retail.mp4" type="video/mp4" />
+      </motion.video>
     </div>
   );
 };

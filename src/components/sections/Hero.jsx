@@ -14,7 +14,11 @@ const Hero = () => {
     <div className="max-w-7xl mx-auto flex items-center justify-center flex-col lg:px-20 px-8 overflow-hidden">
       <div className=" flex flex-row flex-wrap items-center justify-center gap-6 py-20 ">
         <div className="lg:max-w-[42%] flex flex-col items-center  min-w-[300px]">
-          <video src="/hero.mp4" autoPlay muted loop></video>
+          <video src="/hero.mp4" autoPlay muted loop>
+            <source src="/hero.webm" type="video/webm" />
+            <source src="/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <motion.div
           initial={{ x: "500px", opacity: 0 }}

@@ -76,7 +76,7 @@ const WeAre = () => {
               Catalogue Design
             </div>
           </div>
-          <div className="flex flex-col items-center text-center justify-between gap-7 ">
+          <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-[45%]">
             <div className={`${antonio.className}`}>
               <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
                 3000+
@@ -86,7 +86,7 @@ const WeAre = () => {
               Seller Served
             </div>
           </div>
-          <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-1/2">
+          <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-[40%]">
             <div className={`${antonio.className}`}>
               <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
                 20+
