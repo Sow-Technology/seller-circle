@@ -106,7 +106,7 @@ const Strategies = () => {
             </div>
           </div>
         ))}
-        <div className="w-[230px] h-full self-center justify-self-center flex flex-col items-center justify-center">
+        <div className="w-[230px] lg:h-[460px] pt-14s py-10 flex flex-col items-center justify-between">
           <Image
             src="/images/1.svg"
             alt=""
