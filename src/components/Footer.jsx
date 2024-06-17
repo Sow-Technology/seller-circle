@@ -15,13 +15,13 @@ const Footer = () => {
       {" "}
       <div className="mx-auto lg:px-20 px-8 max-w-7xl   py-5">
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
-          <div className="lg:w-[50%] text-white font-bold flex-row p-5 flex lg:text-2xl text-xl bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px] gap-4">
+          <div className="lg:w-[50%] text-white font-bold flex-row p-5 flex lg:text-2xl text-base bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px] gap-4">
             <Image
               src="/images/1.svg"
               alt=""
               width={180}
               height={140}
-              className="max-lg:w-[150px] max-lg:h-[120px]"
+              className="max-lg:w-[110px] max-lg:h-[80px]"
             />
             Top 1%: A testament to our continued performance.
           </div>
@@ -118,8 +118,8 @@ const Footer = () => {
                   <div className="flex flex-col lg:w-[30%]">
                     {" "}
                     <div className=" text-white flex-col justify-center flex text-sm">
-                      <div className="text-white flex-row items-center flex text-base  font-bold">
-                        <div className="mr-2 my-1 text-2xl">
+                      <div className="text-white flex-row items-center flex text-base gap-3  font-bold">
+                        <div className=" text-2xl">
                           <BiMailSend />
                         </div>
                         OUR MAILBOX:
@@ -129,8 +129,8 @@ const Footer = () => {
                       contact@sellercircle.in
                     </div>
                     <div className=" text-white flex-col flex text-sm font-bold">
-                      <div className="text-white flex-row flex text-base ">
-                        <div className="mr-2 my-1 text-2xl">
+                      <div className="text-white flex-row gap-3 flex text-base ">
+                        <div className=" text-lg">
                           <BsFillTelephoneInboundFill />
                         </div>
                         OUR PHONE:
@@ -140,7 +140,7 @@ const Footer = () => {
                       +91 080 4168 8315
                     </div>
                   </div>
-                  <div className="flex flex-wrap flex-row gap-10 lg:w-[65%] items-center justify-center">
+                  <div className="flex flex-wrap flex-row lg:gap-10 gap-5 max-lg:mt-5 lg:w-[65%] items-center justify-center">
                     <div className="">
                       <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
                         <div className=" text-3xl">

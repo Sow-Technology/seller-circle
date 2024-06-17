@@ -53,7 +53,7 @@ const WeAre = () => {
         <div
           className={`flex flex-row  justify-center lg:justify-between flex-wrap gap-8 mt-14`}
         >
-          <div className="flex flex-col items-center text-center justify-between ">
+          <div className="flex flex-col items-center text-center max-lg:w-1/2 justify-between ">
             <div
               className={`${antonio.className} group font-bold lg:text-7xl text-5xl text-white  stroke`}
             >
@@ -66,7 +66,7 @@ const WeAre = () => {
               Manager Advertising
             </div>
           </div>
-          <div className="flex flex-col items-center h-auto flex-1 text-center justify-between gap-7 ">
+          <div className="flex flex-col items-center h-auto flex-1 text-center justify-between gap-7 max-lg:w-1/2 ">
             <div className={`${antonio.className}`}>
               <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
                 500K+
@@ -76,7 +76,7 @@ const WeAre = () => {
               Catalogue Design
             </div>
           </div>
-          <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:min-w-[150px]">
+          <div className="flex flex-col items-center text-center justify-between gap-7 ">
             <div className={`${antonio.className}`}>
               <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
                 3000+
@@ -86,7 +86,7 @@ const WeAre = () => {
               Seller Served
             </div>
           </div>
-          <div className="flex flex-col items-center text-center justify-between gap-7 min-w-[150px]">
+          <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-1/2">
             <div className={`${antonio.className}`}>
               <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
                 20+

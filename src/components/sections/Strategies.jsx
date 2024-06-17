@@ -62,7 +62,7 @@ const Strategies = () => {
         {strategiesItem.map((item, index) => (
           <div className="" key={index}>
             <div
-              className={` bg-white py-8 px-5 lg:w-[220px] ${
+              className={` bg-white py-8 px-5 lg:w-[220px] max-md:ml-5 ${
                 hoverIndex == index ? "h-auto" : "h-[480px]"
               }   w-[85%] group  border-r-2`}
             >

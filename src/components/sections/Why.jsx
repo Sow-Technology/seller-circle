@@ -26,7 +26,7 @@ const Why = () => {
           alt=""
           width={1280}
           height={1500}
-          className="inset-0 bg-cover object-cover max-w-[800px] "
+          className="inset-0 bg-cover object-cover lg:max-w-[800px] "
         />
       </motion.div>
       <motion.h2

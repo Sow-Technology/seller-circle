@@ -96,6 +96,7 @@ const Navbar = () => {
             <div className="flex gap-5 items-center">
               <SecDesktopNav />
               <Button variant="cta">LET&#39;S TALK</Button>
+              <MobileNav className="invert" />
             </div>
           </div>
         </div>
@@ -241,13 +242,13 @@ const ListItem = ({ className, title, children, ...props }, ref) => {
 };
 ListItem.displayName = "ListItem";
 
-const MobileNav = () => {
+const MobileNav = ({ className }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="block lg:hidden ">
       <Sheet>
-        <SheetTrigger asChild>
+        <SheetTrigger asChild className={className}>
           <div className="text-white cursor-pointer">
             <MenuIcon />
           </div>
