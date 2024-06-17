@@ -28,7 +28,7 @@ const Client = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-4xl  text-left my-14"
+        className="nunito font-extrabold text-4xl  text-left my-14 px-20"
       >
         Our <span className="text-[#039BE4]">Client List</span>
       </motion.h2>
