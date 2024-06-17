@@ -25,7 +25,7 @@ const strategiesItem = [
   },
   {
     icon: "/images/34.svg",
-    title: "Transparency",
+    title: "Transparency\n ",
     description:
       "Transparency is a cornerstone of our values. You can expect candid feedback that prioritizes your best interests, ensuring no missed opportunities. We provide upfront insights on what's working and what's not, backed by clear data and reporting.",
   },
@@ -61,7 +61,11 @@ const Strategies = () => {
       <div className="flex flex-row flex-wrap items-start justify-center lg:justify-between gap-3">
         {strategiesItem.map((item, index) => (
           <div className="" key={index}>
-            <div className=" bg-white py-8 px-5 lg:w-[220px] min-h-[500px]   w-[85%] group  border-r-2">
+            <div
+              className={` bg-white py-8 px-5 lg:w-[220px] ${
+                hoverIndex == index ? "h-auto" : "h-[480px]"
+              }   w-[85%] group  border-r-2`}
+            >
               <div className="flex p-5 w-[110%] py-[30px] ml-4 bg-[#039BE4] items-center justify-center  rounded-l-[250px]  !rounded-tr-[100px] relative mt-7">
                 <Image
                   src={item.icon}
@@ -73,12 +77,16 @@ const Strategies = () => {
                 <div className="bg-[#039BE4] -bottom-[47px] h-[140%] w-1/2 absolute -right-[11px] -z-10 rounded-[40px]" />
                 <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[90px] absolute -right-[5px] -z-10 rounded-[21px]" />
               </div>
-              <h2 className="font-[900] text-xl text-center mt-5">
+              <h2 className="font-[900] text-xl text-center mt-5 h-[50px]">
                 {item.title}
               </h2>
-              <div className="overflow-hidden min-h-[150px] max-h-[200px]">
+              <div
+                className={`overflow-hidden text-ellipsis ${
+                  hoverIndex == index ? "h-[300px]" : "h-[200px] "
+                }`}
+              >
                 <p
-                  className={`max-w-[380px] text-center mt-3 ${
+                  className={`max-w-[380px] text-justify mt-3 ${
                     hoverIndex == index ? "h-auto" : "h-[100px] "
                   }`}
                 >
@@ -87,13 +95,13 @@ const Strategies = () => {
               </div>
               <div
                 className={`flex items-end justify-end bg-white/40 backdrop-blur-none w-full z-20 relative h-16  ${
-                  hoverIndex == index ? "" : "-mb-5 absolute bottom-4 "
+                  hoverIndex == index ? "" : "-mb-5 absolute bottom-10 "
                 } `}
               >
                 {" "}
                 <Button
                   variant="cta"
-                  className="mx-auto"
+                  className="mx-auto font-[900]"
                   onClick={() =>
                     hoverIndex === index
                       ? handleHover(undefined)
