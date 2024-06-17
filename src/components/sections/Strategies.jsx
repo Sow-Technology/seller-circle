@@ -60,9 +60,9 @@ const Strategies = () => {
       </motion.h2>
       <div className="flex flex-row flex-wrap items-start justify-center lg:justify-between gap-3">
         {strategiesItem.map((item, index) => (
-          <div className="drop-shadow-xl" key={index}>
-            <div className=" bg-white py-8 px-5 lg:w-[230px] min-h-[500px]   w-[85%] group rounded-[43px]">
-              <div className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative mt-7">
+          <div className="" key={index}>
+            <div className=" bg-white py-8 px-5 lg:w-[220px] min-h-[500px]   w-[85%] group  border-r-2">
+              <div className="flex p-5 w-[110%] ml-4 bg-[#039BE4] items-center justify-center  rounded-l-[250px] !rounded-tr-[100px] relative mt-7">
                 <Image
                   src={item.icon}
                   width={120}
@@ -70,8 +70,8 @@ const Strategies = () => {
                   alt=""
                   className="h-[80px] w-[120px]"
                 />
-                <div className="bg-[#039BE4] -bottom-11 h-[140%] w-1/2 absolute right-0 -z-10 rounded-[40px]" />
-                <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[87px] absolute right-1 -z-10 rounded-[21px]" />
+                <div className="bg-[#039BE4] -bottom-[47px] h-[140%] w-1/2 absolute -right-[11px] -z-10 rounded-[40px]" />
+                <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[90px] absolute -right-[5px] -z-10 rounded-[21px]" />
               </div>
               <h2 className="font-extrabold text-2xl text-center mt-5">
                 {item.title}
@@ -106,7 +106,7 @@ const Strategies = () => {
             </div>
           </div>
         ))}
-        <div className="w-[230px] h-full flex flex-col items-center justify-center">
+        <div className="w-[230px] h-full self-center justify-self-center flex flex-col items-center justify-center">
           <Image
             src="/images/1.svg"
             alt=""
