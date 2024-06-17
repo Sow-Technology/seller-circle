@@ -52,10 +52,10 @@ const formSchema = z.object({
     .max(50, {
       message: "Please enter at msost 50 characters",
     }),
-  service: z.string({
+  service: z.string().min(2, {
     message: "Please select a service.",
   }),
-  service2: z.string({
+  service2: z.string().min(2, {
     message: "Please select a service.",
   }),
   message: z.string().optional(),
@@ -140,7 +140,7 @@ const Audit = () => {
             )}
           />
           <div className="flex flex-row flex-wrap gap-5">
-            <div className="min-w-[150px]">
+            <div className="min-w-[150px] lg:max-w-[50%]">
               {" "}
               <FormField
                 control={form.control}

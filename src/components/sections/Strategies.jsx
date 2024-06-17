@@ -31,10 +31,16 @@ const strategiesItem = [
   },
 ];
 const marqueeItem = [
-  "images/41.svg",
-  "images/42.svg",
-  "images/43.svg",
-  "images/44.svg",
+  "/images/s1.png",
+  "/images/s2.png",
+  "/images/s3.png",
+  "/images/s4.png",
+  "/images/s5.png",
+  "/images/s6.png",
+  "/images/s7.png",
+  "/images/s8.png",
+  "/images/s9.png",
+  "/images/s10.png",
 ];
 const Strategies = () => {
   const [hoverIndex, setHoverIndex] = useState(undefined);
@@ -52,51 +58,52 @@ const Strategies = () => {
         Crafting strategies as{" "}
         <span className="text-[#039BE4]"> unique as your business. </span>{" "}
       </motion.h2>
-      <div className="flex flex-row flex-wrap items-center justify-center lg:justify-between gap-3">
+      <div className="flex flex-row flex-wrap items-start justify-center lg:justify-between gap-3">
         {strategiesItem.map((item, index) => (
-          <div
-            className="drop-shadow-xl"
-            key={index}
-            onMouseEnter={() => handleHover(index)}
-            onMouseLeave={() => setHoverIndex(undefined)}
-          >
-            {index == hoverIndex ? (
-              <div className=" bg-white py-8 px-5 lg:w-[230px] w-[85%] group rounded-[43px] h-[580px]">
-                <motion.div
-                  initial={{ height: "20%" }}
-                  animate={{ height: "480px" }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                  className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative h-[480px] text-white "
+          <div className="drop-shadow-xl" key={index}>
+            <div className=" bg-white py-8 px-5 lg:w-[230px] min-h-[500px]   w-[85%] group rounded-[43px]">
+              <div className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative mt-7">
+                <Image
+                  src={item.icon}
+                  width={120}
+                  height={60}
+                  alt=""
+                  className="h-[80px] w-[120px]"
+                />
+                <div className="bg-[#039BE4] -bottom-11 h-[140%] w-1/2 absolute right-0 -z-10 rounded-[40px]" />
+                <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[87px] absolute right-1 -z-10 rounded-[21px]" />
+              </div>
+              <h2 className="font-extrabold text-2xl text-center mt-5">
+                {item.title}
+              </h2>
+              <div className="overflow-hidden min-h-[150px] max-h-[200px]">
+                <p
+                  className={`max-w-[380px] text-center mt-3 ${
+                    hoverIndex == index ? "h-auto" : "h-[100px] "
+                  }`}
                 >
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 100 }}
-                    transition={{ duration: 2, ease: easeIn, delay: 1 }}
-                  >
-                    {item.description}
-                  </motion.p>
-                  <div className="bg-[#039BE4] -bottom-11 h-[140%] max-h-[200px] w-1/2 absolute right-0 -z-10 rounded-[40px]" />
-                  <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[87px] absolute right-1 -z-10 rounded-[21px]" />
-                </motion.div>
+                  {item.description}
+                </p>
               </div>
-            ) : (
-              <div className=" bg-white py-8 px-5 lg:w-[230px] w-[85%] group rounded-[43px] h-[580px]">
-                <div className="flex p-5 w-[110%]  ml-4 bg-[#039BE4] items-center justify-center rounded-[23px] relative">
-                  <Image
-                    src={item.icon}
-                    width={120}
-                    height={60}
-                    alt=""
-                    className="h-[80px] w-[120px]"
-                  />
-                  <div className="bg-[#039BE4] -bottom-11 h-[140%] w-1/2 absolute right-0 -z-10 rounded-[40px]" />
-                  <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[87px] absolute right-1 -z-10 rounded-[21px]" />
-                </div>
-                <h2 className="font-extrabold text-3xl text-center mt-5">
-                  {item.title}
-                </h2>
+              <div
+                className={`flex items-end justify-end bg-white/40 backdrop-blur-none w-full z-20 relative h-16  ${
+                  hoverIndex == index ? "" : "-mb-5 absolute bottom-4 "
+                } `}
+              >
+                {" "}
+                <Button
+                  variant="cta"
+                  className="mx-auto"
+                  onClick={() =>
+                    hoverIndex === index
+                      ? handleHover(undefined)
+                      : handleHover(index)
+                  }
+                >
+                  KNOW MORE
+                </Button>
               </div>
-            )}
+            </div>
           </div>
         ))}
         <div className="w-[230px] h-full flex flex-col items-center justify-center">
@@ -119,7 +126,13 @@ const Strategies = () => {
         >
           {marqueeItem.map((item, index) => (
             <div className="max-w-[300px] flex items-center " key={index}>
-              <Image src={item} alt="" width={300} height={200} />
+              <Image
+                src={item}
+                alt=""
+                loading="lazy"
+                width={300}
+                height={200}
+              />
             </div>
           ))}
         </Marquee>
