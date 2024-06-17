@@ -62,18 +62,18 @@ const Strategies = () => {
         {strategiesItem.map((item, index) => (
           <div className="" key={index}>
             <div className=" bg-white py-8 px-5 lg:w-[220px] min-h-[500px]   w-[85%] group  border-r-2">
-              <div className="flex p-5 w-[110%] ml-4 bg-[#039BE4] items-center justify-center  rounded-l-[250px] !rounded-tr-[100px] relative mt-7">
+              <div className="flex p-5 w-[110%] py-[30px] ml-4 bg-[#039BE4] items-center justify-center  rounded-l-[250px]  !rounded-tr-[100px] relative mt-7">
                 <Image
                   src={item.icon}
-                  width={120}
-                  height={60}
+                  width={85}
+                  height={90}
                   alt=""
-                  className="h-[80px] w-[120px]"
+                  className="h-[60px] w-[65px]"
                 />
                 <div className="bg-[#039BE4] -bottom-[47px] h-[140%] w-1/2 absolute -right-[11px] -z-10 rounded-[40px]" />
                 <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[90px] absolute -right-[5px] -z-10 rounded-[21px]" />
               </div>
-              <h2 className="font-extrabold text-2xl text-center mt-5">
+              <h2 className="font-[900] text-xl text-center mt-5">
                 {item.title}
               </h2>
               <div className="overflow-hidden min-h-[150px] max-h-[200px]">
