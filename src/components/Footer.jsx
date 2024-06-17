@@ -183,15 +183,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-0.5 w-full bg-white opacity-50 my-8"></div>
-        <div className="flex flex-wrap flex-row">
-          <div className="basis-2/3">
+        <div className="flex flex-wrap flex-row items-center justify-center">
+          <div className="">
             <div className="flex flex-wrap flex-row justify-center">
               <div className="text-white text-xs my-2">
                 Copyright &copy; 2020 Seller Circle. All Rights Reserved.
               </div>
             </div>
           </div>
-          <div className="basis-1/3"></div>
         </div>
       </div>
     </div>
