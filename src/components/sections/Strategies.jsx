@@ -6,25 +6,25 @@ import Marquee from "../ui/marquee";
 import { easeIn, easeInOut, motion } from "framer-motion";
 const strategiesItem = [
   {
-    icon: "/images/31.svg",
+    icon: "/images/31.webp",
     title: "Data-Driven Insights",
     description:
       "At the forefront of our approach is delivering clear and impactful insights on how advertising outcomes align with business objectives. We leverage tech-driven APIs for Amazon advertising, enabling informed real-time decisions.",
   },
   {
-    icon: "/images/32.svg",
+    icon: "/images/32.webp",
     title: "Culture & Our Experianced Team",
     description:
       "Our in-house account experts and advertising managers collaborate on advanced strategies, bringing diverse expertise from unique backgrounds and skill sets. We are certified with over 14 advertising certifications and are advanced.",
   },
   {
-    icon: "/images/33.svg",
+    icon: "/images/33.webp",
     title: "Speed to Market - Our Experience",
     description:
       "With extensive experience across multiple categories and working with over 6000+ brands, we excel in delivering various services swiftly. Our agility in launching and researching products to formulating strategies is our hallmark, powered by our in-house retail tech and our SAAS partner's data-driven approach, ensuring efficiency in reaching the market.",
   },
   {
-    icon: "/images/34.svg",
+    icon: "/images/34.webp",
     title: "Transparency\n ",
     description:
       "Transparency is a cornerstone of our values. You can expect candid feedback that prioritizes your best interests, ensuring no missed opportunities. We provide upfront insights on what's working and what's not, backed by clear data and reporting.",
@@ -116,7 +116,7 @@ const Strategies = () => {
         ))}
         <div className="w-[230px] lg:h-[460px] pt-14s py-10 flex flex-col items-center justify-between">
           <Image
-            src="/images/1.svg"
+            src="/images/1.webp"
             alt=""
             width={200}
             height={200}

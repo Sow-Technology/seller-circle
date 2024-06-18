@@ -90,7 +90,7 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ delay: 1 }}
         >
-          <Image src="/images/1.svg" alt="" width={150} height={150} />
+          <Image src="/images/1.webp" alt="" width={150} height={150} />
         </motion.div>
       </div>
     </div>

@@ -4,19 +4,19 @@ import React from "react";
 import { motion } from "framer-motion";
 const approchItems = [
   {
-    icon: "/images/21.svg",
+    icon: "/images/21.webp",
     text: "We begin with a thorough 30-point account audit to Delivery Methods to pinpoint improvement opportunities and areas of growth",
   },
   {
-    icon: "/images/22.svg",
+    icon: "/images/22.webp",
     text: "We tailor a strategy for Product listings, competitors data, and Amazon ads, aligning with brand goals like the buyer journey, awareness, and sales growth, aiming for effective results",
   },
   {
-    icon: "/images/23.svg",
+    icon: "/images/23.webp",
     text: "Post-strategy finalization, we kickstart account build-out, focusing on the lower end of the sales funnel and seizing missed opportunities for optimal results.",
   },
   {
-    icon: "/images/24.svg",
+    icon: "/images/24.webp",
     text: "Once the account is fully prepared for scaling, our focus shifts to optimizing, crafting new campaign strategies, and exploring expansion opportunities.",
   },
 ];
@@ -56,7 +56,7 @@ const Approach = () => {
           >
             <div>
               {" "}
-              <Image src="/images/17.svg" alt="" width={500} height={700} />
+              <Image src="/images/17.webp" alt="" width={500} height={700} />
             </div>
           </motion.div>
         </div>
@@ -74,7 +74,7 @@ const Approach = () => {
                 className="flex items-center justify-center  gap-5 flex-row font-bold relative "
               >
                 <div className="absolute -left-6">
-                  <Image src="/images/20.svg" alt="" height={50} width={50} />
+                  <Image src="/images/20.webp" alt="" height={50} width={50} />
                 </div>{" "}
                 <div className="  rounded-full flex items-center justify-center ml-10">
                   {" "}

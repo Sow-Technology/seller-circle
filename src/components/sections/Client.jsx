@@ -3,22 +3,22 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 const clientLogos = [
-  "/images/51.svg",
-  "/images/52.svg",
-  "/images/53.svg",
-  "/images/54.svg",
-  "/images/55.svg",
-  "/images/56.svg",
-  "/images/57.svg",
-  "/images/58.svg",
-  "/images/51.svg",
-  "/images/52.svg",
-  "/images/53.svg",
-  "/images/54.svg",
-  "/images/55.svg",
-  "/images/56.svg",
-  "/images/57.svg",
-  "/images/58.svg",
+  "/images/51.webp",
+  "/images/52.webp",
+  "/images/53.webp",
+  "/images/54.webp",
+  "/images/55.webp",
+  "/images/56.webp",
+  "/images/57.webp",
+  "/images/58.webp",
+  "/images/51.webp",
+  "/images/52.webp",
+  "/images/53.webp",
+  "/images/54.webp",
+  "/images/55.webp",
+  "/images/56.webp",
+  "/images/57.webp",
+  "/images/58.webp",
 ];
 const Client = () => {
   return (

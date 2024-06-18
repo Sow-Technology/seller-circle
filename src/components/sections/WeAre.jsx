@@ -3,11 +3,11 @@ import React from "react";
 import Image from "next/image";
 import Marquee from "../ui/marquee";
 const marqueeItem = [
-  "/images/3.svg",
-  "/images/4.svg",
-  "/images/5.svg",
-  "/images/6.svg",
-  "/images/7.svg",
+  "/images/3.webp",
+  "/images/4.webp",
+  "/images/5.webp",
+  "/images/6.webp",
+  "/images/7.webp",
 ];
 import { Antonio } from "next/font/google";
 import { motion } from "framer-motion";

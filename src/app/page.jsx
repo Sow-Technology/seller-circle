@@ -31,7 +31,7 @@ const Home = () => {
       <div className="relative my-10">
         <Image
           height={2000}
-          src="/images/weare.jpg"
+          src="/images/weare.webp"
           alt="background"
           className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20"
           width={2000}
@@ -41,7 +41,7 @@ const Home = () => {
       <div className="relative my-10">
         <Image
           height={3000}
-          src="/images/bg2.svg"
+          src="/images/bg2.webp"
           alt="background"
           className="absolute inset-0 mix-blend-multiply -z-10 -mt-20"
           width={2000}
@@ -53,7 +53,7 @@ const Home = () => {
       <div className="relative my-10">
         <Image
           height={2000}
-          src="/images/bg2.svg"
+          src="/images/bg2.webp"
           alt="background"
           className="absolute inset-0 mix-blend-multiply -z-10 -mt-20"
           width={2000}
