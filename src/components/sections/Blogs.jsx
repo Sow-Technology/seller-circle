@@ -9,11 +9,11 @@ const Blogs = () => {
       <BlogCard data={blogs[0]} />
       <BlogCard3 data={blogs[0]} />
       <BlogCard2 data={blogs[0]} />
-      <div className="flex flex-row">
+      <div className="flex flex-row flex-wrap">
         {" "}
         <BlogCard data={blogs[0]} /> <BlogCard data={blogs[0]} />
       </div>
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-3 flex-wrap">
         {" "}
         <BlogCard2 data={blogs[0]} /> <BlogCard2 data={blogs[0]} />
         <BlogCard2 data={blogs[0]} />
