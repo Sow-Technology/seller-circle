@@ -3,22 +3,22 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 const clientLogos = [
-  "/images/51.webp",
-  "/images/52.webp",
-  "/images/53.webp",
-  "/images/54.webp",
-  "/images/55.webp",
-  "/images/56.webp",
-  "/images/57.webp",
-  "/images/58.webp",
-  "/images/51.webp",
-  "/images/52.webp",
-  "/images/53.webp",
-  "/images/54.webp",
-  "/images/55.webp",
-  "/images/56.webp",
-  "/images/57.webp",
-  "/images/58.webp",
+  "/images/b1.png",
+  "/images/b2.png",
+  "/images/b3.png",
+  "/images/b4.png",
+  "/images/b5.png",
+  "/images/b6.png",
+  "/images/b7.png",
+  "/images/b8.png",
+  "/images/b9.png",
+  "/images/b10.png",
+  "/images/b11.png",
+  "/images/b12.png",
+  "/images/b13.png",
+  "/images/b14.png",
+  "/images/b15.png",
+  "/images/b16.png",
 ];
 const Client = () => {
   return (
@@ -40,6 +40,7 @@ const Client = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 * index }}
             key={index}
+            className="p-5"
           >
             <Image
               src={item}
@@ -47,7 +48,9 @@ const Client = () => {
               height={130}
               alt=""
               loading="lazy"
-              className="object-contain lg:w-[280px] lg:h-[130px] w-[140px] h-[70px]"
+              className={`object-contain lg:w-[250px] lg:h-[130px] w-[140px] h-[70px] grayscale ${
+                index == 3 && "invert"
+              }`}
             />
           </motion.div>
         ))}

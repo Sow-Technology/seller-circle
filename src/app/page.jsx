@@ -88,10 +88,10 @@ const Home = () => {
       </div>
       <LazyLoadComponent component={Retail} />
       <LazyLoadComponent component={Works} />
-      <LazyLoadComponent component={Blogs} />
       <LazyLoadComponent component={Client} />
       <LazyLoadComponent component={Customers} />
       <LazyLoadComponent component={Creative} />
+      <LazyLoadComponent component={Blogs} />
       <Footer />
     </div>
   );

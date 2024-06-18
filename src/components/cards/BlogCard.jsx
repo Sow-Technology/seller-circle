@@ -14,15 +14,15 @@ const BlogCard = ({ data }) => {
         </time>
       </div>
 
-      <div className="hidden sm:block sm:basis-56 object-contain">
+      <div className="hidden sm:block sm:basis-56 object-cover">
         <img
           alt=""
           src={data.imageUrl}
-          className="aspect-square h-full w-full object-contain"
+          className="aspect-square h-full w-full object-cover"
         />
       </div>
 
-      <div className="flex flex-1 flex-col justify-center">
+      <div className="flex flex-1 flex-col justify-beteen">
         <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
           <a href="#">
             <h3 className="font-bold uppercase text-gray-900">{data.title}</h3>
@@ -36,7 +36,7 @@ const BlogCard = ({ data }) => {
         <div className="sm:flex sm:items-end sm:justify-end">
           <a
             href="#"
-            className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+            className="block bg-background px-5 py-3 text-center text-xs font-bold uppercase text-slate-100 transition"
           >
             Read Blog
           </a>
