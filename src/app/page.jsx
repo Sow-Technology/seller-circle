@@ -32,6 +32,10 @@ const WeAre = dynamic(() => import("@/components/sections/WeAre"), {
   ssr: false,
 });
 const Why = dynamic(() => import("@/components/sections/Why"), { ssr: false });
+const Blogs = dynamic(() => import("@/components/sections/Blogs"), {
+  ssr: false,
+});
+
 const Works = dynamic(() => import("@/components/sections/Works"), {
   ssr: false,
 });
@@ -84,6 +88,7 @@ const Home = () => {
       </div>
       <LazyLoadComponent component={Retail} />
       <LazyLoadComponent component={Works} />
+      <LazyLoadComponent component={Blogs} />
       <LazyLoadComponent component={Client} />
       <LazyLoadComponent component={Customers} />
       <LazyLoadComponent component={Creative} />
