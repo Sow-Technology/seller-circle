@@ -1,18 +1,40 @@
-import Footer from "@/components/Footer";
+"use client";
+import LazyLoadComponent from "@/components/LazyLoadComoponent";
 import Navbar from "@/components/Navbar";
-import Approach from "@/components/sections/Approach";
-import Client from "@/components/sections/Client";
-import Creative from "@/components/sections/Creative";
-import Customers from "@/components/sections/Customers";
-import Growth from "@/components/sections/Growth";
 import Hero from "@/components/sections/Hero";
-import Retail from "@/components/sections/Retail";
-import Strategies from "@/components/sections/Strategies";
-import WeAre from "@/components/sections/WeAre";
-import Why from "@/components/sections/Why";
-import Works from "@/components/sections/Works";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import React from "react";
+
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
+const Approach = dynamic(() => import("@/components/sections/Approach"), {
+  ssr: false,
+});
+const Client = dynamic(() => import("@/components/sections/Client"), {
+  ssr: false,
+});
+const Creative = dynamic(() => import("@/components/sections/Creative"), {
+  ssr: false,
+});
+const Customers = dynamic(() => import("@/components/sections/Customers"), {
+  ssr: false,
+});
+const Growth = dynamic(() => import("@/components/sections/Growth"), {
+  ssr: false,
+});
+const Retail = dynamic(() => import("@/components/sections/Retail"), {
+  ssr: false,
+});
+const Strategies = dynamic(() => import("@/components/sections/Strategies"), {
+  ssr: false,
+});
+const WeAre = dynamic(() => import("@/components/sections/WeAre"), {
+  ssr: false,
+});
+const Why = dynamic(() => import("@/components/sections/Why"), { ssr: false });
+const Works = dynamic(() => import("@/components/sections/Works"), {
+  ssr: false,
+});
 
 const Home = () => {
   return (
@@ -36,7 +58,7 @@ const Home = () => {
           className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20"
           width={2000}
         />
-        <WeAre />
+        <LazyLoadComponent component={WeAre} />
       </div>
       <div className="relative my-10">
         <Image
@@ -46,10 +68,10 @@ const Home = () => {
           className="absolute inset-0 mix-blend-multiply -z-10 -mt-20"
           width={2000}
         />
-        <Growth />
+        <LazyLoadComponent component={Growth} />
       </div>
-      <Approach />
-      <Strategies />
+      <LazyLoadComponent component={Approach} />
+      <LazyLoadComponent component={Strategies} />
       <div className="relative my-10">
         <Image
           height={2000}
@@ -58,13 +80,13 @@ const Home = () => {
           className="absolute inset-0 mix-blend-multiply -z-10 -mt-20"
           width={2000}
         />
-        <Why />
+        <LazyLoadComponent component={Why} />
       </div>
-      <Retail />
-      <Works />
-      <Client />
-      <Customers />
-      <Creative />
+      <LazyLoadComponent component={Retail} />
+      <LazyLoadComponent component={Works} />
+      <LazyLoadComponent component={Client} />
+      <LazyLoadComponent component={Customers} />
+      <LazyLoadComponent component={Creative} />
       <Footer />
     </div>
   );
