@@ -15,8 +15,8 @@ const Why = () => {
         Why <span className="text-[#039BE4]">Seller circle? </span>
       </motion.h2>
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 100 }}
+        initial={{ y: 50, opacity: 0, scale: 0.5 }}
+        whileInView={{ y: 0, opacity: 100, scale: 1 }}
         transition={{ ease: easeIn, delay: 1 }}
         viewport={{ once: true }}
         className="lg:p-20 !pt-2 p-8 flex items-center justify-center"

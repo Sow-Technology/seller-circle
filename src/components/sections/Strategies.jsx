@@ -86,7 +86,7 @@ const Strategies = () => {
                 }`}
               >
                 <p
-                  className={`max-w-[380px] text-justify mt-3 ${
+                  className={`max-w-[380px] text-left mt-3 ${
                     hoverIndex == index ? "h-auto" : "h-[100px] "
                   }`}
                 >
