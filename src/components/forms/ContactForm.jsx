@@ -45,24 +45,24 @@ const formSchema = z.object({
       message: "Invalid phone number",
     })
     .refine(isValidPhoneNumber, { message: "Invalid phone number" }),
-  brandName: z
-    .string()
-    .min(2, {
-      message: "Please enter at least 2 characters",
-    })
-    .max(50, {
-      message: "Please enter at msost 50 characters",
-    }),
-  service: z.string().min(2, {
-    message: "Please select a service.",
-  }),
-  service2: z.string().min(2, {
-    message: "Please select a service.",
-  }),
+  // brandName: z
+  //   .string()
+  //   .min(2, {
+  //     message: "Please enter at least 2 characters",
+  //   })
+  //   .max(50, {
+  //     message: "Please enter at msost 50 characters",
+  //   }),
+  // service: z.string().min(2, {
+  //   message: "Please select a service.",
+  // }),
+  // service2: z.string().min(2, {
+  //   message: "Please select a service.",
+  // }),
   message: z.string().optional(),
 });
 
-const Audit = () => {
+const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -70,9 +70,9 @@ const Audit = () => {
       fullName: "",
       workEmail: "",
       phoneNumber: "",
-      brandName: "",
-      service: "",
-      service2: "",
+      // brandName: "",
+      // service: "",
+      // service2: "",
       message: "",
     },
   });
@@ -83,9 +83,9 @@ const Audit = () => {
         fullName: values.fullName,
         workEmail: values.workEmail,
         phoneNumber: values.phoneNumber,
-        brandName: values.brandName,
-        service: values.service,
-        service2: values.service2,
+        // brandName: values.brandName,
+        // service: values.service,
+        // service2: values.service2,
         message: values.message,
       });
       toast.success("We'll reach out to you soon!");
@@ -101,7 +101,7 @@ const Audit = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-5 z-40 relative"
+          className="space-y-5 z-[39] relative"
         >
           <FormField
             control={form.control}
@@ -144,7 +144,7 @@ const Audit = () => {
               </FormItem>
             )}
           />
-          <div className="flex flex-row flex-wrap gap-5">
+          {/* <div className="flex flex-row flex-wrap gap-5">
             <div className="min-w-[150px] lg:max-w-[50%]">
               {" "}
               <FormField
@@ -220,7 +220,7 @@ const Audit = () => {
                 )}
               />
             </div>
-          </div>
+          </div> */}
           <FormField
             control={form.control}
             name="message"
@@ -238,7 +238,7 @@ const Audit = () => {
             )}
           />
           <SendBtn type="submit" disabled={isSubmitting}>
-            LETS AUDIT
+            SEND
           </SendBtn>
         </form>
       </Form>
@@ -247,4 +247,4 @@ const Audit = () => {
   );
 };
 
-export default Audit;
+export default ContactForm;

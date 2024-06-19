@@ -48,7 +48,7 @@ const Navbar = () => {
   }, [y]);
   return (
     <>
-      <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max">
+      <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max relative z-[500]">
         <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between text-sm ">
           <div className="text-white flex gap-5 items-center justify-center">
             {/* <div className="text-sm">About Us</div>
@@ -82,7 +82,10 @@ const Navbar = () => {
           </div>
           <div className="flex gap-5 items-center">
             <DesktopNav />
-            <Button variant="cta">LET&#39;S TALK</Button>
+            <Link href="/contact">
+              {" "}
+              <Button variant="cta">LET&#39;S TALK</Button>
+            </Link>
             <MobileNav />
           </div>
         </div>
@@ -95,7 +98,10 @@ const Navbar = () => {
             </div>
             <div className="flex gap-5 items-center">
               <SecDesktopNav />
-              <Button variant="cta">LET&#39;S TALK</Button>
+              <Link href="/contact">
+                {" "}
+                <Button variant="cta">LET&#39;S TALK</Button>
+              </Link>{" "}
               <MobileNav className="invert" />
             </div>
           </div>
