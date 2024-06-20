@@ -46,7 +46,7 @@ const Home = () => {
       <div className="relative">
         <Image
           height={2000}
-          src="/images/bg1.png"
+          src="/images/bg1.webp"
           alt="background"
           className="absolute inset-0 mix-blend-multiply opacity-10"
           width={2000}
