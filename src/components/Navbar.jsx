@@ -123,15 +123,31 @@ const NavItems = [
     name: "Service",
     subItems: [
       {
-        name: "Service 1",
+        name: "Training",
         link: "#",
       },
       {
-        name: "Service 2",
+        name: "Cataloging",
         link: "#",
       },
       {
-        name: "Service 3",
+        name: "Advertising Management",
+        link: "#",
+      },
+      {
+        name: "Account Management",
+        link: "#",
+      },
+      {
+        name: "EBC",
+        link: "#",
+      },
+      {
+        name: "Brand Store Creation",
+        link: "#",
+      },
+      {
+        name: "Seller Reinstatement Services",
         link: "#",
       },
     ],
@@ -252,14 +268,14 @@ const MobileNav = ({ className }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="block lg:hidden ">
-      <Sheet>
+    <div className="block lg:hidden relative z-[501]  ">
+      <Sheet className="z-[501] relative">
         <SheetTrigger asChild className={className}>
           <div className="text-white cursor-pointer">
             <MenuIcon />
           </div>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="z-[502]">
           <NavigationMenu>
             <NavigationMenuList className="gap-5 text-white font-bold flex-col text-base uppercase text-left items-start ">
               {NavItems.map((item) =>
