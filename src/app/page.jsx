@@ -62,7 +62,7 @@ const Home = () => {
           className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20"
           width={2000}
         />
-        <LazyLoadComponent component={WeAre} />
+        <WeAre />
       </div>
       <div className="relative my-10">
         <Image
@@ -72,7 +72,7 @@ const Home = () => {
           className="absolute inset-0 mix-blend-multiply -z-10 -mt-20"
           width={2000}
         />
-        <LazyLoadComponent component={Growth} />
+        <Growth />
       </div>
       <LazyLoadComponent component={Approach} />
       <LazyLoadComponent component={Strategies} />

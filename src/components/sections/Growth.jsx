@@ -90,7 +90,7 @@ const Growth = () => {
               </div>
               <div className="flex items-center">
                 VIEW MORE{" "}
-                <Image src="/images/10.webp" height={50} width={50} alt="" />
+                <Image src="/images/10.svg" height={50} width={50} alt="" />
               </div>
             </div>
           </motion.div>

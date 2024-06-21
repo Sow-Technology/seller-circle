@@ -17,7 +17,7 @@ const Blogs = () => {
       </motion.h2>
       <div className="flex flex-row flex-wrap gap-3">
         {blogs.map((blog, index) => (
-          <div className="max-w-[48%]" key={index}>
+          <div className="lg:max-w-[48%] w-full" key={index}>
             {" "}
             <BlogCard data={blog} />
           </div>

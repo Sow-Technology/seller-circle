@@ -26,6 +26,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        dark: "#1b1b1b",
+        light: "#f5f5f5",
+        primaryo: "#B63E96", // 240,86,199
+        primaryDark: "#58E6D9", // 80,230,217
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -93,6 +97,7 @@ module.exports = {
         },
       },
       animation: {
+        "spin-slow": "spin 8s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

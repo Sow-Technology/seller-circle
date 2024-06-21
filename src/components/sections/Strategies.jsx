@@ -13,7 +13,7 @@ const strategiesItem = [
   },
   {
     icon: "/images/32.webp",
-    title: "Culture & Our Experianced Team",
+    title: "Culture & Our Experienced Team",
     description:
       "Our in-house account experts and advertising managers collaborate on advanced strategies, bringing diverse expertise from unique backgrounds and skill sets. We are certified with over 14 advertising certifications and are advanced.",
   },

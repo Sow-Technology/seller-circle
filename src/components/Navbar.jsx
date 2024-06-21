@@ -117,15 +117,11 @@ const NavItems = [
   },
   {
     name: "About us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Service",
     subItems: [
-      {
-        name: "Training",
-        link: "#",
-      },
       {
         name: "Cataloging",
         link: "#",
