@@ -31,16 +31,16 @@ const strategiesItem = [
   },
 ];
 const marqueeItem = [
-  "/images/s1.png",
-  "/images/s2.png",
-  "/images/s3.png",
-  "/images/s4.png",
-  "/images/s5.png",
-  "/images/s6.png",
-  "/images/s7.png",
-  "/images/s8.png",
-  "/images/s9.png",
-  "/images/s10.png",
+  "/images/s1.webp",
+  "/images/s2.webp",
+  "/images/s3.webp",
+  "/images/s4.webp",
+  "/images/s5.webp",
+  "/images/s6.webp",
+  "/images/s7.webp",
+  "/images/s8.webp",
+  "/images/s9.webp",
+  "/images/s10.webp",
 ];
 const Strategies = () => {
   const [hoverIndex, setHoverIndex] = useState(undefined);

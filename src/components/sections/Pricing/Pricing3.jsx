@@ -71,10 +71,46 @@ export default function Pricing3() {
           "LAUNCHED BRAND": checkIcon,
         },
         {
-          name: "Advertising Management",
-          STARTER: checkIcon,
+          name: "Training",
+          STARTER: "Free Training On Dash board",
           "LAUNCHED RESELLER": checkIcon,
           "LAUNCHED BRAND": checkIcon,
+        },
+        {
+          name: "Pricing",
+          STARTER: "Free Pricing Training",
+          "LAUNCHED RESELLER": "Automate Pricing",
+          "LAUNCHED BRAND": checkIcon,
+        },
+        {
+          name: "Support",
+          STARTER: "FBA/ Prime upgrade Support",
+          "LAUNCHED RESELLER": checkIcon,
+          "LAUNCHED BRAND": "AMAZON Brand Registry support",
+        },
+        {
+          name: "Shipping",
+          STARTER: "Shipping Creation help",
+          "LAUNCHED RESELLER": "Shipping Creation help",
+          "LAUNCHED BRAND": "Shipping Creation help",
+        },
+        {
+          name: "Listing optimization",
+          STARTER: minusIcon,
+          "LAUNCHED RESELLER": "upto 100 SKU",
+          "LAUNCHED BRAND": checkIcon,
+        },
+        {
+          name: "Brand Placement and strategy",
+          STARTER: minusIcon,
+          "LAUNCHED RESELLER": minusIcon,
+          "LAUNCHED BRAND": checkIcon,
+        },
+        {
+          name: "Campaign management",
+          STARTER: minusIcon,
+          "LAUNCHED RESELLER": minusIcon,
+          "LAUNCHED BRAND": "Sponsered Brand Camapign management",
         },
       ],
     },
@@ -229,13 +265,13 @@ export default function Pricing3() {
                           </td>
 
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item.SKYLAB}
+                            {item.STARTER}
                           </td>
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item.TRANQUALITY}
+                            {item["LAUNCHED RESELLER"]}
                           </td>
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item.DEXTRE}
+                            {item["LAUNCHED BRAND"]}
                           </td>
 
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden">
@@ -249,6 +285,13 @@ export default function Pricing3() {
               </table>
             ))}
           </div>
+        </div>
+        <div className="ml-10 text-sm my-7">
+          <span className="text-base font-bold text-background">
+            Condition*
+          </span>{" "}
+          - To get Account management for 3 months , The seller must not be
+          Launched account in amazon.
         </div>
       </div>
     </section>

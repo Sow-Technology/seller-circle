@@ -22,7 +22,7 @@ const Why = () => {
         className="lg:p-20 !pt-2 p-8 flex items-center justify-center"
       >
         <Image
-          src="/images/why-us.png"
+          src="/images/why-us.webp"
           alt=""
           width={1280}
           height={1500}
