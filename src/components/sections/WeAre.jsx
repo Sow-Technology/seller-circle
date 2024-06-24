@@ -25,7 +25,7 @@ import Working from "./Working";
 
 const WeAre = () => {
   return (
-    <div className="mx-auto lg:max-w-7xl w-screen max-w-[100%]  flex items-center  flex-col flex-wrap lg:px-20 px-8 relative z-20 overflow-hidden ">
+    <div className="mx-auto  lg:max-w-7xl  max-w-[100%]  flex items-center  flex-col flex-wrap lg:px-20 px-8 relative z-20 overflow-hidden ">
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
@@ -35,7 +35,7 @@ const WeAre = () => {
         &quot;We are one circle of growth,{" "}
         <span className="text-[#039BE4]">succeeding like a flywheel</span>”
       </motion.h2>
-      <div className="my-20 overflow-hidden w-screen lg:max-w-7xl">
+      <div className="my-20 overflow-hidden  lg:max-w-7xl">
         <Marquee
           pauseOnHover
           className="flex items-center justify-center overflow-hidden max-w-6xl mx-auto"

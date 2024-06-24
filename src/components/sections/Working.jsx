@@ -6,7 +6,7 @@ const antonio = Antonio({
 });
 const Working = () => {
   return (
-    <div className="my-20  lg:mr-28">
+    <div className="my-20  ">
       <motion.h3
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}

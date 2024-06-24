@@ -188,7 +188,31 @@ const Page = () => {
           Our <span className="text-[#039BE4]">Story </span>
         </motion.h2>
         <OurStory />
+        <motion.h2
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
+        >
+          why <span className="text-[#039BE4]">seller circle </span>
+        </motion.h2>
+        <Image
+          src="/images/a1.png"
+          alt=""
+          width={1200}
+          height={1200}
+          className="w-auto max-h-[80vh] object-contain"
+        />
         <Working />
+        <motion.h2
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          className="nunito font-extrabold text-2xl lg:text-5xl text-balance max-w-5xl mx-auto text-center my-7 uppercase"
+        >
+          Check what our{" "}
+          <span className="text-[#039BE4]">Clients have to say about us </span>
+        </motion.h2>
         <CustomerMaqrquee />
       </div>
       <Footer />

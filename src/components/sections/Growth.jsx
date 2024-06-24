@@ -99,7 +99,7 @@ const Growth = () => {
           {" "}
           <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">
             {" "}
-            <Image src="/images/10.webp" height={100} width={100} alt="" />
+            <Image src="/images/10.svg" height={100} width={100} alt="" />
           </div>
           VIEW ALL
         </div>

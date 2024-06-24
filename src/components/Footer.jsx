@@ -7,7 +7,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { MdOutlineFacebook } from "react-icons/md";
 import { RiPinterestFill } from "react-icons/ri";
-import "../styles.css";
+// import "../styles.css";
 import Audit from "./forms/Audit";
 const Footer = () => {
   return (

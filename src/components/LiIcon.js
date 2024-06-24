@@ -8,7 +8,7 @@ const LiIcon = ({ reference }) => {
     offset: ["start end", "center center"],
   });
   return (
-    <figure className="absolute left-0 stroke-zinc-900 ">
+    <figure className="absolute left-0 lg:left-1/2  stroke-zinc-900 ">
       <svg
         width="75"
         height="75"
