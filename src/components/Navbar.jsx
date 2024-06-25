@@ -265,31 +265,32 @@ const MobileNav = ({ className }) => {
 
   return (
     <div className="block lg:hidden relative z-[501]  ">
-      <Sheet className="z-[501] relative">
+      <Sheet className="z-[501] relative max-sm:w-screen">
         <SheetTrigger asChild className={className}>
           <div className="text-white cursor-pointer">
             <MenuIcon />
           </div>
         </SheetTrigger>
-        <SheetContent className="z-[502]">
+        <SheetContent className="z-[502] max-sm:w-screen">
           <NavigationMenu>
             <NavigationMenuList className="gap-5 text-white font-bold flex-col text-base uppercase text-left items-start ">
               {NavItems.map((item) =>
                 item.subItems ? (
-                  <NavigationMenuItem key={item.name} className="relative">
+                  <NavigationMenuItem key={item.name} className="relative ">
                     <div
                       onClick={() => setIsActive(!isActive)}
-                      className="text-white font-bold text-base cursor-pointer uppercase flex gap-2"
+                      className="text-white font-bold text-base cursor-pointer uppercase flex gap-2 "
                     >
                       {item.name}
                       <ChevronDown />
                     </div>
                     {/* <NavigationMenuContent className=" font-bold text-base uppercase "> */}
                     {isActive && (
-                      <NavigationMenuList className="grid w-max text-left items-start gap-3 p-4  ">
+                      <NavigationMenuList className="grid w-max text-left items-start  p-2  ">
                         {item.subItems.map((subItem) => (
                           <NavigationMenuItem key={subItem.name}>
                             <ListItem
+                              className="text-balance"
                               href={subItem.link}
                               title={subItem.name}
                             ></ListItem>

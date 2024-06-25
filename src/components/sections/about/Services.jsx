@@ -75,7 +75,7 @@ const Services = () => {
           capture audiences effectively, letting you focus on what matters.
         </span>
       </motion.h2> */}
-      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20 ">
+      <div className="flex flex-row flex-wrap justify-center mb-20 gap-10 relative z-10 mt-20 ">
         {items.map((item, index) => (
           <motion.div
             key={index}
