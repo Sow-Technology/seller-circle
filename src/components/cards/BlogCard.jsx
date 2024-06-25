@@ -38,7 +38,7 @@ const BlogCard = ({ data }) => {
             href="#"
             className="block bg-background px-5 py-3 text-center text-xs font-bold uppercase text-slate-100 transition"
           >
-            Read Blog
+            Read More
           </a>
         </div>
       </div>

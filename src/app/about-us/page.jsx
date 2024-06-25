@@ -5,6 +5,9 @@ import Audit from "@/components/forms/Audit";
 import CustomerMaqrquee from "@/components/sections/CustomerMarquee";
 import OurStory from "@/components/sections/Story";
 import Working from "@/components/sections/Working";
+import Services from "@/components/sections/about/Services";
+import Success from "@/components/sections/about/Success";
+import Why from "@/components/sections/about/Why";
 import Marquee from "@/components/ui/marquee";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { motion } from "framer-motion";
@@ -196,14 +199,25 @@ const Page = () => {
         >
           why <span className="text-[#039BE4]">seller circle </span>
         </motion.h2>
-        <Image
-          src="/images/a1.png"
-          alt=""
-          width={1200}
-          height={1200}
-          className="w-auto max-h-[80vh] object-contain"
-        />
+        <Why />
+        <div className="flex lg:flex-row flex-col justify-center gap-16 items-center">
+          <Image
+            src="/images/a1.png"
+            alt=""
+            width={600}
+            height={600}
+            className="w-auto max-h-[80vh] object-contain"
+          />{" "}
+          <Image
+            src="/images/1.webp"
+            alt=""
+            width={200}
+            height={200}
+            className="self-center"
+          />
+        </div>
         <Working />
+        <Services />
         <motion.h2
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
@@ -214,6 +228,7 @@ const Page = () => {
           <span className="text-[#039BE4]">Clients have to say about us </span>
         </motion.h2>
         <CustomerMaqrquee />
+        <Success />
       </div>
       <Footer />
     </>

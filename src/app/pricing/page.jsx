@@ -79,14 +79,14 @@ const Page = () => {
             <CarouselContent className="flex flex-row bg-white max-w-[200px] mx-auto items-center justify-center">
               {services.map((service, idx) => (
                 <CarouselItem key={idx} className="w-[180px] bg-white p-5">
-                  <BackgroundGradient className="blur-0">
-                    <div
-                      className=" rounded-2xl p-3 w-[180px] text-slate-100 font-bold px-7 cursor-pointer"
-                      onClick={() => setActiveService(service)}
-                    >
-                      {service}
-                    </div>
-                  </BackgroundGradient>
+                  {/* <BackgroundGradient className="blur-0"> */}
+                  <div
+                    className=" rounded-2xl p-3 w-[180px] text-slate-100 font-bold px-7 cursor-pointer"
+                    onClick={() => setActiveService(service)}
+                  >
+                    {service}
+                  </div>
+                  {/* </BackgroundGradient> */}
                 </CarouselItem>
               ))}
             </CarouselContent>
