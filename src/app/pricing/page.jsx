@@ -10,6 +10,8 @@ import { Carousel } from "react-responsive-carousel";
 
 import Pricing2 from "@/components/sections/Pricing/Pricing2";
 import Pricing3 from "@/components/sections/Pricing/Pricing3";
+import Pricing5 from "@/components/sections/Pricing/Pricing5";
+import Pricing4 from "@/components/sections/Pricing/Pricing4";
 
 const services = [
   "EBC A+ Creation",
@@ -104,6 +106,8 @@ const Page = () => {
         {activeService == "EBC A+ Creation" && <Pricing />}
         {activeService == "Brand Stores Creation" && <Pricing2 />}
         {activeService == "Account Management" && <Pricing3 />}
+        {activeService == "Catalouge Service" && <Pricing4 />}
+        {activeService == "Training Service" && <Pricing5 />}
       </div>
       {/* </div> */}
       <Footer />

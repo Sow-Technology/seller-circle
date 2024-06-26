@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-export default function Pricing3() {
+export default function Pricing5() {
   const checkIcon = (
     <svg
       className="w-5 h-5 mx-auto text-zinc-600"
@@ -22,19 +22,14 @@ export default function Pricing3() {
 
   const plans = [
     {
-      name: "STARTER",
-      price: "₹0",
-      per: "For 3 Months",
+      name: "BASIC",
+      price: "₹1499",
+      per: "2 Hours session",
     },
     {
-      name: "LAUNCHED RESELLER",
-      price: "₹5999",
-      per: "Per Month",
-    },
-    {
-      name: "LAUNCHED BRAND",
+      name: "ADVANCED",
       price: "₹4999",
-      per: "+2% Sales Commission. Per Month",
+      per: "5 Hours session split in 3 days",
     },
   ];
 
@@ -59,58 +54,11 @@ export default function Pricing3() {
       ),
       items: [
         {
-          name: "SKU",
-          STARTER: "100 Sku Creation",
-          "LAUNCHED RESELLER": "100 Sku Creation",
-          "LAUNCHED BRAND": "Unlimited SKU creation",
-        },
-        {
-          name: "Advertising Management",
-          STARTER: checkIcon,
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Training",
-          STARTER: "Free Training On Dash board",
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Pricing",
-          STARTER: "Free Pricing Training",
-          "LAUNCHED RESELLER": "Automate Pricing",
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Support",
-          STARTER: "FBA/ Prime upgrade Support",
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": "AMAZON Brand Registry support",
-        },
-        {
-          name: "Shipping",
-          STARTER: "Shipping Creation help",
-          "LAUNCHED RESELLER": "Shipping Creation help",
-          "LAUNCHED BRAND": "Shipping Creation help",
-        },
-        {
-          name: "Listing optimization",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": "upto 100 SKU",
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Brand Placement and strategy",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": minusIcon,
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Campaign management",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": minusIcon,
-          "LAUNCHED BRAND": "Sponsered Brand Camapign management",
+          name: "Details",
+          BASIC:
+            "Learn the basics of selling on Amazon and navigating Seller Central. Service providers offer in-person training on topics such as what you can sell, referral fees and other Amazon charges, and how to set up a seller account, create product listings, manage orders, create reports, manage inventory, and understand payments. Learn best practices for managing customer reviews, and the pros and cons of shipping products yourself versus using Fulfillment by Amazon (FBA). Helpful for newly launched sellers.",
+          DETAILED:
+            "Gain insight on how to improve sales on Amazon. This training module is more beneficial for a seller who has been on Seller Central for two to three months and who wants to learn more advanced tips and tricks to expand business and increase revenue. Service providers offer in-person training on how to optimize pricing automatically to win the Buy Box, run Lightning Deals and other promotions, increase search relevance of product listings by adding keywords in the descriptions, run Sponsored Product campaigns to boost impressions of your listings, and use business reports to design business strategy.",
         },
       ],
     },
@@ -124,7 +72,7 @@ export default function Pricing3() {
         <div className="mt-16">
           <div className="sticky top-12 py-6 border-b bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] bg-white dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl">
             <div className="max-w-screen-xl mx-auto ">
-              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:max-w-[850px]">
+              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:min-w-[800px] lg:max-w-[1050px]">
                 {plans.map((item, idx) => (
                   <li key={idx} className={`space-y-4 w-full  bg-white z-10`}>
                     <div className="flex items-center justify-between bg-white">
@@ -264,17 +212,14 @@ export default function Pricing3() {
                             {item.name}
                           </td>
 
-                          <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item.STARTER}
+                          <td className="text-center w-[250px]  px-6 py-4 whitespace-nowrap hidden lg:max-w-[400px] lg:w-auto  text-balance lg:table-cell">
+                            {item.BASIC}
                           </td>
-                          <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item["LAUNCHED RESELLER"]}
-                          </td>
-                          <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item["LAUNCHED BRAND"]}
+                          <td className="text-center w-[250px] lg:max-w-[400px] lg:w-auto px-6 py-4 whitespace-nowrap hidden  text-balance lg:table-cell">
+                            {item.DETAILED}
                           </td>
 
-                          <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden">
+                          <td className="text-center w-[250px]  px-6 py-4 whitespace-nowrap lg:hidden">
                             {item[selectedPlan]}
                           </td>
                         </tr>
@@ -285,13 +230,6 @@ export default function Pricing3() {
               </table>
             ))}
           </div>
-        </div>
-        <div className="ml-10 text-sm my-7">
-          <span className="text-base font-bold text-background">
-            Condition*
-          </span>{" "}
-          - To get Account management for 3 months , The seller must not be
-          Launched account in amazon.
         </div>
       </div>
     </section>

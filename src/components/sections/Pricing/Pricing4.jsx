@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-export default function Pricing3() {
+export default function Pricing4() {
   const checkIcon = (
     <svg
       className="w-5 h-5 mx-auto text-zinc-600"
@@ -22,19 +22,19 @@ export default function Pricing3() {
 
   const plans = [
     {
-      name: "STARTER",
-      price: "₹0",
-      per: "For 3 Months",
+      name: "BASIC",
+      price: "₹500",
+      per: "Upto 20 SKU's",
     },
     {
-      name: "LAUNCHED RESELLER",
-      price: "₹5999",
-      per: "Per Month",
+      name: "DETAILED",
+      price: "1200",
+      per: "Upto 50 SKU's",
     },
     {
-      name: "LAUNCHED BRAND",
-      price: "₹4999",
-      per: "+2% Sales Commission. Per Month",
+      name: "DETAILED +",
+      price: "₹3000",
+      per: "Upto 100 SKU's",
     },
   ];
 
@@ -59,58 +59,52 @@ export default function Pricing3() {
       ),
       items: [
         {
-          name: "SKU",
-          STARTER: "100 Sku Creation",
-          "LAUNCHED RESELLER": "100 Sku Creation",
-          "LAUNCHED BRAND": "Unlimited SKU creation",
+          name: "Additional SKU",
+          BASIC: "₹25 PER SKU Listing",
+          DETAILED: "₹20 PER SKU Listing",
+          "DETAILED +": "₹17 PER SKU Listing",
         },
         {
-          name: "Advertising Management",
-          STARTER: checkIcon,
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": checkIcon,
+          name: "Keywords",
+          BASIC: checkIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Training",
-          STARTER: "Free Training On Dash board",
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": checkIcon,
+          name: "Image URL Creation",
+          BASIC: checkIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Pricing",
-          STARTER: "Free Pricing Training",
-          "LAUNCHED RESELLER": "Automate Pricing",
-          "LAUNCHED BRAND": checkIcon,
+          name: "GTIN Exemption",
+          BASIC: minusIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Support",
-          STARTER: "FBA/ Prime upgrade Support",
-          "LAUNCHED RESELLER": checkIcon,
-          "LAUNCHED BRAND": "AMAZON Brand Registry support",
+          name: "Categogry Approval",
+          BASIC: minusIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Shipping",
-          STARTER: "Shipping Creation help",
-          "LAUNCHED RESELLER": "Shipping Creation help",
-          "LAUNCHED BRAND": "Shipping Creation help",
+          name: "Post Listing Support",
+          BASIC: minusIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Listing optimization",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": "upto 100 SKU",
-          "LAUNCHED BRAND": checkIcon,
+          name: "Content Creation - With Minimum Info Provided",
+          BASIC: minusIcon,
+          DETAILED: checkIcon,
+          "DETAILED +": checkIcon,
         },
         {
-          name: "Brand Placement and strategy",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": minusIcon,
-          "LAUNCHED BRAND": checkIcon,
-        },
-        {
-          name: "Campaign management",
-          STARTER: minusIcon,
-          "LAUNCHED RESELLER": minusIcon,
-          "LAUNCHED BRAND": "Sponsered Brand Camapign management",
+          name: "Training on Pricing",
+          BASIC: minusIcon,
+          DETAILED: minusIcon,
+          "DETAILED +": checkIcon,
         },
       ],
     },
@@ -124,7 +118,7 @@ export default function Pricing3() {
         <div className="mt-16">
           <div className="sticky top-12 py-6 border-b bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] bg-white dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl">
             <div className="max-w-screen-xl mx-auto ">
-              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:max-w-[850px]">
+              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:max-w-[750px]">
                 {plans.map((item, idx) => (
                   <li key={idx} className={`space-y-4 w-full  bg-white z-10`}>
                     <div className="flex items-center justify-between bg-white">
@@ -265,13 +259,13 @@ export default function Pricing3() {
                           </td>
 
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item.STARTER}
+                            {item.BASIC}
                           </td>
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item["LAUNCHED RESELLER"]}
+                            {item.DETAILED}
                           </td>
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                            {item["LAUNCHED BRAND"]}
+                            {item["DETAILED +"]}
                           </td>
 
                           <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden">
@@ -285,13 +279,6 @@ export default function Pricing3() {
               </table>
             ))}
           </div>
-        </div>
-        <div className="ml-10 text-sm my-7">
-          <span className="text-base font-bold text-background">
-            Condition*
-          </span>{" "}
-          - To get Account management for 3 months , The seller must not be
-          Launched account in amazon.
         </div>
       </div>
     </section>

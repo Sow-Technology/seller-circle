@@ -94,7 +94,7 @@ export default function Pricing2() {
         <div className="mt-16">
           <div className="sticky top-12 py-6 border-b bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] bg-white dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl">
             <div className="max-w-screen-xl mx-auto ">
-              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:max-w-[950px]">
+              <ul className="ml-auto  gap-x-6 px-4 md:px-8 hidden bg-white lg:flex lg:max-w-[850px]">
                 {plans.map((item, idx) => (
                   <li key={idx} className={`space-y-4 w-full  bg-white z-10`}>
                     <div className="flex items-center justify-between bg-white">
