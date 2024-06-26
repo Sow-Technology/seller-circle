@@ -116,8 +116,8 @@ const NavItems = [
     link: "/",
   },
   {
-    name: "About us",
-    link: "/about-us",
+    name: "Company",
+    link: "/company",
   },
   {
     name: "Service",
@@ -149,8 +149,8 @@ const NavItems = [
     ],
   },
   {
-    name: "Careers",
-    link: "/careers",
+    name: "Resources",
+    link: "/resources",
   },
   {
     name: "Pricing",

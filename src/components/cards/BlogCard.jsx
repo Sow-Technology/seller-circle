@@ -5,7 +5,7 @@ const BlogCard = ({ data }) => {
     <article className="flex bg-white transition hover:shadow-xl">
       <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
         <time
-          datetime="2022-10-10"
+          dateTime="2022-10-10"
           className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
         >
           <span>{data.year}</span>

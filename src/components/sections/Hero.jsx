@@ -82,7 +82,7 @@ const Hero = () => {
           className="flex items-center gap-3 text-base font-semibold cursor-pointer"
         >
           <FaPinterest className="text-[#E60023] text-xl" />
-          LinkedIn
+          Pinterest
         </motion.div>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -90,7 +90,15 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ delay: 1 }}
         >
-          <Image src="/images/1.webp" alt="" width={150} height={150} />
+          <Image
+            src="/images/1a.webp"
+            alt=""
+            width={300}
+            placeholder="blur"
+            blurDataURL="/images/1.webp"
+            height={300}
+            className="h-[150px] w-auto"
+          />
         </motion.div>
       </div>
     </div>

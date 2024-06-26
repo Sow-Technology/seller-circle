@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "@/components/LiIcon";
 
-const Details = ({ year, text, t1, t2, t3, t4, id }) => {
+const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
   const ref = useRef(null);
   const visible = id % 2;
   return (
@@ -24,25 +24,30 @@ const Details = ({ year, text, t1, t2, t3, t4, id }) => {
           {year}
         </h3>
 
-        <p
-          className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b]  ${
-            !visible ? " lg:visible" : "lg:invisible"
-          }`}
-        >
-          {text}
-        </p>
-        {t1 && (
-          <ul
-            className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b] ${
+        <div className={`${!visible ? " lg:visible" : "lg:invisible"}`}>
+          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text">
+            {month}
+          </h3>
+          <p
+            className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b]  ${
               !visible ? " lg:visible" : "lg:invisible"
             }`}
           >
-            <li>{t1}</li>
-            <li>{t2}</li>
-            <li>{t3}</li>
-            {t4 && <li>{t4}</li>}
-          </ul>
-        )}
+            {text}
+          </p>
+          {t1 && (
+            <ul
+              className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b] ${
+                !visible ? " lg:visible" : "lg:invisible"
+              }`}
+            >
+              <li>{t1}</li>
+              <li>{t2}</li>
+              <li>{t3}</li>
+              {t4 && <li>{t4}</li>}
+            </ul>
+          )}
+        </div>
       </motion.div>
       <LiIcon reference={ref} />
       <motion.div
@@ -59,25 +64,31 @@ const Details = ({ year, text, t1, t2, t3, t4, id }) => {
           {year}
         </h3>
 
-        <p
-          className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b] ${
-            visible ? " lg:visible" : "lg:invisible"
-          }`}
-        >
-          {text}
-        </p>
-        {t1 && (
-          <ul
-            className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b]  ${
+        <div className={`${visible ? " lg:visible" : "lg:invisible"}`}>
+          {" "}
+          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text">
+            {month}
+          </h3>
+          <p
+            className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b] ${
               visible ? " lg:visible" : "lg:invisible"
             }`}
           >
-            <li>{t1}</li>
-            <li>{t2}</li>
-            <li>{t3}</li>
-            {t4 && <li>{t4}</li>}
-          </ul>
-        )}
+            {text}
+          </p>
+          {t1 && (
+            <ul
+              className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b]  ${
+                visible ? " lg:visible" : "lg:invisible"
+              }`}
+            >
+              <li>{t1}</li>
+              <li>{t2}</li>
+              <li>{t3}</li>
+              {t4 && <li>{t4}</li>}
+            </ul>
+          )}
+        </div>
       </motion.div>
     </li>
   );
@@ -108,62 +119,74 @@ const OurStory = () => {
             id="1"
           />
           <Details
-            year="JANUARY 2017"
+            year="2017"
+            month="JANUARY"
             text="Started Consulting and On-boarding for Amazon India with a Team of 10 Specialists"
             id="2"
           />
           <Details
-            year="SEPTEMBER 2017"
+            year=""
+            month="SEPTEMBER "
             text="Incorporated AJ Digi Media Private Limited"
             id="3"
           />
           <Details
-            year="DECEMBER 2017"
+            year=""
+            month="DECEMBER "
             text="Awarded Rising Star of the Year for Seller Management by Amazon"
             id="4"
           />
           <Details
-            year="JANUARY 2018"
+            year="2018"
+            month="JANUARY"
             text="Expanded Catalogue as a service, Expanded Onboarding Engagement with Amazon with a Team of 20 Specialists"
             id="5"
           />
           <Details
-            year="DECEMBER 2018"
+            year=""
+            month="DECEMBER"
             text="Awarded Most Valuable for Onboarding Amazon India"
             id="6"
           />
           <Details
-            year="JANUARY 2019"
+            year="2019"
+            month="JANUARY"
             text="Awarded Best High-Value Seller Management by Amazon"
             id="7"
           />
           <Details
-            year="August 2019"
+            year=""
+            month="August"
             text="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
             id="8"
           />
           <Details
-            year="September 2019"
+            year=""
+            month="September"
             text="Expanded Operations in 2 States"
             id="9"
           />
           <Details
-            year="March 2020"
+            year="2020"
+            month="March"
             text="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
             id="10"
           />
           <Details
-            year="December 2020"
+            year=""
+            month="December"
             text="Started Creative Design Services"
             id="11"
           />
           <Details
-            year="January 2021"
+            year="2021"
+            month="January"
             text="Expanded Total Team of 40 Trained Specialists"
             id="12"
           />
           <Details
-            year="June 2021"
+            year=""
+            month="June"
             t1="Amazon Gold Partner Award"
             t2="Amazon High GMS Award"
             t3="Amazon Reinstatement Champion Award"

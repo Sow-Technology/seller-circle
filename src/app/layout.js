@@ -2,6 +2,7 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--nsans" });
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export const metadata = {
   title: "Seller Circle",
