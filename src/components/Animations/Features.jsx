@@ -4,7 +4,7 @@ const Features = (props) => (
   <div className="max-h-[600px] w-full m-auto max-w-[600px] object-cover">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="max-h-[600px] max-w-[600px] w-[600px] h-[600px] "
+      className="max-h-[600px] max-w-[600px] mx-auto lg:w-[600px] lg:h-[600px] w-[280px] h-auto "
       width="100%"
       height="100%"
       viewBox="0 0 2000 2200"
