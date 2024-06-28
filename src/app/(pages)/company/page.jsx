@@ -1,4 +1,5 @@
 "use client";
+import Features from "@/components/Animations/Features";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Audit from "@/components/forms/Audit";
@@ -207,13 +208,15 @@ const Page = () => {
         </motion.h2>
         <Why />
         <div className="flex lg:flex-row flex-col justify-center gap-16 items-center">
-          <Image
+          <Features />
+          {/* <Image
             src="/images/a1.png"
             alt=""
             width={600}
             height={600}
             className="w-auto max-h-[80vh] object-contain"
-          />{" "}
+          />{" "} */}
+
           {/* <Image
             src="/images/1.webp"
             alt=""
