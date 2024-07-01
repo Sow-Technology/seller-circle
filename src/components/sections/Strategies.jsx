@@ -114,9 +114,9 @@ const Strategies = () => {
             </div>
           </div>
         ))}
-        <div className="w-[230px] lg:h-[460px] pt-14s py-10 flex flex-col items-center justify-between">
+        <div className="w-[230px] lg:h-[460px] pt-14 py-10 flex flex-col items-center justify-between">
           <Image
-            src="/images/1.webp"
+            src="/images/1.png"
             alt=""
             width={200}
             height={200}

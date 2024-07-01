@@ -5,27 +5,51 @@ import { Button } from "@/components/ui/button";
 import Marquee from "@/components/ui/marquee";
 import { easeIn, easeInOut, motion } from "framer-motion";
 const strategiesItem = [
+  // {
+  //   icon: "/images/34.webp",
+  //   title: "Transparent",
+  //   description: "Providing regular contact and reports to all our clients",
+  // },
+  // {
+  //   icon: "/images/32.webp",
+  //   title: "Experienced",
+  //   description:
+  //     "Growth Managers to Develop Unique Strategy To Grow Brands with To Grow Brands with Amazon PPC & Product Placement",
+  // },
+  // {
+  //   icon: "/images/33.webp",
+  //   title: "Professional",
+  //   description: "Amazon Ad's Certified Experts",
+  // },
+  // {
+  //   icon: "/images/a2.png",
+  //   title: "Ad Technology",
+  //   description:
+  //     "Artificial Intelligence + \nMachine learning +\nAutomation +\n Business Intelligence",
+  // },
   {
-    icon: "/images/34.webp",
-    title: "Transparent",
-    description: "Providing regular contact and reports to all our clients",
+    icon: "/images/31.webp",
+    title: "Data-Driven Insights",
+    description:
+      "At the forefront of our approach is delivering clear and impactful insights on how advertising outcomes align with business objectives. We leverage tech-driven APIs for Amazon advertising, enabling informed real-time decisions.",
   },
   {
     icon: "/images/32.webp",
-    title: "Experienced",
+    title: "Culture & Our Experienced Team",
     description:
-      "Growth Managers to Develop Unique Strategy To Grow Brands with To Grow Brands with Amazon PPC & Product Placement",
+      "Our in-house account experts and advertising managers collaborate on advanced strategies, bringing diverse expertise from unique backgrounds and skill sets. We are certified with over 14 advertising certifications and are advanced.",
   },
   {
     icon: "/images/33.webp",
-    title: "Professional",
-    description: "Amazon Ad's Certified Experts",
+    title: "Speed to Market - Our Experience",
+    description:
+      "With extensive experience across multiple categories and working with over 6000+ brands, we excel in delivering various services swiftly. Our agility in launching and researching products to formulating strategies is our hallmark, powered by our in-house retail tech and our SAAS partner's data-driven approach, ensuring efficiency in reaching the market.",
   },
   {
-    icon: "/images/a2.png",
-    title: "Ad Technology",
+    icon: "/images/34.webp",
+    title: "Transparency\n ",
     description:
-      "Artificial Intelligence + \nMachine learning +\nAutomation +\n Business Intelligence",
+      "Transparency is a cornerstone of our values. You can expect candid feedback that prioritizes your best interests, ensuring no missed opportunities. We provide upfront insights on what's working and what's not, backed by clear data and reporting.",
   },
 ];
 const Why = () => {
@@ -69,6 +93,24 @@ const Why = () => {
                 >
                   {item.description}
                 </p>
+              </div>
+              <div
+                className={`flex items-end justify-end bg-white/40 backdrop-blur-none w-full z-20 relative h-16  ${
+                  hoverIndex == index ? "" : "-mb-5 absolute bottom-10 "
+                } `}
+              >
+                {" "}
+                <Button
+                  variant="cta"
+                  className="mx-auto font-[900]"
+                  onClick={() =>
+                    hoverIndex === index
+                      ? handleHover(undefined)
+                      : handleHover(index)
+                  }
+                >
+                  KNOW MORE
+                </Button>
               </div>
             </div>
           </div>

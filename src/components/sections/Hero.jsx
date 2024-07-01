@@ -12,8 +12,8 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="max-w-7xl mx-auto flex items-center justify-center flex-col lg:px-20 px-8 overflow-hidden">
-      <div className=" flex flex-row flex-wrap items-center justify-center gap-6 py-20 ">
-        <div className="lg:max-w-[42%] flex flex-col items-center  min-w-[300px]">
+      <div className=" flex flex-row flex-wrap items-center justify-center gap-x-6 ">
+        <div className="lg:max-w-[42%] flex flex-col items-center py-5  min-w-[280px] ">
           <video src="/hero.mp4" autoPlay muted loop>
             <source src="/hero.webm" type="video/webm" />
             <source src="/hero.mp4" type="video/mp4" />
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <div className="flex gap-7 flex-row mx-auto mb-16 flex-wrap items-center justify-center">
+      <div className="flex gap-7 flex-row mx-auto flex-wrap items-center justify-center">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
@@ -93,10 +93,8 @@ const Hero = () => {
           <Image
             src="/images/1a.webp"
             alt=""
-            width={300}
-            placeholder="blur"
-            blurDataURL="/images/1.webp"
-            height={300}
+            width={500}
+            height={500}
             className="h-[150px] w-auto"
           />
         </motion.div>

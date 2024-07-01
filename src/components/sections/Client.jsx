@@ -3,22 +3,21 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 const clientLogos = [
-  "/images/b1.png",
-  "/images/b2.png",
-  "/images/b3.png",
-  "/images/b4.png",
-  "/images/b5.png",
-  "/images/b6.png",
-  "/images/b7.png",
-  "/images/b8.png",
-  "/images/b9.png",
-  "/images/b10.png",
-  "/images/b11.png",
-  "/images/b12.png",
-  "/images/b13.png",
-  "/images/b14.png",
-  "/images/b15.png",
-  "/images/b16.png",
+  "/images/brands/1.png",
+  "/images/brands/2.png",
+  "/images/brands/3.png",
+  "/images/brands/4.png",
+  "/images/brands/5.png",
+  "/images/brands/6.png",
+  "/images/brands/7.png",
+  "/images/brands/8.png",
+  "/images/brands/9.png",
+  "/images/brands/10.png",
+  "/images/brands/11.png",
+  "/images/brands/12.png",
+  "/images/brands/13.png",
+  "/images/brands/14.png",
+  "/images/brands/15.png",
 ];
 const Client = () => {
   return (
@@ -48,9 +47,7 @@ const Client = () => {
               height={130}
               alt=""
               loading="lazy"
-              className={`object-contain lg:w-[250px] lg:h-[130px] w-[140px] h-[70px] grayscale ${
-                index == 3 && "invert"
-              }`}
+              className={`object-contain lg:w-[250px] lg:h-[130px] w-[140px] h-[70px]             }`}
             />
           </motion.div>
         ))}

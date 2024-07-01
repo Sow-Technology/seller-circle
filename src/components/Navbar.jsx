@@ -117,41 +117,55 @@ const NavItems = [
   },
   {
     name: "Company",
-    link: "/company",
+    subItems: [
+      {
+        name: "About Us",
+        link: "/about",
+      },
+      {
+        name: "Resources",
+        link: "/resources",
+      },
+    ],
   },
   {
     name: "Service",
     subItems: [
       {
-        name: "Cataloging",
+        name: "Growth & Scale up Management",
         link: "#",
       },
       {
-        name: "Advertising Management",
+        name: "Amazon Advertising Services ",
         link: "#",
       },
       {
-        name: "Account Management",
+        name: "Market Places Advertising ",
         link: "#",
       },
       {
-        name: "EBC",
+        name: "Catalog Creation & Design ",
         link: "#",
       },
       {
-        name: "Brand Store Creation",
+        name: "Amazon Creative Storytelling ",
         link: "#",
       },
       {
-        name: "Seller Reinstatement Services",
+        name: "Strategy And consulting ",
+        link: "#",
+      },
+      {
+        name: "Amazon DSP Services ",
+        link: "#",
+      },
+      {
+        name: "Brand Store & Brand Story creation",
         link: "#",
       },
     ],
   },
-  {
-    name: "Resources",
-    link: "/resources",
-  },
+
   {
     name: "Pricing",
     link: "/pricing",
@@ -168,7 +182,7 @@ const DesktopNav = () => {
                 <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
                   {item.name}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className=" font-bold text-base uppercase ">
+                <NavigationMenuContent className=" font-bold text-sm uppercase ">
                   <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
                     {item.subItems.map((subItem) => (
                       <NavigationMenuItem key={subItem.name}>
@@ -184,7 +198,7 @@ const DesktopNav = () => {
             ) : (
               <NavigationMenuItem
                 key={item.name}
-                className="hover:-translate-y-1 transition-transform ease-in-out hover:drop-shadow-xl"
+                className="hover:-translate-y-1 transition-transform ease-in-out hover:drop-shadow-xl px-4"
               >
                 <NavigationMenuLink href={item.link}>
                   {item.name}
@@ -208,7 +222,7 @@ const SecDesktopNav = () => {
                 <NavigationMenuTrigger className="text-black bg-transparent font-bold text-base uppercase">
                   {item.name}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className=" font-bold text-base uppercase ">
+                <NavigationMenuContent className=" font-bold text-sm uppercase ">
                   <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
                     {item.subItems.map((subItem) => (
                       <NavigationMenuItem key={subItem.name}>
@@ -224,7 +238,7 @@ const SecDesktopNav = () => {
             ) : (
               <NavigationMenuItem
                 key={item.name}
-                className="hover:-translate-y-1 transition-transform ease-in-out hover:drop-shadow-xl"
+                className="hover:-translate-y-1 transition-transform ease-in-out hover:drop-shadow-xl px-4"
               >
                 <NavigationMenuLink href={item.link}>
                   {item.name}
@@ -244,12 +258,12 @@ const ListItem = ({ className, title, children, ...props }, ref) => {
         <a
           // ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
         >
-          <div className="font-bold text-base uppercase">{title}</div>
+          <div className="font-bold text-sm uppercase">{title}</div>
           {/* <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p> */}

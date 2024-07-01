@@ -8,13 +8,13 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
   return (
     <li
       ref={ref}
-      className="my-8 w-[60%] lg:w-full mx-auto flex flex-col lg:flex-row justify-between gap-5 lg:gap-40"
+      className="my-8 w-[60%] lg:w-[80%] mx-auto flex flex-col lg:flex-row justify-between gap-5 lg:gap-2i0"
     >
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
-        className="lg:block hidden text-right -mr-20 ml-10"
+        className="lg:block hidden text-right ml-10"
       >
         <h3
           className={`captalize font-[900] text-5xl max-sm:text-xl text-background text-right  ${
@@ -29,7 +29,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
             {month}
           </h3>
           <p
-            className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b]  ${
+            className={`font-medium w-full text-base md:text-xl mt-5 text-[#303f5b]  ${
               !visible ? " lg:visible" : "lg:invisible"
             }`}
           >
@@ -37,7 +37,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b] ${
+              className={`font-medium w-full text-base md:text-xl mt-5 list-disc text-right text-[#303f5b] ${
                 !visible ? " lg:visible" : "lg:invisible"
               }`}
             >
@@ -70,7 +70,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
             {month}
           </h3>
           <p
-            className={`font-medium w-full text-base md:text-3xl mt-5 text-[#303f5b] ${
+            className={`font-medium w-full text-base md:text-xl mt-5 text-[#303f5b] ${
               visible ? " lg:visible" : "lg:invisible"
             }`}
           >
@@ -78,7 +78,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-3xl mt-5 list-disc text-[#303f5b]  ${
+              className={`font-medium w-full text-base md:text-xl mt-5 list-disc text-[#303f5b]  ${
                 visible ? " lg:visible" : "lg:invisible"
               }`}
             >
@@ -128,7 +128,7 @@ const OurStory = () => {
             year=""
             month="SEPTEMBER "
             text="Incorporated AJ Digi Media Private Limited"
-            id="3"
+            id="2"
           />
           <Details
             year=""
@@ -146,25 +146,25 @@ const OurStory = () => {
             year=""
             month="DECEMBER"
             text="Awarded Most Valuable for Onboarding Amazon India"
-            id="6"
+            id="5"
           />
           <Details
             year="2019"
             month="JANUARY"
             text="Awarded Best High-Value Seller Management by Amazon"
-            id="7"
+            id="6"
           />
           <Details
             year=""
             month="August"
             text="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
-            id="8"
+            id="6"
           />
           <Details
             year=""
             month="September"
             text="Expanded Operations in 2 States"
-            id="9"
+            id="6"
           />
           <Details
             year="2020"
@@ -190,7 +190,7 @@ const OurStory = () => {
             t1="Amazon Gold Partner Award"
             t2="Amazon High GMS Award"
             t3="Amazon Reinstatement Champion Award"
-            id="13"
+            id="12"
           />
           <Details
             year="2022"

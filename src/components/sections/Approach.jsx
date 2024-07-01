@@ -2,24 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-const approchItems = [
-  {
-    icon: "/images/21.webp",
-    text: "We begin with a thorough 30-point account audit to Delivery Methods to pinpoint improvement opportunities and areas of growth",
-  },
-  {
-    icon: "/images/22.webp",
-    text: "We tailor a strategy for Product listings, competitors data, and Amazon ads, aligning with brand goals like the buyer journey, awareness, and sales growth, aiming for effective results",
-  },
-  {
-    icon: "/images/23.webp",
-    text: "Post-strategy finalization, we kickstart account build-out, focusing on the lower end of the sales funnel and seizing missed opportunities for optimal results.",
-  },
-  {
-    icon: "/images/24.webp",
-    text: "Once the account is fully prepared for scaling, our focus shifts to optimizing, crafting new campaign strategies, and exploring expansion opportunities.",
-  },
-];
+import { approchItems } from "@/lib/data";
+
 const Approach = () => {
   return (
     <div className="mx-auto max-w-7xl flex flex-col my-20 lg:px-20 px-8">
@@ -52,11 +36,74 @@ const Approach = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5"
+            className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5 max-sm:max-w-[85vw]"
           >
-            <div>
+            <div className="min-w-[280px] max-w-[600px]  flex flex-row flex-wrap items-center">
               {" "}
-              <Image src="/images/17.webp" alt="" width={500} height={700} />
+              {/* <Image src="/images/17.webp" alt="" width={500} height={700} /> */}
+              <motion.div
+                className="w-[70%] max-sm:max-w-[62%]"
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
+                transition={{ ease: "easeIn", type: "spring", duration: 0.2 }}
+              >
+                <Image
+                  src="/images/approach/a1.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                />
+              </motion.div>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
+                transition={{ ease: "easeIn", type: "spring", duration: 0.4 }}
+                className="w-[30%] sm:max-w-[25%] flex justify-between flex-col sm:py-3 sm:mb-5 gap-2 sm:gap-7 "
+              >
+                <Image
+                  src="/images/approach/a2.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                />
+                <Image
+                  src="/images/approach/a3.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                />
+              </motion.div>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
+                transition={{ ease: "easeIn", type: "spring", duration: 0.6 }}
+                className="w-full flex gap-5 max-sm:gap-2 max-sm:max-w-[85vw]"
+              >
+                <Image
+                  src="/images/approach/a4.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                  className="w-1/4 flex-1 max-sm:max-w-[33%]"
+                />
+                <Image
+                  src="/images/approach/a5.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                  className="w-1/4 flex-1 max-sm:max-w-[33%]"
+                />
+                <Image
+                  src="/images/approach/a6.png"
+                  width={400}
+                  height={400}
+                  alt=""
+                  className="w-1/5"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>
