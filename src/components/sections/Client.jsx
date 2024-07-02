@@ -18,6 +18,22 @@ const clientLogos = [
   "/images/brands/13.png",
   "/images/brands/14.png",
   "/images/brands/15.png",
+  "/images/brands/16.png",
+  "/images/brands/17.png",
+  "/images/brands/18.png",
+  "/images/brands/19.png",
+  "/images/brands/20.png",
+  "/images/brands/21.png",
+  "/images/brands/22.png",
+  "/images/brands/23.png",
+  "/images/brands/24.png",
+  "/images/brands/25.png",
+  "/images/brands/26.png",
+  "/images/brands/27.png",
+  "/images/brands/28.png",
+  "/images/brands/29.png",
+  "/images/brands/30.png",
+  "/images/brands/31.png",
 ];
 const Client = () => {
   return (
@@ -39,7 +55,7 @@ const Client = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 * index }}
             key={index}
-            className="p-5"
+            className="p-5 "
           >
             <Image
               src={item}
@@ -47,7 +63,7 @@ const Client = () => {
               height={130}
               alt=""
               loading="lazy"
-              className={`object-contain lg:w-[250px] lg:h-[130px] w-[140px] h-[70px]             }`}
+              className={`object-contain  lg:w-[250px] lg:h-[130px] w-[140px] h-[70px]             }`}
             />
           </motion.div>
         ))}

@@ -62,47 +62,85 @@ const Approach = () => {
                 transition={{ ease: "easeIn", type: "spring", duration: 0.4 }}
                 className="w-[30%] sm:max-w-[25%] flex justify-between flex-col sm:py-3 sm:mb-5 gap-2 sm:gap-7 "
               >
-                <Image
-                  src="/images/approach/a2.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
-                <Image
-                  src="/images/approach/a3.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
+                <motion.div
+                  className=""
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  viewport={{ once: true }}
+                  transition={{ ease: "easeIn", type: "spring", delay: 0.4 }}
+                >
+                  <Image
+                    src="/images/approach/a2.png"
+                    width={400}
+                    height={400}
+                    alt=""
+                  />{" "}
+                </motion.div>
+                <motion.div
+                  className=""
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  viewport={{ once: true }}
+                  transition={{ ease: "easeIn", type: "spring", delay: 0.8 }}
+                >
+                  <Image
+                    src="/images/approach/a3.png"
+                    width={400}
+                    height={400}
+                    alt=""
+                  />
+                </motion.div>
               </motion.div>
               <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 100 }}
                 viewport={{ once: true }}
                 transition={{ ease: "easeIn", type: "spring", duration: 0.6 }}
-                className="w-full flex gap-5 max-sm:gap-2 max-sm:max-w-[85vw]"
+                className="w-full flex items-center gap-5 max-sm:gap-2 max-sm:max-w-[85vw]"
               >
-                <Image
-                  src="/images/approach/a4.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                  className="w-1/4 flex-1 max-sm:max-w-[33%]"
-                />
-                <Image
-                  src="/images/approach/a5.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                  className="w-1/4 flex-1 max-sm:max-w-[33%]"
-                />
-                <Image
-                  src="/images/approach/a6.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                  className="w-1/5"
-                />
+                <motion.div
+                  className="w-1/4 flex-1 max-sm:max-w-[33%] object-contain"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  viewport={{ once: true }}
+                  transition={{ ease: "easeIn", type: "spring", delay: 0.4 }}
+                >
+                  <Image
+                    src="/images/approach/a4.png"
+                    width={400}
+                    height={400}
+                    alt=""
+                  />
+                </motion.div>
+                <motion.div
+                  className="w-1/4 flex-1 max-sm:max-w-[33%] object-contain"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  viewport={{ once: true }}
+                  transition={{ ease: "easeIn", type: "spring", delay: 0.8 }}
+                >
+                  <Image
+                    src="/images/approach/a5.png"
+                    width={400}
+                    height={400}
+                    alt=""
+                  />
+                </motion.div>
+                <motion.div
+                  className="w-1/5 object-contain"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  viewport={{ once: true }}
+                  transition={{ ease: "easeIn", type: "spring", delay: 1.2 }}
+                >
+                  <Image
+                    src="/images/approach/a6.png"
+                    width={400}
+                    height={400}
+                    alt=""
+                    className="object-contain"
+                  />
+                </motion.div>
               </motion.div>
             </div>
           </motion.div>

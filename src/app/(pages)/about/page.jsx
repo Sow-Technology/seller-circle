@@ -34,19 +34,19 @@ const marqueeItem = [
 ];
 const approchItems = [
   {
-    icon: "/images/21.webp",
+    icon: "images/approach/1.svg",
     text: "Conduct a comprehensive 30-point account audit for improvement opportunities.",
   },
   {
-    icon: "/images/22.webp",
+    icon: "images/approach/2.svg",
     text: "Tailor strategies for product listings, competitor data, and Amazon ads aligned with brand goals.",
   },
   {
-    icon: "/images/23.webp",
+    icon: "images/approach/3.svg",
     text: "Kickstart account build-out focusing on lower funnel optimization.",
   },
   {
-    icon: "/images/24.webp",
+    icon: "images/approach/4.svg",
     text: "Optimize, craft new campaign strategies, and explore expansion opportunities post-account preparation.",
   },
 ];

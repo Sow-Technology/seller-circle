@@ -25,7 +25,7 @@ const strategiesItem = [
   },
   {
     icon: "/images/34.webp",
-    title: "Transparency\n ",
+    title: "Transparency ",
     description:
       "Transparency is a cornerstone of our values. You can expect candid feedback that prioritizes your best interests, ensuring no missed opportunities. We provide upfront insights on what's working and what's not, backed by clear data and reporting.",
   },
@@ -77,7 +77,7 @@ const Strategies = () => {
                 <div className="bg-[#039BE4] -bottom-[47px] h-[140%] w-1/2 absolute -right-[11px] -z-10 rounded-[40px]" />
                 <div className="bg-[#066EA0] -bottom-[42.5px] h-[43px] w-[90px] absolute -right-[5px] -z-10 rounded-[21px]" />
               </div>
-              <h2 className="font-[900] text-xl text-center mt-5 h-[50px]">
+              <h2 className="font-[900] text-xl text-center mt-5 lg:h-[50px] lg:flex items-center justify-center">
                 {item.title}
               </h2>
               <div

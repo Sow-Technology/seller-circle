@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <div className="flex gap-7 flex-row mx-auto flex-wrap items-center justify-center">
+      <div className="flex gap-7 flex-row mx-auto flex-wrap items-center justify-center max-lg:my-4">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}

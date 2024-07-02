@@ -9,6 +9,8 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { RiPinterestFill } from "react-icons/ri";
 // import "../styles.css";
 import Audit from "./forms/Audit";
+import { services } from "@/lib/data";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-background">
@@ -52,21 +54,11 @@ const Footer = () => {
                     <div className="basis-1/2 text-3xl font-bold mb-2">
                       Services
                     </div>
-                    <div className="basis-1/2  text-base mb-2">Training</div>
-                    <div className="basis-1/2  text-base mb-2">Cataloging</div>
-                    <div className="basis-1/2 text-base mb-2">
-                      Advertising Management
-                    </div>
-                    <div className="basis-1/2 text-base mb-2">
-                      Account Management
-                    </div>
-                    <div className="basis-1/2 text-base mb-2">EBC</div>
-                    <div className="basis-1/2 text-base mb-2">
-                      Brand Store Creation
-                    </div>
-                    <div className="basis-1/2 text-base mb-2">
-                      Seller Reinstatement Services
-                    </div>
+                    {services.map((service, idx) => (
+                      <div className="basis-1/2  text-base mb-2" key={idx}>
+                        <Link href={service.link}>{service.name}</Link>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div>

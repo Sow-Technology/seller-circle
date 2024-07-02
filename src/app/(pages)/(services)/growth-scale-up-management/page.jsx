@@ -1,12 +1,77 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import React from "react";
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import AM1 from "@/components/sections/services/AM1";
 import Audit from "@/components/forms/Audit";
 import Image from "next/image";
 import Services from "@/components/sections/about/Services";
 import { approchItems } from "@/lib/data";
+import CTA from "@/components/pages/growth/CTA";
+import Footer from "@/components/Footer";
+const items = [
+  {
+    title: "Strategic Planning",
+    description:
+      "Working with you to create a strategic plan to get your business where you want it to be.",
+  },
+  {
+    title: "Best Practices",
+    description:
+      "Keeping up to date on current best practices for Amazon businesses to grow your revenue and profit numbers.",
+  },
+  {
+    title: "Listing Creation",
+    description:
+      "Creating listings, parent-child variations, virtual bundles, etc.",
+  },
+  {
+    title: "Promotional Strategies",
+    description:
+      "Providing suggestions on coupons, deals, product pricing, new product bundles, and more. We’ll then execute any changes.",
+  },
+  {
+    title: "SEO Optimization",
+    description:
+      "Utilizing SEO to grow your impressions, clicks, sales, and organic reach.",
+  },
+  {
+    title: "Conversion Optimization",
+    description:
+      "Optimizing listings for conversion through both copy and photography updates.",
+  },
+  {
+    title: "Holistic Approach to Scale",
+    description:
+      "Implementing a Flywheel strategy for advertising on Amazon combined with a conversion engine, SEO, and creative tactics to scale up.",
+  },
+  {
+    title: "Data-Driven Strategies",
+    description:
+      "Utilizing insights from business reports and brand analytics to identify top-performing products and drive growth.",
+  },
+  {
+    title: "Advanced Advertising Technologies",
+    description:
+      "Leveraging cutting-edge tools to maximize ROI and reach your target audience effectively.",
+  },
+  {
+    title: "Holistic Approach",
+    description:
+      "Navigating growth challenges and capitalizing on market opportunities with tailored solutions.",
+  },
+  {
+    title: "Collaborative Management",
+    description:
+      "Ensuring no opportunities are missed through a collaborative approach with our in-house team.",
+  },
+  {
+    title: "Transparent Processes",
+    description:
+      "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
+  },
+];
+
 const page = () => {
   return (
     <>
@@ -59,18 +124,36 @@ const page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
+            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
           >
             Explore Our{" "}
             <span className="text-[#039BE4]">
               Growth and Full Service Management{" "}
             </span>
           </motion.h2>
+          <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 my-20 ">
+            {items.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: easeIn }}
+                className="min-w-[280px] max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
+              >
+                <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
+                  {item.title}
+                </h4>
+                <p className="nunito text-xs text-left">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+          <CTA />
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
+            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
           >
             No one-size-fits-all here,{" "}
             <span className="text-[#039BE4]">only tailored strategies.  </span>
@@ -139,6 +222,7 @@ const page = () => {
           <Services />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

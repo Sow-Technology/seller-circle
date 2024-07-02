@@ -35,6 +35,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { services } from "@/lib/data";
 
 const Navbar = () => {
   const [isSecNav, setIsSecNav] = useState(false);
@@ -130,40 +131,7 @@ const NavItems = [
   },
   {
     name: "Service",
-    subItems: [
-      {
-        name: "Growth & Scale up Management",
-        link: "#",
-      },
-      {
-        name: "Amazon Advertising Services ",
-        link: "#",
-      },
-      {
-        name: "Market Places Advertising ",
-        link: "#",
-      },
-      {
-        name: "Catalog Creation & Design ",
-        link: "#",
-      },
-      {
-        name: "Amazon Creative Storytelling ",
-        link: "#",
-      },
-      {
-        name: "Strategy And consulting ",
-        link: "#",
-      },
-      {
-        name: "Amazon DSP Services ",
-        link: "#",
-      },
-      {
-        name: "Brand Store & Brand Story creation",
-        link: "#",
-      },
-    ],
+    subItems: services,
   },
 
   {

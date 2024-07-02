@@ -56,19 +56,53 @@ export const sStories = [
 
 export const approchItems = [
   {
-    icon: "/images/21.webp",
+    icon: "/images/approach/1.svg",
     text: "We begin with a thorough 30-point account audit to Delivery Methods to pinpoint improvement opportunities and areas of growth",
   },
   {
-    icon: "/images/22.webp",
+    icon: "/images/approach/2.svg",
     text: "We tailor a strategy for Product listings, competitors data, and Amazon ads, aligning with brand goals like the buyer journey, awareness, and sales growth, aiming for effective results",
   },
   {
-    icon: "/images/23.webp",
+    icon: "/images/approach/3.svg",
     text: "Post-strategy finalization, we kickstart account build-out, focusing on the lower end of the sales funnel and seizing missed opportunities for optimal results.",
   },
   {
-    icon: "/images/24.webp",
+    icon: "/images/approach/4.svg",
     text: "Once the account is fully prepared for scaling, our focus shifts to optimizing, crafting new campaign strategies, and exploring expansion opportunities.",
+  },
+];
+export const services = [
+  {
+    name: "Growth & Scale up Management",
+    link: "/growth-scale-up-management",
+  },
+  {
+    name: "Amazon Advertising Services ",
+    link: "#",
+  },
+  {
+    name: "Market Places Advertising ",
+    link: "#",
+  },
+  {
+    name: "Catalog Creation & Design ",
+    link: "#",
+  },
+  {
+    name: "Amazon Creative Storytelling ",
+    link: "#",
+  },
+  {
+    name: "Strategy And consulting ",
+    link: "#",
+  },
+  {
+    name: "Amazon DSP Services ",
+    link: "#",
+  },
+  {
+    name: "Brand Store & Brand Story creation",
+    link: "#",
   },
 ];

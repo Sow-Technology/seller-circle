@@ -8,13 +8,13 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
   return (
     <li
       ref={ref}
-      className="my-8 w-[60%] lg:w-[80%] mx-auto flex flex-col lg:flex-row justify-between gap-5 lg:gap-2i0"
+      className="my-8 w-[60%] lg:w-[80%] mx-auto flex flex-col lg:flex-row justify-center  gap-5 "
     >
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
-        className="lg:block hidden text-right ml-10"
+        className="lg:block hidden text-right ml-10   self-end justify-self-end "
       >
         <h3
           className={`captalize font-[900] text-5xl max-sm:text-xl text-background text-right  ${
@@ -25,7 +25,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
         </h3>
 
         <div className={`${!visible ? " lg:visible" : "lg:invisible"}`}>
-          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text">
+          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text-xl">
             {month}
           </h3>
           <p
@@ -54,7 +54,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
-        className="lg:ml-10"
+        className="lg:ml-10 "
       >
         <h3
           className={`captalize font-[900] text-5xl max-sm:text-xl text-background  ${
@@ -66,7 +66,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
 
         <div className={`${visible ? " lg:visible" : "lg:invisible"}`}>
           {" "}
-          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text">
+          <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text-xl">
             {month}
           </h3>
           <p
