@@ -90,6 +90,10 @@ module.exports = {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
+        "marquee-vert": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-10% - var(--gap)))" },
+        },
         "border-beam": {
           "100%": {
             "offset-distance": "100%",
@@ -102,7 +106,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee var(--duration) linear infinite",
+
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        "marquee-vert": "marquee-vertical 1s linear ",
       },
     },
   },

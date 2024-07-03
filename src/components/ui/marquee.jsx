@@ -5,6 +5,7 @@ export default function Marquee({
   reverse,
   pauseOnHover = false,
   children,
+  isBackward = false,
   vertical = false,
   repeat = 4,
   ...props
@@ -29,7 +30,9 @@ export default function Marquee({
             className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
               "animate-marquee flex-row": !vertical,
               "animate-marquee-vertical flex-col": vertical,
+              "animate-marquee-vert": isBackward,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
+              "[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
             })}
           >

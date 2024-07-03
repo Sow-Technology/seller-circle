@@ -1,6 +1,14 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
+import { useRef, useState } from "react";
+import {
+  BiChevronDown,
+  BiChevronUp,
+  BiChevronsUp,
+  BiPause,
+  BiPlay,
+} from "react-icons/bi";
 
 const reviews = [
   {
@@ -58,18 +66,84 @@ const ReviewCard = ({ img, name, username, body }) => {
 };
 
 const CustomerMaqrquee = () => {
+  const [isPaused, setIsPaused] = useState(false);
+  const [isForward, setIsForward] = useState(false);
+  const [isBackward, setIsBackward] = useState(false);
+  const marqueeRef = useRef(null);
+  const secondMarqueeRef = useRef(null);
+  const moveMarquee = (ref, distance) => {
+    if (ref.current) {
+      ref.current.style.transform = `translateY(${distance}px)`;
+    }
+  };
+
+  const handleMoveForward = () => {
+    if (marqueeRef.current) {
+      const currentTransform = marqueeRef.current.style.transform;
+      const currentY = currentTransform
+        ? parseInt(currentTransform.split("(")[1])
+        : 0;
+      moveMarquee(marqueeRef, currentY - 100);
+    }
+
+    if (secondMarqueeRef.current) {
+      const currentTransform = secondMarqueeRef.current.style.transform;
+      const currentY = currentTransform
+        ? parseInt(currentTransform.split("(")[1])
+        : 0;
+      moveMarquee(secondMarqueeRef, currentY - 100);
+    }
+  };
+
+  const handleMoveBackward = () => {
+    if (marqueeRef.current) {
+      const currentTransform = marqueeRef.current.style.transform;
+      const currentY = currentTransform
+        ? parseInt(currentTransform.split("(")[1])
+        : 0;
+      moveMarquee(marqueeRef, currentY + 100);
+    }
+
+    if (secondMarqueeRef.current) {
+      const currentTransform = secondMarqueeRef.current.style.transform;
+      const currentY = currentTransform
+        ? parseInt(currentTransform.split("(")[1])
+        : 0;
+      moveMarquee(secondMarqueeRef, currentY + 100);
+    }
+  };
+
   return (
     <div className="relative flex h-[600px] flex-row items-center justify-center overflow-hidden rounded-lg   sm:px-20 ">
-      <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review, index) => (
-          <ReviewCard key={index} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review, index) => (
-          <ReviewCard key={index} {...review} />
-        ))}
-      </Marquee>
+      <div ref={marqueeRef} className="marquee-wrapper">
+        <Marquee pauseOnHover={isPaused} vertical className="[--duration:20s]">
+          {firstRow.map((review, index) => (
+            <ReviewCard key={index} {...review} />
+          ))}
+        </Marquee>
+      </div>
+      <div ref={secondMarqueeRef} className="marquee-wrapper">
+        <Marquee pauseOnHover={isPaused} vertical className="[--duration:20s]">
+          {secondRow.map((review, index) => (
+            <ReviewCard key={index} {...review} />
+          ))}
+        </Marquee>
+      </div>
+      <div className="p-2 border rounded-xl border-gray-400/50 shadow-md">
+        <div className="text-2xl cursor-pointer" onClick={handleMoveForward}>
+          <BiChevronUp />
+        </div>
+
+        <div
+          className="text-2xl cursor-pointer"
+          onClick={() => setIsPaused(!isPaused)}
+        >
+          {isPaused ? <BiPlay /> : <BiPause />}
+        </div>
+        <div className="text-2xl cursor-pointer" onClick={handleMoveBackward}>
+          <BiChevronDown />
+        </div>
+      </div>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
     </div>
