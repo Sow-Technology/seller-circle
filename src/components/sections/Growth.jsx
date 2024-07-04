@@ -83,7 +83,7 @@ const Growth = () => {
             <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
               {item.title}
             </h4>
-            <p className="nunito text-xs text-justify">{item.description}</p>
+            <p className="nunito text-xs text-left">{item.description}</p>
             <div className="flex items-center justify-between">
               <div>
                 <Image src={item.icon} height={50} width={50} alt="" />
