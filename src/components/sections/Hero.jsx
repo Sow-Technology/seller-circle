@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Socials from "./Socials";
+import Link from "next/link";
 const Hero = () => {
   return (
     <div className="max-w-7xl mx-auto flex items-center justify-center flex-col lg:px-20 px-8 overflow-hidden">
@@ -38,67 +40,17 @@ const Hero = () => {
             holistic approach to scale your brand.
           </p>
           <div className="flex flex-row gap-5 mt-10">
-            <Button variant="cta">Get Started </Button>
-            <Button variant="cta">Our story </Button>
+            <Link href="/contact">
+              {" "}
+              <Button variant="cta">Get Started </Button>
+            </Link>
+            <Link href="/about#ourStory">
+              <Button variant="cta">Our story </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
-      <div className="flex gap-7 flex-row mx-auto flex-wrap items-center justify-center max-lg:my-4">
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-        >
-          <FaLinkedin className="text-[#0762C8] text-xl" />
-          LinkedIn
-        </motion.div>
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-        >
-          <FaInstagram className=" text-xl" />
-          Instagram
-        </motion.div>
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-        >
-          <FaFacebook className="text-[#0762C8] text-xl" />
-          Facebook
-        </motion.div>
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-        >
-          <FaPinterest className="text-[#E60023] text-xl" />
-          Pinterest
-        </motion.div>
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1 }}
-        >
-          <Image
-            src="/images/1a.webp"
-            alt=""
-            width={500}
-            height={500}
-            className="h-[150px] w-auto"
-          />
-        </motion.div>
-      </div>
+      <Socials />
     </div>
   );
 };

@@ -243,7 +243,7 @@ const ListItem = ({ className, title, children, ...props }, ref) => {
 ListItem.displayName = "ListItem";
 
 const MobileNav = ({ className }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(null);
 
   return (
     <div className="block lg:hidden relative z-[501]  ">
@@ -256,18 +256,18 @@ const MobileNav = ({ className }) => {
         <SheetContent className="z-[502] max-sm:w-screen">
           <NavigationMenu>
             <NavigationMenuList className="gap-5 text-white font-bold flex-col text-base uppercase text-left items-start ">
-              {NavItems.map((item) =>
+              {NavItems.map((item, index) =>
                 item.subItems ? (
                   <NavigationMenuItem key={item.name} className="relative ">
                     <div
-                      onClick={() => setIsActive(!isActive)}
+                      onClick={() => setIsActive(index)}
                       className="text-white font-bold text-base cursor-pointer uppercase flex gap-2 "
                     >
                       {item.name}
                       <ChevronDown />
                     </div>
                     {/* <NavigationMenuContent className=" font-bold text-base uppercase "> */}
-                    {isActive && (
+                    {isActive === index && (
                       <NavigationMenuList className="grid w-max text-left items-start  p-2  ">
                         {item.subItems.map((subItem) => (
                           <NavigationMenuItem key={subItem.name}>

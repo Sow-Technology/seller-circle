@@ -103,7 +103,7 @@ const OurStory = () => {
   });
 
   return (
-    <div className="my-10 mx-auto max-w-6xl lg:ml-20 ">
+    <div className="my-10 mx-auto max-w-6xl lg:ml-20 " id="ourStory">
       <div
         ref={ref}
         className="w-full mx-auto relative xs:!w-[130%] md:!w-full lg:w-[90%] md:-ml-[10%]"

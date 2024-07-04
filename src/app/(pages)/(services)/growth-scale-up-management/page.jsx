@@ -9,6 +9,7 @@ import Services from "@/components/sections/about/Services";
 import { approchItems } from "@/lib/data";
 import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
+import Marquee from "@/components/ui/marquee";
 const items = [
   {
     title: "Strategic Planning",
@@ -70,6 +71,23 @@ const items = [
     description:
       "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
   },
+];
+const marqueeItem = [
+  "/images/brands/1.png",
+  "/images/brands/2.png",
+  "/images/brands/3.png",
+  "/images/brands/4.png",
+  "/images/brands/5.png",
+  "/images/brands/6.png",
+  "/images/brands/7.png",
+  "/images/brands/8.png",
+  "/images/brands/9.png",
+  "/images/brands/10.png",
+  "/images/brands/11.png",
+  "/images/brands/12.png",
+  "/images/brands/13.png",
+  "/images/brands/14.png",
+  "/images/brands/15.png",
 ];
 
 const page = () => {
@@ -181,6 +199,7 @@ const page = () => {
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
               </div>
               <div className="flex flex-col items-center justify-center gap-5">
+                {" "}
                 {approchItems.map((item, index) => (
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -197,6 +216,7 @@ const page = () => {
                         width={50}
                       />
                     </div>{" "}
+                    jj
                     <div className="  rounded-full flex items-center justify-center ml-10">
                       {" "}
                       <Image
@@ -219,7 +239,32 @@ const page = () => {
               <Audit />
             </div>
           </div>
-          <Services />
+          <Services slice="1" />
+          <div className="">
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
+            >
+              Brands <span className="text-[#039BE4]">we work with  </span>
+            </motion.h2>
+            <div className="my-10 overflow-hidden w-screen lg:max-w-7xl">
+              <Marquee
+                pauseOnHover
+                className="flex items-center justify-center overflow-hidden max-w-6xl mx-auto"
+              >
+                {marqueeItem.map((item, index) => (
+                  <div
+                    className="max-w-[300px] flex items-center mx-5 "
+                    key={index}
+                  >
+                    <Image src={item} alt="" width={150} height={150} />
+                  </div>
+                ))}
+              </Marquee>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
