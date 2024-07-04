@@ -116,10 +116,7 @@ const Why = () => {
           </div>
         ))}
         <div className=" flex flex-row items-center justify-center gap-2 ml-10 lg:w-[250px] lg:h-[250px]">
-          <div className="text-4xl text-orange-500 font-[900]">20+</div>
-          <div className="text-balance font-bold text-2xl">
-            Amazon Ad Certification
-          </div>
+          <Image src="/images/amazon2.png" alt="" width={500} height={250} />
         </div>
       </div>
     </div>

@@ -79,7 +79,7 @@ export const services = [
   },
   {
     name: "Amazon Advertising Services ",
-    link: "#",
+    link: "/amazon-advertisng-services",
   },
   {
     name: "Market Places Advertising ",
