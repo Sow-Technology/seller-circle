@@ -116,20 +116,31 @@ const CustomerMaqrquee = () => {
   return (
     <div className="relative flex h-[600px] flex-row items-center justify-center overflow-hidden rounded-lg   sm:px-20 ">
       <div ref={marqueeRef} className="marquee-wrapper">
-        <Marquee pauseOnHover={isPaused} vertical className="[--duration:20s]">
+        <Marquee
+          pause={isPaused}
+          pauseOnHover
+          vertical
+          reverse
+          className="[--duration:20s]"
+        >
           {firstRow.map((review, index) => (
             <ReviewCard key={index} {...review} />
           ))}
         </Marquee>
       </div>
       <div ref={secondMarqueeRef} className="marquee-wrapper">
-        <Marquee pauseOnHover={isPaused} vertical className="[--duration:20s]">
+        <Marquee
+          pause={isPaused}
+          vertical
+          pauseOnHover
+          className="[--duration:20s]"
+        >
           {secondRow.map((review, index) => (
             <ReviewCard key={index} {...review} />
           ))}
         </Marquee>
       </div>
-      <div className="p-2 border rounded-xl border-gray-400/50 shadow-md">
+      <div className="p-2 border rounded-xl md:block hidden border-gray-400/50 shadow-md">
         <div className="text-2xl cursor-pointer" onClick={handleMoveForward}>
           <BiChevronUp />
         </div>

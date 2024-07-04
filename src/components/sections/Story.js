@@ -106,11 +106,11 @@ const OurStory = () => {
     <div className="my-10 mx-auto max-w-6xl lg:ml-20 ">
       <div
         ref={ref}
-        className="w-[75%] mx-auto relative xs:!w-[130%] md:!w-full lg:w-[90%] md:-ml-[10%]"
+        className="w-full mx-auto relative xs:!w-[130%] md:!w-full lg:w-[90%] md:-ml-[10%]"
       >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-[34px] top-0 w-[5px] h-full bg-[#272727] rounded-2xl origin-top  max-md:w-[2px] max-md:left-[36px] lg:left-1/2 lg:ml-9 xs:!left-[20px]"
+          className="absolute  top-0 w-[5px] h-full bg-[#272727] rounded-2xl origin-top  max-md:w-[2px] left-[0px] lg:left-1/2 lg:ml-9 xs:!left-[20px]"
         />
         <ul className="w-full flex-col flex items-start justify-between ml-4 xs:ml-2">
           <Details
@@ -170,13 +170,13 @@ const OurStory = () => {
             year="2020"
             month="March"
             text="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
-            id="10"
+            id="9"
           />
           <Details
             year=""
             month="December"
             text="Started Creative Design Services"
-            id="11"
+            id="9"
           />
           <Details
             year="2021"

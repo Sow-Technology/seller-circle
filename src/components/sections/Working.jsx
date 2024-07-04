@@ -6,7 +6,7 @@ const antonio = Antonio({
 });
 const Working = () => {
   return (
-    <div className="my-10  ">
+    <div className="my-10 max-w-7xl ">
       <motion.h3
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
@@ -54,7 +54,7 @@ const Working = () => {
             Seller Served
           </div>
         </div>
-        <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-[40%] lg:min-w-[170px]">
+        <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-[40%] lg:min-w-[15%]">
           <div className={`${antonio.className}`}>
             <span className="font-bold lg:text-7xl text-5xl text-white stroke stroke-black stroke-2 outline-black block">
               20+

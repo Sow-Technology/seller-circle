@@ -4,6 +4,7 @@ export default function Marquee({
   className,
   reverse,
   pauseOnHover = false,
+  pause = false,
   children,
   isBackward = false,
   vertical = false,
@@ -32,7 +33,7 @@ export default function Marquee({
               "animate-marquee-vertical flex-col": vertical,
               "animate-marquee-vert": isBackward,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-play-state:paused]": pauseOnHover,
+              "[animation-play-state:paused]": pause,
               "[animation-direction:reverse]": reverse,
             })}
           >

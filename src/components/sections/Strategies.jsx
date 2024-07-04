@@ -120,9 +120,9 @@ const Strategies = () => {
             alt=""
             width={200}
             height={200}
-            className="self-center"
+            className="self-center lg:mt-32"
           />
-          <Button variant="cta" className="px-9 mt-5">
+          <Button variant="cta" className="px-9 ">
             KNOW MORE
           </Button>
         </div>

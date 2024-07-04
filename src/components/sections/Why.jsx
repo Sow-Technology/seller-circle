@@ -5,13 +5,13 @@ import { easeIn, motion } from "framer-motion";
 import Features from "../Animations/Features";
 const Why = () => {
   return (
-    <div className="mx-auto max-w-7xl flex flex-col">
+    <div className="mx-auto max-w-7xl flex flex-col lg:-mt-20">
       {" "}
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold text-4xl lg:text-5xl uppercase text-center my-7"
+        className="nunito font-extrabold text-4xl lg:text-5xl uppercase text-center "
       >
         Why <span className="text-[#039BE4]">Seller circle? </span>
       </motion.h2>
