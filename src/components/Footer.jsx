@@ -19,11 +19,11 @@ const Footer = () => {
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
           <div className="lg:w-[50%] text-white font-bold flex-row lg:p-5 p-3 flex lg:text-2xl text-xs bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px] gap-2 lg:gap-4">
             <Image
-              src="/images/1.webp"
+              src="/images/1.png"
               alt=""
-              width={180}
-              height={140}
-              className="max-lg:w-[110px] max-lg:h-[80px]"
+              width={500}
+              height={500}
+              className="max-lg:w-[110px] w-[180px] h-[140px] max-lg:h-[80px]"
             />
             Top 1%: A testament to our continued performance.
           </div>
