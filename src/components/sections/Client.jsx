@@ -43,18 +43,18 @@ const Client = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="nunito font-extrabold lg:text-4xl text-2xl  text-left my-14 lg:px-20 px-8 relative"
+        className="nunito font-extrabold lg:text-4xl text-2xl  text-left my-14 lg:px-20 px-8 relative flex"
       >
+        <span className="text-[#272727]  top-[17%] lg:top-[25%] lg:left-[9%] left-[14.5%] sm:left-[7%] ">
+          ON
+        </span>
         <Image
-          src="/images/circle-arrow.svg"
+          src="/images/arrow.gif"
           alt=""
           height={120}
           width={120}
-          className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px] fill-background"
+          className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px] fill-background rotate-180"
         />
-        <span className="text-[#272727] absolute top-[17%] lg:top-[25%] lg:left-[9%] left-[14.5%] sm:left-[7%] ">
-          ON
-        </span>
       </motion.h2>
       <div className="flex flex-wrap gap-5 items-center justify-center">
         {clientLogos.map((item, index) => (
@@ -72,7 +72,7 @@ const Client = () => {
               height={130}
               alt=""
               loading="lazy"
-              className={`object-contain  lg:w-[250px] lg:h-[130px] w-[140px] h-[70px]             }`}
+              className={`object-contain  lg:w-[250px] lg:h-[130px] w-[125px] h-[70px]             }`}
             />
           </motion.div>
         ))}

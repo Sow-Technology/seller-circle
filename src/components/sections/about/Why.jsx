@@ -115,8 +115,14 @@ const Why = () => {
             </div>
           </div>
         ))}
-        <div className=" flex flex-row items-center justify-center gap-2 ml-10 lg:w-[250px] lg:h-[250px]">
-          <Image src="/images/amazon2.png" alt="" width={500} height={250} />
+        <div className=" flex flex-row items-center justify-center gap-2 ml-10 lg:w-[220px] lg:h-[220px]">
+          <Image
+            src="/images/amazon2.png"
+            alt=""
+            width={500}
+            height={500}
+            className="lg:w-[200px] h-auto"
+          />
         </div>
       </div>
     </div>

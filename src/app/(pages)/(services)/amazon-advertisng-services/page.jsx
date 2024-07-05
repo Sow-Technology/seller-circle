@@ -10,6 +10,8 @@ import { approchItems } from "@/lib/data";
 import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
+import CycleCard from "@/components/cards/CycleCard";
+import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
 const items = [
   {
     title: "Strategic Planning",
@@ -89,7 +91,29 @@ const marqueeItem = [
   "/images/brands/14.png",
   "/images/brands/15.png",
 ];
-
+const cycle = [
+  {
+    title: "Looking for Inspiration",
+    description: "The first point of contact for product/brand inspiration.",
+  },
+  {
+    title: "Product/Brand Awareness",
+    description: "Increasing awareness of your product or brand.",
+  },
+  {
+    title: "Improving Purchase Intent",
+    description: "Enhancing the intent of customers to make a purchase.",
+  },
+  {
+    title: "Finding Information",
+    description:
+      "Addressing customer preferences and providing relevant information.",
+  },
+  {
+    title: "Driving Purchase",
+    description: "Encouraging customers to make a purchase.",
+  },
+];
 const page = () => {
   return (
     <>
@@ -98,7 +122,7 @@ const page = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <div className="max-w-7xl mx-auto my-20 z-[39]">
+        <div className="max-w-7xl mx-auto my-20 z-[39] px-5">
           <motion.h3
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
@@ -125,45 +149,72 @@ const page = () => {
             effectively. The product discovery cycle highlights the path toward
             connecting with customers:
           </motion.p>
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-          >
-            Holistic Flywheel Strategy for Amazon Advertising
-          </motion.h2>
-          <motion.p
-            className="mx-auto max-w-4xl text-center"
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-          >
-            We create a holistic Flywheel strategy tailored to your Amazon
-            Advertising needs, taking into account the core value of your
-            product and leveraging data to unlock the Amazon Flywheel.
-          </motion.p>{" "}
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-          >
-            Unlocking the Full Potential of Your Amazon Presence
-          </motion.h2>
-          <motion.p
-            className="mx-auto max-w-4xl text-center"
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-          >
-            Unlock the full potential of your Amazon presence with our targeted
-            advertising campaigns, designed to maximize ROI. We utilize advanced
-            techniques for enhanced visibility and sales while optimizing ad
-            spend. Through our marketing stream and tracking capabilities, we
-            ensure that every dollar spent delivers a meaningful impact, driving
-            measurable results for your brand.
-          </motion.p>
+          <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5  ">
+            {cycle.map((item, idx) => (
+              <CycleCard item={item} index={idx} key={idx} />
+            ))}
+          </div>
+          <div className="my-5">
+            {" "}
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
+            >
+              Holistic Flywheel Strategy for Amazon Advertising
+            </motion.h2>
+            <motion.p
+              className="mx-auto max-w-4xl text-center"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+            >
+              We create a holistic Flywheel strategy tailored to your Amazon
+              Advertising needs, taking into account the core value of your
+              product and leveraging data to unlock the Amazon Flywheel.
+            </motion.p>{" "}
+          </div>
+          <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center">
+            <Image
+              src="/images/1.png"
+              alt=""
+              width={500}
+              height={500}
+              className="w-[250px] h-auto "
+            />
+            <Image
+              src="/images/amazon2.png"
+              alt=""
+              width={500}
+              height={500}
+              className="w-[250px] h-auto "
+            />
+          </div>
+          <StickyScrollCards />
+          <div className="my-20">
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
+            >
+              Unlocking the Full Potential of Your Amazon Presence
+            </motion.h2>
+            <motion.p
+              className="mx-auto max-w-4xl text-center"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+            >
+              Unlock the full potential of your Amazon presence with our
+              targeted advertising campaigns, designed to maximize ROI. We
+              utilize advanced techniques for enhanced visibility and sales
+              while optimizing ad spend. Through our marketing stream and
+              tracking capabilities, we ensure that every dollar spent delivers
+              a meaningful impact, driving measurable results for your brand.
+            </motion.p>
+          </div>
           {/* <AM1 /> */}
           {/* <motion.h2
             initial={{ y: 100, opacity: 0 }}

@@ -118,9 +118,9 @@ const Strategies = () => {
           <Image
             src="/images/1.png"
             alt=""
-            width={200}
-            height={200}
-            className="self-center lg:mt-32"
+            width={500}
+            height={500}
+            className="self-center lg:mt-32 h-48 w-48"
           />
           <Button variant="cta" className="px-9 ">
             KNOW MORE

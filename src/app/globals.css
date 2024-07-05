@@ -38,7 +38,11 @@
 
   
   }
+.no-scrollbar::-webkit-scrollbar{
+scrollbar-width: 0;
+display: none;
 
+}
   @layer base {
     * {
       @apply border-border;

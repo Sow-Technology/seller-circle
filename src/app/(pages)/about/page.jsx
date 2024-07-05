@@ -273,12 +273,10 @@ const Page = () => {
             transition={{ delay: 1 }}
           >
             <Image
-              src="/images/1a.webp"
+              src="/images/1.png"
               alt=""
-              width={300}
-              placeholder="blur"
-              blurDataURL="/images/1.webp"
-              height={300}
+              width={500}
+              height={500}
               className="h-[150px] w-auto"
             />
           </motion.div>
