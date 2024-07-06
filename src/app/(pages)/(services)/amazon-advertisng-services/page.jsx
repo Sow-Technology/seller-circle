@@ -122,7 +122,7 @@ const page = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <div className="max-w-7xl mx-auto my-20 z-[39] px-5">
+        <div className="max-w-7xl mx-auto my-20 z-[39] lg:px-5">
           <motion.h3
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
@@ -192,7 +192,7 @@ const page = () => {
             />
           </div>
           <StickyScrollCards />
-          <div className="my-20">
+          <div className="my-10 p-4">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
@@ -271,7 +271,7 @@ const page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
+            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
           >
             No one-size-fits-all here,{" "}
             <span className="text-[#039BE4]">only tailored strategies.  </span>
@@ -280,7 +280,7 @@ const page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
+            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 px-4"
           >
             At Seller Circle, we specialize in scaling sales for brands on
             Amazon and other marketplaces through a holistic approach and proven
@@ -293,7 +293,7 @@ const page = () => {
             the competitive marketplace. Join us and experience continuous and
             sustainable growth.
           </motion.p>
-          <div className="flex flex-row flex-wrap gap-16 mt-16">
+          <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8">
             <div className="flex flex-row lg:max-w-[45%]">
               <div>
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />

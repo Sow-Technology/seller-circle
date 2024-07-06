@@ -17,9 +17,11 @@ const Services = ({ slice }) => {
         OUR SERVICES
       </motion.h3>
       <div className="flex flex-row flex-wrap justify-center mb-20 gap-10 relative z-10 mt-20 ">
-        {services.slice(slice, services.length).map((item, index) => (
-          <ServiceCard item={item} key={index} />
-        ))}
+        {services
+          .filter((item, idx) => idx + 1 != slice)
+          .map((item, index) => (
+            <ServiceCard item={item} key={index} />
+          ))}
       </div>
     </div>
   );
