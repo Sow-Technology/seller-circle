@@ -29,7 +29,7 @@ const Growth = () => {
           capture audiences effectively, letting you focus on what matters.
         </span>
       </motion.h2>
-      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20 lg:items-start items-center">
+      <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20  lg:items-stretch items-center">
         {services.slice(0, 7).map((item, index) => (
           <ServiceCard item={item} key={index} />
         ))}

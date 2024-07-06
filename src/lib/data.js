@@ -92,35 +92,38 @@ export const services = [
   {
     name: "Market Places Advertising ",
     title: "Market Places Advertising ",
+    link: "market-places-advertising",
     description:
       "Expand your brand's reach across diverse marketplaces using personalized advertising strategies. Amplify your brand presence and customer engagement on top e-commerce platforms, including Walmart, Flipkart, and Quick commerce channels. Our multi-channel advertising solutions ensure holistic market penetration and measurable metrics, empo wering your brand to thrive in competitive market spaces.",
     icon: "/images/13.webp",
-    link: "#",
   },
   {
     name: "Catalog Creation & Design ",
     title: "Catalog Creation & Design ",
+    link: "catalog-creation-design",
     description:
       "Elevate your product listings with captivating catalog designs tailored for marketplace ecommerce platforms. Ensure seamless navigation and an enhanced user experience for shoppers, driving conversions and sales. Incorporate SEO-based titles and details, along with Product Display Page designs featuring rich infographic information. Our expertise extends to marketplace ecommerce catalog creation, optimizing visibility and engagement across multiple platforms.",
     icon: "/images/14.webp",
-    link: "#",
   },
   {
     name: "Amazon Creative Storytelling ",
     title: "Amazon Creative Storytelling ",
+    link: "amazon-creative-storytelling",
     description:
       "Craft compelling brand narratives on Amazon that resonate with your audience. Utilize Brand Story Creation and A+ Design to communicate product USPs effectively, engaging customers through storytelling to showcase your brand's unique value. Our expertise extends to creating great designs that visually tell your brand's story, utilizing the brand store to boost order value and reduce bounce rates. Implement creative content strategies to stand out in the competitive marketplace and drive meaningful engagement with your audience.",
     icon: "/images/15.webp",
+  },
+  {
     title: "Strategy And consulting ",
+    link: "strategy-and-consulting",
     description:
       "Partner with seasoned experts for winning strategies and actionable insights to optimize your Amazon presence and marketing efforts. Drive business growth through informed decision-making and strategic planning, whether you're launching your brand on Amazon or seeking expert guidance for a perfect launch",
     icon: "/images/16.webp",
-    link: "#",
   },
 
   {
     name: "Amazon DSP Services ",
-    link: "#",
+    link: "amazon-dsp-services",
     title: "Amazon DSP Services ",
     description:
       "we go beyond conventional strategies to elevate your Amazon DSP campaigns. Our approach begins with meticulous analysis, ensuring we target the right audience and build precise customer targets. We craft a creative funnel designed for optimal awareness, capturing attention and driving engagement. Engineered for long-term success, our DSP campaigns are structured to deliver sustained results, amplifying your brand's presence and impact on Amazon.",
@@ -128,8 +131,8 @@ export const services = [
   },
   {
     name: "Brand Store & Brand Story creation",
-    link: "#",
     title: "Brand Store & Brand Story creation",
+    link: "brand-store-brand-story-creation",
     description:
       "Craft compelling brand narratives on Amazon that resonate with your audience. Utilize Brand Story Creation and A+ Design to communicate product USPs effectively, engaging customers through storytelling to showcase your brand's unique value. Our expertise extends to creating great designs that visually tell your brand's story, utilizing the brand store to boost order value and reduce bounce rates. Implement creative content strategies to stand out in the competitive marketplace and drive meaningful engagement with your audience.",
     icon: "/images/15.webp",

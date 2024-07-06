@@ -1,6 +1,7 @@
 import React from "react";
 import { easeIn, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 const ServiceCard = ({ item }) => {
   return (
     <motion.div
@@ -18,9 +19,19 @@ const ServiceCard = ({ item }) => {
         <div>
           <Image src={item.icon} height={50} width={50} alt="" />
         </div>
-        <div className="flex items-center">
-          VIEW MORE <Image src="/images/10.svg" height={50} width={50} alt="" />
-        </div>
+        <Link href={item.link}>
+          {" "}
+          <div className="flex items-center hover:gap-5 cursor-pointer group">
+            VIEW MORE{" "}
+            <Image
+              src="/images/10.svg"
+              height={50}
+              width={50}
+              alt=""
+              className="group-hover:-mr-3"
+            />
+          </div>
+        </Link>
       </div>
     </motion.div>
   );

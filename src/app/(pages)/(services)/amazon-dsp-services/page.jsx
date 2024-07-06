@@ -129,7 +129,7 @@ const page = () => {
             viewport={{ once: true }}
             className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
           >
-            Market Places Advertising
+            Amazon DSP Services
           </motion.h3>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}

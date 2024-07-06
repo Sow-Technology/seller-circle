@@ -53,7 +53,7 @@ const Client = () => {
           alt=""
           height={120}
           width={120}
-          className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px] fill-background rotate-180"
+          className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px] fill-background rotate-180 bg-white"
         />
       </motion.h2>
       <div className="flex flex-wrap gap-5 items-center justify-center">
