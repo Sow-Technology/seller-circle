@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Marquee from "../ui/marquee";
 import { easeIn, easeInOut, motion } from "framer-motion";
+import Awards from "./Awards";
 const strategiesItem = [
   {
     icon: "/images/31.webp",
@@ -30,18 +31,7 @@ const strategiesItem = [
       "Transparency is a cornerstone of our values. You can expect candid feedback that prioritizes your best interests, ensuring no missed opportunities. We provide upfront insights on what's working and what's not, backed by clear data and reporting.",
   },
 ];
-const marqueeItem = [
-  "/images/s1.webp",
-  "/images/s2.webp",
-  "/images/s3.webp",
-  "/images/s4.webp",
-  "/images/s5.webp",
-  "/images/s6.webp",
-  "/images/s7.webp",
-  "/images/s8.webp",
-  "/images/s9.webp",
-  "/images/s10.webp",
-];
+
 const Strategies = () => {
   const [hoverIndex, setHoverIndex] = useState(undefined);
   const handleHover = (index) => {
@@ -127,24 +117,7 @@ const Strategies = () => {
           </Button>
         </div>
       </div>
-      <div className="my-20">
-        <Marquee
-          pauseOnHover
-          className="flex items-center justify-center gap-5"
-        >
-          {marqueeItem.map((item, index) => (
-            <div className="max-w-[300px] flex items-center " key={index}>
-              <Image
-                src={item}
-                alt=""
-                loading="lazy"
-                width={300}
-                height={200}
-              />
-            </div>
-          ))}
-        </Marquee>
-      </div>
+      <Awards />
     </div>
   );
 };

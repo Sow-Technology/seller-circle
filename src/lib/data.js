@@ -115,6 +115,7 @@ export const services = [
   },
   {
     title: "Strategy And consulting ",
+    name: "Strategy And consulting ",
     link: "strategy-and-consulting",
     description:
       "Partner with seasoned experts for winning strategies and actionable insights to optimize your Amazon presence and marketing efforts. Drive business growth through informed decision-making and strategic planning, whether you're launching your brand on Amazon or seeking expert guidance for a perfect launch",

@@ -5,23 +5,25 @@ const CTA = () => {
     <section className="relative z-10 overflow-hidden bg-indigo-600 py-16 px-8 mt-40">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-2/3">
             <div className="text-center lg:text-left ">
               <div className="mb-10 lg:mb-0 ">
                 <h1 className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                  Check Our Advertising Inclusion and service offering
+                  Ready to take your Amazon presence to the next level? Get in
+                  touch with our expert consultants today to discuss your goals
+                  and start developing a winning strategy.
                 </h1>
                 <p className="w-full text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed text-white"></p>
               </div>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4 lg:w-1/3">
             <div className="text-center lg:text-right">
               <a
                 className="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
-                href="/amazon-advertisng-services"
+                href="/contact"
               >
-                Visit
+                Contact
               </a>
             </div>
           </div>
@@ -49,7 +51,7 @@ const CTA = () => {
               y2="111"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.520507" stopcolor="white"></stop>
+              <stop offset="0.520507" stopColor="white"></stop>
               <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </linearGradient>
           </defs>

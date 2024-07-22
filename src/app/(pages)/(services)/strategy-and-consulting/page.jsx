@@ -7,73 +7,17 @@ import Audit from "@/components/forms/Audit";
 import Image from "next/image";
 import Services from "@/components/sections/about/Services";
 import { approchItems } from "@/lib/data";
-import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
 import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
-const items = [
-  {
-    title: "Strategic Planning",
-    description:
-      "Working with you to create a strategic plan to get your business where you want it to be.",
-  },
-  {
-    title: "Best Practices",
-    description:
-      "Keeping up to date on current best practices for Amazon businesses to grow your revenue and profit numbers.",
-  },
-  {
-    title: "Listing Creation",
-    description:
-      "Creating listings, parent-child variations, virtual bundles, etc.",
-  },
-  {
-    title: "Promotional Strategies",
-    description:
-      "Providing suggestions on coupons, deals, product pricing, new product bundles, and more. We’ll then execute any changes.",
-  },
-  {
-    title: "SEO Optimization",
-    description:
-      "Utilizing SEO to grow your impressions, clicks, sales, and organic reach.",
-  },
-  {
-    title: "Conversion Optimization",
-    description:
-      "Optimizing listings for conversion through both copy and photography updates.",
-  },
-  {
-    title: "Holistic Approach to Scale",
-    description:
-      "Implementing a Flywheel strategy for advertising on Amazon combined with a conversion engine, SEO, and creative tactics to scale up.",
-  },
-  {
-    title: "Data-Driven Strategies",
-    description:
-      "Utilizing insights from business reports and brand analytics to identify top-performing products and drive growth.",
-  },
-  {
-    title: "Advanced Advertising Technologies",
-    description:
-      "Leveraging cutting-edge tools to maximize ROI and reach your target audience effectively.",
-  },
-  {
-    title: "Holistic Approach",
-    description:
-      "Navigating growth challenges and capitalizing on market opportunities with tailored solutions.",
-  },
-  {
-    title: "Collaborative Management",
-    description:
-      "Ensuring no opportunities are missed through a collaborative approach with our in-house team.",
-  },
-  {
-    title: "Transparent Processes",
-    description:
-      "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
-  },
-];
+import CTA from "@/components/pages/strategy/CTA";
+import Awards from "@/components/sections/Awards";
+import { IoBarChart, IoExtensionPuzzle, IoRocketSharp } from "react-icons/io5";
+import { BiSolidMegaphone } from "react-icons/bi";
+import { BsFillLightbulbFill, BsGlobeCentralSouthAsia } from "react-icons/bs";
+import Why from "@/components/pages/strategy/Why";
+
 const marqueeItem = [
   "/images/brands/1.png",
   "/images/brands/2.png",
@@ -91,27 +35,42 @@ const marqueeItem = [
   "/images/brands/14.png",
   "/images/brands/15.png",
 ];
-const cycle = [
+const Items = [
   {
-    title: "Looking for Inspiration",
-    description: "The first point of contact for product/brand inspiration.",
-  },
-  {
-    title: "Product/Brand Awareness",
-    description: "Increasing awareness of your product or brand.",
-  },
-  {
-    title: "Improving Purchase Intent",
-    description: "Enhancing the intent of customers to make a purchase.",
-  },
-  {
-    title: "Finding Information",
+    title: "Product Launch",
     description:
-      "Addressing customer preferences and providing relevant information.",
+      "Navigate the complexities of launching your product on Amazon with our comprehensive guidance and support.",
+    icon: <IoRocketSharp />,
   },
   {
-    title: "Driving Purchase",
-    description: "Encouraging customers to make a purchase.",
+    title: "Product Market Fit",
+    description:
+      "Identify and target the right market segments to ensure your product resonates with your audience.",
+    icon: <IoExtensionPuzzle />,
+  },
+  {
+    title: "Profitable Scaling",
+    description:
+      "Grow your business sustainably with strategies designed to maximize profitability and minimize risks.",
+    icon: <IoBarChart />,
+  },
+  {
+    title: "Advertising Structure and Strategy",
+    description:
+      "Develop and optimize your advertising campaigns to increase visibility and drive sales effectively.",
+    icon: <BiSolidMegaphone />,
+  },
+  {
+    title: "Creative Strategy",
+    description:
+      "Craft compelling brand narratives and visuals that engage your audience and enhance your brand's presence.",
+    icon: <BsFillLightbulbFill />,
+  },
+  {
+    title: "Global Launch Strategy",
+    description:
+      "Learn about other global marketplaces and ways to successfully launch and grow your brand internationally.",
+    icon: <BsGlobeCentralSouthAsia />,
   },
 ];
 const page = () => {
@@ -137,209 +96,101 @@ const page = () => {
             viewport={{ once: true }}
             className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
           >
-            Engage Shoppers Through the Product Discovery Cycle{" "}
+            “ Strategic Insights for E-Commerce Excellence.”{" "}
           </motion.h2>
-          <motion.p
-            className="mx-auto max-w-4xl text-center"
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-          >
-            Understanding the customer journey is key to engaging with shoppers
-            effectively. The product discovery cycle highlights the path toward
-            connecting with customers:
-          </motion.p>
-          <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5  ">
-            {cycle.map((item, idx) => (
-              <CycleCard item={item} index={idx} key={idx} />
-            ))}
-          </div>
-          <div className="my-5">
-            {" "}
-            <motion.h2
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-            >
-              Holistic Flywheel Strategy for Amazon Advertising
-            </motion.h2>
-            <motion.p
-              className="mx-auto max-w-4xl text-center"
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-            >
-              We create a holistic Flywheel strategy tailored to your Amazon
-              Advertising needs, taking into account the core value of your
-              product and leveraging data to unlock the Amazon Flywheel.
-            </motion.p>{" "}
-          </div>
-          <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center">
-            <Image
-              src="/images/1.png"
-              alt=""
-              width={500}
-              height={500}
-              className="w-[250px] h-auto "
-            />
-            <Image
-              src="/images/amazon2.png"
-              alt=""
-              width={500}
-              height={500}
-              className="w-[250px] h-auto "
-            />
-          </div>
-          <StickyScrollCards />
-          <div className="my-10 p-4">
-            <motion.h2
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-            >
-              Unlocking the Full Potential of Your Amazon Presence
-            </motion.h2>
-            <motion.p
-              className="mx-auto max-w-4xl text-center"
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-            >
-              Unlock the full potential of your Amazon presence with our
-              targeted advertising campaigns, designed to maximize ROI. We
-              utilize advanced techniques for enhanced visibility and sales
-              while optimizing ad spend. Through our marketing stream and
-              tracking capabilities, we ensure that every dollar spent delivers
-              a meaningful impact, driving measurable results for your brand.
-            </motion.p>
-          </div>
-          {/* <AM1 /> */}
-          {/* <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
-          >
-            Level Up Your Brand on Amazon with{" "}
-            <span className="text-[#039BE4]">Full Service Management  </span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
-          >
-            Our comprehensive Amazon Full-Service offering provides a dynamic
-            solution designed to grow or launch your Amazon business. Our expert
-            team utilizes proprietary techniques to free up your time by
-            managing day-to-day Amazon tasks, enhancing listing SEO and
-            conversions, updating product photos, creating high success rate
-            launches, revitalizing low sale products, and more!
-          </motion.p>
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
-          >
-            Explore Our{" "}
-            <span className="text-[#039BE4]">
-              Growth and Full Service Management{" "}
-            </span>
-          </motion.h2>
-          <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 my-20 ">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
+          <div className="">
+            <div className=""></div>
+            <div className="">
+              {" "}
+              <motion.h2
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 100 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, ease: easeIn }}
-                className="min-w-[280px] max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
+                className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
               >
-                <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
-                  {item.title}
-                </h4>
-                <p className="nunito text-xs text-left">{item.description}</p>
-              </motion.div>
-            ))}
+                Partner with{" "}
+                <span className="text-[#039BE4]">
+                  Seasoned Experts for Winning Strategies
+                </span>
+              </motion.h2>{" "}
+              <motion.p
+                className="mx-auto lg:max-w-4xl max-lg:p-4 text-center"
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                viewport={{ once: true }}
+              >
+                Optimize your Amazon presence and marketing efforts with our
+                expert consulting services. Drive business growth through
+                informed decision-making and strategic planning, whether
+                you&#39;re launching your brand on Amazon or seeking expert
+                guidance for a perfect launch.{" "}
+              </motion.p>
+            </div>
           </div>
-          <CTA /> */}
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
-          >
-            No one-size-fits-all here,{" "}
-            <span className="text-[#039BE4]">only tailored strategies.  </span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 px-4"
-          >
-            At Seller Circle, we specialize in scaling sales for brands on
-            Amazon and other marketplaces through a holistic approach and proven
-            strategies for PPC and DSP. As an advanced Amazon partner with
-            hands-on expertise across all categories, we’ve worked with over
-            1000+ brands, tailoring unique strategies to maximize ROI and impact
-            profits. Our proactive, data-driven team ensures transparent
-            advertising and effective conversion engines. With our tech-enabled,
-            comprehensive services, your brand will not only grow but thrive in
-            the competitive marketplace. Join us and experience continuous and
-            sustainable growth.
-          </motion.p>
-          <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8">
-            <div className="flex flex-row lg:max-w-[45%]">
-              <div>
-                <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
+          <div className="my-8">
+            <motion.h3
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+            >
+              Personalized Expert Advice{" "}
+            </motion.h3>
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
+            >
+              “Tailored Strategies for{" "}
+              <span className="text-[#039BE4]">Maximum Impact.” </span>
+            </motion.h2>{" "}
+            <motion.p
+              className="mx-auto lg:max-w-4xl max-lg:p-4 text-center"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+            >
+              Tailored to your unique e-commerce goals, our consultants work
+              closely with you to develop strategies, optimize your Amazon
+              presence, and address any challenges you’re facing, providing
+              actionable insights to drive your success.
+            </motion.p>
+          </div>{" "}
+          <div className="flex lg:flex-row flex-col relative my-4">
+            <div className="lg:w-1/2 w-full p-5 flex flex-col gap-12 lg:px-10">
+              {Items.map((item, idx) => (
+                <div className="flex text-[#272727] gap-10 " key={idx}>
+                  <div className="w-8 h-8 text-5xl">{item.icon}</div>{" "}
+                  <div>
+                    <h3 className="lg:text-3xl  font-extrabold text-xl">
+                      {item.title}
+                    </h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5">
+              {" "}
+              <div className="sticky top-24 ">
                 {" "}
-                {approchItems.map((item, index) => (
-                  <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 100 }}
-                    viewport={{ once: true }}
-                    key={index}
-                    className="flex items-center justify-center  gap-5 flex-row font-bold relative "
-                  >
-                    <div className="absolute -left-6">
-                      <Image
-                        src="/images/20.webp"
-                        alt=""
-                        height={50}
-                        width={50}
-                      />
-                    </div>{" "}
-                    jj
-                    <div className="  rounded-full flex items-center justify-center ml-10">
-                      {" "}
-                      <Image
-                        src={item.icon}
-                        height={100}
-                        width={100}
-                        alt=""
-                        className="lg:min-h-[100px] min-h-[50px] min-w-[50px] lg:min-w-[100px]"
-                      />
-                    </div>
-                    <div className="h-[70px] w-[70px] flex items-center justify-center text-6xl bg-clip-text from-[#755AFF] to-[#9B88FF] bg-gradient-to-r text-transparent font-extrabold">
-                      {index + 1}
-                    </div>
-                    {item.text}
-                  </motion.div>
-                ))}
+                <motion.h3
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 100 }}
+                  viewport={{ once: true }}
+                  className="font-[900] text-2xl lg:text-4xl text-[#272727] text-center max-w-4xl uppercase mx-auto"
+                >
+                  Navigating Success Together.
+                </motion.h3>
+                <Audit />
               </div>
             </div>
-            <div className="mx-auto">
-              <Audit />
-            </div>
           </div>
-          <Services slice="2" />
+          <Why />
+          <Awards />
+          <CTA />
+          <Services slice="6" />
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}

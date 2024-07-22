@@ -12,68 +12,8 @@ import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
 import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
-const items = [
-  {
-    title: "Strategic Planning",
-    description:
-      "Working with you to create a strategic plan to get your business where you want it to be.",
-  },
-  {
-    title: "Best Practices",
-    description:
-      "Keeping up to date on current best practices for Amazon businesses to grow your revenue and profit numbers.",
-  },
-  {
-    title: "Listing Creation",
-    description:
-      "Creating listings, parent-child variations, virtual bundles, etc.",
-  },
-  {
-    title: "Promotional Strategies",
-    description:
-      "Providing suggestions on coupons, deals, product pricing, new product bundles, and more. We’ll then execute any changes.",
-  },
-  {
-    title: "SEO Optimization",
-    description:
-      "Utilizing SEO to grow your impressions, clicks, sales, and organic reach.",
-  },
-  {
-    title: "Conversion Optimization",
-    description:
-      "Optimizing listings for conversion through both copy and photography updates.",
-  },
-  {
-    title: "Holistic Approach to Scale",
-    description:
-      "Implementing a Flywheel strategy for advertising on Amazon combined with a conversion engine, SEO, and creative tactics to scale up.",
-  },
-  {
-    title: "Data-Driven Strategies",
-    description:
-      "Utilizing insights from business reports and brand analytics to identify top-performing products and drive growth.",
-  },
-  {
-    title: "Advanced Advertising Technologies",
-    description:
-      "Leveraging cutting-edge tools to maximize ROI and reach your target audience effectively.",
-  },
-  {
-    title: "Holistic Approach",
-    description:
-      "Navigating growth challenges and capitalizing on market opportunities with tailored solutions.",
-  },
-  {
-    title: "Collaborative Management",
-    description:
-      "Ensuring no opportunities are missed through a collaborative approach with our in-house team.",
-  },
-  {
-    title: "Transparent Processes",
-    description:
-      "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
-  },
-];
+import Awards from "@/components/sections/Awards";
+
 const marqueeItem = [
   "/images/brands/1.png",
   "/images/brands/2.png",
@@ -339,6 +279,7 @@ const page = () => {
               <Audit />
             </div>
           </div>
+          <Awards />
           <Services slice="2" />
           <div className="">
             <motion.h2
