@@ -138,4 +138,12 @@ export const services = [
       "Craft compelling brand narratives on Amazon that resonate with your audience. Utilize Brand Story Creation and A+ Design to communicate product USPs effectively, engaging customers through storytelling to showcase your brand's unique value. Our expertise extends to creating great designs that visually tell your brand's story, utilizing the brand store to boost order value and reduce bounce rates. Implement creative content strategies to stand out in the competitive marketplace and drive meaningful engagement with your audience.",
     icon: "/images/15.webp",
   },
+  {
+    name: "Global Launch Strategy",
+    title: "Global Launch Strategy",
+    link: "global-launch-strategy",
+    description:
+      "Craft compelling brand narratives on Amazon that resonate with your audience. Utilize Brand Story Creation and A+ Design to communicate product USPs effectively, engaging customers through storytelling to showcase your brand's unique value. Our expertise extends to creating great designs that visually tell your brand's story, utilizing the brand store to boost order value and reduce bounce rates. Implement creative content strategies to stand out in the competitive marketplace and drive meaningful engagement with your audience.",
+    icon: "/images/15.webp",
+  },
 ];

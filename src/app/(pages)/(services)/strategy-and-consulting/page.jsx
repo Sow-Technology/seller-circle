@@ -161,7 +161,9 @@ const page = () => {
             <div className="lg:w-1/2 w-full p-5 flex flex-col gap-12 lg:px-10">
               {Items.map((item, idx) => (
                 <div className="flex text-[#272727] gap-10 " key={idx}>
-                  <div className="w-8 h-8 text-5xl">{item.icon}</div>{" "}
+                  <div className="w-8 h-8 text-5xl text-background">
+                    {item.icon}
+                  </div>{" "}
                   <div>
                     <h3 className="lg:text-3xl  font-extrabold text-xl">
                       {item.title}

@@ -81,7 +81,7 @@ const page = () => {
             viewport={{ once: true }}
             className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
           >
-            Amazon DSP Management
+            Global Launch Strategy
           </motion.h3>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
@@ -89,7 +89,7 @@ const page = () => {
             viewport={{ once: true }}
             className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
           >
-            “Reach New Heights with Amazon DSP”
+            Expand Your Reach with Expert Global Market Launch Support{" "}
           </motion.h2>
           <div className="">
             <div className=""></div>
@@ -101,8 +101,8 @@ const page = () => {
                 viewport={{ once: true }}
                 className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
               >
-                Your Brand in Front of{" "}
-                <span className="text-[#039BE4]">Eager Shoppers </span>
+                Expand Beyond Borders with{" "}
+                <span className="text-[#039BE4]">Confidence </span>
               </motion.h2>{" "}
               <motion.p
                 className="mx-auto lg:max-w-4xl max-lg:p-4 text-center"
@@ -110,18 +110,54 @@ const page = () => {
                 whileInView={{ y: 0, opacity: 100 }}
                 viewport={{ once: true }}
               >
-                Our team generates targeted ad campaigns that connect your
-                products with the right audience, utilizing Amazon&#39;s wealth
-                of shopper data. With our service, you&#39;ll benefit from
-                increased visibility, enhanced brand awareness, and a boost in
-                sales. We handle everything from ad creation to performance
-                analysis, ensuring your campaigns are optimized for maximum
-                impact.
+                Take your brand to the global stage with our comprehensive
+                support for launching products in international marketplaces.
+                Our expertise ensures that you understand the nuances and local
+                compliance requirements, enabling a successful and seamless
+                entry into new markets.
               </motion.p>
             </div>
           </div>
-
-          <div className="flex lg:flex-row-reverse flex-col-reverse relative my-4">
+          <div className="my-8">
+            <motion.h3
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+            >
+              Comprehensive Global Launch Support{" "}
+            </motion.h3>
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
+            >
+              Local Expertise,{" "}
+              <span className="text-[#039BE4]">Global Reach. </span>
+            </motion.h2>{" "}
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
+            >
+              Expand Your Reach with Expert Global Market Launch Support{" "}
+            </motion.h2>
+            <motion.p
+              className="mx-auto lg:max-w-4xl max-lg:p-4 text-center"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+            >
+              We offer personalized support to help you navigate the
+              complexities of launching your product in global marketplaces.
+              From understanding local compliance to crafting region-specific
+              advertising strategies, our team ensures that your global
+              expansion is smooth and successful.
+            </motion.p>
+          </div>{" "}
+          <div className="flex lg:flex-row flex-col relative my-4">
             <div className="lg:w-1/2 w-full p-5 flex flex-col gap-12 lg:px-10">
               {Items.map((item, idx) => (
                 <div className="flex text-[#272727] gap-10 " key={idx}>
