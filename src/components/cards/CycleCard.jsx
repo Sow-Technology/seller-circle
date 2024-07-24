@@ -13,7 +13,7 @@ const CycleCard = ({ item, index }) => {
         delay: 0.2 * index,
         type: "spring",
       }}
-      className="min-w-[280px] lg:max-w-[380px] lg:min-w-[330px]   flex flex-col gap-3 py-5 px-2 rounded-2xl border-[3px] border-background justify-between relative z-10 bg-white flex-1 text-center"
+      className="min-w-[280px] lg:max-w-[380px] lg:min-w-[330px]   flex flex-col gap-3 py-5 px-2 rounded-2xl border-[3px] border-background  relative z-10 bg-white flex-1 text-center"
     >
       <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
         {item.title}
@@ -26,6 +26,14 @@ const CycleCard = ({ item, index }) => {
         <div className="w-full h-1 bg-background" />
       </div>
       <p className="nunito text-xs ">{item.description}</p>
+      {item.l1 && (
+        <>
+          <ul className="list-disc pl-7">
+            <li>{item.l1}</li>
+            {item.l2 && <li>{item.l2}</li>}
+          </ul>
+        </>
+      )}
     </motion.div>
   );
 };
