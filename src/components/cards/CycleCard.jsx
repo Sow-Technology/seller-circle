@@ -25,7 +25,7 @@ const CycleCard = ({ item, index }) => {
         </div>
         <div className="w-full h-1 bg-background" />
       </div>
-      <p className="nunito text-xs ">{item.description}</p>
+      <p className="nunito  ">{item.description}</p>
       {item.l1 && (
         <>
           <ul className="list-disc pl-7">

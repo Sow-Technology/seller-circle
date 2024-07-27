@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Audit from "../forms/Audit";
 import { services } from "@/lib/data";
 import ServiceCard from "../cards/ServiceCard";
+import Services from "./about/Services";
 
 const Growth = () => {
   return (
@@ -30,9 +31,10 @@ const Growth = () => {
         </span>
       </motion.h2>
       <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20  lg:items-stretch items-center">
-        {services.slice(0, 7).map((item, index) => (
+        {/* {services.slice(0, 7).map((item, index) => (
           <ServiceCard item={item} key={index} />
-        ))}
+        ))} */}
+        <Services />
         <div className="flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold">
           {" "}
           <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">

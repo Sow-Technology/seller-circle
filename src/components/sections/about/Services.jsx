@@ -6,7 +6,7 @@ import ServiceCard from "@/components/cards/ServiceCard";
 
 const Services = ({ slice }) => {
   return (
-    <div className="mx-auto my-20 max-w-7xl flex flex-col lg:px-20 px-8 relative z-10">
+    <div className="mx-auto my-20 max-w-7xl flex flex-col  px-8 relative z-10">
       {" "}
       <motion.h3
         initial={{ y: 100, opacity: 0 }}

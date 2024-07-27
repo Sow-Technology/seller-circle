@@ -1,29 +1,20 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import React from "react";
-import { easeIn, motion } from "framer-motion";
-import AM1 from "@/components/sections/services/AM1";
-import Audit from "@/components/forms/Audit";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Services from "@/components/sections/about/Services";
-import { approchItems } from "@/lib/data";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
-import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
 import CTA from "@/components/pages/dsp/CTA";
 import Awards from "@/components/sections/Awards";
-import { IoBarChart, IoExtensionPuzzle, IoRocketSharp } from "react-icons/io5";
-import { BiSolidMegaphone } from "react-icons/bi";
-import { HiDocumentCheck } from "react-icons/hi2";
-import { TbMapPin2 } from "react-icons/tb";
+
 import { GiPalette } from "react-icons/gi";
 import { IoMdAnalytics } from "react-icons/io";
 
-import { BsFillLightbulbFill, BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Why from "@/components/pages/dsp/Why";
-import { AiOutlineTranslation } from "react-icons/ai";
-import { FaFunnelDollar, FaStoreAlt } from "react-icons/fa";
+import { FaFunnelDollar } from "react-icons/fa";
 
 const marqueeItem = [
   "/images/brands/1.png",
@@ -60,6 +51,53 @@ const Items = [
     description:
       "Utilize our AMC insight to gain a competitive edge. We analyze market trends and consumer behavior, providing data-driven recommendations to optimize your ad spend.",
     icon: <IoMdAnalytics />,
+  },
+];
+const data = [
+  {
+    title: "Lifestyle Audiences",
+    description:
+      "Lifestyle audiences are based on shopper’s ongoing online behavior.",
+  },
+  {
+    title: "In-Market Audiences",
+    description:
+      "In-market audiences are built based on someone’s shopping behavior on Amazon – specifically related to the category page they visit.",
+  },
+  {
+    title: "Competitor Purchase Audiences",
+    description:
+      "Competitor purchasing audiences are built based on people who previously purchased a competitor ASIN.",
+  },
+  {
+    title: "Competitor Retargeting Audiences",
+    description:
+      "Competitor retargeting audiences are built based on people who visited a competitor ASIN but didn’t convert.",
+  },
+  {
+    title: "Cross Retargeting Audiences",
+    description:
+      "Cross retargeting audiences target people that viewed one of the seller’s other ASIN but didn’t convert.",
+  },
+  {
+    title: "Pixel Retargeting Audiences",
+    description:
+      "Pixel retargeting audiences are built based on people who visited an external website containing a tracking pixel.",
+  },
+  {
+    title: "ASIN Retargeting Audiences",
+    description:
+      "ASIN retargeting audiences are built based on people who visit your product detail page and don’t convert.",
+  },
+  {
+    title: "Cross Purchase Audiences",
+    description:
+      "Cross purchase audiences target people that previously purchased the seller’s complementary ASIN (e.g., audience purchased a pencil, now target with a pencil sharpener).",
+  },
+  {
+    title: "ASIN Repurchase Audiences",
+    description:
+      "Repurchase audiences target people that previously purchased the seller’s own ASIN.",
   },
 ];
 const cycle = [
@@ -206,26 +244,21 @@ const page = () => {
           >
             Guide Customers Through the Entire Funnel{" "}
           </motion.h3>
-          <div className="flex gap-5 flex-row flex-wrap my-5 items-center justify-center gap-y-10">
-            <div className="p-10 border-background rounded-lg border-[3px] bg-white relative w-auto min-w-[280px] max-w-[400px]">
-              <div className="absolute left-1/2 -translate-x-1/2 -top-6 bg-white font-bold rounded-full p-2 px-4 border-background border-2">
-                1
-              </div>
-              Acquire new customers with tailored audience strategies
-            </div>
-            <div className="p-10 border-background border-[3px] rounded-lg relative  bg-white w-auto min-w-[280px] max-w-[400px]">
-              <div className="absolute left-1/2 -translate-x-1/2 -top-6 bg-white font-bold rounded-full p-2 px-4 border-background border-2">
-                2
-              </div>
-              Use data to retarget mid-funnel shoppers confidently.{" "}
-            </div>
-            <div className="p-10 border-background border-[3px] rounded-lg relative bg-white w-auto min-w-[280px] max-w-[400px]">
-              <div className="absolute left-1/2 -translate-x-1/2 -top-6 bg-white font-bold rounded-full p-2 px-4 border-background border-2">
-                3
-              </div>
-              Retarget hesitant shoppers who’ve added to cart but haven’t
-              purchased.{" "}
-            </div>
+          <motion.h2
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
+          >
+            “Connect with Shoppers Through{" "}
+            <span className="text-[#039BE4]">
+              Tailored Audience Strategies&#34;{" "}
+            </span>
+          </motion.h2>{" "}
+          <div className="flex gap-5 flex-row flex-wrap my-5  justify-center gap-y-10">
+            {data.map((item, index) => (
+              <CycleCard item={item} index={index} key={index} />
+            ))}
           </div>
           <div className="">
             <motion.h3

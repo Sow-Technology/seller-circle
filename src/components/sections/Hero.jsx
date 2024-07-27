@@ -34,10 +34,11 @@ const Hero = () => {
             <span className="text-[#039BE4]">proven holistic approach</span>
           </h2>
           <p className="mt-5">
-            With over 7 years of expertise, we&#39;ve empowered 3000+ brands
-            with highly optimized campaigns and creatives that maximize
-            visibility, conversions, and ROI. Experience our award-winning
-            holistic approach to scale your brand.
+            With 30+ years of combined expertise, SellerCircle has empowered
+            over 6,000 brands through highly optimized campaigns, compelling
+            creatives, strategic product launches, and expert advisory.
+            Experience our award-winning, holistic approach to maximize
+            visibility, conversions, and ROI for your brand
           </p>
           <div className="flex flex-row gap-5 mt-10">
             <Link href="/contact">

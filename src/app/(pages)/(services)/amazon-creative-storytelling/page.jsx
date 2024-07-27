@@ -12,6 +12,8 @@ import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
 import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
+import TabsSection from "@/components/pages/creative/TabsSection";
+import FAQ from "@/components/pages/creative/FAQ";
 const items = [
   {
     title: "Strategic Planning",
@@ -129,7 +131,7 @@ const page = () => {
             viewport={{ once: true }}
             className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
           >
-            Brand Store & Brand Story creation
+            Creative storytelling
           </motion.h3>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
@@ -137,136 +139,37 @@ const page = () => {
             viewport={{ once: true }}
             className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
           >
-            Engage Shoppers Through the Product Discovery Cycle{" "}
-          </motion.h2>
-          <motion.p
-            className="mx-auto max-w-4xl text-center"
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-          >
-            Understanding the customer journey is key to engaging with shoppers
-            effectively. The product discovery cycle highlights the path toward
-            connecting with customers:
-          </motion.p>
-          <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5  ">
-            {cycle.map((item, idx) => (
-              <CycleCard item={item} index={idx} key={idx} />
-            ))}
-          </div>
-          <div className="my-5">
-            {" "}
-            <motion.h2
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-            >
-              Holistic Flywheel Strategy for Amazon Advertising
-            </motion.h2>
-            <motion.p
-              className="mx-auto max-w-4xl text-center"
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-            >
-              We create a holistic Flywheel strategy tailored to your Amazon
-              Advertising needs, taking into account the core value of your
-              product and leveraging data to unlock the Amazon Flywheel.
-            </motion.p>{" "}
-          </div>
-          <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center">
-            <Image
-              src="/images/1.png"
-              alt=""
-              width={500}
-              height={500}
-              className="w-[250px] h-auto "
-            />
-            <Image
-              src="/images/amazon2.png"
-              alt=""
-              width={500}
-              height={500}
-              className="w-[250px] h-auto "
-            />
-          </div>
-          <StickyScrollCards />
-          <div className="my-10 p-4">
-            <motion.h2
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
-            >
-              Unlocking the Full Potential of Your Amazon Presence
-            </motion.h2>
-            <motion.p
-              className="mx-auto max-w-4xl text-center"
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
-            >
-              Unlock the full potential of your Amazon presence with our
-              targeted advertising campaigns, designed to maximize ROI. We
-              utilize advanced techniques for enhanced visibility and sales
-              while optimizing ad spend. Through our marketing stream and
-              tracking capabilities, we ensure that every dollar spent delivers
-              a meaningful impact, driving measurable results for your brand.
-            </motion.p>
-          </div>
-          {/* <AM1 /> */}
-          {/* <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
-          >
-            Level Up Your Brand on Amazon with{" "}
-            <span className="text-[#039BE4]">Full Service Management  </span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
-          >
-            Our comprehensive Amazon Full-Service offering provides a dynamic
-            solution designed to grow or launch your Amazon business. Our expert
-            team utilizes proprietary techniques to free up your time by
-            managing day-to-day Amazon tasks, enhancing listing SEO and
-            conversions, updating product photos, creating high success rate
-            launches, revitalizing low sale products, and more!
-          </motion.p>
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
-          >
-            Explore Our{" "}
-            <span className="text-[#039BE4]">
-              Growth and Full Service Management{" "}
+            Seamless Storytelling: Design That Converts Across{" "}
+            <span className="text-background">
+              Every Stage of the Buyer Journey.
             </span>
           </motion.h2>
-          <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 my-20 ">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 100 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: easeIn }}
-                className="min-w-[280px] max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
-              >
-                <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
-                  {item.title}
-                </h4>
-                <p className="nunito text-xs text-left">{item.description}</p>
-              </motion.div>
-            ))}
+          <motion.p
+            className="mx-auto max-w-4xl text-center p-5"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+          >
+            At Seller Circle, we transform your Amazon presence through powerful
+            creative storytelling. Our comprehensive services are designed to
+            captivate and engage your audience, enhance your brand’s narrative,
+            and drive conversions. From compelling A+ content and immersive
+            brand stories to engaging product display designs and dynamic brand
+            videos, we offer a holistic approach to elevate your product
+            listings and marketing campaigns. Explore our specialized services
+            below to see how we can help you craft a standout brand experience
+            on Amazon.
+          </motion.p>
+          <div className="w-full h-auto my-12 p-5">
+            <Image
+              src="/images/services/whyaplus.jpg"
+              width={1280}
+              height={600}
+              alt=""
+            />
           </div>
-          <CTA /> */}
+          <TabsSection />
+          <FAQ />
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
