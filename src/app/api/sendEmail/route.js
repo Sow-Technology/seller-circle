@@ -9,6 +9,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.FROM_EMAIL_PASSWORD,
   },
 });
+export const runtime = "edge";
 
 export async function POST(req, res) {
   if (req.method === "POST") {

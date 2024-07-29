@@ -83,26 +83,6 @@ export default function FAQ() {
           </dl>
         </div>
       </div>
-
-      <div className="mt-16 px-6 text-center sm:mt-24 lg:px-8">
-        <h3 className="text-2xl font-semibold leading-tight text-neutral-900 lg:text-3xl dark:text-neutral-50">
-          Still have questions?
-        </h3>
-
-        <p className="mx-auto mt-6 max-w-2xl text-base text-neutral-600 md:text-lg dark:text-neutral-400">
-          Maecenas diam purus, aliquam et gravida ut, fermentum ut est.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada.
-        </p>
-
-        <div className="mt-10">
-          <Link
-            href="#"
-            className="rounded-md bg-neutral-900 px-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:outline-neutral-400"
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
     </div>
   );
 }
