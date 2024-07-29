@@ -98,7 +98,7 @@ const page = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <div className="max-w-7xl mx-auto my-20 z-[39]">
+        <div className="max-w-7xl mx-auto my-20 z-[39] ">
           <motion.h3
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
@@ -198,7 +198,7 @@ const page = () => {
               <div>
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
               </div>
-              <div className="flex flex-col items-center justify-center gap-5">
+              <div className="flex flex-col items-center justify-center gap-5 lg:px-20 px-8">
                 {" "}
                 {approchItems.map((item, index) => (
                   <motion.div
@@ -216,7 +216,6 @@ const page = () => {
                         width={50}
                       />
                     </div>{" "}
-                    jj
                     <div className="  rounded-full flex items-center justify-center ml-10">
                       {" "}
                       <Image

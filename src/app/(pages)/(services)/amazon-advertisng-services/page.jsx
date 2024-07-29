@@ -80,7 +80,7 @@ const page = () => {
             Engage Shoppers Through the Product Discovery Cycle{" "}
           </motion.h2>
           <motion.p
-            className="mx-auto max-w-4xl text-center"
+            className="mx-auto lg:max-w-4xl text-center text-wrap"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}

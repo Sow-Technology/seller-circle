@@ -48,13 +48,16 @@ const Client = () => {
         <span className="text-[#272727]  top-[17%] lg:top-[25%] lg:left-[9%] left-[14.5%] sm:left-[7%] ">
           ON
         </span>
-        <Image
-          src="/images/arrow.gif"
-          alt=""
-          height={120}
-          width={120}
-          className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px] fill-background rotate-180 bg-white"
-        />
+        <div className="bg-white">
+          {" "}
+          <Image
+            src="/images/arrow.gif"
+            alt=""
+            height={120}
+            width={120}
+            className="lg:w-[120px] w-[70px] lg:h-[120px] h-[70px]  rotate-180 bg-transparent dark:bg-transparent"
+          />
+        </div>
       </motion.h2>
       <div className="flex flex-wrap gap-5 items-center justify-center">
         {clientLogos.map((item, index) => (
