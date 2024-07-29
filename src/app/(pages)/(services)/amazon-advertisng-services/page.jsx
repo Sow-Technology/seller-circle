@@ -61,7 +61,6 @@ const page = () => {
       <div className="w-full  bg-white  bg-grid-black/[0.05] relative flex items-center justify-center ">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-
         <div className="max-w-7xl mx-auto my-20 z-[39] lg:px-5">
           <motion.h3
             initial={{ y: 100, opacity: 0 }}
@@ -94,7 +93,7 @@ const page = () => {
               <CycleCard item={item} index={idx} key={idx} />
             ))}
           </div>
-          <div className="my-5">
+          <div className="my-5 p-2">
             {" "}
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
@@ -155,84 +154,36 @@ const page = () => {
               a meaningful impact, driving measurable results for your brand.
             </motion.p>
           </div>
-          {/* <AM1 /> */}
-          {/* <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
-          >
-            Level Up Your Brand on Amazon with{" "}
-            <span className="text-[#039BE4]">Full Service Management  </span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
-          >
-            Our comprehensive Amazon Full-Service offering provides a dynamic
-            solution designed to grow or launch your Amazon business. Our expert
-            team utilizes proprietary techniques to free up your time by
-            managing day-to-day Amazon tasks, enhancing listing SEO and
-            conversions, updating product photos, creating high success rate
-            launches, revitalizing low sale products, and more!
-          </motion.p>
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10"
-          >
-            Explore Our{" "}
-            <span className="text-[#039BE4]">
-              Growth and Full Service Management{" "}
-            </span>
-          </motion.h2>
-          <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 my-20 ">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 100 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: easeIn }}
-                className="min-w-[280px] max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
-              >
-                <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
-                  {item.title}
-                </h4>
-                <p className="nunito text-xs text-left">{item.description}</p>
-              </motion.div>
-            ))}
+          <div className="">
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
+            >
+              No one-size-fits-all here,{" "}
+              <span className="text-[#039BE4]">
+                only tailored strategies. {" "}
+              </span>
+            </motion.h2>
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 px-4"
+            >
+              At Seller Circle, we specialize in scaling sales for brands on
+              Amazon and other marketplaces through a holistic approach and
+              proven strategies for PPC and DSP. As an advanced Amazon partner
+              with hands-on expertise across all categories, we’ve worked with
+              over 1000+ brands, tailoring unique strategies to maximize ROI and
+              impact profits. Our proactive, data-driven team ensures
+              transparent advertising and effective conversion engines. With our
+              tech-enabled, comprehensive services, your brand will not only
+              grow but thrive in the competitive marketplace. Join us and
+              experience continuous and sustainable growth.
+            </motion.p>
           </div>
-          <CTA /> */}
-          <motion.h2
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase mt-10 px-4"
-          >
-            No one-size-fits-all here,{" "}
-            <span className="text-[#039BE4]">only tailored strategies.  </span>
-          </motion.h2>
-          <motion.p
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 px-4"
-          >
-            At Seller Circle, we specialize in scaling sales for brands on
-            Amazon and other marketplaces through a holistic approach and proven
-            strategies for PPC and DSP. As an advanced Amazon partner with
-            hands-on expertise across all categories, we’ve worked with over
-            1000+ brands, tailoring unique strategies to maximize ROI and impact
-            profits. Our proactive, data-driven team ensures transparent
-            advertising and effective conversion engines. With our tech-enabled,
-            comprehensive services, your brand will not only grow but thrive in
-            the competitive marketplace. Join us and experience continuous and
-            sustainable growth.
-          </motion.p>
           <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8">
             <div className="flex flex-row lg:max-w-[45%]">
               <div>
