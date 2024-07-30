@@ -123,9 +123,26 @@ const NavItems = [
         name: "About Us",
         link: "/about",
       },
+      // {
+      //   name: "Resources",
+      //   link: "/resources",
+      // },
+    ],
+  },
+  {
+    name: "Company",
+    subItems: [
       {
-        name: "Resources",
-        link: "/resources",
+        name: "Blog",
+        link: "/#",
+      },
+      {
+        name: "Newsletter",
+        link: "/#",
+      },
+      {
+        name: "Case Study",
+        link: "/#",
       },
     ],
   },
