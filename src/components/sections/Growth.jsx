@@ -31,26 +31,35 @@ const Growth = () => {
         </span>
       </motion.h2>
       <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20  lg:items-stretch items-center">
-        {/* {services.slice(0, 7).map((item, index) => (
-          <ServiceCard item={item} key={index} />
-        ))} */}
-        <Services />
-        <div className="flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold">
-          {" "}
-          <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">
-            {" "}
-            <Image src="/images/10.svg" height={100} width={100} alt="" />
-          </div>
-          VIEW ALL
-        </div>
-        <motion.div
-          className=""
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 100 }}
-          transition={{ ease: "easeIn", duration: 1, type: "tween" }}
+        <motion.h3
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          className="font-extrabold text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
         >
-          <Audit />
-        </motion.div>
+          OUR SERVICES
+        </motion.h3>
+        <div className="flex flex-row flex-wrap justify-center mb-20 gap-10 relative z-10 mt-20 ">
+          {services.map((item, index) => (
+            <ServiceCard item={item} key={index} />
+          ))}
+          <div className="inline-flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold">
+            {" "}
+            <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">
+              {" "}
+              <Image src="/images/10.svg" height={100} width={100} alt="" />
+            </div>
+            VIEW ALL
+          </div>
+          <motion.div
+            className=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 100 }}
+            transition={{ ease: "easeIn", duration: 1, type: "tween" }}
+          >
+            <Audit />
+          </motion.div>
+        </div>
       </div>
     </div>
   );

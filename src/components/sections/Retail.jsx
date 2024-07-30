@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Retail = () => {
   return (
-    <div className="mx-auto max-w-7xl flex flex-col p-5">
+    <div className="mx-auto max-w-7xl flex flex-col p-5 lg:p-1">
       {" "}
       {/* <motion.h2
         initial={{ y: 100, opacity: 0 }}
@@ -18,7 +18,7 @@ const Retail = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className="max-h-[80vh]"
+        className="max-h-[89vh]"
         autoPlay
         muted
         loop

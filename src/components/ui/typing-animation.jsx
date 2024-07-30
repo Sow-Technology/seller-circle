@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
-export default function TypingAnimation({ text, duration = 200, className }) {
+export default function TypingAnimation({ text, duration = 70, className }) {
   const [displayedText, setDisplayedText] = useState("");
   const [i, setI] = useState(0);
 

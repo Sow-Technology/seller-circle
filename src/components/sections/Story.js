@@ -37,7 +37,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-xl mt-5 list-disc text-right text-[#303f5b] ${
+              className={`font-medium w-full text-base md:text-xl mt-5  text-left text-[#303f5b] ${
                 !visible ? " lg:visible" : "lg:invisible"
               }`}
             >
@@ -78,7 +78,7 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-xl mt-5 list-disc text-[#303f5b]  ${
+              className={`font-medium w-full text-base md:text-xl mt-5  text-[#303f5b]  ${
                 visible ? " lg:visible" : "lg:invisible"
               }`}
             >
@@ -197,7 +197,7 @@ const OurStory = () => {
             t1="100+ D2C Growth and Full-service management"
             t2="500 Brand Stores Created on Amazon"
             t3="30,000 A+ Catalogue creations"
-            id="14"
+            id="13"
           />
           <Details
             year="2023"
@@ -205,7 +205,7 @@ const OurStory = () => {
             t2="E4M Awards 2023 Winner, Best PPC Campaign"
             t3="Amazon Ads Catalyst Winner for Q1, Q2, Q3 & Q4"
             t4="$100 Mn Advertising Spend managed"
-            id="15"
+            id="14"
           />
         </ul>
       </div>

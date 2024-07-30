@@ -130,7 +130,7 @@ const NavItems = [
     ],
   },
   {
-    name: "Company",
+    name: "Resources",
     subItems: [
       {
         name: "Blog",

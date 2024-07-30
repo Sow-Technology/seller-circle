@@ -31,7 +31,7 @@ const Working = () => {
           </div>
           <div className={`font-bold text-background lg:text-2xl text-xl `}>
             {" "}
-            Managed Advertising
+            In Managed Advertising{" "}
           </div>
         </div>
         <div className="flex flex-col items-center h-auto flex-1 text-center justify-between gap-7 max-lg:w-1/2 ">
@@ -41,8 +41,7 @@ const Working = () => {
             </span>
           </div>
           <div className={`font-bold text-background lg:text-2xl text-xl `}>
-            Catalogue Design
-          </div>
+          Catalog Design          </div>
         </div>
         <div className="flex flex-col items-center text-center justify-between gap-7 max-lg:w-[45%]">
           <div className={`${antonio.className}`}>

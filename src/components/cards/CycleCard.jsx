@@ -1,6 +1,14 @@
+"use client";
 import React from "react";
 import { easeIn, motion } from "framer-motion";
 import Image from "next/image";
+import {
+  CheckCheckIcon,
+  CheckCircle2Icon,
+  CheckCircleIcon,
+  CheckIcon,
+} from "lucide-react";
+import { CheckboxIcon } from "@radix-ui/react-icons";
 const CycleCard = ({ item, index }) => {
   return (
     <motion.div
@@ -25,12 +33,27 @@ const CycleCard = ({ item, index }) => {
         </div>
         <div className="w-full h-1 bg-background" />
       </div>
+      {item.b && <h5 className="font-bold text-lg">{item.b}</h5>}
       <p className="nunito  ">{item.description}</p>
       {item.l1 && (
         <>
-          <ul className="list-disc pl-7">
-            <li>{item.l1}</li>
-            {item.l2 && <li>{item.l2}</li>}
+          <ul className=" list-none pl-7">
+            <li className="flex">
+              <div>
+                {" "}
+                <CheckCircleIcon className="  aspect-square block w-5 h-5" />
+              </div>
+              {item.l1}
+            </li>
+            {item.l2 && (
+              <li className="flex">
+                <div>
+                  {" "}
+                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
+                </div>
+                {item.l2}
+              </li>
+            )}
           </ul>
         </>
       )}

@@ -194,11 +194,11 @@ const page = () => {
             sustainable growth.
           </motion.p>
           <div className="flex flex-row flex-wrap gap-16 mt-16">
-            <div className="flex flex-row lg:max-w-[45%]">
+            <div className="flex flex-row lg:px-12 px-8 lg:max-w-[45%]">
               <div>
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
               </div>
-              <div className="flex flex-col items-center justify-center gap-5 lg:px-20 px-8">
+              <div className="flex flex-col items-center justify-center gap-5 ">
                 {" "}
                 {approchItems.map((item, index) => (
                   <motion.div

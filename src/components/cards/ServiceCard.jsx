@@ -21,7 +21,7 @@ const ServiceCard = ({ item }) => {
         </div>
         <Link href={item.link}>
           {" "}
-          <div className="flex items-center hover:gap-5 cursor-pointer group">
+          <div className="flex items-center hover:gap-5 cursor-pointer group transition-transform  ease-in-out">
             VIEW MORE{" "}
             <Image
               src="/images/10.svg"

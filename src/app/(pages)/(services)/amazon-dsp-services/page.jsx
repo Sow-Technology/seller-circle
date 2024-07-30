@@ -132,7 +132,7 @@ const page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
+            className="nunito font-extrabold text-2xl lg:text-4xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
           >
             “Reach New Heights with Amazon DSP”
           </motion.h2>
@@ -332,9 +332,16 @@ const page = () => {
                 resources or expertise.
               </motion.p>
               <ul className="list-disc p-4 flex gap-10">
-                <li>Display Ads </li>
-                <li>Video Ads </li>
-                <li> Audio Ads </li>
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                  Display Ads{" "}
+                </li>
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                  Video Ads{" "}
+                </li>
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                  {" "}
+                  Audio Ads{" "}
+                </li>
               </ul>
             </div>
             <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 items-center">
