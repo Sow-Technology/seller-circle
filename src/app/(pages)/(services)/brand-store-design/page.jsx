@@ -16,7 +16,7 @@ import TabsSection from "@/components/pages/creative/TabsSection";
 import FAQ from "@/components/pages/creative/FAQ";
 import Awards from "@/components/sections/Awards";
 import AContent from "@/components/pages/creative/AContent";
-import BrandStory from "@/components/pages/creative/BrandStory";
+import BrandStore from "@/components/pages/creative/BrandStore";
 const items = [
   {
     title: "Strategic Planning",
@@ -171,8 +171,8 @@ const page = () => {
               alt=""
             />
           </div>
-          <TabsSection active={2} />
-          <BrandStory />
+          <TabsSection active={3} />
+          <BrandStore />
           <FAQ />
 
           <Services slice="2" />

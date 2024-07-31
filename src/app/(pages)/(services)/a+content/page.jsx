@@ -170,7 +170,7 @@ const page = () => {
               alt=""
             />
           </div>
-          <TabsSection />
+          <TabsSection active={1} />
           <AContent />
           <FAQ />
 
