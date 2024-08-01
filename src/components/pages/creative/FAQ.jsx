@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import {
   Disclosure,
   DisclosureButton,
@@ -41,7 +39,7 @@ const faqs = [
   },
 ];
 
-export default function FAQ() {
+export default function FAQ({ faq }) {
   return (
     <div>
       <div className="mx-auto max-w-7xl px-6 pt-24 sm:pt-32 lg:px-8 lg:pt-40 w-auto bg-white">

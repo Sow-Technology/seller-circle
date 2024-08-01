@@ -83,7 +83,10 @@ const Footer = () => {
                         Terms & Conditions
                       </div>
                       <div className="basis-1/4 text-base mb-2">
-                        Privacy Policy
+                        <Link href="/privacy-policy">Privacy Policy</Link>
+                      </div>
+                      <div className="basis-1/4 text-base mb-2">
+                        <Link href="/faq">FAQ</Link>
                       </div>
                       <div className="basis-1/4 text-base mb-2">
                         EBC Example
