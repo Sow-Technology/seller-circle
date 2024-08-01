@@ -16,6 +16,9 @@ import TabsSection from "@/components/pages/creative/TabsSection";
 import FAQ from "@/components/pages/creative/FAQ";
 import Awards from "@/components/sections/Awards";
 import AContent from "@/components/pages/creative/AContent";
+import BrandStory from "@/components/pages/creative/BrandStory";
+import Catalog from "@/components/pages/creative/Catalog";
+import Videos from "@/components/pages/creative/Videos";
 const items = [
   {
     title: "Strategic Planning",
@@ -170,8 +173,8 @@ const page = () => {
               alt=""
             />
           </div>
-          <TabsSection active={1} />
-          <AContent />
+          <TabsSection active={5} />
+          <Videos />
           <FAQ />
 
           <Services slice="2" />

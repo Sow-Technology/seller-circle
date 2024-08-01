@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import Works from "@/components/sections/Works";
 import {
   IoAlbumsOutline,
+  IoAnalytics,
+  IoColorWandOutline,
+  IoCreateOutline,
+  IoCubeOutline,
   IoFlashOutline,
   IoMicOutline,
   IoPricetagOutline,
@@ -11,84 +15,80 @@ import {
 } from "react-icons/io5";
 import {
   FaAward,
+  FaChartPie,
+  FaDatabase,
+  FaGlobe,
   FaLayerGroup,
   FaLocationArrow,
   FaRetweet,
+  FaTags,
   FaVectorSquare,
 } from "react-icons/fa6";
 import { MdCompareArrows } from "react-icons/md";
-import { FaDraftingCompass } from "react-icons/fa";
+import { FaCogs, FaDotCircle, FaDraftingCompass } from "react-icons/fa";
 import Audit from "@/components/forms/Audit";
 import NumberedDesign1 from "@/components/Animations/NumberedDesign1";
 import CTA from "./CTA";
+import { BiBriefcase } from "react-icons/bi";
 const Items = [
   {
-    title: "Amazon Brand Story Design",
-    hl1: "Engaging Narratives",
-    hl2: "Visual Appeal",
-    l1: "Craft compelling stories that highlight your brand’s journey, values, and unique selling points.",
-    l2: "Use high-quality visuals and creative layouts to capture attention and engage potential customers.",
-    i1: <IoMicOutline />,
-    i2: <IoFlashOutline />,
+    title: "Crafting Compelling Product Images",
+    hl1: "Category-Researched Infographics",
+    hl2: "High-Impact Image Creation",
+    l1: "Develop visually appealing infographics that highlight key features and benefits, tailored to your product category.",
+    l2: "Design images that resonate with search keywords and are optimized for better conversion rates.",
+    i1: <FaChartPie />,
+    i2: <IoCreateOutline />,
   },
   {
-    title: "Showcase Other Products/Category",
-    hl1: "Comprehensive Display",
-    hl2: "Cross-Promotion",
-    l1: "Design brand stories that seamlessly integrate with your product display pages, showcasing other products and categories.",
-    l2: "Encourage cross-selling and upselling by featuring related products in a visually appealing manner.",
-    i1: <FaLayerGroup />,
-    i2: <MdCompareArrows />,
+    title: "Optimized Titles, Bullet Points, and Keywords",
+    hl1: "Keyword-Rich Titles",
+    hl2: "Effective Bullet Points",
+    hl3: "Research-Based Keywords",
+    l1: "Create product titles that are not only engaging but also optimized with relevant keywords to improve search visibility.",
+    l2: " Write concise and compelling bullet points that clearly communicate your product’s unique selling points.",
+    l3: "Incorporate researched keywords into your listings to drive targeted traffic and enhance discoverability.",
+    i1: <FaTags />,
+    i2: <FaDotCircle />,
+    i3: <FaDatabase />,
   },
   {
-    title: "Drive Traffic to Brand Pages",
-    hl1: "Strategic Design",
-    hl2: "Enhanced Navigation",
-    l1: "Create brand stories that drive traffic to your Amazon Brand Store and other product pages.",
-    l2: "Use intuitive design elements to guide customers through your product range and brand offerings.",
-    i1: <FaDraftingCompass />,
-    i2: <FaLocationArrow />,
-  },
-  {
-    title: "Beautiful Backgrounds and Themes",
-    hl1: "Cohesive Aesthetics",
-    hl2: "Custom Visuals",
-    l1: "Design brand stories with backgrounds that match your brand’s theme, creating a consistent and attractive look.",
-    l2: "Develop custom visuals that enhance your brand’s narrative and appeal to your target audience.",
-    i1: <IoAlbumsOutline />,
-    i2: <FaVectorSquare />,
-  },
-  {
-    title: "Mobile Optimization",
-    hl1: "Cohesive Aesthetics",
-    hl2: "Enhanced Engagement",
-    l1: "Ensure that all brand stories are optimized for mobile devices, providing a seamless experience for on-the-go shoppers.",
-    l2: "Use mobile-friendly designs to keep customers engaged and informed, no matter how they access your product pages.",
-    i1: <IoSwapHorizontalOutline />,
-    i2: <FaRetweet />,
+    title: "Conversion-Driven Design",
+    hl1: "Enhanced Visuals",
+    hl2: "Strategic Layouts",
+    l1: "Utilize high-quality images and infographics that attract attention and drive purchase decisions.",
+    l2: "Design product pages with a focus on clarity and ease of navigation, ensuring a seamless shopping experience.",
+    i1: <IoColorWandOutline />,
+    i2: <IoCubeOutline />,
   },
 ];
 const NumberedData = [
   {
-    title: "Expert Design",
-    desc: "Leverage our expertise in Amazon Brand Story design to create compelling and visually appealing narratives.",
-    icon: <FaAward />,
+    title: "Proven Expertise",
+    desc: "Over 1 million product listings optimized, showcasing our extensive experience and knowledge in creating effective Amazon pages.",
+    icon: <BiBriefcase />,
     color: "#6A1B9A",
   },
   {
-    title: "Consistent Branding",
-    desc: "Ensure your brand’s story is consistent and reflects your unique identity across all product pages.",
-    icon: <IoPricetagOutline />,
+    title: "Tailored Solutions",
+    desc: "We offer customized design solutions that align with your brand’s goals and product requirements.",
+    icon: <FaCogs />,
     color: "#26A69A",
   },
   {
-    title: "Increased Visibility",
-    desc: "Drive more traffic to your brand pages.",
-    icon: <IoTrendingUpOutline />,
+    title: "High Conversion Rates",
+    desc: "Our designs are crafted to improve engagement and boost conversion rates by leveraging keyword optimization and compelling visuals.",
+    icon: <IoAnalytics />,
     color: "#FBBB3B",
   },
+  {
+    title: "Comprehensive Approach",
+    desc: "From product images to titles and descriptions, we handle every aspect of your product page to ensure it performs at its best.",
+    icon: <FaGlobe />,
+    color: "#42A5F5",
+  },
 ];
-const BrandStory = () => {
+const Catalog = () => {
   return (
     <div>
       {" "}
@@ -98,7 +98,7 @@ const BrandStory = () => {
         viewport={{ once: true }}
         className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
       >
-        Amazon Brand Story Design Services
+        Amazon Product Page Design Services
       </motion.h3>
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
@@ -106,8 +106,8 @@ const BrandStory = () => {
         viewport={{ once: true }}
         className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
       >
-        Transform Your Product Pages with{" "}
-        <span className="text-background">Engaging Brand Stories.</span>
+        Transform Your Listings into{" "}
+        <span className="text-background">High-Performing Sales Machines.</span>
       </motion.h2>
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
@@ -115,7 +115,7 @@ const BrandStory = () => {
         viewport={{ once: true }}
         className="nunito font-extrabold text-xl lg:text-3xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
       >
-        Bring Your Brand&#39;s Story to Life
+        Designs That Convert, Listings That Perform
       </motion.h2>
       <motion.p
         className="mx-auto max-w-4xl text-center p-5"
@@ -123,12 +123,11 @@ const BrandStory = () => {
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
       >
-        Elevate your Amazon product pages with our Amazon Brand Story Design
-        Services. We specialize in creating captivating brand stories that not
-        only inform but also engage potential buyers, driving traffic to your
-        brand pages and showcasing your entire product range. Our designs are
-        tailored to reflect your brand’s theme, ensuring a cohesive and visually
-        appealing experience.
+        We specialize in creating high-impact product pages that not only
+        attract attention but also drive conversions. Our expertise, honed
+        through working on over 1 million product listings, ensures your product
+        images, infographics, titles, and descriptions are optimized to enhance
+        visibility and sales.
       </motion.p>
       <div className="flex lg:flex-row-reverse flex-col-reverse relative my-4">
         <div className="lg:w-1/2 w-full p-5 flex flex-col gap-12 lg:px-10">
@@ -162,6 +161,20 @@ const BrandStory = () => {
                     <p>{item.l2}</p>
                   </div>
                 </div>
+                {item.i3 && (
+                  <div className="flex gap-7">
+                    {" "}
+                    <div className="w-8 h-8 text-5xl text-background">
+                      {item.i3}
+                    </div>{" "}
+                    <div>
+                      <h3 className="lg:text-2xl  font-bold text-lg">
+                        {item.hl3}
+                      </h3>
+                      <p>{item.l3}</p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -199,4 +212,4 @@ const BrandStory = () => {
   );
 };
 
-export default BrandStory;
+export default Catalog;

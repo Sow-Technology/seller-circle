@@ -1,12 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CycleCard from "@/components/cards/CycleCard";
-import { FaBoxes, FaSitemap, FaSlidersH } from "react-icons/fa";
+import {
+  FaBoxes,
+  FaCalendarCheck,
+  FaChalkboardTeacher,
+  FaLaptopCode,
+  FaSitemap,
+  FaSlidersH,
+} from "react-icons/fa";
 import { IoBasketOutline, IoNewspaperOutline } from "react-icons/io5";
 import { FaMicrochip } from "react-icons/fa6";
 import Works from "@/components/sections/Works";
 import Audit from "@/components/forms/Audit";
 import NumberedDesign1 from "@/components/Animations/NumberedDesign1";
+import { MdAssignment } from "react-icons/md";
 const data = [
   {
     title: "Tailored Store Design",
@@ -100,6 +108,32 @@ const Items = [
     l2: "Feature products in a grid format with options for Add to Cart and Quick Shop, enhancing the shopping experience.",
     i1: <FaSitemap />,
     i2: <IoBasketOutline />,
+  },
+];
+const NumberedData = [
+  {
+    title: "Consultation",
+    desc: "We begin with a thorough consultation to understand your brand, products, and goals.",
+    icon: <FaChalkboardTeacher />,
+    color: "#6A1B9A",
+  },
+  {
+    title: "Design Proposal",
+    desc: "Our team creates a design proposal tailored to your needs, including layout, visuals, and SEO strategy.",
+    icon: <MdAssignment />,
+    color: "#26A69A",
+  },
+  {
+    title: "Development",
+    desc: "Once approved, we develop your store using Amazon’s Store Builder tools, ensuring a professional and cohesive design.",
+    icon: <FaLaptopCode />,
+    color: "#FBBB3B",
+  },
+  {
+    title: "Review and Launch",
+    desc: "We review the store with you, make any necessary adjustments, and launch your brand new Amazon Store.",
+    icon: <FaCalendarCheck />,
+    color: "#42A5F5",
   },
 ];
 const BrandStore = () => {
@@ -204,7 +238,7 @@ const BrandStore = () => {
           <Audit />
         </div>
         <div className="lg:w-1/2 w-[90%]">
-          <NumberedDesign1 />
+          <NumberedDesign1 data={NumberedData} />
         </div>
         <div className="flex gap-5 flex-row flex-wrap   justify-center gap-y-10 my-10 ">
           {data3.map((item, index) => (
