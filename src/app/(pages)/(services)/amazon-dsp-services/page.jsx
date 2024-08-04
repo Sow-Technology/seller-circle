@@ -183,17 +183,9 @@ const page = () => {
             </div>
             <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 items-center">
               {" "}
-              <div className="sticky top-24 h-80 w-80 border-2 border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
+              <div className="sticky top-24  border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
                 {" "}
-                IMAGE
-                {/* <motion.h3
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 100 }}
-                  viewport={{ once: true }}
-                  className="font-[900] text-2xl lg:text-4xl text-[#272727] text-center max-w-4xl uppercase mx-auto"
-                >
-                  Navigating Success Together.
-                </motion.h3> */}
+                <Image src="/gif/3.gif" alt="" width={800} height={500} />
               </div>
             </div>
           </div>
@@ -332,13 +324,13 @@ const page = () => {
                 resources or expertise.
               </motion.p>
               <ul className="list-disc p-4 flex gap-10">
-                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer bg-white">
                   Display Ads{" "}
                 </li>
-                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer bg-white">
                   Video Ads{" "}
                 </li>
-                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white cursor-pointer">
+                <li className="list-none border-2 border-background p-2 rounded-md px-5 hover:bg-background hover:text-white bg-white cursor-pointer">
                   {" "}
                   Audio Ads{" "}
                 </li>
@@ -346,17 +338,9 @@ const page = () => {
             </div>
             <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 items-center">
               {" "}
-              <div className="sticky top-24 h-80 w-80 border-2 border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
+              <div className="sticky top-24  border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
                 {" "}
-                IMAGE
-                {/* <motion.h3
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 100 }}
-                  viewport={{ once: true }}
-                  className="font-[900] text-2xl lg:text-4xl text-[#272727] text-center max-w-4xl uppercase mx-auto"
-                >
-                  Navigating Success Together.
-                </motion.h3> */}
+                <Image src="/gif/4.gif" alt="" width={800} height={500} />
               </div>
             </div>
           </div>

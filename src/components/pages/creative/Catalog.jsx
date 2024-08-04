@@ -181,9 +181,11 @@ const Catalog = () => {
         </div>
         <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 items-center">
           {" "}
-          <div className="sticky top-24 h-80 w-80 border-2 border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
+          <div className="sticky top-24  bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
             {" "}
-            IMAGE
+            <video autoPlay loop muted>
+              <source src="/videos/4.mp4" />
+            </video>
           </div>
         </div>
       </div>

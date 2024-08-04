@@ -10,6 +10,7 @@ import { approchItems } from "@/lib/data";
 import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
+import CycleCard from "@/components/cards/CycleCard";
 const items = [
   {
     title: "Strategic Planning",
@@ -89,7 +90,38 @@ const marqueeItem = [
   "/images/brands/14.png",
   "/images/brands/15.png",
 ];
-
+const data = [
+  {
+    title: "Ignite Your Business Growth",
+    description:
+      "Our approach integrates data-driven strategies for managing daily operations, optimizing creatives, and catalog management. We leverage advanced advertising technologies to maximize ROI and reach your target audience.",
+  },
+  {
+    title: "Tailored Holistic Solutions",
+    description:
+      "Our holistic solutions are designed to navigate growth challenges and capitalize on market opportunities, driving exponential business growth. We tailor our strategies to meet the unique needs of your brand, ensuring you stay ahead in the competitive marketplace.",
+  },
+  {
+    title: "Maximize Your ROI",
+    description:
+      "We leverage cutting-edge advertising technologies to ensure your campaigns deliver the highest return on investment. Our team continuously optimizes your advertising efforts, targeting the right audience at the right time for maximum impact.",
+  },
+  {
+    title: "Collaborative Account Management",
+    description:
+      "Our in-house team of Account Executives takes a collaborative approach to account management. We ensure no opportunities are left on the table by simplifying volumes of data with our tech and expertise.",
+  },
+  {
+    title: "Transparent and Confident Delegation",
+    description:
+      "With our transparent processes, you gain the confidence to delegate your advertising efforts. Our tech simplifies data, giving you clear insights into your campaign performance and growth trajectory.",
+  },
+  {
+    title: "Full Funnel Advertising Strategy",
+    description:
+      "Scaling your sales through a well-researched audience. Our full funnel advertising strategy ensures that each stage of the customer journey is targeted effectively, from awareness to conversion. We analyze and engage the right audience segments, driving traffic and maximizing sales opportunities through tailored ads and precise targeting.",
+  },
+];
 const page = () => {
   return (
     <>
@@ -105,7 +137,7 @@ const page = () => {
             viewport={{ once: true }}
             className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
           >
-            Growth & Scale-up Management
+            Growth & Scale-up ! Amazon Full Service Management
           </motion.h3>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
@@ -113,9 +145,15 @@ const page = () => {
             viewport={{ once: true }}
             className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
           >
-            Amazon Operations + Advertising Management
+            Amazon Operations <br />+ <br />
+            Advertising Management
           </motion.h2>
           <AM1 />
+          <div className="flex gap-5 flex-row flex-wrap my-5  justify-center gap-y-10">
+            {data.map((item, index) => (
+              <CycleCard item={item} index={index} key={index} />
+            ))}
+          </div>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}

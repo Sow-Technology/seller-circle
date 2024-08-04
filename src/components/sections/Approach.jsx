@@ -36,12 +36,12 @@ const Approach = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5 max-sm:max-w-[85vw]"
+            className="p-4 bg-gray-100 shadow-sm rounded-xl my-5 max-sm:max-w-[85vw]"
           >
             <div className="min-w-[280px] max-w-[600px]  flex flex-row flex-wrap items-center">
               {" "}
-              {/* <Image src="/images/17.webp" alt="" width={500} height={700} /> */}
-              <motion.div
+              <Image src="/gif/2.gif" alt="" width={500} height={700} />
+              {/* <motion.div
                 className="w-[70%] max-sm:max-w-[62%]"
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 100 }}
@@ -141,7 +141,7 @@ const Approach = () => {
                     className="object-contain"
                   />
                 </motion.div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>

@@ -19,7 +19,7 @@ import { HiDocumentCheck } from "react-icons/hi2";
 import { TbMapPin2 } from "react-icons/tb";
 
 import { BsFillLightbulbFill, BsGlobeCentralSouthAsia } from "react-icons/bs";
-import Why from "@/components/pages/strategy/Why";
+import Why from "@/components/pages/global/Why";
 import { AiOutlineTranslation } from "react-icons/ai";
 import { FaStoreAlt } from "react-icons/fa";
 

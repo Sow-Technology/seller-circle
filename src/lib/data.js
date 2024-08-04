@@ -56,19 +56,19 @@ export const sStories = [
 
 export const approchItems = [
   {
-    icon: "/images/approach/1.svg",
+    icon: "/images/approach/1.png",
     text: "We begin with a thorough 30-point account audit to Delivery Methods to pinpoint improvement opportunities and areas of growth",
   },
   {
-    icon: "/images/approach/2.svg",
+    icon: "/images/approach/2.png",
     text: "We tailor a strategy for Product listings, competitors data, and Amazon ads, aligning with brand goals like the buyer journey, awareness, and sales growth, aiming for effective results",
   },
   {
-    icon: "/images/approach/3.svg",
+    icon: "/images/approach/3.png",
     text: "Post-strategy finalization, we kickstart account build-out, focusing on the lower end of the sales funnel and seizing missed opportunities for optimal results.",
   },
   {
-    icon: "/images/approach/4.svg",
+    icon: "/images/approach/4.png",
     text: "Once the account is fully prepared for scaling, our focus shifts to optimizing, crafting new campaign strategies, and exploring expansion opportunities.",
   },
 ];
@@ -106,9 +106,9 @@ export const services = [
     icon: "/images/15.webp",
   },
   {
-    name: "Market Places Advertising ",
-    title: "Market Places Advertising ",
-    link: "market-places-advertising",
+    name: "Marketplaces Advertising ",
+    title: "Marketplaces Advertising ",
+    link: "marketplaces-advertising",
     description:
       "Expand your brand's reach across diverse marketplaces using personalized advertising strategies. Amplify your brand presence and customer engagement on top e-commerce platforms, including Walmart, Flipkart, and Quick commerce channels. Our multi-channel advertising solutions ensure holistic market penetration and measurable metrics, empo wering your brand to thrive in competitive market spaces.",
     icon: "/images/13.webp",

@@ -114,6 +114,30 @@ const page = () => {
               product and leveraging data to unlock the Amazon Flywheel.
             </motion.p>{" "}
           </div>
+          <div className="my-5 p-2">
+            {" "}
+            <motion.h2
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-wrap"
+            >
+              Unlocking the Full Potential of Your Amazon Presence
+            </motion.h2>
+            <motion.p
+              className="mx-auto max-w-4xl text-center"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+            >
+              Unlock the full potential of your Amazon presence with our
+              targeted advertising campaigns, designed to maximize ROI. We
+              utilize advanced techniques for enhanced visibility and sales
+              while optimizing ad spend. Through our marketing stream and
+              tracking capabilities, we ensure that every dollar spent delivers
+              a meaningful impact, driving measurable results for your brand.
+            </motion.p>{" "}
+          </div>
           <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center">
             <Image
               src="/images/1.png"

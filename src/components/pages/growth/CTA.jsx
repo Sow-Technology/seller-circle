@@ -49,7 +49,7 @@ const CTA = () => {
               y2="111"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.520507" stopcolor="white"></stop>
+              <stop offset="0.520507" stopColor="white"></stop>
               <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </linearGradient>
           </defs>

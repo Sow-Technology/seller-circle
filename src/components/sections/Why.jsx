@@ -15,16 +15,6 @@ const Why = () => {
       >
         Why <span className="text-[#039BE4]">Seller circle? </span>
       </motion.h2>
-      <motion.p
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true }}
-        className="mb-20 font-medium text-sm lg:text-base max-w-4xl mx-auto text-center p-5"
-      >
-        30+ years of expertise blend into captivating stories through Product
-        display images, A+, brand stories, videos, and a bespoke Brand store for
-        maximum engagement .
-      </motion.p>
       <motion.div
         // initial={{ y: 50, opacity: 0, scale: 0.5 }}
         // whileInView={{ y: 0, opacity: 100, scale: 1 }}
@@ -52,6 +42,16 @@ const Why = () => {
         </span>
         Crafting Amazon narratives that convert.
       </motion.h2>
+      <motion.p
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className="mb-20 font-medium text-sm lg:text-base max-w-4xl mx-auto text-center p-5"
+      >
+        30+ years of expertise blend into captivating stories through Product
+        display images, A+, brand stories, videos, and a bespoke Brand store for
+        maximum engagement .
+      </motion.p>
     </div>
   );
 };

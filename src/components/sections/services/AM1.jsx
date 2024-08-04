@@ -16,7 +16,7 @@ const ServiceItem = ({ service, left }) => (
     initial={{ opacity: 0, x: left ? -100 : 100, scale: 1.2 }}
     whileInView={{ opacity: 1, x: 0, scale: 1 }}
     transition={{
-      delay: 1 * service.number,
+      delay: 0.3 * service.number,
       ease: easeInOut,
       type: "spring",
     }}
