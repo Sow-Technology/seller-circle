@@ -60,7 +60,7 @@ const content = [
         viewport={{ once: true }}
         className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5 max-sm:max-w-[85vw]"
       >
-        <Image src="/images/adver3.png" alt="" width={1000} height={1000} />
+        <Image src="/gif/5.gif" alt="" width={1000} height={1000} />
       </motion.div>
     ),
   },
@@ -75,7 +75,7 @@ const content = [
         viewport={{ once: true }}
         className="py-10 px-4 bg-gray-100 shadow-sm rounded-xl my-5 max-sm:max-w-[85vw]"
       >
-        <Image src="/images/adver3.png" alt="" width={1000} height={1000} />
+        <Image src="/gif/5.gif" alt="" width={1000} height={1000} />
       </motion.div>
     ),
   },
