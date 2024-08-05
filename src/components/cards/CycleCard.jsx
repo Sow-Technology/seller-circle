@@ -57,6 +57,17 @@ const CycleCard = ({ item, index }) => {
           </ul>
         </>
       )}
+      {item.services &&
+        item.services.map((service, idx) => (
+          <li key={idx} className=" list-none">
+            <div className="flex gap-5 items-center mb-2">
+              {" "}
+              <CheckCircleIcon className="  aspect-square block w-5 h-5" />
+              <span className="font-bold">{service.h}</span>
+            </div>
+            <p>{service.desc}</p>
+          </li>
+        ))}
     </motion.div>
   );
 };
