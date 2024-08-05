@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import A from "../pages/works/A";
 
 const Works = () => {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ const Works = () => {
         Check Our <span className="text-[#039BE4]">Works</span>
       </motion.h2>
       {pathname == "/works" ? (
-        <Tabs defaultValue="account" className="w-[400px]">
+        <Tabs defaultValue="a" className="">
           <TabsList>
             <TabsTrigger value="a">
               {" "}
@@ -72,7 +73,7 @@ const Works = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="a">
-            Make changes to your account here.
+            <A />
           </TabsContent>
           <TabsContent value="story">Change your password here.</TabsContent>
           <TabsContent value="store">Change your password here.</TabsContent>
