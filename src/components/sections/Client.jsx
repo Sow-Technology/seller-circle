@@ -52,6 +52,7 @@ const Client = () => {
           {" "}
           <Image
             src="/images/arrow.gif"
+            unoptimized
             alt=""
             height={120}
             width={120}

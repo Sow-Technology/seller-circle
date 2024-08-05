@@ -40,7 +40,13 @@ const Approach = () => {
           >
             <div className="min-w-[280px] max-w-[600px]  flex flex-row flex-wrap items-center">
               {" "}
-              <Image src="/gif/2.gif" alt="" width={500} height={700} />
+              <Image
+                src="/gif/2.gif"
+                unoptimized
+                alt=""
+                width={500}
+                height={700}
+              />
               {/* <motion.div
                 className="w-[70%] max-sm:max-w-[62%]"
                 initial={{ y: 100, opacity: 0 }}

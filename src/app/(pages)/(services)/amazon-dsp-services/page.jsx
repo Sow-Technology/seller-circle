@@ -185,7 +185,13 @@ const page = () => {
               {" "}
               <div className="sticky top-24  border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
                 {" "}
-                <Image src="/gif/3.gif" alt="" width={800} height={500} />
+                <Image
+                  src="/gif/3.gif"
+                  unoptimized
+                  alt=""
+                  width={800}
+                  height={500}
+                />
               </div>
             </div>
           </div>
@@ -340,7 +346,13 @@ const page = () => {
               {" "}
               <div className="sticky top-24  border-background bg-background/30 rounded-md flex items-center justify-center text-2xl font-extrabold">
                 {" "}
-                <Image src="/gif/4.gif" alt="" width={800} height={500} />
+                <Image
+                  src="/gif/4.gif"
+                  unoptimized
+                  alt=""
+                  width={800}
+                  height={500}
+                />
               </div>
             </div>
           </div>
