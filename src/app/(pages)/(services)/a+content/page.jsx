@@ -78,46 +78,7 @@ const items = [
       "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
   },
 ];
-const marqueeItem = [
-  "/images/brands/1.png",
-  "/images/brands/2.png",
-  "/images/brands/3.png",
-  "/images/brands/4.png",
-  "/images/brands/5.png",
-  "/images/brands/6.png",
-  "/images/brands/7.png",
-  "/images/brands/8.png",
-  "/images/brands/9.png",
-  "/images/brands/10.png",
-  "/images/brands/11.png",
-  "/images/brands/12.png",
-  "/images/brands/13.png",
-  "/images/brands/14.png",
-  "/images/brands/15.png",
-];
-const cycle = [
-  {
-    title: "Looking for Inspiration",
-    description: "The first point of contact for product/brand inspiration.",
-  },
-  {
-    title: "Product/Brand Awareness",
-    description: "Increasing awareness of your product or brand.",
-  },
-  {
-    title: "Improving Purchase Intent",
-    description: "Enhancing the intent of customers to make a purchase.",
-  },
-  {
-    title: "Finding Information",
-    description:
-      "Addressing customer preferences and providing relevant information.",
-  },
-  {
-    title: "Driving Purchase",
-    description: "Encouraging customers to make a purchase.",
-  },
-];
+
 const page = () => {
   return (
     <>

@@ -6,7 +6,7 @@ import AM1 from "@/components/sections/services/AM1";
 import Audit from "@/components/forms/Audit";
 import Image from "next/image";
 import Services from "@/components/sections/about/Services";
-import { approchItems } from "@/lib/data";
+import { approchItems, marqueeItem } from "@/lib/data";
 import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
@@ -74,23 +74,7 @@ const items = [
       "Providing clear insights into your campaign performance and growth trajectory for confident delegation.",
   },
 ];
-const marqueeItem = [
-  "/images/brands/1.png",
-  "/images/brands/2.png",
-  "/images/brands/3.png",
-  "/images/brands/4.png",
-  "/images/brands/5.png",
-  "/images/brands/6.png",
-  "/images/brands/7.png",
-  "/images/brands/8.png",
-  "/images/brands/9.png",
-  "/images/brands/10.png",
-  "/images/brands/11.png",
-  "/images/brands/12.png",
-  "/images/brands/13.png",
-  "/images/brands/14.png",
-  "/images/brands/15.png",
-];
+
 const cycle = [
   {
     title: "Looking for Inspiration",

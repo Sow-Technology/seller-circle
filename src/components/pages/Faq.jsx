@@ -12,8 +12,8 @@ export default function FAQ({ faqs }) {
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between  lg:px-8  w-full bg-white">
         <div className="mx-auto w-full divide-y divide-neutral-900/10 dark:divide-white/30">
           <dl className="mt-12 space-y-6 divide-y  w-fulldivide-neutral-900/10 dark:divide-white/30">
-            {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.id} className="pt-6 w-full">
+            {faqs.map((faq, idx) => (
+              <Disclosure as="div" key={idx} className="pt-6 w-full">
                 {({ open }) => (
                   <>
                     <dt className="w-full">

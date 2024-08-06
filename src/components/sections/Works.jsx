@@ -6,11 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import A from "../pages/works/A";
+import Story from "../pages/works/Story";
 
 const Works = () => {
   const pathname = usePathname();
   return (
-    <div className="mx-auto max-w-7xl flex flex-col my-20">
+    <div className="mx-auto max-w-7xl  flex flex-col my-20">
       {" "}
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
@@ -75,7 +76,9 @@ const Works = () => {
           <TabsContent value="a">
             <A />
           </TabsContent>
-          <TabsContent value="story">Change your password here.</TabsContent>
+          <TabsContent value="story">
+            <Story />
+          </TabsContent>
           <TabsContent value="store">Change your password here.</TabsContent>
           <TabsContent value="video">Change your password here.</TabsContent>
         </Tabs>

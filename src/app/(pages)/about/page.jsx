@@ -11,6 +11,7 @@ import Success from "@/components/sections/about/Success";
 import Why from "@/components/sections/about/Why";
 import Marquee from "@/components/ui/marquee";
 import TypingAnimation from "@/components/ui/typing-animation";
+import { marqueeItem } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -20,18 +21,7 @@ import {
   FaLinkedin,
   FaPinterest,
 } from "react-icons/fa6";
-const marqueeItem = [
-  "/images/s1.webp",
-  "/images/s2.webp",
-  "/images/s3.webp",
-  "/images/s4.webp",
-  "/images/s5.webp",
-  "/images/s6.webp",
-  "/images/s7.webp",
-  "/images/s8.webp",
-  "/images/s9.webp",
-  "/images/s10.webp",
-];
+
 const approchItems = [
   {
     icon: "/images/approach/1.png",

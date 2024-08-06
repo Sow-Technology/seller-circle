@@ -30,6 +30,18 @@ const generalFaq = [
         b: "Product Display Page & Amazon Ads Video Creation:",
         desc: "Producing informative and high-impact videos for product display pages and Amazon ads.",
       },
+      {
+        b: "Amazon Growth Management",
+        desc: "Full-service management that encompasses operations and advertising. We strategize holistically to scale your brand with listing optimization, daily operations, and advertising. Our unique 30+ touch point audit covers brand presence, competition, pricing, advertising structure, and creatives. The data used for the audit is kept confidential and secure.",
+      },
+      {
+        b: "Amazon DSP Management",
+        desc: "Utilizing a self-serve seat, we build audience-based campaigns tailored to your product needs. Campaigns start as low as $1000, with custom audience creations and creative services billed separately from the service fees.",
+      },
+      {
+        b: "Strategy Consulting",
+        desc: "A 1-3 month package offering handholding and strategy creation. We work with your team to develop a compelling strategy for your sales operations.",
+      },
     ],
   },
   {
@@ -41,6 +53,21 @@ const generalFaq = [
     question: "What makes Seller Circle’s services unique?",
     answer:
       "Our services are designed to deliver exceptional results through a combination of industry expertise, data-driven strategies, and creative solutions. We focus on creating content that not only looks great but also converts, leveraging our extensive experience with over 1 million product listings and multiple award-winning Amazon Ads strategies.",
+  },
+  {
+    question:
+      "How do you ensure the confidentiality of the data used in your audits?",
+    answer:
+      "We take data security seriously. All data collected during our audits is kept confidential and secure within our audit systems. Only authorized personnel have access to this data.",
+  },
+  {
+    question: "What is the onboarding process for new brands?",
+    answer: "The onboarding process includes:",
+    ul: [
+      "Conducting a comprehensive 30+ touch point audit",
+      "Assessing brand presence, competition, pricing, advertising structure, and creatives",
+      "Agreeing on fees and strategy before proceeding",
+    ],
   },
 ];
 const brandStoreFaq = [
@@ -118,6 +145,20 @@ const productDisplayFaq = [
     question: "How do your videos contribute to better performance on Amazon?",
     answer:
       "Our videos are designed to engage viewers, highlight product USPs, and drive conversions by presenting clear, relevant information in an engaging format. This helps increase click-through rates and overall sales.",
+    ul: [
+      "Listing optimization",
+      "Daily operations management",
+      "Advertising management",
+      "A 30+ touch point audit, assessing brand presence, competition, pricing, advertising structure, and creatives",
+      "Confidential and secure data handling",
+    ],
+  },
+];
+const growthManagementFaq = [
+  {
+    question: "What does your Amazon Growth Management service include?",
+    answer:
+      "Our Amazon Growth Management service includes a holistic approach to scaling your brand, covering:",
   },
 ];
 const additionalFaq = [
@@ -130,6 +171,31 @@ const additionalFaq = [
     question: "Can you help with ongoing support and optimization?",
     answer:
       "Yes, we offer ongoing support and optimization services to ensure that your content continues to perform well and meets your evolving needs.\nFor any other questions or to learn more about how Seller Circle can help your business, please contact us. We’re here to assist you in achieving your Amazon sales goals!",
+  },
+];
+const dspFaq = [
+  {
+    question: "How does the Amazon DSP Management service work?",
+    answer: "Our Amazon DSP Management service involves:",
+    ul: [
+      "Utilizing a self-serve seat",
+      "Building audiences based on product needs",
+      "Starting campaigns as low as $1000",
+      "Custom audience creations",
+      "Creative services for DSP advertising, billed separately from service fees",
+    ],
+  },
+];
+const strategyFaq = [
+  {
+    question: "What is included in the Strategy Consulting service?",
+    answer: "Our Strategy Consulting service offers:",
+    ul: [
+      "A 1-3 month package",
+      "Handholding and strategy creation",
+      "Working with your team to develop a sales strategy",
+      "Enabling you to operate independently after the consulting period",
+    ],
   },
 ];
 const page = () => {
@@ -152,6 +218,45 @@ const page = () => {
           <div className="w-full">
             {" "}
             <FAQ faqs={generalFaq} />
+          </div>{" "}
+          <motion.h3
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+            id="growthManagementFaq"
+          >
+            Amazon Growth Management{" "}
+          </motion.h3>
+          <div className="w-full">
+            {" "}
+            <FAQ faqs={growthManagementFaq} />
+          </div>{" "}
+          <motion.h3
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+            id="dspFaq"
+          >
+            Amazon DSP Management
+          </motion.h3>
+          <div className="w-full">
+            {" "}
+            <FAQ faqs={dspFaq} />
+          </div>{" "}
+          <motion.h3
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto"
+            id="strategyFaq"
+          >
+            Strategy Consulting{" "}
+          </motion.h3>
+          <div className="w-full">
+            {" "}
+            <FAQ faqs={strategyFaq} />
           </div>{" "}
           <motion.h3
             initial={{ y: 100, opacity: 0 }}

@@ -97,6 +97,44 @@ const food = [
   "/images/work/a/Food/23.png",
   "/images/work/a/Food/24.jpeg",
 ];
+const games = ["/images/work/a/Games/1.png", "/images/work/a/Games/2.png"];
+const health = ["/images/work/a/Health/1.jpeg", "/images/work/a/Health/2.jpeg"];
+const homeDecor = [
+  "/images/work/a/HomeDecor/1.jpeg",
+  "/images/work/a/HomeDecor/2.png",
+  "/images/work/a/HomeDecor/3.png",
+  "/images/work/a/HomeDecor/4.jpeg",
+  "/images/work/a/HomeDecor/5.png",
+  "/images/work/a/HomeDecor/6.jpeg",
+  "/images/work/a/HomeDecor/7.png",
+  "/images/work/a/HomeDecor/8.png",
+  "/images/work/a/HomeDecor/9.png",
+  "/images/work/a/HomeDecor/10.png",
+];
+const kids = [
+  "/images/work/a/KidsProducts/1.png",
+  "/images/work/a/KidsProducts/2.png",
+  "/images/work/a/KidsProducts/3.png",
+  "/images/work/a/KidsProducts/4.jpeg",
+  "/images/work/a/KidsProducts/5.png",
+  "/images/work/a/KidsProducts/6.png",
+  "/images/work/a/KidsProducts/7.png",
+];
+const kitchen = [
+  "/images/work/a/Kitchenessentials/1.png",
+  "/images/work/a/Kitchenessentials/2.png",
+  "/images/work/a/Kitchenessentials/3.png",
+  "/images/work/a/Kitchenessentials/4.jpeg",
+  "/images/work/a/Kitchenessentials/5.png",
+];
+const pets = [
+  "/images/work/a/Pets/1.png",
+  "/images/work/a/Pets/2.png",
+  "/images/work/a/Pets/3.jpeg",
+  "/images/work/a/Pets/4.jpeg",
+  "/images/work/a/Pets/5.png",
+  "/images/work/a/Pets/6.jpeg",
+];
 
 const A = () => {
   return (
@@ -168,7 +206,7 @@ const A = () => {
               whileInView={{ y: 0, opacity: 100 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="w-[150px] hover:text-white py-1"
+              className=" hover:text-white py-1"
             >
               Everyday Essentials
             </motion.div>
@@ -252,7 +290,7 @@ const A = () => {
               whileInView={{ y: 0, opacity: 100 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
+              className="w-[150px] hover:text-white py-1"
             >
               Kitchen Essentials
             </motion.div>
@@ -323,6 +361,54 @@ const A = () => {
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
           {food.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
+        <TabsContent
+          value="games"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {games.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
+        <TabsContent
+          value="health"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {health.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
+        <TabsContent
+          value="home"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {homeDecor.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>{" "}
+        <TabsContent
+          value="kids"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {kids.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
+        <TabsContent
+          value="kitchen"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {kitchen.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
+        <TabsContent
+          value="pets"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+        >
+          {pets.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>

@@ -7,11 +7,11 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full  bg-white  bg-grid-black/[0.05] relative flex items-center justify-center ">
+      <div className="w-full  bg-white  bg-grid-black/[0.05] z-[501] flex items-center justify-center ">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-        <div className="max-w-7xl mx-auto my-20 z-[39] lg:px-5">
+        <div className="max-w-7xl mx-auto z-30  lg:px-5">
           <Works />
         </div>
       </div>

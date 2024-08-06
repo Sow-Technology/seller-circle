@@ -15,24 +15,8 @@ import { IoMdAnalytics } from "react-icons/io";
 
 import Why from "@/components/pages/dsp/Why";
 import { FaFunnelDollar } from "react-icons/fa";
+import { marqueeItem } from "@/lib/data";
 
-const marqueeItem = [
-  "/images/brands/1.png",
-  "/images/brands/2.png",
-  "/images/brands/3.png",
-  "/images/brands/4.png",
-  "/images/brands/5.png",
-  "/images/brands/6.png",
-  "/images/brands/7.png",
-  "/images/brands/8.png",
-  "/images/brands/9.png",
-  "/images/brands/10.png",
-  "/images/brands/11.png",
-  "/images/brands/12.png",
-  "/images/brands/13.png",
-  "/images/brands/14.png",
-  "/images/brands/15.png",
-];
 const Items = [
   {
     title: "Full-Funnel Strategy",
