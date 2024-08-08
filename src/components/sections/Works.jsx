@@ -3,13 +3,20 @@ import React from "react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import A from "../pages/works/A";
 import Story from "../pages/works/Story";
+import Store from "../pages/works/Store";
+import Premium from "../pages/works/Premium";
+import Video from "../pages/works/Video";
 
 const Works = () => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const defaultVal = searchParams.get("s");
+  console.log(searchParams.get("s"));
+  console.log(pathname);
   return (
     <div className="mx-auto max-w-7xl  flex flex-col my-20">
       {" "}
@@ -22,7 +29,7 @@ const Works = () => {
         Check Our <span className="text-[#039BE4]">Works</span>
       </motion.h2>
       {pathname == "/works" ? (
-        <Tabs defaultValue="a" className="">
+        <Tabs defaultValue={defaultVal || "a"} className="">
           <TabsList>
             <TabsTrigger value="a">
               {" "}
@@ -72,6 +79,18 @@ const Works = () => {
                 BRAND STORE
               </motion.div>
             </TabsTrigger>
+            <TabsTrigger value="premium">
+              {" "}
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true }}
+                className="w-[130px] hover:text-white py-1"
+              >
+                Premium A+
+              </motion.div>
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="a">
             <A />
@@ -79,12 +98,19 @@ const Works = () => {
           <TabsContent value="story">
             <Story />
           </TabsContent>
-          <TabsContent value="store">Change your password here.</TabsContent>
-          <TabsContent value="video">Change your password here.</TabsContent>
+          <TabsContent value="store">
+            <Store />
+          </TabsContent>
+          <TabsContent value="video">
+            <Video />
+          </TabsContent>
+          <TabsContent value="premium">
+            <Premium />
+          </TabsContent>
         </Tabs>
       ) : (
         <div className="flex flex-wrap items-center gap-7 justify-center">
-          <Link href="/works">
+          <Link href="/works?s=a">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
@@ -96,7 +122,7 @@ const Works = () => {
               </Button>
             </motion.div>
           </Link>
-          <Link href="/works">
+          <Link href="/works?s=story">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
@@ -108,7 +134,7 @@ const Works = () => {
               </Button>
             </motion.div>
           </Link>
-          <Link href="/works">
+          <Link href="/works?s=video">
             {" "}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
@@ -121,7 +147,7 @@ const Works = () => {
               </Button>
             </motion.div>
           </Link>{" "}
-          <Link href="/works">
+          <Link href="/works?s=store">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}

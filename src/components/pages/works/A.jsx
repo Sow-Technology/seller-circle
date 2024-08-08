@@ -4,34 +4,48 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const accessories = [
-  "/images/work/a/Accessories/1.png",
-  "/images/work/a/Accessories/2.jpeg",
-  "/images/work/a/Accessories/3.jpeg",
-  "/images/work/a/Accessories/4.png",
-  "/images/work/a/Accessories/5.png",
-  "/images/work/a/Accessories/6.png",
-  "/images/work/a/Accessories/7.png",
-  "/images/work/a/Accessories/8.png",
-  "/images/work/a/Accessories/9.png",
-  "/images/work/a/Accessories/10.jpeg",
-  "/images/work/a/Accessories/11.png",
-  "/images/work/a/Accessories/12.png",
-  "/images/work/a/Accessories/13.png",
-  "/images/work/a/Accessories/14.png",
-  "/images/work/a/Accessories/15.png",
-  "/images/work/a/Accessories/16.png",
-  "/images/work/a/Accessories/17.jpeg",
-  "/images/work/a/Accessories/18.png",
-  "/images/work/a/Accessories/19.png",
+const apparel = [
+  "/images/work/a/Apparel/1.png",
+  "/images/work/a/Apparel/2.jpeg",
+  "/images/work/a/Apparel/3.jpeg",
+  "/images/work/a/Apparel/4.jpeg",
+  "/images/work/a/Apparel/5.jpeg",
+  "/images/work/a/Apparel/6.png",
+  "/images/work/a/Apparel/7.png",
+  "/images/work/a/Apparel/8.png",
+  "/images/work/a/Apparel/9.png",
+  "/images/work/a/Apparel/10.jpeg",
+  "/images/work/a/Apparel/11.png",
+  "/images/work/a/Apparel/12.png",
+  "/images/work/a/Apparel/13.jpeg",
 ];
-const bathroom = [
-  "/images/work/a/Bathroom/1.png",
-  "/images/work/a/Bathroom/2.png",
-  "/images/work/a/Bathroom/3.png",
-  "/images/work/a/Bathroom/4.png",
-  "/images/work/a/Bathroom/5.png",
-  "/images/work/a/Bathroom/6.png",
+const consumable = [
+  "/images/work/a/Consumable/1.png",
+  "/images/work/a/Consumable/2.jpeg",
+  "/images/work/a/Consumable/3.jpeg",
+  "/images/work/a/Consumable/4.jpeg",
+  "/images/work/a/Consumable/5.png",
+  "/images/work/a/Consumable/6.png",
+  "/images/work/a/Consumable/7.jpeg",
+  "/images/work/a/Consumable/8.jpeg",
+  "/images/work/a/Consumable/9.jpeg",
+  "/images/work/a/Consumable/10.png",
+  "/images/work/a/Consumable/11.jpeg",
+  "/images/work/a/Consumable/12.png",
+  "/images/work/a/Consumable/13.png",
+  "/images/work/a/Consumable/14.png",
+  "/images/work/a/Consumable/15.png",
+  "/images/work/a/Consumable/16.png",
+  "/images/work/a/Consumable/17.jpeg",
+  "/images/work/a/Consumable/18.jpeg",
+  "/images/work/a/Consumable/19.png",
+  "/images/work/a/Consumable/20.png",
+  "/images/work/a/Consumable/21.png",
+  "/images/work/a/Consumable/22.png",
+  "/images/work/a/Consumable/23.png",
+  "/images/work/a/Consumable/24.png",
+  "/images/work/a/Consumable/25.png",
+  "/images/work/a/Consumable/26.jpeg",
 ];
 const beauty = [
   "/images/work/a/Beauty/1.jpeg",
@@ -48,85 +62,65 @@ const beauty = [
   "/images/work/a/Beauty/12.png",
   "/images/work/a/Beauty/13.jpeg",
 ];
-const clothes = [
-  "/images/work/a/Clothes/1.jpeg",
-  "/images/work/a/Clothes/2.jpeg",
-  "/images/work/a/Clothes/3.png",
-  "/images/work/a/Clothes/4.png",
-  "/images/work/a/Clothes/5.jpeg",
-  "/images/work/a/Clothes/6.png",
-  "/images/work/a/Clothes/7.jpeg",
+const home = [
+  "/images/work/a/Home/1.jpeg",
+  "/images/work/a/Home/2.png",
+  "/images/work/a/Home/3.png",
+  "/images/work/a/Home/4.png",
+  "/images/work/a/Home/5.png",
+  "/images/work/a/Home/6.png",
+  "/images/work/a/Home/7.png",
+  "/images/work/a/Home/8.jpeg",
+  "/images/work/a/Home/9.png",
+  "/images/work/a/Home/10.png",
+  "/images/work/a/Home/11.png",
+  "/images/work/a/Home/12.png",
+  "/images/work/a/Home/13.png",
+  "/images/work/a/Home/14.jpeg",
+  "/images/work/a/Home/15.png",
+  "/images/work/a/Home/16.png",
+  "/images/work/a/Home/17.png",
+  "/images/work/a/Home/18.png",
+  "/images/work/a/Home/19.jpeg",
+  "/images/work/a/Home/20.png",
+  "/images/work/a/Home/21.png",
 ];
-const everyday = [
-  "/images/work/a/EverydayEssentials/1.jpeg",
-  "/images/work/a/EverydayEssentials/2.jpeg",
-  "/images/work/a/EverydayEssentials/3.jpeg",
-  "/images/work/a/EverydayEssentials/4.jpeg",
+const others = [
+  "/images/work/a/others/1.png",
+  "/images/work/a/others/2.jpeg",
+  "/images/work/a/others/3.jpeg",
+  "/images/work/a/others/4.png",
+  "/images/work/a/others/5.png",
+  "/images/work/a/others/6.jpeg",
+  "/images/work/a/others/7.png",
+  "/images/work/a/others/8.png",
+  "/images/work/a/others/9.png",
+  "/images/work/a/others/10.jpeg",
+  "/images/work/a/others/11.png",
+  "/images/work/a/others/12.png",
+  "/images/work/a/others/13.png",
+  "/images/work/a/others/14.png",
+  "/images/work/a/others/15.png",
+  "/images/work/a/others/16.png",
+  "/images/work/a/others/17.png",
+  "/images/work/a/others/18.jpeg",
+  "/images/work/a/others/19.jpeg",
+  "/images/work/a/others/20.png",
+  "/images/work/a/others/21.png",
 ];
-const fashion = [
-  "/images/work/a/Fashion/1.png",
-  "/images/work/a/Fashion/2.jpeg",
-  "/images/work/a/Fashion/3.jpeg",
-  "/images/work/a/Fashion/4.png",
-  "/images/work/a/Fashion/5.png",
-  "/images/work/a/Fashion/6.png",
+
+const games = [
+  "/images/work/a/Games/1.png",
+  "/images/work/a/Games/2.png",
+  "/images/work/a/Games/3.png",
+  "/images/work/a/Games/4.png",
+  "/images/work/a/Games/5.jpeg",
+  "/images/work/a/Games/6.png",
+  "/images/work/a/Games/7.png",
+  "/images/work/a/Games/8.png",
+  "/images/work/a/Games/9.png",
 ];
-const food = [
-  "/images/work/a/Food/1.png",
-  "/images/work/a/Food/2.jpeg",
-  "/images/work/a/Food/3.jpeg",
-  "/images/work/a/Food/4.png",
-  "/images/work/a/Food/5.png",
-  "/images/work/a/Food/6.jpeg",
-  "/images/work/a/Food/7.jpeg",
-  "/images/work/a/Food/8.jpeg",
-  "/images/work/a/Food/9.png",
-  "/images/work/a/Food/10.jpeg",
-  "/images/work/a/Food/11.png",
-  "/images/work/a/Food/12.png",
-  "/images/work/a/Food/13.png",
-  "/images/work/a/Food/14.png",
-  "/images/work/a/Food/15.png",
-  "/images/work/a/Food/16.jpeg",
-  "/images/work/a/Food/17.png",
-  "/images/work/a/Food/18.png",
-  "/images/work/a/Food/19.png",
-  "/images/work/a/Food/20.jpeg",
-  "/images/work/a/Food/21.png",
-  "/images/work/a/Food/22.png",
-  "/images/work/a/Food/23.png",
-  "/images/work/a/Food/24.jpeg",
-];
-const games = ["/images/work/a/Games/1.png", "/images/work/a/Games/2.png"];
-const health = ["/images/work/a/Health/1.jpeg", "/images/work/a/Health/2.jpeg"];
-const homeDecor = [
-  "/images/work/a/HomeDecor/1.jpeg",
-  "/images/work/a/HomeDecor/2.png",
-  "/images/work/a/HomeDecor/3.png",
-  "/images/work/a/HomeDecor/4.jpeg",
-  "/images/work/a/HomeDecor/5.png",
-  "/images/work/a/HomeDecor/6.jpeg",
-  "/images/work/a/HomeDecor/7.png",
-  "/images/work/a/HomeDecor/8.png",
-  "/images/work/a/HomeDecor/9.png",
-  "/images/work/a/HomeDecor/10.png",
-];
-const kids = [
-  "/images/work/a/KidsProducts/1.png",
-  "/images/work/a/KidsProducts/2.png",
-  "/images/work/a/KidsProducts/3.png",
-  "/images/work/a/KidsProducts/4.jpeg",
-  "/images/work/a/KidsProducts/5.png",
-  "/images/work/a/KidsProducts/6.png",
-  "/images/work/a/KidsProducts/7.png",
-];
-const kitchen = [
-  "/images/work/a/Kitchenessentials/1.png",
-  "/images/work/a/Kitchenessentials/2.png",
-  "/images/work/a/Kitchenessentials/3.png",
-  "/images/work/a/Kitchenessentials/4.jpeg",
-  "/images/work/a/Kitchenessentials/5.png",
-];
+
 const pets = [
   "/images/work/a/Pets/1.png",
   "/images/work/a/Pets/2.png",
@@ -148,32 +142,21 @@ const A = () => {
       >
         A+ Content
       </motion.h3>
-      <Tabs defaultValue="accessories" className="">
+      <Tabs defaultValue="apparel" className="">
         <TabsList>
-          <TabsTrigger value="accessories">
+          <TabsTrigger value="apparel">
             {" "}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
+              className=" hover:text-white py-1 "
             >
-              Accessories
+              Apparel and Fashion
             </motion.div>
           </TabsTrigger>
-          <TabsTrigger value="bathroom">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
-            >
-              Bathroom
-            </motion.div>
-          </TabsTrigger>
+
           <TabsTrigger value="beauty">
             {" "}
             <motion.div
@@ -187,7 +170,7 @@ const A = () => {
               Beauty
             </motion.div>
           </TabsTrigger>
-          <TabsTrigger value="clothes">
+          <TabsTrigger value="consumable">
             {" "}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
@@ -196,43 +179,7 @@ const A = () => {
               viewport={{ once: true }}
               className="w-[130px] hover:text-white py-1"
             >
-              Clothes
-            </motion.div>
-          </TabsTrigger>
-          <TabsTrigger value="everyday">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className=" hover:text-white py-1"
-            >
-              Everyday Essentials
-            </motion.div>
-          </TabsTrigger>
-          <TabsTrigger value="fashion">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
-            >
-              Fashion
-            </motion.div>
-          </TabsTrigger>
-          <TabsTrigger value="food">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
-            >
-              Food
+              Consumable
             </motion.div>
           </TabsTrigger>
           <TabsTrigger value="games">
@@ -242,21 +189,9 @@ const A = () => {
               whileInView={{ y: 0, opacity: 100 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
+              className=" hover:text-white py-1"
             >
-              Games
-            </motion.div>
-          </TabsTrigger>
-          <TabsTrigger value="health">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="w-[130px] hover:text-white py-1"
-            >
-              Health
+              Games and Education{" "}
             </motion.div>
           </TabsTrigger>
           <TabsTrigger value="home">
@@ -268,10 +203,10 @@ const A = () => {
               viewport={{ once: true }}
               className="w-[130px] hover:text-white py-1"
             >
-              Home Decor
+              Home
             </motion.div>
           </TabsTrigger>
-          <TabsTrigger value="kids">
+          <TabsTrigger value="others">
             {" "}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
@@ -280,21 +215,10 @@ const A = () => {
               viewport={{ once: true }}
               className="w-[130px] hover:text-white py-1"
             >
-              Kids Products
+              Others
             </motion.div>
           </TabsTrigger>
-          <TabsTrigger value="kitchen">
-            {" "}
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 100 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="w-[150px] hover:text-white py-1"
-            >
-              Kitchen Essentials
-            </motion.div>
-          </TabsTrigger>
+
           <TabsTrigger value="pets">
             {" "}
             <motion.div
@@ -309,21 +233,14 @@ const A = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent
-          value="accessories"
+          value="apparel"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
-          {accessories.map((image, index) => (
+          {apparel.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>
-        <TabsContent
-          value="bathroom"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
-        >
-          {bathroom.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>
+
         <TabsContent
           value="beauty"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
@@ -333,77 +250,38 @@ const A = () => {
           ))}{" "}
         </TabsContent>
         <TabsContent
-          value="clothes"
+          value="consumable"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
-          {clothes.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>
-        <TabsContent
-          value="everyday"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
-        >
-          {everyday.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>
-        <TabsContent
-          value="fashion"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
-        >
-          {fashion.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>
-        <TabsContent
-          value="food"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
-        >
-          {food.map((image, index) => (
+          {consumable.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>
         <TabsContent
           value="games"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
           {games.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>
         <TabsContent
-          value="health"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
-        >
-          {health.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>
-        <TabsContent
           value="home"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
-          {homeDecor.map((image, index) => (
-            <WorkCard src={image} key={index} />
-          ))}{" "}
-        </TabsContent>{" "}
-        <TabsContent
-          value="kids"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
-        >
-          {kids.map((image, index) => (
+          {home.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>
         <TabsContent
-          value="kitchen"
-          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "
+          value="others"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
         >
-          {kitchen.map((image, index) => (
+          {others.map((image, index) => (
             <WorkCard src={image} key={index} />
           ))}{" "}
         </TabsContent>
+
         <TabsContent
           value="pets"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center  "

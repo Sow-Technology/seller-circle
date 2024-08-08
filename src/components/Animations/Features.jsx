@@ -11,7 +11,7 @@ const Features = (props) => (
       transition={{ ease: easeIn, type: "spring" }}
     >
       <Image
-        src="/images/a1.png"
+        src="/images/2.png"
         alt=""
         width={600}
         height={600}

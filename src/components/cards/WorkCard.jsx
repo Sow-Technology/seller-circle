@@ -10,14 +10,8 @@ import {
 } from "@/components/ui/dialog";
 
 const WorkCard = ({ src }) => {
-  const handleClick = () => {
-    console.log("clicked");
-  };
   return (
-    <div
-      className="shadow-md p-4 px-10 rounded-md border border-gray-200 bg-white object-contain z-0"
-      onClick={handleClick}
-    >
+    <div className="shadow-md p-4 px-10 rounded-md border border-gray-200 bg-white object-contain z-0">
       <Dialog>
         <DialogTrigger>
           {" "}
