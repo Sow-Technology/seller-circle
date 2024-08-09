@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 import { easeIn, motion } from "framer-motion";
 import AM1 from "@/components/sections/services/AM1";
 import Audit from "@/components/forms/Audit";
@@ -132,7 +132,10 @@ const page = () => {
             />
           </div>
           <TabsSection active={1} />
-          <AContent />
+          <Suspense>
+            {" "}
+            <AContent />
+          </Suspense>
           <FAQ />
 
           <Services slice="2" />
