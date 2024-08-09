@@ -6,6 +6,7 @@ import Audit from "../forms/Audit";
 import { services } from "@/lib/data";
 import ServiceCard from "../cards/ServiceCard";
 import Services from "./about/Services";
+import Link from "next/link";
 
 const Growth = () => {
   return (
@@ -32,6 +33,7 @@ const Growth = () => {
       </motion.h2>
       <div className="flex flex-row flex-wrap justify-center lg:justify-between gap-10 relative z-10 mt-20  lg:items-stretch items-center">
         <motion.h3
+          id="services"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
           viewport={{ once: true }}
@@ -43,14 +45,19 @@ const Growth = () => {
           {services.map((item, index) => (
             <ServiceCard item={item} key={index} />
           ))}
-          <div className="inline-flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold">
-            {" "}
-            <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold"
+          >
+            <div className="inline-flex items-center justify-center lg:mr-auto lg:ml-10 gap-2 flex-col font-bold">
               {" "}
-              <Image src="/images/10.svg" height={100} width={100} alt="" />
+              <div className="w-[150px] h-[150px] cshad rounded-full flex items-center justify-center">
+                {" "}
+                <Image src="/images/10.svg" height={100} width={100} alt="" />
+              </div>
+              VIEW ALL
             </div>
-            VIEW ALL
-          </div>
+          </Link>
           <motion.div
             className=""
             initial={{ opacity: 0 }}

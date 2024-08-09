@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import Marquee from "../ui/marquee";
 import { easeIn, easeInOut, motion } from "framer-motion";
 import Awards from "./Awards";
+import Link from "next/link";
 const strategiesItem = [
   {
     icon: "/images/31.webp",
@@ -112,9 +113,12 @@ const Strategies = () => {
             height={500}
             className="self-center lg:mt-32 h-48 w-48"
           />
-          <Button variant="cta" className="px-9 ">
-            KNOW MORE
-          </Button>
+          <Link href="/about">
+            {" "}
+            <Button variant="cta" className="px-9 ">
+              KNOW MORE
+            </Button>
+          </Link>
         </div>
       </div>
       <Awards />

@@ -24,7 +24,7 @@ const cycle = [
 ];
 const Why = () => {
   return (
-    <div className="my-10">
+    <div className="mt-10">
       {" "}
       <motion.h3
         initial={{ y: 100, opacity: 0 }}
@@ -34,7 +34,7 @@ const Why = () => {
       >
         Why Use Amazon DSP Campaigns?{" "}
       </motion.h3>
-      <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5  ">
+      <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 mt-20 max-lg:px-5  ">
         {cycle.map((item, idx) => (
           <CycleCard item={item} index={idx} key={idx} />
         ))}

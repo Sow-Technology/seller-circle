@@ -21,7 +21,7 @@ const ServiceItem = ({ service, left }) => (
       type: "spring",
     }}
     viewport={{ once: true }}
-    className={`flex items-center lg:w-auto min-w-[80px] max-md:max-w-[120px] z-10 ${
+    className={`flex items-center lg:w-auto min-w-[80px] max-md:max-w-[120px]  z-10 ${
       left
         ? service.number % 2 == 1
           ? "md:-mr-24 -mr-10   flex-row-reverse max-md:ml-10 "
@@ -35,7 +35,7 @@ const ServiceItem = ({ service, left }) => (
       {service.number}
     </div>
     <div className=" h-1 bg-background w-10" />
-    <div className=" border-blue-500 border-2 rounded-xl p-2  relative lg:w-[300px] lg:px-5 lg:text-base text-[8px] text-balance font-bold text-[#272727]">
+    <div className=" border-blue-500 border-2 rounded-xl p-2  relative lg:w-[300px] min-h-[67px]  flex items-center justify-center lg:px-5 text-center lg:text-base text-[8px] text-balance font-bold text-[#272727]">
       <div className="absolute h-1.5  w-10 -top-1 left-1/2 -translate-x-1/2 bg-white z-[11]" />
       {service.title}
       <div className="absolute h-1.5  w-10 -bottom-1 left-1/2 -translate-x-1/2 bg-white z-[11]" />

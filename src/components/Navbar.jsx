@@ -12,7 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "./ui/button";
-import { ChevronDown, MenuIcon } from "lucide-react";
+import { ChevronDown, ChevronUp, MenuIcon } from "lucide-react";
 import { FaLocationDot, FaMailchimp } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
@@ -58,12 +58,12 @@ const Navbar = () => {
             </div> */}
           </div>
           <div className="flex gap-5 text-sm items-center">
-            <Link href="tel:+9108041688315">
+            {/* <Link href="tel:+9108041688315">
               <div className="flex text-white items-center gap-2">
                 <FaPhoneAlt className="text-lg" />
                 +9108041688315
               </div>
-            </Link>
+            </Link> */}
             {/* <div className="flex text-white items-center gap-2">
               <FaLocationDot className="text-lg" />
               Kalyan Nagar, Bangalore
@@ -112,37 +112,43 @@ const Navbar = () => {
   );
 };
 const NavItems = [
+  // {
+  //   name: "Home",
+  //   link: "/",
+  // },
   {
-    name: "Home",
+    name: "About",
     link: "/",
-  },
-  {
-    name: "Company",
     subItems: [
       {
-        name: "About Us",
+        name: "Company",
         link: "/about",
+        desc: "We're Your sales Growth Partner",
       },
-      // {
-      //   name: "Resources",
-      //   link: "/resources",
-      // },
+      {
+        name: "Careers",
+        link: "#",
+        desc: " Join Us ",
+      },
     ],
   },
   {
     name: "Resources",
     subItems: [
       {
-        name: "Blog",
+        name: "Our Blog",
         link: "/#",
-      },
-      {
-        name: "Newsletter",
-        link: "/#",
+        desc: "Latest on Advertising",
       },
       {
         name: "Case Study",
         link: "/#",
+        desc: "Celebrating strategy and success ",
+      },
+      {
+        name: "Newsletter",
+        link: "/#",
+        desc: "Join our Tribe",
       },
     ],
   },
@@ -163,23 +169,33 @@ const DesktopNav = () => {
         <NavigationMenuList className="gap-5 text-white font-bold text-base uppercase">
           {NavItems.map((item) =>
             item.subItems ? (
-              <NavigationMenuItem key={item.name} className="relative">
-                <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
-                  {item.name}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className=" font-bold text-sm uppercase ">
-                  <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
-                    {item.subItems.map((subItem) => (
-                      <NavigationMenuItem key={subItem.name}>
-                        <ListItem
-                          href={subItem.link}
-                          title={subItem.name}
-                        ></ListItem>
-                      </NavigationMenuItem>
-                    ))}
-                  </NavigationMenuList>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+              <Link href={item.link || "#"} key={item.name}>
+                <NavigationMenuItem className="relative">
+                  <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
+                    {item.name}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className=" font-bold text-sm uppercase ">
+                    <NavigationMenuList className="grid w-max text-left  p-6 ">
+                      {item.subItems.map((subItem) => (
+                        <NavigationMenuItem key={subItem.name}>
+                          <Link
+                            href={subItem.link}
+                            className="hover:bg-slate-100/70 block p-3"
+                          >
+                            {" "}
+                            <div className={cn("text-xl font-semibold ")}>
+                              {subItem.priority || subItem.name}
+                            </div>
+                            <p className="text-gray-600 text-sm">
+                              {subItem.desc}
+                            </p>
+                          </Link>
+                        </NavigationMenuItem>
+                      ))}
+                    </NavigationMenuList>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </Link>
             ) : (
               <NavigationMenuItem
                 key={item.name}
@@ -208,13 +224,21 @@ const SecDesktopNav = () => {
                   {item.name}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className=" font-bold text-sm uppercase ">
-                  <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
+                  <NavigationMenuList className="grid w-max text-left  p-6 ">
                     {item.subItems.map((subItem) => (
                       <NavigationMenuItem key={subItem.name}>
-                        <ListItem
+                        <Link
                           href={subItem.link}
-                          title={subItem.name}
-                        ></ListItem>
+                          className="hover:bg-slate-100/70 block p-3"
+                        >
+                          {" "}
+                          <div className={cn("text-xl font-semibold ")}>
+                            {subItem.priority || subItem.name}
+                          </div>
+                          <p className="text-gray-600 text-sm">
+                            {subItem.desc}
+                          </p>
+                        </Link>
                       </NavigationMenuItem>
                     ))}
                   </NavigationMenuList>
@@ -243,15 +267,15 @@ const ListItem = ({ className, title, children, ...props }, ref) => {
         <a
           // ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md sm:w-[40vw] p-3 py-2 text-sm w-[85vw] leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
         >
           <div className="font-bold text-sm uppercase">{title}</div>
-          {/* <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className=" text-xs leading-snug text-wrap h-auto w-full  text-slate-300">
             {children}
-          </p> */}
+          </p>
         </a>
       </NavigationMenuLink>
     </li>
@@ -281,18 +305,20 @@ const MobileNav = ({ className }) => {
                       className="text-white font-bold text-base cursor-pointer uppercase flex gap-2 "
                     >
                       {item.name}
-                      <ChevronDown />
+                      {isActive == index ? <ChevronUp /> : <ChevronDown />}{" "}
                     </div>
                     {/* <NavigationMenuContent className=" font-bold text-base uppercase "> */}
                     {isActive === index && (
-                      <NavigationMenuList className="grid w-max text-left items-start  p-2  ">
+                      <NavigationMenuList className="grid w-max text-left items-start  p-2 relative ">
                         {item.subItems.map((subItem) => (
                           <NavigationMenuItem key={subItem.name}>
                             <ListItem
                               className="text-balance"
                               href={subItem.link}
-                              title={subItem.name}
-                            ></ListItem>
+                              title={subItem.priority || subItem.name}
+                            >
+                              {subItem.desc}
+                            </ListItem>
                           </NavigationMenuItem>
                         ))}
                       </NavigationMenuList>

@@ -2,13 +2,13 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <section className="relative z-10 overflow-hidden bg-indigo-600 py-16 px-8 mt-40">
+    <section className="relative z-10 overflow-hidden bg-indigo-600 py-16 px-8 mt-10">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-2/3">
             <div className="text-center lg:text-left ">
               <div className="mb-10 lg:mb-0 ">
-                <h1 className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
+                <h1 className="mt-0 mb-3 md:text-2xl  text-xl font-bold leading-tight sm:text-4xl sm:leading-tight md:leading-tight text-white ">
                   Ready to elevate your brand with Amazon DSP? Get in touch with
                   our expert team today to start optimizing your ad campaigns
                   and drive your business growth.

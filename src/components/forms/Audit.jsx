@@ -28,6 +28,7 @@ import { Textarea } from "../ui/textarea";
 import { toast } from "sonner";
 import axios from "axios";
 import { BorderBeam } from "../ui/border-beam";
+import { services } from "@/lib/data";
 
 const formSchema = z.object({
   fullName: z
@@ -145,7 +146,7 @@ const Audit = () => {
             )}
           />
           <div className="flex flex-row flex-wrap gap-5">
-            <div className="min-w-[150px] lg:max-w-[50%]">
+            <div className="min-w-[150px] flex-1 lg:max-w-[50%]">
               {" "}
               <FormField
                 control={form.control}
@@ -160,7 +161,7 @@ const Audit = () => {
                 )}
               />
             </div>
-            <div className="min-w-[150px]">
+            <div className="min-w-[150px] flex-1">
               {" "}
               <FormField
                 control={form.control}
@@ -178,9 +179,11 @@ const Audit = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="service1">service1 </SelectItem>
-                          <SelectItem value="service2">service2</SelectItem>
-                          <SelectItem value="service3">service3</SelectItem>
+                          {services.map((service, idx) => (
+                            <SelectItem key={idx} value={service.name}>
+                              {service.name}
+                            </SelectItem>
+                          ))}
                         </SelectContent>
                       </Select>
                     </FormControl>
@@ -190,7 +193,7 @@ const Audit = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row flex-wrap gap-5">
+          {/* <div className="flex flex-row flex-wrap gap-5">
             <div className="min-w-[200px]">
               {" "}
               <FormField
@@ -220,7 +223,7 @@ const Audit = () => {
                 )}
               />
             </div>
-          </div>
+          </div> */}
           <FormField
             control={form.control}
             name="message"

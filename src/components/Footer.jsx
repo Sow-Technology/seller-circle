@@ -66,11 +66,21 @@ const Footer = () => {
                     <div className="basis-1/3 text-3xl font-bold mb-2">
                       Quick Links
                     </div>
-                    <div className="basis-1/3 text-base mb-2">About Us</div>
-                    <div className="basis-1/3 text-base mb-2">Our Services</div>
-                    <div className="basis-1/3 text-base mb-2">Careers</div>
-                    <div className="basis-1/3 text-base mb-2">Contact Us</div>
-                    <div className="basis-1/3 text-base mb-2">Pricing</div>
+                    <div className="basis-1/3 text-base mb-2">
+                      <Link href="/about">About Us</Link>
+                    </div>
+                    <div className="basis-1/3 text-base mb-2">
+                      <Link href="/#services">Our Services</Link>
+                    </div>
+                    <div className="basis-1/3 text-base mb-2">
+                      <Link href="#">Careers</Link>
+                    </div>
+                    <div className="basis-1/3 text-base mb-2">
+                      <Link href="/contact">Contact Us</Link>
+                    </div>
+                    <div className="basis-1/3 text-base mb-2">
+                      <Link href="/pricing">Pricing</Link>
+                    </div>
                   </div>
                 </div>
                 <div className="flex w-auto  flex-row">
@@ -80,7 +90,7 @@ const Footer = () => {
                         More
                       </div>
                       <div className="basis-1/4 text-base mb-2">
-                        Terms & Conditions
+                        <Link href="#"> Terms & Conditions</Link>
                       </div>
                       <div className="basis-1/4 text-base mb-2">
                         <Link href="/privacy-policy">Privacy Policy</Link>
@@ -89,10 +99,7 @@ const Footer = () => {
                         <Link href="/faq">FAQ</Link>
                       </div>
                       <div className="basis-1/4 text-base mb-2">
-                        EBC Example
-                      </div>
-                      <div className="basis-1/4 text-base mb-2">
-                        Brand Stores Examples
+                        <Link href="/works"> Creative examples</Link>{" "}
                       </div>
                     </div>
                   </div>

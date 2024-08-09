@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "@/components/LiIcon";
+import { IoThunderstormOutline } from "react-icons/io5";
+import { MdOutlineElectricBolt } from "react-icons/md";
 
 const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
   const ref = useRef(null);
@@ -37,14 +39,36 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-xl mt-5  text-left text-[#303f5b] ${
+              className={`font-medium w-full text-base md:text-xl mt-5  text-left items-start flex flex-col text-[#303f5b] ${
                 !visible ? " lg:visible" : "lg:invisible"
               }`}
             >
-              <li>{t1}</li>
-              <li>{t2}</li>
-              <li>{t3}</li>
-              {t4 && <li>{t4}</li>}
+              <li className="flex gap-2 items-start  my-2">
+                <div className="text-xl mt-2 h-full w-max text-background ">
+                  <MdOutlineElectricBolt />
+                </div>
+                {t1}
+              </li>
+              <li className="flex gap-2 items-start  my-2">
+                <div className="text-xl mt-2 h-full w-max text-background ">
+                  <MdOutlineElectricBolt />
+                </div>
+                {t2}
+              </li>
+              <li className="flex gap-2 items-start  my-2 ">
+                <div className="text-xl mt-2 h-full w-max text-background ">
+                  <MdOutlineElectricBolt />
+                </div>
+                {t3}
+              </li>
+              {t4 && (
+                <li className="flex gap-2 items-start  my-2">
+                  <div className="text-xl mt-2 h-full w-max text-background ">
+                    <MdOutlineElectricBolt />
+                  </div>
+                  {t4}
+                </li>
+              )}
             </ul>
           )}
         </div>
@@ -82,10 +106,34 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
                 visible ? " lg:visible" : "lg:invisible"
               }`}
             >
-              <li>{t1}</li>
-              <li>{t2}</li>
-              <li>{t3}</li>
-              {t4 && <li>{t4}</li>}
+              <li className="flex gap-2 items-start my-2">
+                <div className="text-xl mt-2 h-full w-max text-background ">
+                  <MdOutlineElectricBolt />
+                </div>{" "}
+                {t1}
+              </li>
+              <li className="flex gap-2 items-start my-2">
+                <div className="text-xl mt-2 h-full w-max text-background ">
+                  <MdOutlineElectricBolt />
+                </div>{" "}
+                {t2}
+              </li>
+              {t3 && (
+                <li className="flex gap-2 items-start my-2">
+                  <div className="text-xl mt-2 h-full w-max text-background ">
+                    <MdOutlineElectricBolt />
+                  </div>{" "}
+                  {t3}
+                </li>
+              )}
+              {t4 && (
+                <li className="flex gap-2 items-start my-2">
+                  <div className="text-xl mt-2 h-full w-max text-background ">
+                    <MdOutlineElectricBolt />
+                  </div>{" "}
+                  {t4}
+                </li>
+              )}
             </ul>
           )}
         </div>
@@ -139,7 +187,8 @@ const OurStory = () => {
           <Details
             year="2018"
             month="JANUARY"
-            text="Expanded Catalogue as a service, Expanded Onboarding Engagement with Amazon with a Team of 20 Specialists"
+            t1="Expanded Catalogue as a service"
+            t2=" Expanded Onboarding Engagement with Amazon with a Team of 20 Specialists"
             id="5"
           />
           <Details

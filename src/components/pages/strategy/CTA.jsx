@@ -8,7 +8,7 @@ const CTA = () => {
           <div className="w-full px-4 lg:w-2/3">
             <div className="text-center lg:text-left ">
               <div className="mb-10 lg:mb-0 ">
-                <h1 className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
+                <h1 className="mt-0 mb-3 lg:text-2xl text-xl font-bold leading-tight sm:text-4xl sm:leading-tight  md:leading-tight text-white ">
                   Ready to take your Amazon presence to the next level? Get in
                   touch with our expert consultants today to discuss your goals
                   and start developing a winning strategy.

@@ -49,7 +49,7 @@ const Why = () => {
         className="mb-20 font-medium text-sm lg:text-base max-w-4xl mx-auto text-center p-5"
       >
         30+ years of expertise blend into captivating stories through Product
-        display images, A+, brand stories, videos, and a bespoke Brand store for
+        display images, A+, Brand Stories, Videos, and a Bespoke Brand Store for
         maximum engagement .
       </motion.p>
     </div>

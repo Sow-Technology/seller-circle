@@ -9,7 +9,7 @@ const CTA = () => {
             <div className="text-center lg:text-left ">
               <div className="mb-10 lg:mb-0 ">
                 <h1 className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                  Check Our Advertising Inclusion and service offering
+                  Check Our Advertising Inclusion and Service Offering
                 </h1>
                 <p className="w-full text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed text-white"></p>
               </div>

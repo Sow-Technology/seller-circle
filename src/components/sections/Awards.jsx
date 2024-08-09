@@ -15,7 +15,7 @@ const marqueeItem = [
 ];
 const Awards = () => {
   return (
-    <div className="my-20 w-full overflow-hidden max-w-[100vw]">
+    <div className="my-10 w-full overflow-hidden max-w-[100vw]">
       <Marquee pauseOnHover className="flex items-center justify-center gap-5">
         {marqueeItem.map((item, index) => (
           <div className="max-w-[300px] flex items-center " key={index}>

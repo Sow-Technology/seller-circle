@@ -74,6 +74,8 @@ export const approchItems = [
 ];
 export const services = [
   {
+    priority: "Full Service Management ",
+    desc: "Growth and scale management Operations - advertising",
     name: "Growth & Scale up Management",
     link: "/growth-scale-up-management",
     title: "Growth & Scale up Management",
@@ -83,6 +85,8 @@ export const services = [
   },
   {
     name: "Amazon Advertising Services ",
+    priority: "Amazon Advertising ",
+    desc: "Grow your business with amazon search ads full funnel strategy",
     link: "/amazon-advertisng-services",
     title: "Amazon Advertising  Services ",
     description:
@@ -91,6 +95,7 @@ export const services = [
   },
   {
     name: "Amazon DSP Services ",
+    desc: "Your Brand on Amazon and Beyond",
     link: "amazon-dsp-services",
     title: "Amazon DSP Services ",
     description:
@@ -99,6 +104,8 @@ export const services = [
   },
   {
     name: "Amazon Creative Storytelling ",
+    priority: "Creative Services",
+    desc: "Storytelling through A+,Brand Video , Product images",
     title: "Amazon Creative Storytelling ",
     link: "amazon-creative-storytelling",
     description:
@@ -109,6 +116,8 @@ export const services = [
     name: "Marketplaces Advertising ",
     title: "Marketplaces Advertising ",
     link: "marketplaces-advertising",
+    priority: "Marketplace Expansion",
+    desc: "Advertising managed for other Marketplaces",
     description:
       "Expand your brand's reach across diverse marketplaces using personalized advertising strategies. Amplify your brand presence and customer engagement on top e-commerce platforms, including Walmart, Flipkart, and Quick commerce channels. Our multi-channel advertising solutions ensure holistic market penetration and measurable metrics, empo wering your brand to thrive in competitive market spaces.",
     icon: "/images/13.webp",
@@ -123,8 +132,10 @@ export const services = [
   // },
 
   {
-    title: "Strategy And consulting ",
-    name: "Strategy And consulting ",
+    title: "Strategy and Consulting ",
+    priority: "Strategy & Consulting",
+    desc: "Expert Strategist to work with you",
+    name: "Strategy and Consulting ",
     link: "strategy-and-consulting",
     description:
       "Partner with seasoned experts for winning strategies and actionable insights to optimize your Amazon presence and marketing efforts. Drive business growth through informed decision-making and strategic planning, whether you're launching your brand on Amazon or seeking expert guidance for a perfect launch",
@@ -142,6 +153,8 @@ export const services = [
   {
     name: "Global Launch Strategy",
     title: "Global Launch Strategy",
+    priority: "Global Launch",
+    desc: "Taking Your Brand To Global Audience",
     link: "global-launch-strategy",
     description:
       "We help you expand your reach with our Amazon Global Sales services. Our expertise includes creating tailored global launch strategies, ensuring compliance with local regulations, and optimizing product listings for international marketplaces. We handle language localization, local SEO, and region-specific advertising strategies to make your brand successful worldwide. With our comprehensive approach, you can seamlessly navigate new markets, boost visibility, and drive international sales while maintaining a strong, cohesive brand presence. Let us guide you through the complexities of global ecommerce, enhancing your brand’s global footprint and maximizing your market potential.",
