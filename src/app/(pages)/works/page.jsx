@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Works from "@/components/sections/Works";
-import React from "react";
+import React, { Suspense } from "react";
 
 const page = () => {
   return (
@@ -12,7 +12,9 @@ const page = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
         <div className="max-w-7xl mx-auto z-30  lg:px-5">
-          <Works />
+          <Suspense>
+            <Works />
+          </Suspense>
         </div>
       </div>
       <Footer />
