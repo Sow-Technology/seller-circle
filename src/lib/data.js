@@ -108,7 +108,7 @@ export const services = [
     priority: "Creative Services",
     desc: "Storytelling through A+,Brand Video , Product images",
     title: "Amazon Creative Storytelling ",
-    link: "creative-storytelling",
+    link: "creative-services",
     description:
       "We elevate your brand with expert catalog designs, A+ content, and brand storytelling on Amazon. Our services include creating compelling brand narratives and engaging Product Display Pages with rich infographics. We also design immersive brand stores and captivating brand videos for ads, ensuring your product stands out in the competitive marketplace, driving engagement, and boosting conversions. Our tailored strategies enhance visibility across multiple platforms, ensuring a seamless and enhanced user experience for shoppers. Let us help you communicate your brand’s unique value and drive meaningful customer interactions.",
     icon: "/images/15.webp",
@@ -116,7 +116,7 @@ export const services = [
   {
     name: "Marketplaces Advertising ",
     title: "Marketplaces Advertising ",
-    link: "marketplaces-advertising",
+    link: "marketplaces-expansion",
     priority: "Marketplace Expansion",
     desc: "Advertising managed for other Marketplaces",
     description:
