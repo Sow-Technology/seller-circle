@@ -77,7 +77,7 @@ export const services = [
     priority: "Full Service Management ",
     desc: "Growth and scale management Operations - advertising",
     name: "Growth & Scale up Management",
-    link: "/growth-scale-up-management",
+    link: "/full-service-management",
     title: "Growth & Scale up Management",
     description:
       "Our approach integrates data-driven strategies for managing daily operations, optimizing creatives, and catalog management. We leverage advanced advertising technologies to maximize ROI and reach your target audience. Our holistic solutions are tailored to navigate growth challenges and capitalize on market opportunities, driving exponential business growth.",
@@ -87,8 +87,8 @@ export const services = [
     name: "Amazon Advertising Services ",
     priority: "Amazon Advertising ",
     desc: "Grow your business with amazon search ads full funnel strategy",
-    link: "/amazon-advertisng-services",
-    title: "Amazon Advertising  Services ",
+    link: "/amazon-advertising",
+    title: "Amazon Advertising Services ",
     description:
       "Unlock the full potential of your Amazon presence with our targeted advertising campaigns, designed to maximize ROI. We utilize advanced techniques for enhanced visibility and sales while optimizing ad spend. Through our marketing stream and tracking capabilities, we ensure that every dollar spent delivers a meaningful impact, driving measurable results for your brand.",
     icon: "/images/12.webp",
@@ -98,6 +98,7 @@ export const services = [
     desc: "Your Brand on Amazon and Beyond",
     link: "amazon-dsp-services",
     title: "Amazon DSP Services ",
+    priority: "Amazon DSP Services ",
     description:
       "we go beyond conventional strategies to elevate your Amazon DSP campaigns. Our approach begins with meticulous analysis, ensuring we target the right audience and build precise customer targets. We craft a creative funnel designed for optimal awareness, capturing attention and driving engagement. Engineered for long-term success, our DSP campaigns are structured to deliver sustained results, amplifying your brand's presence and impact on Amazon.",
     icon: "/images/11.webp",
@@ -107,7 +108,7 @@ export const services = [
     priority: "Creative Services",
     desc: "Storytelling through A+,Brand Video , Product images",
     title: "Amazon Creative Storytelling ",
-    link: "amazon-creative-storytelling",
+    link: "creative-storytelling",
     description:
       "We elevate your brand with expert catalog designs, A+ content, and brand storytelling on Amazon. Our services include creating compelling brand narratives and engaging Product Display Pages with rich infographics. We also design immersive brand stores and captivating brand videos for ads, ensuring your product stands out in the competitive marketplace, driving engagement, and boosting conversions. Our tailored strategies enhance visibility across multiple platforms, ensuring a seamless and enhanced user experience for shoppers. Let us help you communicate your brand’s unique value and drive meaningful customer interactions.",
     icon: "/images/15.webp",
@@ -155,7 +156,7 @@ export const services = [
     title: "Global Launch Strategy",
     priority: "Global Launch",
     desc: "Taking Your Brand To Global Audience",
-    link: "global-launch-strategy",
+    link: "global-launch",
     description:
       "We help you expand your reach with our Amazon Global Sales services. Our expertise includes creating tailored global launch strategies, ensuring compliance with local regulations, and optimizing product listings for international marketplaces. We handle language localization, local SEO, and region-specific advertising strategies to make your brand successful worldwide. With our comprehensive approach, you can seamlessly navigate new markets, boost visibility, and drive international sales while maintaining a strong, cohesive brand presence. Let us guide you through the complexities of global ecommerce, enhancing your brand’s global footprint and maximizing your market potential.",
     icon: "/images/15.webp",

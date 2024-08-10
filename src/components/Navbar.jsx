@@ -70,7 +70,7 @@ const Navbar = () => {
             </div> */}
             <Link href="mailto:contact@sellercircle.in">
               {" "}
-              <div className="flex text-white items-center gap-2">
+              <div className="flex text-white items-center gap-2 font-bold">
                 <IoMail className="text-lg" />
                 contact@sellercircle.in
               </div>
@@ -132,6 +132,11 @@ const NavItems = [
       },
     ],
   },
+
+  {
+    name: "Service",
+    subItems: services,
+  },
   {
     name: "Resources",
     subItems: [
@@ -147,14 +152,10 @@ const NavItems = [
       },
       {
         name: "Newsletter",
-        link: "/#",
+        link: "/newsletter",
         desc: "Join our Tribe",
       },
     ],
-  },
-  {
-    name: "Service",
-    subItems: services,
   },
 
   {
@@ -183,10 +184,12 @@ const DesktopNav = () => {
                             className="hover:bg-slate-100/70 block p-3"
                           >
                             {" "}
-                            <div className={cn("text-xl font-semibold ")}>
+                            <div
+                              className={cn("text-xl font-bold text-gray-700 ")}
+                            >
                               {subItem.priority || subItem.name}
                             </div>
-                            <p className="text-gray-600 text-sm">
+                            <p className="text-gray-600 text-sm capitalize">
                               {subItem.desc}
                             </p>
                           </Link>
@@ -232,10 +235,12 @@ const SecDesktopNav = () => {
                           className="hover:bg-slate-100/70 block p-3"
                         >
                           {" "}
-                          <div className={cn("text-xl font-semibold ")}>
+                          <div
+                            className={cn("text-xl font-bold text-gray-700 ")}
+                          >
                             {subItem.priority || subItem.name}
                           </div>
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-sm capitalize">
                             {subItem.desc}
                           </p>
                         </Link>

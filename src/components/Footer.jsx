@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8">
             <div className="lg:w-[60%]">
               {" "}
-              <Audit />
+              <Audit footer />
             </div>
             <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
               <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
@@ -128,9 +128,12 @@ const Footer = () => {
                           OUR MAILBOX:
                         </div>
                       </div>
-                      <div className=" text-white flex-col flex text-base">
-                        contact@sellercircle.in
-                      </div>
+                      <Link href="mailto:contact@sellercircle.in">
+                        {" "}
+                        <div className=" text-white flex-col flex text-base">
+                          contact@sellercircle.in
+                        </div>
+                      </Link>
                     </div>
                     <div className="">
                       <div className=" text-white flex-col flex text-sm font-bold">
@@ -141,21 +144,29 @@ const Footer = () => {
                           OUR PHONE:
                         </div>
                       </div>
-                      <div className=" text-white flex-col flex text-base">
-                        +91 080 4168 8315
-                      </div>
+                      <Link href="tel:+9108041688315">
+                        <div className=" text-white flex-col flex text-base">
+                          +91 080 4168 8315
+                        </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="flex flex-wrap flex-row lg:gap-10 gap-5 max-lg:mt-5 lg:w-[65%] lg:items-center items-start lg:justify-center justify-start">
-                    <div className="">
+                    <Link
+                      href="https://www.linkedin.com/company/seller-circle/"
+                      className=""
+                    >
                       <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
                         <div className=" text-3xl">
                           <AiOutlineLinkedin />
                         </div>
                         <div className="">Linkedin</div>
                       </div>
-                    </div>
-                    <div className="">
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/sellercircle.in?igsh=bXBqNGNuMzd3Z3Br"
+                      className=""
+                    >
                       <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
                         {" "}
                         <div className="text-3xl">
@@ -163,8 +174,11 @@ const Footer = () => {
                         </div>
                         <div className="">Instagram</div>
                       </div>
-                    </div>
-                    <div className="">
+                    </Link>
+                    <Link
+                      href="https://www.facebook.com/sellercircle.in"
+                      className=""
+                    >
                       <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
                         {" "}
                         <div className="text-3xl">
@@ -172,7 +186,7 @@ const Footer = () => {
                         </div>
                         <div className="">Facebook</div>
                       </div>
-                    </div>
+                    </Link>
                     <div className="">
                       <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
                         {" "}

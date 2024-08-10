@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { approchItems } from "@/lib/data";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 const Approach = () => {
   return (
@@ -183,6 +185,12 @@ const Approach = () => {
                 {item.text}
               </motion.div>
             ))}
+            <Link href="/contact" className="mt-10">
+              {" "}
+              <Button variant="cta" className="text-2xl px-10 py-8">
+                Request Audit
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
