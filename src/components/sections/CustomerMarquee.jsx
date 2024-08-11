@@ -24,6 +24,10 @@ const reviews = [
     img: "/images/cm3.webp",
   },
   {
+    body: "Since partnering with Seller Circle in April 2024, our sales have doubled and our Advertising Cost of Sale (ACOS) has decreased by 8%. Additionally, our Flipkart ad costs were reduced by 50%, with sales exceeding 2X. Seller Circle has expertly managed all aspects of our Amazon business, from Seller Central operations and creatives to DSP and search ads. Their holistic approach and deep understanding of Amazon's ecosystem have driven significant growth for Krishna Ayurveda and Herbal. Seller Circle is a great full-service team to work with, and I highly recommend them to any brand looking to scale their presence on Amazon. - Shrawan Daga ,Founder (Krishna Herbal And Ayurveda)",
+    img: "/images/brands/1.png",
+  },
+  {
     body: "Seller Circle is beyond an agency - they have been a partner in Pink Moon's journey providing end to end support right from cataloging, strategy, content and ads. Their deep understanding of Amazon has helped us scale significantly in the last 2 years.",
     img: "/images/cm4.webp",
   },
@@ -53,7 +57,7 @@ const ReviewCard = ({ img, name, username, body }) => {
     >
       <div className="flex flex-row items-center justify-center gap-2">
         <Image
-          className="rounded-full"
+          className="rounded-full grayscale"
           width="114"
           height="85"
           alt=""

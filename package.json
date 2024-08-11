@@ -31,6 +31,7 @@
     "embla-carousel-react": "^8.1.5",
     "feather-icons": "^4.29.2",
     "framer-motion": "^11.2.13",
+    "geoip-country": "^4.2.122",
     "grommet-icons": "^4.12.1",
     "i18n-iso-countries": "^7.11.2",
     "libphonenumber-js": "^1.11.3",

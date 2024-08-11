@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Pricing from "@/components/sections/Pricing";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
@@ -12,16 +12,19 @@ import Pricing2 from "@/components/sections/Pricing/Pricing2";
 import Pricing3 from "@/components/sections/Pricing/Pricing3";
 import Pricing5 from "@/components/sections/Pricing/Pricing5";
 import Pricing4 from "@/components/sections/Pricing/Pricing4";
-
+import Creative from "@/components/sections/Pricing/creative/Creative";
 const services = [
-  "EBC A+ Creation",
-  "Brand Stores Creation",
-  "Account Management",
-  "Catalouge Service",
-  "Training Service",
+  "Creative Services",
+  "Full service management",
+  "Advertising",
+  "DSP",
+  "Strategy and consulting",
+  "Global launch",
+  "Marketplaces Expansion",
 ];
 const Page = () => {
-  const [activeService, setActiveService] = useState("EBC A+ Creation");
+  const [activeService, setActiveService] = useState("Creative Services");
+  const [country, setCountry] = useState(null);
   const settings = {
     dots: true,
     infinite: true,
@@ -29,7 +32,17 @@ const Page = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+  useEffect(() => {
+    async function fetchVisitorInfo() {
+      const response = await fetch("https://ipapi.co/json/");
+      const data = await response.json();
+      // setVisitorInfo(data);
+      console.log(data);
+      setCountry(data.country);
+    }
 
+    fetchVisitorInfo();
+  }, []);
   return (
     <>
       <Navbar />
@@ -99,15 +112,16 @@ const Page = () => {
           </Carousel>
         </div>
       </div>
-      <div className="w-full my-3 text-2xl py-5 font-[900] text-center text-white  rounded-none bg-grid-background bg-background">
+      <div className="w-full my-3 text-2xl py-5 font-[900] text-center text-white  rounded-none bg-grid-background bg-background mb-20">
         {activeService}
       </div>
       <div className="-mt-24">
-        {activeService == "EBC A+ Creation" && <Pricing />}
+        {/* {activeService == "EBC A+ Creation" && <Pricing />}
         {activeService == "Brand Stores Creation" && <Pricing2 />}
         {activeService == "Account Management" && <Pricing3 />}
         {activeService == "Catalouge Service" && <Pricing4 />}
-        {activeService == "Training Service" && <Pricing5 />}
+        {activeService == "Training Service" && <Pricing5 />} */}
+        {activeService == "Creative Services" && <Creative />}
       </div>
       {/* </div> */}
       <Footer />

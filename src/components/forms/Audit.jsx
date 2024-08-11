@@ -31,6 +31,14 @@ import { BorderBeam } from "../ui/border-beam";
 import { services } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import { Turnstile } from "@marsidev/react-turnstile";
+import {
+  MultiSelector,
+  MultiSelectorContent,
+  MultiSelectorInput,
+  MultiSelectorItem,
+  MultiSelectorList,
+  MultiSelectorTrigger,
+} from "@/components/ui/multi-select";
 
 const formSchema = z.object({
   fullName: z
@@ -56,9 +64,7 @@ const formSchema = z.object({
     .max(50, {
       message: "Please enter at msost 50 characters",
     }),
-  service: z.string().min(2, {
-    message: "Please select a service.",
-  }),
+  service: z.array(z.string()),
   // service2: z.string().min(2, {
   //   message: "Please select a service.",
   // }),
@@ -192,26 +198,26 @@ const Audit = ({ footer }) => {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
+                      <MultiSelector
+                        onValuesChange={field.onChange}
+                        values={field.value}
                       >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {services.map((service, idx) => (
-                            <SelectItem
-                              key={idx}
-                              value={service.priority || service.name}
-                            >
-                              {service.priority || service.name}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                        <MultiSelectorTrigger>
+                          <MultiSelectorInput placeholder="Select services" />
+                        </MultiSelectorTrigger>
+                        <MultiSelectorContent>
+                          <MultiSelectorList>
+                            {services.map((service, idx) => (
+                              <MultiSelectorItem
+                                key={idx}
+                                value={service.priority || service.name}
+                              >
+                                {service.priority || service.name}
+                              </MultiSelectorItem>
+                            ))}
+                          </MultiSelectorList>
+                        </MultiSelectorContent>
+                      </MultiSelector>
                     </FormControl>
                     <FormMessage />
                   </FormItem>

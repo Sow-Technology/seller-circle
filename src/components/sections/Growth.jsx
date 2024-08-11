@@ -59,7 +59,7 @@ const Growth = () => {
             </div>
           </Link>
           <motion.div
-            className=""
+            className="max-w-[500px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 100 }}
             transition={{ ease: "easeIn", duration: 1, type: "tween" }}
