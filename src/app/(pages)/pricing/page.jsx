@@ -115,7 +115,7 @@ const Page = () => {
       <div className="w-full my-3 text-2xl py-5 font-[900] text-center text-white  rounded-none bg-grid-background bg-background mb-20">
         {activeService}
       </div>
-      <div className="-mt-24">
+      <div className="-mt-12 max-w-7xl mx-auto">
         {/* {activeService == "EBC A+ Creation" && <Pricing />}
         {activeService == "Brand Stores Creation" && <Pricing2 />}
         {activeService == "Account Management" && <Pricing3 />}
