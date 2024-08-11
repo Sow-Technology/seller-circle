@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Pricing from "@/components/sections/Pricing";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
@@ -122,7 +122,10 @@ const Page = () => {
         {activeService == "Catalouge Service" && <Pricing4 />}
         {activeService == "Training Service" && <Pricing5 />} */}
         {activeService == "Creative Services" && (
-          <Creative IN={country == "IN" ? true : false} />
+          <Suspense>
+            {" "}
+            <Creative IN={country == "IN" ? true : false} />
+          </Suspense>
         )}
       </div>
       {/* </div> */}
