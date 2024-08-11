@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import Form from '../../models/Form';
 import axios from 'axios';
+import Form from '@/models/Form';
 
 const connectToDatabase = async () => {
   if (mongoose.connection.readyState === 1) return;
