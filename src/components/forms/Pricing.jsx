@@ -50,7 +50,7 @@ const formSchema = z.object({
   message: z.string().optional(),
 });
 
-const Pricing = ({ services }) => {
+const Pricing = ({ services, brandName, businessName, nPage }) => {
   console.log(services);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm({
@@ -133,55 +133,107 @@ const Pricing = ({ services }) => {
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="ASIN"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    type="number"
-                    min="1"
-                    max="1000"
-                    {...field}
-                    placeholder="Enter the number of ASIN required"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="min-w-[150px]">
-            {" "}
+          {businessName && (
             <FormField
               control={form.control}
-              name="service"
+              name="businessName"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        {services?.map((service, idx) => (
-                          <SelectItem key={idx} value={service}>
-                            {service}{" "}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <Input placeholder="Business Name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-          </div>
+          )}
+
+          {nPage ? (
+            <FormField
+              control={form.control}
+              name={"nPage"}
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="number"
+                      min="1"
+                      max="1000"
+                      {...field}
+                      placeholder={"Enter the number of pages"}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          ) : (
+            <FormField
+              control={form.control}
+              name={"ASIN"}
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="number"
+                      min="1"
+                      max="1000"
+                      {...field}
+                      placeholder={"Enter the number of ASIN required"}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
+          {brandName && (
+            <FormField
+              control={form.control}
+              name="brandName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="Brand Name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
+          {services && (
+            <div className="min-w-[150px]">
+              {" "}
+              <FormField
+                control={form.control}
+                name="service"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {services?.map((service, idx) => (
+                            <SelectItem key={idx} value={service}>
+                              {service}{" "}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          )}
           {/* <div className="flex flex-row flex-wrap gap-5">
             <div className="min-w-[150px] lg:max-w-[50%]">
               {" "}

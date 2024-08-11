@@ -2,6 +2,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import React from "react";
 import Basic from "./Basic";
+import Premium from "./Premium";
+import Story from "./Story";
+import Store from "./Store";
 
 const TabsSection = ({ active, IN }) => {
   return (
@@ -18,6 +21,15 @@ const TabsSection = ({ active, IN }) => {
         </TabsList>
         <TabsContent value={1}>
           <Basic IN={IN} />
+        </TabsContent>
+        <TabsContent value={2}>
+          <Premium IN={IN} />
+        </TabsContent>
+        <TabsContent value={3}>
+          <Story IN={IN} />
+        </TabsContent>
+        <TabsContent value={4}>
+          <Store IN={IN} />
         </TabsContent>
       </Tabs>
     </div>

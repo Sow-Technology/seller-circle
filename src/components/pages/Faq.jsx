@@ -8,7 +8,7 @@ import {
 
 export default function FAQ({ faqs }) {
   return (
-    <div className="w- lg:w-[1000px]">
+    <div className="w-full mx-auto lg:w-[1000px]">
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between  lg:px-8  w-full bg-white">
         <div className="mx-auto w-full divide-y divide-neutral-900/10 dark:divide-white/30">
           <dl className="mt-12 space-y-6 divide-y  w-fulldivide-neutral-900/10 dark:divide-white/30">
@@ -17,7 +17,7 @@ export default function FAQ({ faqs }) {
                 {({ open }) => (
                   <>
                     <dt className="w-full">
-                      <DisclosureButton className="flex w-full max-w-[90vw] items-center justify-between text-left text-neutral-900 dark:text-neutral-200">
+                      <DisclosureButton className="flex w-full max-w-[90vw] items-center justify-between text-left text-slate-600 dark:text-neutral-200">
                         <span className="text-2xl  font-bold leading-7">
                           {faq.question}
                         </span>

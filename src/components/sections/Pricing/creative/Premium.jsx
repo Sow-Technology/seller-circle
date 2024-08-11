@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { CheckCircleIcon, ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 import { BiPieChart, BiWindow } from "react-icons/bi";
-import { FaColumns, FaFileAlt, FaPallet } from "react-icons/fa";
+import { FaColumns, FaFileAlt, FaPallet, FaShieldAlt } from "react-icons/fa";
 import {
+  FaComment,
   FaCube,
+  FaFilm,
   FaGem,
+  FaGlobe,
   FaHandshake,
   FaKey,
   FaList,
@@ -26,59 +29,60 @@ import Link from "next/link";
 import CTA1 from "./CTA1";
 const Items = [
   {
-    hl1: "High-Quality Design",
+    hl1: "Premium Quality Design",
     l1: (
       <>
-        <b>Benefit:</b> Professional design aligned with your brand’s aesthetic,
-        creating a strong visual impact.
+        <b>Benefit:</b> High-quality, custom design that enhances your product’s
+        presentation and engages your audience.
       </>
     ),
-    i1: <FaGem />,
+    i1: <FaShieldAlt />,
   },
   {
-    hl1: "SEO Optimization",
+    hl1: "Enhanced SEO Optimization",
     l1: (
       <>
-        <b>Benefit:</b> 100 alt texts per photo and SEO text to improve
-        visibility and Amazon search ranking.
+        <b>Benefit:</b> 100 alt texts per photo and around 400 words of SEO text
+        to significantly improve your product’s search ranking and visibility on
+        Amazon.
       </>
     ),
-    i1: <FaKey />,
+    i1: <FaGlobe />,
   },
   {
-    hl1: "Increased Conversion Rates",
+    hl1: "Increased Conversion and Engagement",
     l1: (
       <>
-        <b>Benefit:</b> Visually rich content that engages buyers and boosts
-        conversion rates.
+        <b>Benefit:</b> Premium content that not only looks great but also
+        drives higher engagement and conversion rates.
       </>
     ),
     i1: <FaTrophy />,
   },
   {
-    hl1: "Customer Trust and Engagement",
+    hl1: "Video Module Inclusion",
     l1: (
       <>
-        <b>Benefit:</b> Build trust with structured content that reduces bounce
-        rates and effectively communicates your brand’s value.
+        <b>Benefit:</b> Engage customers with video content, providing a dynamic
+        way to showcase product features.
       </>
     ),
-    i1: <FaHandshake />,
+    i1: <FaFilm />,
   },
   {
-    hl1: "Differentiation from Competitors",
+    hl1: "Advanced Customer Interaction",
     l1: (
       <>
-        <b>Benefit:</b> Stand out with detailed product information and rich
-        media that set your brand apart.
+        <b>Benefit:</b> Interactive modules like Hotspots and Carousels provide
+        a richer, more engaging shopping experience.
       </>
     ),
-    i1: <HiMegaphone />,
+    i1: <FaComment />,
   },
 ];
 const Items2 = [
   {
-    hl1: "Basic A+ Content Package",
+    hl1: "Premium A+ Content Package ($100 per ASIN)",
     l1: (
       <>
         <ul className="flex flex-col gap-4 my-3">
@@ -88,28 +92,28 @@ const Items2 = [
               {" "}
               <CheckCircleIcon className="block aspect-square w-5 h-5" />
             </div>
-            High-Quality Design
+            Premium Quality Design{" "}
           </li>
           <li className="flex gap-3">
             <div>
               {" "}
               <CheckCircleIcon className="block aspect-square w-5 h-5" />
             </div>
-            970 Pixel Width Layout
+            1464 Pixel Width Layout{" "}
           </li>
           <li className="flex gap-3">
             <div>
               {" "}
               <CheckCircleIcon className="block aspect-square w-5 h-5" />
             </div>
-            100 Alt Text for SEO Optimization
+            100 Alt Text per Photo for SEO Optimization{" "}
           </li>
           <li className="flex gap-3">
             <div>
               {" "}
               <CheckCircleIcon className="block aspect-square w-5 h-5" />
             </div>
-            SEO Text Integration
+            Around 400 Words of Crawlable SEO Text
           </li>
           <li className="flex gap-3">
             <div>
@@ -124,39 +128,46 @@ const Items2 = [
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              1 Standard Image & Dark Text Overlay{" "}
+              2 Premium Full Image{" "}
             </li>
             <li className="flex gap-3">
               <div>
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              3 Standard Image Header With Text
+              2 Premium Hotspots 1{" "}
             </li>
             <li className="flex gap-3">
               <div>
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              1 Standard Single Image & Sidebar{" "}
+              1 Premium Navigation Carousel 1 or Premium Regimen Carousel
             </li>
             <li className="flex gap-3">
               <div>
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              1 Standard Four Image & Text{" "}
+              1 Premium Q & A
             </li>
             <li className="flex gap-3">
               <div>
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              1 Standard Comparison Chart{" "}
+              1 Premium Comparison Table 1
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              1 Video Module Insertion with Video Thumbnail{" "}
             </li>
           </ul>
           <li>
-            <b>Iterations:</b> 2 Iterations for Design Refinement
+            <b>Iterations:</b> 3 Iterations for Design Refinement
           </li>
         </ul>
       </>
@@ -166,31 +177,38 @@ const Items2 = [
 ];
 const additionalFaq = [
   {
-    question: "What is included in the Standard A+ Content package?",
+    question:
+      "What makes the Premium A+ Content package different from the Standard package?",
     answer:
-      "The Standard package includes a high-quality design, 970 pixel width layout, 100 alt texts for SEO optimization, and up to 7 modules with 2 iterations for design refinement.",
+      "The Premium package offers a higher quality design, advanced modules, and additional SEO benefits including around 400 words of crawlable SEO text, a video module, and 3 iterations for design refinement.",
   },
   {
-    question: "How long does it take to create Standard A+ Content?",
+    question: "What modules are included in the Premium A+ Content package?",
     answer: "The creation process typically takes 7-14 business days.",
   },
   {
     question: "Can I choose the modules I want for my A+ Content?",
     answer:
-      "Yes, you can select from the available modules, such as Standard Image & Dark Text Overlay, Standard Image Header With Text, and others.",
+      "The Premium package includes modules such as Premium Full Image, Premium Hotspots, Premium Navigation Carousel, Premium Q & A, Premium Comparison Table, and a Video Module with Thumbnail.",
   },
   {
-    question: "Is there any additional cost for using certain modules?",
-    answer: "No, the $50 per ASIN includes all standard modules listed.",
-  },
-  {
-    question: "What does '2 Iterations' mean?",
+    question: "How does the video module work in Premium A+ Content?",
     answer:
-      "You will have the opportunity to review and request changes to the design twice before the final version is delivered.",
+      "The video module allows you to showcase your product with a custom video, enhancing customer engagement.",
+  },
+
+  {
+    question: "How long does it take to create Premium A+ Content?",
+    answer: "The creation process typically takes 7-10 business days.",
+  },
+  {
+    question: "What does '3 Iterations' mean?",
+    answer:
+      "You will have the opportunity to review and request changes to the design three times before the final version is delivered.",
   },
 ];
 
-const Basic = ({ IN }) => {
+const Premium = ({ IN }) => {
   const [whatActive, setWhatActive] = useState(true);
   const [moduleActive, setModuleActive] = useState(false);
   return (
@@ -258,7 +276,7 @@ const Basic = ({ IN }) => {
             {" "}
             <div className="w-full">
               {" "}
-              <Pricing services={["Basic A+ Content"]} />
+              <Pricing services={["Premium A+ Content"]} />
             </div>{" "}
             <div className="flex flex-col gap-5">
               <h2 className="text-xl">
@@ -274,19 +292,20 @@ const Basic = ({ IN }) => {
       </div>
       <div className="text-background text-xl font-bold ml-10">
         Package Starts from{" "}
-        <span className="font-bold text-4xl">{IN ? " ₹ 1200" : " $75"}</span>
+        <span className="font-bold text-4xl">{IN ? " ₹ 3000 " : " $150"}</span>
       </div>
       <div className="">
         <Works />
         <div className="text-3xl text-center text-background font-bold">
-          Standard A+ Content FAQs:
+          Premium A+ Content FAQs:
         </div>
         <FAQ faqs={additionalFaq} />
         <CTA1 link="/a+content" />
+
         <Awards />
       </div>
     </div>
   );
 };
 
-export default Basic;
+export default Premium;
