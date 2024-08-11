@@ -16,7 +16,7 @@ const Works = () => {
   const searchParams = useSearchParams();
   const defaultVal = searchParams.get("s");
   return (
-    <div className="mx-auto max-w-7xl  flex flex-col my-20">
+    <div className="mx-auto max-w-7xl  flex flex-col my-20 ">
       {" "}
       <motion.h2
         initial={{ y: 100, opacity: 0 }}

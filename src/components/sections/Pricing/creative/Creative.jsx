@@ -1,10 +1,10 @@
 import React from "react";
 import TabsSection from "./TabSection";
 
-const Creative = () => {
+const Creative = ({ IN }) => {
   return (
     <div>
-      <TabsSection />
+      <TabsSection IN={IN} active={1} />
     </div>
   );
 };

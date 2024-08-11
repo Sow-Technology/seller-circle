@@ -121,7 +121,9 @@ const Page = () => {
         {activeService == "Account Management" && <Pricing3 />}
         {activeService == "Catalouge Service" && <Pricing4 />}
         {activeService == "Training Service" && <Pricing5 />} */}
-        {activeService == "Creative Services" && <Creative />}
+        {activeService == "Creative Services" && (
+          <Creative IN={country == "IN" ? true : false} />
+        )}
       </div>
       {/* </div> */}
       <Footer />

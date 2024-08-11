@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Basic from "./Basic";
 
-const TabsSection = ({ active }) => {
+const TabsSection = ({ active, IN }) => {
   return (
     <div className="my-7">
       <Tabs defaultValue={active} className="w-auto p-3" id="tabs">
@@ -17,7 +17,7 @@ const TabsSection = ({ active }) => {
           <TabsTrigger value={6}> Listing Image Design</TabsTrigger>
         </TabsList>
         <TabsContent value={1}>
-          <Basic />
+          <Basic IN={IN} />
         </TabsContent>
       </Tabs>
     </div>
