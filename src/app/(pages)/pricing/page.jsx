@@ -13,6 +13,9 @@ import Pricing3 from "@/components/sections/Pricing/Pricing3";
 import Pricing5 from "@/components/sections/Pricing/Pricing5";
 import Pricing4 from "@/components/sections/Pricing/Pricing4";
 import Creative from "@/components/sections/Pricing/creative/Creative";
+import FullService from "@/components/sections/Pricing/FullService";
+import Advertising from "@/components/sections/Pricing/Advertising";
+import DSP from "@/components/sections/Pricing/DSP";
 const services = [
   "Creative Services",
   "Full service management",
@@ -125,6 +128,24 @@ const Page = () => {
           <Suspense>
             {" "}
             <Creative IN={country == "IN" ? true : false} />
+          </Suspense>
+        )}
+        {activeService == "Full service management" && (
+          <Suspense>
+            {" "}
+            <FullService IN={country == "IN" ? true : false} />
+          </Suspense>
+        )}
+        {activeService == "Advertising" && (
+          <Suspense>
+            {" "}
+            <Advertising IN={country == "IN" ? true : false} />
+          </Suspense>
+        )}
+        {activeService == "DSP" && (
+          <Suspense>
+            {" "}
+            <DSP IN={country == "IN" ? true : false} />
           </Suspense>
         )}
       </div>

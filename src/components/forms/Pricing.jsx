@@ -29,6 +29,7 @@ import { toast } from "sonner";
 import axios from "axios";
 import { BorderBeam } from "../ui/border-beam";
 import { Turnstile } from "@marsidev/react-turnstile";
+import { Checkbox } from "../ui/checkbox";
 
 const formSchema = z.object({
   fullName: z
@@ -50,7 +51,19 @@ const formSchema = z.object({
   message: z.string().optional(),
 });
 
-const Pricing = ({ services, brandName, businessName, nPage }) => {
+const Pricing = ({
+  services,
+  brandName,
+  businessName,
+  nPage,
+  ASIN = true,
+  monthlyRevenue,
+  advertisingBudget,
+  businessDetails,
+  monthlyAdvertisingBudget,
+  primaryAdvertisingGoals,
+  additionalInfo,
+}) => {
   console.log(services);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm({
@@ -147,8 +160,146 @@ const Pricing = ({ services, brandName, businessName, nPage }) => {
               )}
             />
           )}
+          {businessDetails && (
+            <>
+              <span className="my-1 font-medium block">Business Details:</span>
+              <FormField
+                control={form.control}
+                name="amazonStoreUrl"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        placeholder="Amazon Store URL (if applicable)"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-          {nPage ? (
+              <FormField
+                control={form.control}
+                name="monthlyAdvertisingBudget"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Monthly advertising budget" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {monthlyAdvertisingBudget?.map((service, idx) => (
+                            <SelectItem key={idx} value={service}>
+                              {service}{" "}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </>
+          )}
+          {primaryAdvertisingGoals && (
+            <>
+              <span className="my-1 font-medium block">
+                Primary Advertising Goal:
+              </span>
+
+              <div className="flex gap-2 flex-wrap items-center">
+                <FormField
+                  control={form.control}
+                  name="increaseBrandVisibility"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 bg-[#CEEAF8]">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>Increase Brand Visiblity</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="driveSales"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-[#CEEAF8] p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>Drive Sales</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="improveROI"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-[#CEEAF8] p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>Improve ROI</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="launchNewProducts"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-[#CEEAF8] p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>Launch New Products</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="otherAdvertisingGoal"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input placeholder="other" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </>
+          )}
+          {nPage && (
             <FormField
               control={form.control}
               name={"nPage"}
@@ -167,7 +318,8 @@ const Pricing = ({ services, brandName, businessName, nPage }) => {
                 </FormItem>
               )}
             />
-          ) : (
+          )}
+          {!nPage && ASIN && (
             <FormField
               control={form.control}
               name={"ASIN"}
@@ -180,6 +332,57 @@ const Pricing = ({ services, brandName, businessName, nPage }) => {
                       max="1000"
                       {...field}
                       placeholder={"Enter the number of ASIN required"}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
+          {monthlyRevenue && (
+            <>
+              {" "}
+              <FormField
+                control={form.control}
+                name="monthlyRevenue"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select your monthly revenue" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {monthlyRevenue?.map((service, idx) => (
+                            <SelectItem key={idx} value={service}>
+                              {service}{" "}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </>
+          )}
+          {advertisingBudget && (
+            <FormField
+              control={form.control}
+              name={"advertisingBudget"}
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      type="number"
+                      {...field}
+                      placeholder={"Enter your advertising budget(optional)"}
                     />
                   </FormControl>
                   <FormMessage />
@@ -282,22 +485,81 @@ const Pricing = ({ services, brandName, businessName, nPage }) => {
               />
             </div>
           </div> */}
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Textarea
-                    placeholder="Additional Comments"
-                    className="border-b-2 border-r-2 border-[#F2F2F2] bg-[#CEEAF8]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {additionalInfo ? (
+            <>
+              {" "}
+              <span className="my-1 font-medium block">
+                Additional Information
+              </span>
+              <FormField
+                control={form.control}
+                name="businessNeeds"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Describe Your Business & Advertising Needs:"
+                        className="border-b-2 border-r-2 border-[#F2F2F2] bg-[#CEEAF8]"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="hearAboutUs"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="How Did You Hear About Us?" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {[
+                            "Google Search",
+                            "Amazon",
+                            "Social Media",
+                            "Referral",
+                            "Other",
+                          ].map((service, idx) => (
+                            <SelectItem key={idx} value={service}>
+                              {service}{" "}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </>
+          ) : (
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Additional Comments"
+                      className="border-b-2 border-r-2 border-[#F2F2F2] bg-[#CEEAF8]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
           <Turnstile
             siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
             onSuccess={setToken}

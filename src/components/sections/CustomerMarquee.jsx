@@ -9,46 +9,16 @@ import {
   BiPause,
   BiPlay,
 } from "react-icons/bi";
-
-const reviews = [
-  {
-    body: "Drawing on our comprehensive understanding of the Amazon landscape, we craft campaigns with precision, ensuring impactful strategies that drive success.",
-    img: "/images/cm1.webp",
-  },
-  {
-    body: "We extend sincere gratitude to SellerCircle for their invaluable partnership in amplifying our visionary journey. SellerCircle's expertise in e-commerce and deep understanding of the Amazon marketplace have played a pivotal role in our success. Their customized advertising strategy effectively addressed every stage of the buyer journey, resulting in increased visibility, engagement, and sales",
-    img: "/images/cm2.webp",
-  },
-  {
-    body: "With a strategic approach and in collaboration With SellerCircle Agency, We experienced explosive growth by harnessing the full potential of Amazon Ads' comprehensive full-funnel strategy. By effectively leveraging Amazon ads' SB (Sponsored Brands), SP (Sponsored Products), and SD (Sponsored Display), we unlocked the true power of Amazon Ads, propelling our investments to unparalleled heights. This cutting-edge feature empowered us to confidently expand our reach, accelerate growth, and establish ourselves as the undeniable category leader for several of our exceptional products.",
-    img: "/images/cm3.webp",
-  },
-  {
-    body: "Since partnering with Seller Circle in April 2024, our sales have doubled and our Advertising Cost of Sale (ACOS) has decreased by 8%. Additionally, our Flipkart ad costs were reduced by 50%, with sales exceeding 2X. Seller Circle has expertly managed all aspects of our Amazon business, from Seller Central operations and creatives to DSP and search ads. Their holistic approach and deep understanding of Amazon's ecosystem have driven significant growth for Krishna Ayurveda and Herbal. Seller Circle is a great full-service team to work with, and I highly recommend them to any brand looking to scale their presence on Amazon. - Shrawan Daga ,Founder (Krishna Herbal And Ayurveda)",
-    img: "/images/brands/1.png",
-  },
-  {
-    body: "Seller Circle is beyond an agency - they have been a partner in Pink Moon's journey providing end to end support right from cataloging, strategy, content and ads. Their deep understanding of Amazon has helped us scale significantly in the last 2 years.",
-    img: "/images/cm4.webp",
-  },
-  {
-    body: "We're pretty impressed with the work of Seller Circle. We onboarded them to help scale up Sadhev on Amazon. We were facing issues with ROAS while scaling up and the catalogue had to be fixed as well. The team at Seller Circle was hands-on and got the campaigns fixed within a couple Of weeks. We saw over 2X jump in ROAS since we on-boarded them. Our cataloguing issues were fixed within a month. The team at Seller Circle is available When needed and have a tried and tested method Of approach to scaling up brands. We're happy to have them as our growth partner.",
-    img: "/images/cm5.webp",
-  },
-  {
-    body: "The team at seller circle is very efficient and have a great understanding of the amazon platform which is vey crucial to achieving scale and success here.",
-    img: "/images/cm6.webp",
-  },
-];
+import { reviews } from "@/lib/data";
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({ img, name, username, body }) => {
+export const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "relative min-h-40 min-w-[150px] lg:min-w-[280px] max-w-[600px] cursor-pointer overflow-hidden rounded-xl border p-4 drop-shadow-sm",
+        "relative min-h-40 min-w-[150px] lg:min-w-[280px] max-w-[500px] cursor-pointer overflow-hidden rounded-xl border p-4 drop-shadow-sm",
         // light styles
         "border-gray-950/[.1] bg-[#F7F7F7] hover:bg-gray-950/[.05]",
         // dark styles

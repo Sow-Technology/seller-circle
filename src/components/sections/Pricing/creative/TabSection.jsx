@@ -5,6 +5,8 @@ import Basic from "./Basic";
 import Premium from "./Premium";
 import Story from "./Story";
 import Store from "./Store";
+import Listing from "./Listing";
+import Videos from "./Videos";
 
 const TabsSection = ({ active, IN }) => {
   return (
@@ -30,6 +32,12 @@ const TabsSection = ({ active, IN }) => {
         </TabsContent>
         <TabsContent value={4}>
           <Store IN={IN} />
+        </TabsContent>
+        <TabsContent value={5}>
+          <Videos IN={IN} />
+        </TabsContent>
+        <TabsContent value={6}>
+          <Listing IN={IN} />
         </TabsContent>
       </Tabs>
     </div>

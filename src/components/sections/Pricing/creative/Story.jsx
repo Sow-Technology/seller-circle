@@ -253,10 +253,28 @@ const Story = ({ IN }) => {
                 </div>
               </div>
             </div>
-          ))}
+          ))}{" "}
+          <div className="flex flex-col gap-5">
+            <h2 className="text-xl">
+              Get a Custom quote if ASIN is greater than 10
+            </h2>
+            <Link href="#quote">
+              {" "}
+              <Button variant="cta">Get a custom Quote</Button>
+            </Link>{" "}
+          </div>
         </div>
 
-        <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 items-center">
+        <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 ">
+          <div className="text-background border-2 border-background rounded-md border-dashed p-5 py-2 text-2xl uppercase font-extrabold text-center">
+            BRAND STORY
+          </div>
+          <div className="bg-background text-xl font-bold text-white p-5 rounded-xl">
+            Package Starts from{" "}
+            <span className="font-bold text-4xl">
+              {IN ? " ₹ 3000 " : " $150"}
+            </span>
+          </div>
           <div className="absolute -top-20" id="quote"></div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14 items-center w-full justify-center ">
             {" "}
@@ -264,26 +282,13 @@ const Story = ({ IN }) => {
               {" "}
               <Pricing services={[" Brand Story"]} />
             </div>{" "}
-            <div className="flex flex-col gap-5">
-              <h2 className="text-xl">
-                Get a Custom quote if ASIN is greater than 10
-              </h2>
-              <Link href="#quote">
-                {" "}
-                <Button variant="cta">Get a custom Quote</Button>
-              </Link>{" "}
-            </div>
           </div>
         </div>
-      </div>
-      <div className="text-background text-xl font-bold ml-10">
-        Package Starts from{" "}
-        <span className="font-bold text-4xl">{IN ? " ₹ 3000 " : " $150"}</span>
       </div>
       <div className="">
         <Works />
         <div className="text-3xl text-center text-background font-bold">
-          Premium A+ Content FAQs:
+          Brand Story FAQs:
         </div>
         <FAQ faqs={additionalFaq} />
         <CTA1 link="/brand-story-creation" />
