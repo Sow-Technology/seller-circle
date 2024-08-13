@@ -50,7 +50,10 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max relative z-[500]">
-        <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between text-sm ">
+        <div
+          className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between text-sm "
+          id="nav"
+        >
           <div className="text-white flex gap-5 items-center justify-center">
             {/* <div className="text-sm">About Us</div>
             <div className="text-lg">

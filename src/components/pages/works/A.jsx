@@ -132,7 +132,7 @@ const pets = [
 
 const A = () => {
   return (
-    <div className="flex flex-col gap-10 my-20">
+    <div className="flex flex-col gap-10 my-20 relative">
       {" "}
       <motion.h3
         initial={{ y: 100, opacity: 0 }}
