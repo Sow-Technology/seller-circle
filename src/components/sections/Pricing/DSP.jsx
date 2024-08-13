@@ -60,6 +60,7 @@ import CTA1 from "./creative/CTA1";
 import Marquee from "@/components/ui/marquee";
 import { ReviewCard } from "../CustomerMarquee";
 import { reviews } from "@/lib/data";
+import Why1 from "./Why1";
 const Items = [
   {
     hl1: "Advanced Audience Targeting",
@@ -158,27 +159,6 @@ const additionalFaq = [
       "Will you perform an account audit before starting the DSP campaigns?",
     answer:
       "Yes, we conduct a thorough audit of your current advertising efforts and account setup. This allows us to identify opportunities for improvement and craft a DSP strategy that’s aligned with your goals.",
-  },
-
-  {
-    question: "What role does the Dedicated Account Manager play?",
-    answer:
-      "Your Dedicated Account Manager ensures all aspects of your campaigns are aligned with your business goals, providing strategic advice and overseeing execution.",
-  },
-  {
-    question: "How do you utilize technology in advertising management?",
-    answer:
-      "We leverage AI and machine learning technologies for ad optimization, including dayparting and SOV analysis, to ensure your ads reach the right audience at the right time.",
-  },
-  {
-    question: "What is included in the regular performance reporting?",
-    answer:
-      "You will receive detailed reports that cover key performance indicators (KPIs) such as sales, advertising metrics, and overall account health. These reports help you stay informed and make data-driven decisions.",
-  },
-  {
-    question: "Do you perform an audit of my account before onboarding?",
-    answer:
-      "Yes, before we begin managing your Amazon Advertising, we conduct a thorough audit of your existing account. This audit helps us identify strengths, weaknesses, and opportunities, allowing us to tailor our strategies to maximize your results from the start.",
   },
 ];
 
@@ -311,21 +291,22 @@ const DSP = ({ IN }) => {
 
         <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 ">
           <div className="absolute -top-20" id="quote"></div>{" "}
-          <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14  w-full justify-center ">
+          <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-6  w-full justify-center ">
             {" "}
             <div className="">
               <div className="">
-                <b> Pricing:</b>{" "}
-                <span className="text-2xl font-bold text-background">
-                  {IN ? " ₹25,000" : "$500"} + 6%{" "}
-                </span>{" "}
-                of Ad Spend
+                <h2 className="text-2xl font-semibold">
+                  Ready to Scale Your Business with Amazon DSP?
+                </h2>
+                <p>
+                  We believe in customized solutions that fit your unique
+                  business needs. Fill out the form below, and one of our DSP
+                  experts will contact you to discuss a tailored plan designed
+                  to achieve your goals.
+                </p>
               </div>
-              <div className="">
-                Starting from {IN ? "₹25,000" : "$500"} for the{" "}
-                {IN ? "IN" : "US"} market, our pricing ensures that your
-                advertising budget is utilized efficiently to deliver the best
-                possible return on investment.
+              <div className="text-xl font-bold mt-2 text-center">
+                Quote Request Form
               </div>
             </div>
             <div className="w-full">
@@ -340,13 +321,23 @@ const DSP = ({ IN }) => {
                 ]}
                 primaryAdvertisingGoals
                 businessName
+                preferredServices
                 additionalInfo
+                quoteReq
                 ASIN={false}
               />
             </div>{" "}
           </div>
         </div>
       </div>
+      <Why1 />
+      <Link
+        href="#quote"
+        className="mx-auto w-full flex items-center justify-center"
+      >
+        {" "}
+        <Button variant="cta">Get a custom Quote</Button>
+      </Link>{" "}
       <div className="marquee-wrapper [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] my-20">
         <Marquee pauseOnHover reverse className="[--duration:20s]">
           {reviews.map((review, index) => (
