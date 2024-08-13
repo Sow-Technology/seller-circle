@@ -23,6 +23,67 @@ const videos = [
     src: "/images/work/videos/5.mp4",
     thumb: "/images/work/videos/5.png",
   },
+  {
+    src: "/images/work/videos/6.mp4",
+    thumb: "/images/work/videos/6.png",
+  },
+  {
+    src: "/images/work/videos/7.mp4",
+    thumb: "/images/work/videos/7.png",
+  },
+  {
+    src: "/images/work/videos/8.mp4",
+    thumb: "/images/work/videos/8.png",
+  },
+  {
+    src: "/images/work/videos/9.mp4",
+    thumb: "/images/work/videos/9.png",
+  },
+  {
+    src: "/images/work/videos/10.mp4",
+    thumb: "/images/work/videos/10.png",
+  },
+  {
+    src: "/images/work/videos/11.mp4",
+    thumb: "/images/work/videos/11.png",
+  },
+  {
+    src: "/images/work/videos/12.mp4",
+    thumb: "/images/work/videos/12.png",
+  },
+  {
+    src: "/images/work/videos/13.mp4",
+    thumb: "/images/work/videos/13.png",
+  },
+  {
+    src: "/images/work/videos/14.mp4",
+    thumb: "/images/work/videos/14.png",
+  },
+
+  {
+    src: "/images/work/videos/15.mp4",
+    thumb: "/images/work/videos/15.png",
+  },
+  {
+    src: "/images/work/videos/16.mp4",
+    thumb: "/images/work/videos/16.png",
+  },
+  {
+    src: "/images/work/videos/17.mp4",
+    thumb: "/images/work/videos/17.png",
+  },
+  {
+    src: "/images/work/videos/18.mp4",
+    thumb: "/images/work/videos/18.png",
+  },
+  {
+    src: "/images/work/videos/19.mp4",
+    thumb: "/images/work/videos/19.png",
+  },
+  {
+    src: "/images/work/videos/20.mp4",
+    thumb: "/images/work/videos/20.png",
+  },
 ];
 const Video = () => {
   return (
