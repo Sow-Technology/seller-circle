@@ -284,6 +284,7 @@ const Audit = ({ footer }) => {
                 (pathname == "/pricing" && "Request a quote") ||
                 (pathname == "/full-service-management" && "Request a audit") ||
                 (pathname == "/amazon-advertising" && "Request a audit") ||
+                (pathname == "/creative-services" && "Get a Custom Quote") ||
                 "LETS AUDIT"}
           </SendBtn>
         </form>
