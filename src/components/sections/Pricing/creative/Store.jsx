@@ -225,15 +225,6 @@ const Store = ({ IN }) => {
                 </div>
               </div>
             ))}{" "}
-          <div className="flex flex-col gap-5">
-            <h2 className="text-xl">
-              Get a Custom quote if ASIN is greater than 10
-            </h2>
-            <Link href="#quote">
-              {" "}
-              <Button variant="cta">Get a custom Quote</Button>
-            </Link>{" "}
-          </div>
         </div>
 
         <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 ">

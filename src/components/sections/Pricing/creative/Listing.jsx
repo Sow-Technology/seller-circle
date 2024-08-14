@@ -90,14 +90,14 @@ const Items2 = [
       <>
         <ul className="flex flex-col gap-4 my-3">
           {" "}
-          <li className="flex gap-3 items-center">
+          {/* <li className="flex gap-3 items-center">
             <div>
               {" "}
               <FaDollarSign className="block aspect-square w-5 h-5" />
             </div>
             <b>Price:</b>
             <span className="font-bold text-2xl">$50 per package</span>
-          </li>
+          </li> */}
           <li className="flex gap-3">
             <div>
               {" "}
@@ -158,14 +158,14 @@ const Items3 = [
       <>
         <ul className="flex flex-col gap-4 my-3">
           {" "}
-          <li className="flex gap-3 items-center">
+          {/* <li className="flex gap-3 items-center">
             <div>
               {" "}
               <FaDollarSign className="block aspect-square w-5 h-5" />
             </div>
             <b>Price:</b>
             <span className="font-bold text-2xl">$60 per package</span>
-          </li>
+          </li> */}
           <li className="flex gap-3">
             <div>
               {" "}
@@ -247,11 +247,6 @@ const additionalFaq = [
     answer:
       "Yes, each image is accompanied by SEO-optimized alt text to enhance your product's search engine visibility.",
   },
-  {
-    question: "What is the cost of each package?",
-    answer:
-      "The 5-Image Package is priced at $50, and the 7-Image Package is priced at $60.",
-  },
 ];
 
 const Listing = ({ IN }) => {
@@ -301,6 +296,22 @@ const Listing = ({ IN }) => {
           <div className="text-background border-2 border-background rounded-md border-dashed p-5 py-2 text-2xl uppercase font-extrabold text-center">
             LISTING IMAGE DESIGN
           </div>
+          <div className="flex gap-5">
+            <div className="bg-background flex-1 p-5 px-4 rounded-xl text-white text-lg font-bold ">
+              5-Image Package Starts from <br />
+              <span className="font-bold text-4xl">
+                {IN ? " ₹1500" : " $50"}
+              </span>
+              per package
+            </div>{" "}
+            <div className="bg-background flex-1 p-5 px-4 rounded-xl text-white text-lg font-bold ">
+              7-Image Package Starts from <br />
+              <span className="font-bold text-4xl">
+                {IN ? " ₹2000" : " $60"}
+              </span>
+              per package
+            </div>
+          </div>
           <div className="absolute -top-20" id="quote"></div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14 items-center w-full justify-center ">
             {" "}
@@ -324,9 +335,9 @@ const Listing = ({ IN }) => {
           </div>
         </div>
       </div>
-      <h2 className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background my-10">
+      {/* <h2 className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background my-10">
         <FaMoneyBill1Wave /> Pricing Details
-      </h2>
+      </h2> */}
       <div className="w-full lg:flex-row flex-col flex mb-10">
         <div className="w-1/2">
           {" "}
@@ -378,7 +389,7 @@ const Listing = ({ IN }) => {
       <div className="">
         <Works />
         <div className="text-3xl text-center text-background font-bold">
-          Premium A+ Content FAQs:
+          Catalog Design FAQs:{" "}
         </div>
         <FAQ faqs={additionalFaq} />
         <CTA1 link="/catalog-and-product-display-design" />

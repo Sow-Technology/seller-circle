@@ -16,6 +16,7 @@ import {
   FaTachometerAlt,
 } from "react-icons/fa";
 import {
+  FaCertificate,
   FaChartBar,
   FaComment,
   FaCube,
@@ -206,7 +207,7 @@ const FullService = ({ IN }) => {
         <>
           <ul className="flex flex-col gap-4 my-3">
             {" "}
-            <li className="flex gap-3 items-center">
+            {/* <li className="flex gap-3 items-center">
               <div>
                 {" "}
                 <FaDollarSign className="block aspect-square w-5 h-5" />
@@ -218,72 +219,63 @@ const FullService = ({ IN }) => {
               per month +{" "}
               <span className="text-background font-bold text-2xl">2%</span>of
               sales
+            </li> */}
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              Comprehensive Amazon account management{" "}
             </li>
             <li className="flex gap-3">
               <div>
                 {" "}
                 <CheckCircleIcon className="block aspect-square w-5 h-5" />
               </div>
-              Inclusions:
+              Amazon advertising management{" "}
             </li>
-            <ul className="ml-10">
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                Comprehensive Amazon account management{" "}
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                Amazon advertising management{" "}
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                tailored advertising strategies{" "}
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                content creation
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                inventory management
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                SEO and listing optimization
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                regular performance reporting
-              </li>
-              <li className="flex gap-3">
-                <div>
-                  {" "}
-                  <CheckCircleIcon className="block aspect-square w-5 h-5" />
-                </div>
-                dedicated account management
-              </li>
-            </ul>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              tailored advertising strategies{" "}
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              content creation
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              inventory management
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              SEO and listing optimization
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              regular performance reporting
+            </li>
+            <li className="flex gap-3">
+              <div>
+                {" "}
+                <CheckCircleIcon className="block aspect-square w-5 h-5" />
+              </div>
+              dedicated account management
+            </li>
           </ul>
         </>
       ),
@@ -323,9 +315,42 @@ const FullService = ({ IN }) => {
                 </div>
               </div>
             ))}
+          <h2
+            className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background"
+            onClick={() => setModuleActive(!moduleActive)}
+          >
+            <FaCertificate /> Inclusions:
+            {moduleActive ? <ChevronUp /> : <ChevronDown />}
+          </h2>
+          {moduleActive &&
+            Items2.map((item, idx) => (
+              <div className="flex flex-col text-[#272727] gap-10 " key={idx}>
+                <div className="flex flex-col gap-10">
+                  <div className="flex gap-7">
+                    {" "}
+                    <div className="w-8 h-8 text-5xl text-background">
+                      {item.i1}
+                    </div>{" "}
+                    <div>
+                      <h3 className="lg:text-2xl  font-bold text-lg">
+                        {item.hl1}
+                      </h3>
+                      <p>{item.l1}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}{" "}
         </div>
 
         <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 ">
+          <div className="bg-background text-white text-xl font-bold p-5 rounded-xl">
+            Package Starts from{" "}
+            <span className="font-bold text-4xl">
+              {IN ? " ₹25,000 " : " $500"}
+            </span>
+            +2% of sales
+          </div>
           <div className="absolute -top-20" id="quote"></div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14 items-center w-full justify-center ">
             {" "}
@@ -334,43 +359,20 @@ const FullService = ({ IN }) => {
               <Pricing
                 businessName
                 ASIN={false}
-                advertisingBudget
+                IN
+                monthlyAdvertisingBudget={[
+                  `${IN ? "<₹100,000" : "<$5,000"}`,
+                  `${IN ? "₹100,000-₹500,000" : "$5,000-$20,000"}`,
+                  `${IN ? "₹500,000-₹1,000,000" : "$20,000-$50,000"}`,
+                  `${IN ? ">₹1,000,000" : ">$50,000"}`,
+                ]}
                 monthlyRevenue={[
-                  "<$10,000",
-                  "$10,000-$50,000",
-                  "$50,000-$100,000",
-                  "$100,000+",
+                  `${IN ? "<₹100,000" : "<$10,000"}`,
+                  `${IN ? "₹100,000-₹500,000" : "$10,000-$50,000"}`,
+                  `${IN ? "₹500,000-₹1,500,000" : "$50,000-$100,000"}`,
+                  `${IN ? ">₹1,500,000" : ">$100,000"}`,
                 ]}
               />
-              <div className="w-full flex-col gap-5 flex mt-20 ">
-                <h2 className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background">
-                  <FaMoneyBill1Wave /> Full Service Management Pricing
-                </h2>
-                <div className="">
-                  {" "}
-                  {Items2.map((item, idx) => (
-                    <div
-                      className="flex flex-col text-[#272727] gap-10 "
-                      key={idx}
-                    >
-                      <div className="flex flex-col gap-10">
-                        <div className="flex gap-7">
-                          {" "}
-                          <div className="w-8 h-8 text-5xl text-background">
-                            {item.i1}
-                          </div>{" "}
-                          <div>
-                            <h3 className="lg:text-2xl  font-bold text-lg">
-                              {item.hl1}
-                            </h3>
-                            <p>{item.l1}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>{" "}
           </div>
         </div>

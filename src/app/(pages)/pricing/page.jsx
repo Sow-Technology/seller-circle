@@ -21,16 +21,15 @@ import Global from "@/components/sections/Pricing/Global";
 import Marketplaces from "@/components/sections/Pricing/Marketplces";
 const services = [
   "Creative Services",
-  "Full service management",
+  "Full Service Management",
   "Advertising",
   "DSP",
-  "Strategy and consulting",
-  "Global launch",
+  "Strategy and Consulting",
+  "Global Launch",
   "Marketplaces Expansion",
 ];
 const Page = () => {
   const [activeService, setActiveService] = useState("Creative Services");
-  const [country, setCountry] = useState(null);
   const settings = {
     dots: true,
     infinite: true,
@@ -38,6 +37,7 @@ const Page = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+  const [country, setCountry] = useState(null);
   useEffect(() => {
     async function fetchVisitorInfo() {
       const response = await fetch("https://ipapi.co/json/");
@@ -133,7 +133,7 @@ const Page = () => {
             <Creative IN={country == "IN" ? true : false} />
           </Suspense>
         )}
-        {activeService == "Full service management" && (
+        {activeService == "Full Service Management" && (
           <Suspense>
             {" "}
             <FullService IN={country == "IN" ? true : false} />
@@ -151,13 +151,13 @@ const Page = () => {
             <DSP IN={country == "IN" ? true : false} />
           </Suspense>
         )}
-        {activeService == "Strategy and consulting" && (
+        {activeService == "Strategy and Consulting" && (
           <Suspense>
             {" "}
             <Strategy IN={country == "IN" ? true : false} />
           </Suspense>
         )}
-        {activeService == "Global launch" && (
+        {activeService == "Global Launch" && (
           <Suspense>
             {" "}
             <Global IN={country == "IN" ? true : false} />

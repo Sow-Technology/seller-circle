@@ -21,7 +21,7 @@ const CTA1 = ({ link }) => {
                 className="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
                 href={link}
               >
-                Get Started
+                Learn More
               </a>
             </div>
           </div>

@@ -28,7 +28,10 @@ const Socials = () => {
         // viewport={{ once: true }}
         // transition={{ delay: 0.2 }}
         >
-          <Link href="https://www.linkedin.com/company/seller-circle/">
+          <Link
+            href="https://www.linkedin.com/company/seller-circle/"
+            target="_blank"
+          >
             {" "}
             <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
               <Image
@@ -48,7 +51,10 @@ const Socials = () => {
         // viewport={{ once: true }}
         // transition={{ delay: 0.4 }}
         >
-          <Link href="https://www.instagram.com/sellercircle.in?igsh=bXBqNGNuMzd3Z3Br">
+          <Link
+            href="https://www.instagram.com/sellercircle.in?igsh=bXBqNGNuMzd3Z3Br"
+            target="_blank"
+          >
             {" "}
             <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
               <Image
@@ -62,7 +68,7 @@ const Socials = () => {
             </div>
           </Link>
         </div>
-        <Link href="https://www.facebook.com/sellercircle.in">
+        <Link href="https://www.facebook.com/sellercircle.in" target="_blank">
           <div
           // initial={{ y: "100px", opacity: 0 }}
           // whileInView={{ y: 0, opacity: 100 }}

@@ -72,6 +72,8 @@ const Pricing = ({
   launch,
   targetMarkets,
   interest2,
+  IN,
+  reqAudit,
   interest3,
   advertisingFocus,
 }) => {
@@ -411,38 +413,37 @@ const Pricing = ({
                   </div>
                 </>
               )}
-
-              {monthlyAdvertisingBudget && (
-                <FormField
-                  control={form.control}
-                  name="monthlyAdvertisingBudget"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Monthly advertising budget" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {monthlyAdvertisingBudget?.map((service, idx) => (
-                              <SelectItem key={idx} value={service}>
-                                {service}{" "}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              )}
             </>
+          )}
+          {monthlyAdvertisingBudget && (
+            <FormField
+              control={form.control}
+              name="monthlyAdvertisingBudget"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Monthly advertising budget" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {monthlyAdvertisingBudget?.map((service, idx) => (
+                          <SelectItem key={idx} value={service}>
+                            {service}{" "}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           )}
           {challenges && (
             <FormField
@@ -608,7 +609,7 @@ const Pricing = ({
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>Market Analysis </FormLabel>
+                        <FormLabel>Market Analysis</FormLabel>
                       </div>
                     </FormItem>
                   )}
@@ -693,14 +694,14 @@ const Pricing = ({
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>ReportingAndInsights</FormLabel>
+                        <FormLabel>Reporting and Insights</FormLabel>
                       </div>
                     </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
-                  name="operationalEfficiency"
+                  name="ongoingSupport"
                   render={({ field }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-[#CEEAF8] p-4">
                       <FormControl>
@@ -710,7 +711,24 @@ const Pricing = ({
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>Operational Efficiency</FormLabel>
+                        <FormLabel>Ongoing Support</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="newLaunchStrategy"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-[#CEEAF8] p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>New Launch Strategy</FormLabel>
                       </div>
                     </FormItem>
                   )}
@@ -1302,7 +1320,7 @@ const Pricing = ({
             onSuccess={setToken}
           />
           <SendBtn type="submit" disabled={isSubmitting}>
-            {quoteReq ? "Submit Quote Req" : "Get a Quote"}
+            {reqAudit ? "Request a Audit" : "Get a Quote"}
           </SendBtn>
         </form>
       </Form>

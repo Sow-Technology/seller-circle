@@ -304,30 +304,22 @@ const Advertising = ({ IN }) => {
           <div className="absolute -top-20" id="quote"></div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14  w-full justify-center ">
             {" "}
-            <div className="">
-              <div className="">
-                <b> Pricing:</b>{" "}
-                <span className="text-2xl font-bold text-background">
-                  {IN ? " ₹25,000" : "$500"} + 6%{" "}
-                </span>{" "}
-                of Ad Spend
-              </div>
-              <div className="">
-                Starting from {IN ? "₹25,000" : "$500"} for the{" "}
-                {IN ? "IN" : "US"} market, our pricing ensures that your
-                advertising budget is utilized efficiently to deliver the best
-                possible return on investment.
-              </div>
+            <div className="bg-background text-white text-xl font-bold p-5 rounded-xl">
+              Package Starts from{" "}
+              <span className="font-bold text-4xl">
+                {IN ? " ₹25,000 " : " $500"}
+              </span>
+              +6% of sales
             </div>
             <div className="w-full">
               {" "}
               <Pricing
                 businessDetails
                 monthlyAdvertisingBudget={[
-                  `Below ${IN ? "₹50,000" : "$1,000"}`,
-                  `${IN ? "₹50,000 - $1,00,000" : "$1,000-$2,000"}`,
-                  `${IN ? " $1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
-                  `Above ${IN ? "₹5,00,000" : "$10,000"}`,
+                  `<${IN ? "₹50,000" : "$1,000"}`,
+                  `${IN ? "₹50,000 - ₹1,00,000" : "$1,000-$2,000"}`,
+                  `${IN ? " ₹1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
+                  `> ${IN ? "₹5,00,000" : "$10,000"}`,
                 ]}
                 primaryAdvertisingGoals
                 businessName
@@ -351,7 +343,7 @@ const Advertising = ({ IN }) => {
           Amazon Advertising FAQs:
         </div>
         <FAQ faqs={additionalFaq} />
-        <CTA1 link="//amazon-advertising" />
+        <CTA1 link="/amazon-advertising" />
 
         <Awards />
       </div>

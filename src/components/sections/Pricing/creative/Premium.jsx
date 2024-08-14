@@ -82,7 +82,7 @@ const Items = [
 ];
 const Items2 = [
   {
-    hl1: "Premium A+ Content Package ($100 per ASIN)",
+    hl1: "Premium A+ Content Package",
     l1: (
       <>
         <ul className="flex flex-col gap-4 my-3">

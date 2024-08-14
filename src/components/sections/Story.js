@@ -30,13 +30,19 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           <h3 className="captalize text-[#303f5b] font-[800] text-5xl max-sm:text-xl">
             {month}
           </h3>
-          <p
-            className={`font-medium w-full text-base md:text-xl mt-5 text-[#303f5b]  ${
-              !visible ? " lg:visible" : "lg:invisible"
-            }`}
-          >
-            {text}
-          </p>
+          {text && (
+            <p
+              className={`font-medium w-full text-base md:text-xl flex gap-2 border items-start justify-start  mt-5 text-[#303f5b]  ${
+                !visible ? " lg:visible" : "lg:invisible"
+              }`}
+            >
+              {" "}
+              <div className="text-xl  ml-auto border h-full w-max text-background ">
+                <MdOutlineElectricBolt />
+              </div>
+              <span className="border">{text}</span>
+            </p>
+          )}
           {t1 && (
             <ul
               className={`font-medium w-full text-base md:text-xl mt-5  text-left items-start flex flex-col text-[#303f5b] ${
@@ -49,18 +55,23 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
                 </div>
                 {t1}
               </li>
-              <li className="flex gap-2 items-start  my-2">
-                <div className="text-xl mt-2 h-full w-max text-background ">
-                  <MdOutlineElectricBolt />
-                </div>
-                {t2}
-              </li>
-              <li className="flex gap-2 items-start  my-2 ">
-                <div className="text-xl mt-2 h-full w-max text-background ">
-                  <MdOutlineElectricBolt />
-                </div>
-                {t3}
-              </li>
+              {t2 && (
+                <>
+                  {" "}
+                  <li className="flex gap-2 items-start  my-2">
+                    <div className="text-xl mt-2 h-full w-max text-background ">
+                      <MdOutlineElectricBolt />
+                    </div>
+                    {t2}
+                  </li>
+                  <li className="flex gap-2 items-start  my-2 ">
+                    <div className="text-xl mt-2 h-full w-max text-background ">
+                      <MdOutlineElectricBolt />
+                    </div>
+                    {t3}
+                  </li>
+                </>
+              )}
               {t4 && (
                 <li className="flex gap-2 items-start  my-2">
                   <div className="text-xl mt-2 h-full w-max text-background ">
@@ -112,12 +123,14 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
                 </div>{" "}
                 {t1}
               </li>
-              <li className="flex gap-2 items-start my-2">
-                <div className="text-xl mt-2 h-full w-max text-background ">
-                  <MdOutlineElectricBolt />
-                </div>{" "}
-                {t2}
-              </li>
+              {t2 && (
+                <li className="flex gap-2 items-start my-2">
+                  <div className="text-xl mt-2 h-full w-max text-background ">
+                    <MdOutlineElectricBolt />
+                  </div>{" "}
+                  {t2}
+                </li>
+              )}
               {t3 && (
                 <li className="flex gap-2 items-start my-2">
                   <div className="text-xl mt-2 h-full w-max text-background ">
@@ -163,25 +176,25 @@ const OurStory = () => {
         <ul className="w-full flex-col flex items-start justify-between ml-4 xs:ml-2">
           <Details
             year="2016"
-            text="Started Consulting Amazon Initiative on Training online sellers"
+            t1="Started Consulting Amazon Initiative on Training online sellers"
             id="1"
           />
           <Details
             year="2017"
             month="JANUARY"
-            text="Started Consulting and On-boarding for Amazon India with a Team of 10 Specialists"
+            t1="Started Consulting and On-boarding for Amazon India with a Team of 10 Specialists"
             id="2"
           />
           <Details
             year=""
             month="SEPTEMBER "
-            text="Incorporated AJ Digi Media Private Limited"
+            t1="Incorporated AJ Digi Media Private Limited"
             id="2"
           />
           <Details
             year=""
             month="DECEMBER "
-            text="Awarded Rising Star of the Year for Seller Management by Amazon"
+            t1="Awarded Rising Star of the Year for Seller Management by Amazon"
             id="4"
           />
           <Details
@@ -194,43 +207,43 @@ const OurStory = () => {
           <Details
             year=""
             month="DECEMBER"
-            text="Awarded Most Valuable for Onboarding Amazon India"
+            t1="Awarded Most Valuable for Onboarding Amazon India"
             id="5"
           />
           <Details
             year="2019"
             month="JANUARY"
-            text="Awarded Best High-Value Seller Management by Amazon"
+            t1="Awarded Best High-Value Seller Management by Amazon"
             id="6"
           />
           <Details
             year=""
             month="August"
-            text="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
+            t1="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
             id="6"
           />
           <Details
             year=""
             month="September"
-            text="Expanded Operations in 2 States"
+            t1="Expanded Operations in 2 States"
             id="6"
           />
           <Details
             year="2020"
             month="March"
-            text="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
+            t1="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
             id="9"
           />
           <Details
             year=""
             month="December"
-            text="Started Creative Design Services"
+            t1="Started Creative Design Services"
             id="9"
           />
           <Details
             year="2021"
             month="January"
-            text="Expanded Total Team of 40 Trained Specialists"
+            t1="Expanded Total Team of 40 Trained Specialists"
             id="12"
           />
           <Details

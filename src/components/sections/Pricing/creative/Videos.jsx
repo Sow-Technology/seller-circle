@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 import {
   FaBullhorn,
+  FaCertificate,
   FaChartPie,
   FaCloud,
   FaComment,
@@ -139,14 +140,14 @@ const Items2 = [
       <>
         <ul className="flex flex-col gap-4 my-3">
           {" "}
-          <li className="flex gap-3 items-center">
+          {/* <li className="flex gap-3 items-center">
             <div>
               {" "}
               <FaDollarSign className="block aspect-square w-5 h-5" />
             </div>
             <b>Price:</b>
             <span className="font-bold text-2xl">$100 per video</span>
-          </li>
+          </li> */}
           <li className="flex gap-3">
             <div>
               {" "}
@@ -343,32 +344,32 @@ const Videos = ({ IN }) => {
                 </div>
               </div>
             ))}
-          <div className="w-full flex-col gap-5 flex ">
-            <h2 className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background">
-              <FaMoneyBill1Wave /> Pricing Details
-            </h2>
-            <div className="">
-              {" "}
-              {Items2.map((item, idx) => (
-                <div className="flex flex-col text-[#272727] gap-10 " key={idx}>
-                  <div className="flex flex-col gap-10">
-                    <div className="flex gap-7">
-                      {" "}
-                      <div className="w-8 h-8 text-5xl text-background">
-                        {item.i1}
-                      </div>{" "}
-                      <div>
-                        <h3 className="lg:text-2xl  font-bold text-lg">
-                          {item.hl1}
-                        </h3>
-                        <p>{item.l1}</p>
-                      </div>
+          <h2
+            className="lg:text-3xl  font-extrabold text-xl flex gap-2 items-center cursor-pointer text-background"
+            onClick={() => setModuleActive(!moduleActive)}
+          >
+            <FaCertificate /> Inclusions:
+            {moduleActive ? <ChevronUp /> : <ChevronDown />}
+          </h2>
+          {moduleActive &&
+            Items2.map((item, idx) => (
+              <div className="flex flex-col text-[#272727] gap-10 " key={idx}>
+                <div className="flex flex-col gap-10">
+                  <div className="flex gap-7">
+                    {" "}
+                    <div className="w-8 h-8 text-5xl text-background">
+                      {item.i1}
+                    </div>{" "}
+                    <div>
+                      <h3 className="lg:text-2xl  font-bold text-lg">
+                        {item.hl1}
+                      </h3>
+                      <p>{item.l1}</p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            ))}{" "}
         </div>
 
         <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5 ">
@@ -378,7 +379,14 @@ const Videos = ({ IN }) => {
           </div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-14 items-center w-full justify-center ">
             {" "}
-            <div className="w-full">
+            <div className="w-full flex flex-col gap-5">
+              <div className="bg-background p-5 rounded-xl text-white text-xl font-bold ">
+                Package Starts from{" "}
+                <span className="font-bold text-4xl">
+                  {IN ? " ₹5000" : " $100"}
+                </span>
+                per video
+              </div>{" "}
               <Pricing
                 businessName
                 ASIN={false}

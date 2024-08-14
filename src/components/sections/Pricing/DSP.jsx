@@ -314,10 +314,10 @@ const DSP = ({ IN }) => {
               <Pricing
                 businessDetails
                 monthlyAdvertisingBudget={[
-                  `Below ${IN ? "₹50,000" : "$1,000"}`,
-                  `${IN ? "₹50,000 - $1,00,000" : "$1,000-$2,000"}`,
-                  `${IN ? " $1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
-                  `Above ${IN ? "₹5,00,000" : "$10,000"}`,
+                  `<${IN ? "₹50,000" : "$1,000"}`,
+                  `${IN ? "₹50,000 - ₹1,00,000" : "$1,000-$2,000"}`,
+                  `${IN ? " ₹1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
+                  `> ${IN ? "₹5,00,000" : "$10,000"}`,
                 ]}
                 primaryAdvertisingGoals
                 businessName
@@ -351,7 +351,7 @@ const DSP = ({ IN }) => {
           Amazon Advertising FAQs:
         </div>
         <FAQ faqs={additionalFaq} />
-        <CTA1 link="//amazon-advertising" />
+        <CTA1 link="/amazon-dsp-services" />
 
         <Awards />
       </div>

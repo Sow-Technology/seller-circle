@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import { BiMailSend } from "react-icons/bi";
@@ -11,7 +12,21 @@ import { RiPinterestFill } from "react-icons/ri";
 import Audit from "./forms/Audit";
 import { services } from "@/lib/data";
 import Link from "next/link";
+import Pricing from "./forms/Pricing";
 const Footer = () => {
+  const [IN, setIN] = useState(null);
+  useEffect(() => {
+    async function fetchVisitorInfo() {
+      const response = await fetch("https://ipapi.co/json/");
+      const data = await response.json();
+      // setVisitorInfo(data);
+      console.log(data);
+      setIN(data.country);
+    }
+
+    fetchVisitorInfo();
+  }, []);
+
   return (
     <div className="bg-background">
       {" "}
@@ -45,7 +60,20 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8">
             <div className="lg:w-[60%]">
               {" "}
-              <Audit footer />
+              <Pricing
+                businessDetails
+                monthlyAdvertisingBudget={[
+                  `<${IN ? "₹50,000" : "$1,000"}`,
+                  `${IN ? "₹50,000 - ₹1,00,000" : "$1,000-$2,000"}`,
+                  `${IN ? " ₹1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
+                  `> ${IN ? "₹5,00,000" : "$10,000"}`,
+                ]}
+                primaryAdvertisingGoals
+                businessName
+                reqAudit
+                additionalInfo
+                ASIN={false}
+              />
             </div>
             <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
               <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
