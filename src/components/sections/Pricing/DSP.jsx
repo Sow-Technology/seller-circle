@@ -336,7 +336,9 @@ const DSP = ({ IN }) => {
         className="mx-auto w-full flex items-center justify-center"
       >
         {" "}
-        <Button variant="cta">Get a custom Quote</Button>
+        <Button variant="cta" className="px-28 py-8  text-2xl">
+          Get a custom Quote
+        </Button>
       </Link>{" "}
       <div className="marquee-wrapper [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] my-20">
         <Marquee pauseOnHover reverse className="[--duration:20s]">

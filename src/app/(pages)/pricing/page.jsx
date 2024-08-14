@@ -19,6 +19,7 @@ import DSP from "@/components/sections/Pricing/DSP";
 import Strategy from "@/components/sections/Pricing/Strategy";
 import Global from "@/components/sections/Pricing/Global";
 import Marketplaces from "@/components/sections/Pricing/Marketplces";
+import { usePathname, useSearchParams } from "next/navigation";
 const services = [
   "Creative Services",
   "Full Service Management",
@@ -29,7 +30,11 @@ const services = [
   "Marketplaces Expansion",
 ];
 const Page = () => {
-  const [activeService, setActiveService] = useState("Creative Services");
+  const searchParam = useSearchParams();
+  console.log(searchParam);
+  const [activeService, setActiveService] = useState(
+    searchParam.get("s") || "Creative Services"
+  );
   const settings = {
     dots: true,
     infinite: true,

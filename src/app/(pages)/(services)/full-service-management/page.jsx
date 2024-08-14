@@ -11,6 +11,8 @@ import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 const items = [
   {
     title: "Strategic Planning",
@@ -261,6 +263,15 @@ const page = () => {
             </div>
           </div>
           <Services slice="1" />
+          <Link
+            href="/pricing?s=Full%20Service%20Management"
+            className="mx-auto w-full flex items-center justify-center"
+          >
+            {" "}
+            <Button variant="cta" className="px-28 py-8  text-2xl">
+              Request a Quote{" "}
+            </Button>
+          </Link>
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
