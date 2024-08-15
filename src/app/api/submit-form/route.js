@@ -1,59 +1,73 @@
-import mongoose from 'mongoose';
-import axios from 'axios';
-import Form from '@/models/Form';
+import { Client, Databases, ID } from "appwrite";
+import { NextResponse } from "next/server";
 
-const connectToDatabase = async () => {
-  if (mongoose.connection.readyState === 1) return;
-  await mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
-};
-
-const sendToZohoCRM = async (data) => {
-  try {
-    await axios.post('https://www.zohoapis.com/crm/v2/Leads', {
-      data: {
-        Full_Name: data.fullName,
-        Email: data.workEmail,
-        Phone: data.phoneNumber,
-        Brand_Name: data.brandName,
-        Service: data.service,
-        Service2: data.service2,
-        Message: data.message
-      }
-    }, {
-      headers: {
-        'Authorization': `Zoho-oauthtoken ${process.env.ZOHO_OAUTH_TOKEN}`,
-        'Content-Type': 'application/json'
-      }
-    });
-  } catch (error) {
-    console.error('Error sending data to Zoho CRM:', error);
-    throw new Error('Error sending data to Zoho CRM');
+export async function POST(req, res) {
+  const data = await req.json();
+  console.log(data);
+  if (!data) {
+    return NextResponse.json(
+      {
+        message: "Form type and data are required",
+      },
+      { status: 400 }
+    );
   }
-};
 
-export default async function POST(req, res) {
-  if (req.method === 'POST') {
-    try {
-      await connectToDatabase();
-      
-      const formData = req.body;
+  // Initialize Appwrite Client
+  const client = new Client();
+  client
+    .setEndpoint("https://cloud.appwrite.io/v1")
+    .setProject(process.env.APPWRITE_PROJECT_ID);
 
-      // Create and save form data in MongoDB
-      const newForm = new Form(formData);
-      await newForm.save();
-      
-      // Send data to Zoho CRM
-      await sendToZohoCRM(formData);
-      
-      res.status(200).json({ message: 'Form data successfully submitted!' });
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
+  // Initialize Appwrite Databases
+  const databases = new Databases(client);
+  console.log("before try");
+
+  // Select the collection based on the form type
+  let collectionId = "";
+  console.log("try");
+  console.log(data.formType);
+  switch (data.formType) {
+    case "contact":
+      collectionId = "contact";
+      break;
+    case "form2":
+      collectionId = "[FORM2_COLLECTION_ID]";
+      break;
+    // Add more cases for additional forms
+    default:
+      return NextResponse.json(
+        { message: "Invalid form type" },
+        { status: 400 }
+      );
+  }
+  console.log("here");
+  console.log(collectionId);
+  console.log({ ...data });
+  // Save the form data to Appwrite
+  const result = await databases.createDocument(
+    "forms",
+    collectionId,
+    ID.unique(), // Unique ID for the document
+    { ...data }
+  );
+  console.log(result);
+  console.log("result");
+  if (result.$id) {
+    return NextResponse.json(
+      {
+        message: "Form data submitted successfully",
+        data: result,
+      },
+      { status: 200 }
+    );
   } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+    return NextResponse.json(
+      {
+        message: "Failed to submit form data",
+        error: error.message,
+      },
+      { status: 500 }
+    );
   }
 }

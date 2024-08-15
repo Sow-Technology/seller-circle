@@ -22,6 +22,9 @@ import { BsFillLightbulbFill, BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Why from "@/components/pages/global/Why";
 import { AiOutlineTranslation } from "react-icons/ai";
 import { FaStoreAlt } from "react-icons/fa";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Pricing from "@/components/forms/Pricing";
 
 const Items = [
   {
@@ -141,24 +144,27 @@ const page = () => {
             </motion.p>
           </div>{" "}
           <div className="flex lg:flex-row flex-col relative my-4">
-            <div className="lg:w-1/2 w-full p-5 flex flex-col gap-12 lg:px-10">
-              {Items.map((item, idx) => (
-                <div className="flex text-[#272727] gap-10 " key={idx}>
-                  <div className="w-8 h-8 text-5xl text-background">
-                    {item.icon}
-                  </div>{" "}
-                  <div>
-                    <h3 className="lg:text-3xl  font-extrabold text-xl">
-                      {item.title}
-                    </h3>
-                    <p>{item.description}</p>
+            <div className="lg:w-1/2 w-full">
+              {" "}
+              <div className=" sticky top-24 p-5 flex flex-col gap-12 lg:px-10">
+                {Items.map((item, idx) => (
+                  <div className="flex text-[#272727] gap-10 " key={idx}>
+                    <div className="w-8 h-8 text-5xl text-background">
+                      {item.icon}
+                    </div>{" "}
+                    <div>
+                      <h3 className="lg:text-3xl  font-extrabold text-xl">
+                        {item.title}
+                      </h3>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             <div className="lg:w-1/2 w-full p-5 relative  flex flex-col gap-5">
               {" "}
-              <div className="sticky top-24 ">
+              <div className=" ">
                 {" "}
                 {/* <motion.h3
                   initial={{ y: 100, opacity: 0 }}
@@ -168,7 +174,18 @@ const page = () => {
                 >
                   Navigating Success Together.
                 </motion.h3> */}
-                <Audit />
+                <Pricing
+                  businessDetails
+                  businessName
+                  consulting
+                  challenges
+                  productDetails
+                  targetMarkets
+                  interest2
+                  additionalInfo
+                  quoteReq
+                  ASIN={false}
+                />
               </div>
             </div>
           </div>
@@ -176,6 +193,15 @@ const page = () => {
           <Awards />
           <CTA />
           <Services slice="9" />
+          <Link
+            href="/pricing?s=Global Launch"
+            className="mx-auto w-full flex items-center justify-center"
+          >
+            {" "}
+            <Button variant="cta" className="px-28 py-8  text-2xl">
+              Request a Quote
+            </Button>
+          </Link>
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}

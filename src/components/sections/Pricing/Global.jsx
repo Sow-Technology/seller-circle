@@ -73,6 +73,7 @@ import { ReviewCard } from "../CustomerMarquee";
 import { reviews } from "@/lib/data";
 import Why1 from "./Why1";
 import { motion } from "framer-motion";
+import HorizontalTestimonials from "@/components/HorizontalTestimonials";
 const Items = [
   {
     hl1: "Market Entry Analysis:",
@@ -329,13 +330,7 @@ const Global = ({ IN }) => {
       </div>
       <CTA1 link="/global-launch" />
       {/* <Why1 /> */}
-      <div className="marquee-wrapper [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] my-20">
-        <Marquee pauseOnHover reverse className="[--duration:20s]">
-          {reviews.map((review, index) => (
-            <ReviewCard key={index} {...review} />
-          ))}
-        </Marquee>
-      </div>
+      <HorizontalTestimonials />
       <div className="">
         {/* <Works /> */}
         {/* <div className="text-3xl text-center text-background font-bold">

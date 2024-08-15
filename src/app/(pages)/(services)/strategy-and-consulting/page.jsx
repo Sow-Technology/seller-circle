@@ -17,6 +17,9 @@ import { IoBarChart, IoExtensionPuzzle, IoRocketSharp } from "react-icons/io5";
 import { BiSolidMegaphone } from "react-icons/bi";
 import { BsFillLightbulbFill, BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Why from "@/components/pages/strategy/Why";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Pricing from "@/components/forms/Pricing";
 
 const Items = [
   {
@@ -168,7 +171,16 @@ const page = () => {
                 >
                   Navigating Success Together.
                 </motion.h3>
-                <Audit />
+                <Pricing
+                  businessDetails
+                  businessName
+                  consulting
+                  challenges
+                  intrest
+                  additionalInfo
+                  quoteReq
+                  ASIN={false}
+                />
               </div>
             </div>
           </div>
@@ -176,6 +188,15 @@ const page = () => {
           <Awards />
           <CTA />
           <Services slice="6" />
+          <Link
+            href="/pricing?s=Strategy and Consulting"
+            className="mx-auto w-full flex items-center justify-center"
+          >
+            {" "}
+            <Button variant="cta" className="px-28 py-8  text-2xl">
+              Request a Quote
+            </Button>
+          </Link>
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}

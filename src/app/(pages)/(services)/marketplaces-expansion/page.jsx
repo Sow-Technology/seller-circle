@@ -13,6 +13,8 @@ import CycleCard from "@/components/cards/CycleCard";
 import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
 import Why from "@/components/pages/marketplace/Why";
 import CTA from "@/components/pages/marketplace/CTA";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 const items = [
   {
     title: "Strategic Planning",
@@ -223,6 +225,15 @@ const page = () => {
           <Why />
           <CTA />
           <Services slice="2" />
+          <Link
+            href="/pricing?s=Marketplaces Expansion"
+            className="mx-auto w-full flex items-center justify-center"
+          >
+            {" "}
+            <Button variant="cta" className="px-28 py-8  text-2xl">
+              Request a Quote
+            </Button>
+          </Link>
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}

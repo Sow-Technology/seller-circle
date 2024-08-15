@@ -1,6 +1,7 @@
 import axios from "axios";
+import { NextResponse } from "next/server";
 
-export default async function handler(req, res) {
+export async function POST(req, res) {
   const { token } = req.body;
 
   try {
@@ -11,13 +12,19 @@ export default async function handler(req, res) {
         response: token,
       })
     );
+    console.log(response);
 
-    if (response.data.success) {
-      res.status(200).json({ success: true });
+    if (response.status == 200) {
+      console.log(true);
+      return NextResponse.json({ success: true, status: 200 });
     } else {
-      res.status(400).json({ success: false });
+      return NextResponse.json({ success: false, status: 400 });
     }
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+      status: 500,
+    });
   }
 }

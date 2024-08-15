@@ -14,7 +14,7 @@ import { reviews } from "@/lib/data";
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-export const ReviewCard = ({ img, name, username, body }) => {
+export const ReviewCard = ({ img, name, username, body, className }) => {
   return (
     <figure
       className={cn(
@@ -22,7 +22,8 @@ export const ReviewCard = ({ img, name, username, body }) => {
         // light styles
         "border-gray-950/[.1] bg-[#F7F7F7] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        className
       )}
     >
       <div className="flex flex-row items-center justify-center gap-2">

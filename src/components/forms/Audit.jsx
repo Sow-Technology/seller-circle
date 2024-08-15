@@ -73,6 +73,8 @@ const formSchema = z.object({
 
 const Audit = ({ footer }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [token, setToken] = useState("");
+  console.log(token);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -90,16 +92,18 @@ const Audit = ({ footer }) => {
       setIsSubmitting(true);
 
       const response = await axios.post("/api/verify-turnstile", { token });
+      console.log(response);
       if (response.data.success) {
-        const response = await axios.post("/api/sendEmail", {
+        const response = await axios.post("/api/submit-form", {
           fullName: values.fullName,
           workEmail: values.workEmail,
           phoneNumber: values.phoneNumber,
           brandName: values.brandName,
           service: values.service,
-          // service2: values.service2,
           message: values.message,
+          formType: "contact",
         });
+        console.log(response);
         toast.success("We'll reach out to you soon!");
       } else {
         toast.error("Invalid Captcha! Please try again later");
@@ -111,7 +115,6 @@ const Audit = ({ footer }) => {
     }
     console.log(values);
   };
-  const [token, setToken] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();

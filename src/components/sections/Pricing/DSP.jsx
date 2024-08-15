@@ -61,6 +61,7 @@ import Marquee from "@/components/ui/marquee";
 import { ReviewCard } from "../CustomerMarquee";
 import { reviews } from "@/lib/data";
 import Why1 from "./Why1";
+import HorizontalTestimonials from "@/components/HorizontalTestimonials";
 const Items = [
   {
     hl1: "Advanced Audience Targeting",
@@ -340,13 +341,7 @@ const DSP = ({ IN }) => {
           Get a custom Quote
         </Button>
       </Link>{" "}
-      <div className="marquee-wrapper [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] my-20">
-        <Marquee pauseOnHover reverse className="[--duration:20s]">
-          {reviews.map((review, index) => (
-            <ReviewCard key={index} {...review} />
-          ))}
-        </Marquee>
-      </div>
+      <HorizontalTestimonials />
       <div className="">
         {/* <Works /> */}
         <div className="text-3xl text-center text-background font-bold">

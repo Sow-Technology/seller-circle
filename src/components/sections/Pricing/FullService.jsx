@@ -50,6 +50,7 @@ import CTA1 from "./creative/CTA1";
 import Marquee from "@/components/ui/marquee";
 import { ReviewCard } from "../CustomerMarquee";
 import { reviews } from "@/lib/data";
+import HorizontalTestimonials from "@/components/HorizontalTestimonials";
 const Items = [
   {
     hl1: "Comprehensive Amazon Account Management",
@@ -377,13 +378,7 @@ const FullService = ({ IN }) => {
           </div>
         </div>
       </div>
-      <div className="marquee-wrapper [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] my-20">
-        <Marquee pauseOnHover reverse className="[--duration:20s]">
-          {reviews.map((review, index) => (
-            <ReviewCard key={index} {...review} />
-          ))}
-        </Marquee>
-      </div>
+      <HorizontalTestimonials />
       <div className="">
         {/* <Works /> */}
         <div className="text-3xl text-center text-background font-bold">

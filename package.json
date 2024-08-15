@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.7.1",
+    "@egjs/react-flicking": "^4.11.4",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^1.0.6",
     "@hookform/resolvers": "^3.6.0",
@@ -25,6 +27,7 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "@radix-ui/react-toast": "^1.1.5",
     "@uidotdev/usehooks": "^2.4.1",
+    "appwrite": "^15.0.0",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -36,6 +39,7 @@
     "geoip-country": "^4.2.122",
     "grommet-icons": "^4.12.1",
     "i18n-iso-countries": "^7.11.2",
+    "keen-slider": "^6.8.6",
     "libphonenumber-js": "^1.11.3",
     "lucide-react": "^0.394.0",
     "mini-svg-data-uri": "^1.4.4",
