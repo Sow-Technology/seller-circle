@@ -16,6 +16,8 @@ import { IoMdAnalytics } from "react-icons/io";
 import Why from "@/components/pages/dsp/Why";
 import { FaFunnelDollar } from "react-icons/fa";
 import { marqueeItem } from "@/lib/data";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Items = [
   {
@@ -344,6 +346,15 @@ const page = () => {
           <Awards />
           <CTA />
           <Services slice="7" />
+          <Link
+            href="/pricing?s=DSP"
+            className="mx-auto w-full flex items-center justify-center"
+          >
+            {" "}
+            <Button variant="cta" className="px-28 py-8  text-2xl">
+              Request a Quote
+            </Button>
+          </Link>
           <div className="">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}

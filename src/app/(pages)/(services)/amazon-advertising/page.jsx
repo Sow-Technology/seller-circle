@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { easeIn, motion } from "framer-motion";
 import AM1 from "@/components/sections/services/AM1";
 import Audit from "@/components/forms/Audit";
@@ -15,6 +15,7 @@ import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCa
 import Awards from "@/components/sections/Awards";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Pricing from "@/components/forms/Pricing";
 
 const cycle = [
   {
@@ -39,7 +40,19 @@ const cycle = [
     description: "Encouraging customers to make a purchase.",
   },
 ];
-const page = () => {
+const Page = () => {
+  const [IN, setIN] = useState(null);
+  useEffect(() => {
+    async function fetchVisitorInfo() {
+      const response = await fetch("https://ipapi.co/json/");
+      const data = await response.json();
+      // setVisitorInfo(data);
+      console.log(data);
+      setIN(data.country);
+    }
+
+    fetchVisitorInfo();
+  }, []);
   return (
     <>
       <Navbar />
@@ -193,8 +206,8 @@ const page = () => {
               experience continuous and sustainable growth.
             </motion.p>
           </div>
-          <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8">
-            <div className="flex flex-row lg:max-w-[45%]">
+          <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8 items-start">
+            <div className="flex sticky top-20 flex-row lg:max-w-[45%]">
               <div>
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
               </div>
@@ -235,8 +248,20 @@ const page = () => {
                 ))}
               </div>
             </div>
-            <div className="mx-auto">
-              <Audit />
+            <div className="mx-auto w-[450px]">
+              <Pricing
+                businessDetails
+                monthlyAdvertisingBudget={[
+                  `<${IN ? "₹50,000" : "$1,000"}`,
+                  `${IN ? "₹50,000 - ₹1,00,000" : "$1,000-$2,000"}`,
+                  `${IN ? " ₹1,00,000-₹5,00,000 " : "$2,000-$10,000"}`,
+                  `> ${IN ? "₹5,00,000" : "$10,000"}`,
+                ]}
+                primaryAdvertisingGoals
+                businessName
+                additionalInfo
+                ASIN={false}
+              />
             </div>
           </div>
           <Awards />
@@ -282,4 +307,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

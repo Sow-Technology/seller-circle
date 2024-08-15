@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { easeIn, motion } from "framer-motion";
 import AM1 from "@/components/sections/services/AM1";
 import Audit from "@/components/forms/Audit";
@@ -13,6 +13,7 @@ import Marquee from "@/components/ui/marquee";
 import CycleCard from "@/components/cards/CycleCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Pricing from "@/components/forms/Pricing";
 const items = [
   {
     title: "Strategic Planning",
@@ -108,7 +109,19 @@ const data = [
       "Scaling your sales through a well-researched audience. Our full funnel advertising strategy ensures that each stage of the customer journey is targeted effectively, from awareness to conversion. We analyze and engage the right audience segments, driving traffic and maximizing sales opportunities through tailored ads and precise targeting.",
   },
 ];
-const page = () => {
+const Page = () => {
+  const [IN, setIN] = useState(null);
+  useEffect(() => {
+    async function fetchVisitorInfo() {
+      const response = await fetch("https://ipapi.co/json/");
+      const data = await response.json();
+      // setVisitorInfo(data);
+      console.log(data);
+      setIN(data.country);
+    }
+
+    fetchVisitorInfo();
+  }, []);
   return (
     <>
       <Navbar />
@@ -258,8 +271,24 @@ const page = () => {
                 ))}
               </div>
             </div>
-            <div className="mx-auto">
-              <Audit />
+            <div className="mx-auto lg:w-[450px]">
+              <Pricing
+                businessName
+                ASIN={false}
+                IN
+                monthlyAdvertisingBudget={[
+                  `${IN ? "<₹100,000" : "<$5,000"}`,
+                  `${IN ? "₹100,000-₹500,000" : "$5,000-$20,000"}`,
+                  `${IN ? "₹500,000-₹1,000,000" : "$20,000-$50,000"}`,
+                  `${IN ? ">₹1,000,000" : ">$50,000"}`,
+                ]}
+                monthlyRevenue={[
+                  `${IN ? "<₹100,000" : "<$10,000"}`,
+                  `${IN ? "₹100,000-₹500,000" : "$10,000-$50,000"}`,
+                  `${IN ? "₹500,000-₹1,500,000" : "$50,000-$100,000"}`,
+                  `${IN ? ">₹1,500,000" : ">$100,000"}`,
+                ]}
+              />
             </div>
           </div>
           <Services slice="1" />
@@ -304,4 +333,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
