@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--nsans" });
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Seller Circle",
@@ -13,9 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
-        {children} <Toaster position={"top-center"} />
-      </body>
+      <Suspense>
+        <body className={nunito.className}>
+          {children} <Toaster position={"top-center"} />
+        </body>
+      </Suspense>
     </html>
   );
 }
