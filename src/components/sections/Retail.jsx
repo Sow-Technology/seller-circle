@@ -20,6 +20,7 @@ const Retail = () => {
         viewport={{ once: true }}
         className="max-h-[89vh]"
         autoPlay
+        playsInline
         muted
         loop
       >

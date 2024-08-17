@@ -23,7 +23,12 @@ const VideoCard = ({ src, thumb }) => {
           <DialogHeader>
             <DialogTitle>Preview</DialogTitle>
           </DialogHeader>
-          <video controls autoPlay className="w-full h-auto object-contain">
+          <video
+            controls
+            autoPlay
+            playsInline
+            className="w-full h-auto object-contain"
+          >
             <source src={src} type="video/mp4" />
           </video>
         </DialogContent>
