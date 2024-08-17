@@ -40,6 +40,12 @@ export async function POST(req, res) {
     case "fullServiceManagement":
       collectionId = "fullServiceManagement";
       break;
+    case "DSP":
+      collectionId = "dsp";
+      break;
+    case "strategyAndConsulting":
+      collectionId = "strategyAndConsulting";
+      break;
     // Add more cases for additional forms
     default:
       return NextResponse.json(

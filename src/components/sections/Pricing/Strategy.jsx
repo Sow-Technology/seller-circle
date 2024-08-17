@@ -349,6 +349,7 @@ const Strategy = ({ IN }) => {
                 additionalInfo
                 quoteReq
                 ASIN={false}
+                formType="strategyAndConsulting"
               />
             </div>{" "}
           </div>

@@ -80,8 +80,10 @@ const formSchema = z.object({
   brandName: z.string().optional(),
   amazonStoreUrl: z.string().url("Invalid URL format").optional(),
   businessName: z.string().optional(),
+  currentChallengesOrGoals: z.string().optional(),
   service: z.string().optional(),
   businessNeeds: z.string().optional(),
+  monthlyAdvertisingBudget: z.string().optional(),
   hearAboutUs: z.string().optional(),
   message: z.string().optional(),
 });
@@ -115,6 +117,35 @@ const Pricing = ({
 }) => {
   console.log(services);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [AGoals, setAGoals] = useState([]);
+  const [prefServices, setPrefServices] = useState([]);
+  const [areasOfInterest, setAreasOfInterest] = useState([]);
+  const handleAGoalsChange = (serviceName, isChecked) => {
+    if (isChecked) {
+      setAGoals((prev) => [...prev, serviceName]);
+    } else {
+      setAGoals((prev) => prev.filter((service) => service !== serviceName));
+    }
+  };
+  const handlePrefServicesChange = (serviceName, isChecked) => {
+    if (isChecked) {
+      setPrefServices((prev) => [...prev, serviceName]);
+    } else {
+      setPrefServices((prev) =>
+        prev.filter((service) => service !== serviceName)
+      );
+    }
+  };
+  const handleAreasOfInterest = (interest, isChecked) => {
+    if (isChecked) {
+      setAreasOfInterest((prev) => [...prev, interest]);
+    } else {
+      setAreasOfInterest((prev) =>
+        prev.filter((service) => service !== interest)
+      );
+    }
+  };
+  console.log(areasOfInterest);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -150,8 +181,10 @@ const Pricing = ({
 
       monthlyRevenue: undefined,
       brandName: "",
+      currentChallengesOrGoals: "",
       service: "",
       businessNeeds: "",
+      monthlyAdvertisingBudget: "",
       hearAboutUs: "",
       message: "",
     },
@@ -160,7 +193,14 @@ const Pricing = ({
 
   const onSubmit = async (val) => {
     const values = form.getValues();
+    if (
+      values.otherAdvertisingGoal.length > 1 &&
+      !AGoals.includes(values.otherAdvertisingGoal)
+    ) {
+      setAGoals([...AGoals, values.otherAdvertisingGoal]);
+    }
 
+    // console.log(getArrayData);
     console.log("button clicked");
     try {
       setIsSubmitting(true);
@@ -185,7 +225,7 @@ const Pricing = ({
             businessName: values.businessName,
             amazonStoreUrl: values.amazonStoreUrl,
             monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
-            primaryAdvertisingGoals: values.primaryAdvertisingGoals,
+            primaryAdvertisingGoals: AGoals,
             businessNeeds: values.businessNeeds,
             hearAboutUs: values.hearAboutUs,
           };
@@ -198,7 +238,34 @@ const Pricing = ({
             businessName: values.businessName,
             amazonStoreUrl: values.amazonStoreUrl,
             monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
-            primaryAdvertisingGoals: values.primaryAdvertisingGoals,
+            primaryAdvertisingGoals: AGoals,
+            businessNeeds: values.businessNeeds,
+            hearAboutUs: values.hearAboutUs,
+          };
+          break;
+        case "DSP":
+          data = {
+            fullName: values.fullName,
+            workEmail: values.workEmail,
+            phoneNumber: values.phoneNumber,
+            businessName: values.businessName,
+            amazonStoreUrl: values.amazonStoreUrl,
+            monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
+            primaryAdvertisingGoals: AGoals,
+            preferredServices: prefServices,
+            businessNeeds: values.businessNeeds,
+            hearAboutUs: values.hearAboutUs,
+          };
+          break;
+        case "strategyAndConsulting":
+          data = {
+            fullName: values.fullName,
+            workEmail: values.workEmail,
+            phoneNumber: values.phoneNumber,
+            businessName: values.businessName,
+            amazonStoreUrl: values.amazonStoreUrl,
+            currentChallengesOrGoals: values.currentChallengesOrGoals,
+            areasOfInterest: areasOfInterest,
             businessNeeds: values.businessNeeds,
             hearAboutUs: values.hearAboutUs,
           };
@@ -718,7 +785,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("marketAnalysis", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -735,7 +805,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("strategyDevelopment", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -752,7 +825,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("performanceOptimization", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -770,7 +846,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("brandPositioning", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -787,7 +866,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("operationalEfficiency", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -804,7 +886,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("reportingAndInsights", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -821,7 +906,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("ongoingSupport", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -838,7 +926,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAreasOfInterest("newLaunchStrategy", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -992,7 +1083,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAGoalsChange("increaseBrandVisibility", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1009,7 +1103,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAGoalsChange("driveSales", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1026,7 +1123,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAGoalsChange("improveROI", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1043,7 +1143,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handleAGoalsChange("launchNewProducts", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1082,7 +1185,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handlePrefServicesChange("audienceTargeting", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1099,7 +1205,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handlePrefServicesChange("creativeOptimisation", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1116,7 +1225,13 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handlePrefServicesChange(
+                              "crossChannelAvertising",
+                              e
+                            );
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1133,7 +1248,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handlePrefServicesChange("performanceReporting", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -1150,7 +1268,10 @@ const Pricing = ({
                       <FormControl>
                         <Checkbox
                           checked={field.value}
-                          onCheckedChange={field.onChange}
+                          onCheckedChange={(e) => {
+                            field.onChange(e);
+                            handlePrefServicesChange("fullFunnelStrategy", e);
+                          }}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
