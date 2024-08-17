@@ -275,13 +275,13 @@ const ListItem = ({ className, title, children, ...props }, ref) => {
         <a
           // ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md sm:w-[40vw] p-3 py-2 text-sm w-[85vw] leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md sm:w-[40vw] p-3 py-2 text-sm w-[85vw] leading-none no-underline outline-none transition-colors hover:bg-accent max-lg:hover:text-zinc-800 focus:bg-accent focus:text-accent-foreground group",
             className
           )}
           {...props}
         >
-          <div className="font-bold text-sm uppercase">{title}</div>
-          <p className=" text-xs leading-snug text-wrap h-auto w-full  text-slate-300">
+          <div className="font-bold peer text-sm uppercase">{title}</div>
+          <p className="group text-xs leading-snug text-wrap peer h-auto w-full max-lg:peer-hover:text-zinc-800  text-slate-300 max-lg:hover:text-zinc-800 ">
             {children}
           </p>
         </a>
@@ -296,7 +296,7 @@ const MobileNav = ({ className }) => {
 
   return (
     <div className="block lg:hidden relative z-[501]  ">
-      <Sheet className="z-[501] relative max-sm:w-screen">
+      <Sheet className="z-[501] relative max-sm:w-screen backdrop-blur-2xl bg-background">
         <SheetTrigger asChild className={className}>
           <div className="text-white cursor-pointer">
             <MenuIcon />
@@ -344,6 +344,15 @@ const MobileNav = ({ className }) => {
                   </NavigationMenuItem>
                 )
               )}
+              <Link href="/contact">
+                {" "}
+                <Button
+                  variant=""
+                  className="bg-background shadow-lg px-10 hover:bg-cyan-600 "
+                >
+                  LET&#39;S TALK
+                </Button>
+              </Link>
             </NavigationMenuList>
           </NavigationMenu>
         </SheetContent>
