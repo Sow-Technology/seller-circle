@@ -93,7 +93,7 @@ const Audit = ({ footer }) => {
 
       const response = await axios.post("/api/verify-turnstile", { token });
       console.log(response);
-      if (response.data.success) {
+      if (token && response.data.success) {
         const response = await axios.post("/api/submit-form", {
           fullName: values.fullName,
           workEmail: values.workEmail,
@@ -116,17 +116,6 @@ const Audit = ({ footer }) => {
     console.log(values);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const response = await fetch("/api/verify-turnstile", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ token }),
-    });
-  };
   const pathname = usePathname();
 
   return (

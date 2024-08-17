@@ -16,15 +16,17 @@ export async function POST(req, res) {
 
     if (response.status == 200) {
       console.log(true);
-      return NextResponse.json({ success: true, status: 200 });
+      return NextResponse.json({ success: true }, { status: 200 });
     } else {
-      return NextResponse.json({ success: false, status: 400 });
+      return NextResponse.json({ success: false }, { status: 400 });
     }
   } catch (error) {
-    return NextResponse.json({
-      success: false,
-      error: error.message,
-      status: 500,
-    });
+    return NextResponse.json(
+      {
+        success: false,
+        error: error.message,
+      },
+      { status: 500 }
+    );
   }
 }

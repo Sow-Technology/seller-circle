@@ -326,6 +326,7 @@ const Advertising = ({ IN }) => {
                 businessName
                 additionalInfo
                 ASIN={false}
+                formType="avertising"
               />
             </div>{" "}
           </div>

@@ -16,7 +16,7 @@ export async function POST(req, res) {
   // Initialize Appwrite Client
   const client = new Client();
   client
-    .setEndpoint("https://cloud.appwrite.io/v1")
+    .setEndpoint(process.env.APPWRITE_PROJECT_API)
     .setProject(process.env.APPWRITE_PROJECT_ID);
 
   // Initialize Appwrite Databases
@@ -31,8 +31,14 @@ export async function POST(req, res) {
     case "contact":
       collectionId = "contact";
       break;
-    case "form2":
-      collectionId = "[FORM2_COLLECTION_ID]";
+    case "advertising":
+      collectionId = "advertising";
+      break;
+    case "footer":
+      collectionId = "advertising";
+      break;
+    case "fullServiceManagement":
+      collectionId = "fullServiceManagement";
       break;
     // Add more cases for additional forms
     default:

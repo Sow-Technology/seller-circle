@@ -47,7 +47,42 @@ const formSchema = z.object({
       message: "Invalid phone number",
     })
     .refine(isValidPhoneNumber, { message: "Invalid phone number" }),
-  ASIN: z.string(),
+  ASIN: z.string().optional(),
+  brandPositioning: z.boolean().default(false),
+  operationalEfficiency: z.boolean().default(false),
+  reportingAndInsights: z.boolean().default(false),
+  ongoingSupport: z.boolean().default(false),
+  newLaunchStrategy: z.boolean().default(false),
+  marketEntryAnalysis: z.boolean().default(false),
+  localizedStrategyDevelopment: z.boolean().default(false),
+  crossBorderCompliance: z.boolean().default(false),
+  brandAdaptation: z.boolean().default(false),
+  channelStrategy: z.boolean().default(false),
+  performanceTracking: z.boolean().default(false),
+  increaseBrandVisibility: z.boolean().default(false),
+  driveSales: z.boolean().default(false),
+  improveROI: z.boolean().default(false),
+  launchNewProducts: z.boolean().default(false),
+  otherAdvertisingGoal: z.string().default(""),
+  audienceTargeting: z.boolean().default(false),
+  creativeOptimisation: z.boolean().default(false),
+  crossChannelAvertising: z.boolean().default(false),
+  performanceReporting: z.boolean().default(false),
+  fullFunnelStrategy: z.boolean().default(false),
+
+  // Number fields
+  nPage: z.number().min(1).max(1000).optional(), // Optional field
+  advertisingBudget: z.number().optional(), // Optional field
+
+  // String fields
+  monthlyRevenue: z.string().optional(),
+
+  brandName: z.string().optional(),
+  amazonStoreUrl: z.string().url("Invalid URL format").optional(),
+  businessName: z.string().optional(),
+  service: z.string().optional(),
+  businessNeeds: z.string().optional(),
+  hearAboutUs: z.string().optional(),
   message: z.string().optional(),
 });
 
@@ -76,6 +111,7 @@ const Pricing = ({
   reqAudit,
   interest3,
   advertisingFocus,
+  formType,
 }) => {
   console.log(services);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -85,25 +121,102 @@ const Pricing = ({
       fullName: "",
       workEmail: "",
       phoneNumber: "",
-      ASIN: "",
+      ASIN: undefined,
+      brandPositioning: false,
+      operationalEfficiency: false,
+      reportingAndInsights: false,
+      ongoingSupport: false,
+      newLaunchStrategy: false,
+      marketEntryAnalysis: false,
+      localizedStrategyDevelopment: false,
+      crossBorderCompliance: false,
+      brandAdaptation: false,
+      channelStrategy: false,
+      performanceTracking: false,
+      increaseBrandVisibility: false,
+      driveSales: false,
+      improveROI: false,
+      launchNewProducts: false,
+      otherAdvertisingGoal: "",
+      audienceTargeting: false,
+      creativeOptimisation: false,
+      crossChannelAvertising: false,
+      performanceReporting: false,
+      fullFunnelStrategy: false,
+      amazonStoreUrl: "",
+      nPage: undefined, // or null, if you prefer
+      ASIN: undefined, // or null, if you prefer
+      advertisingBudget: undefined, // or null, if you prefer
+
+      monthlyRevenue: undefined,
+      brandName: "",
+      service: "",
+      businessNeeds: "",
+      hearAboutUs: "",
       message: "",
     },
   });
   const [token, setToken] = useState("");
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (val) => {
+    const values = form.getValues();
+
+    console.log("button clicked");
     try {
       setIsSubmitting(true);
-      const response = await axios.post("/api/sendEmail", {
-        fullName: values.fullName,
-        workEmail: values.workEmail,
-        phoneNumber: values.phoneNumber,
-        // brandName: values.brandName,
-        // service: values.service,
-        // service2: values.service2,
-        message: values.message,
-      });
-      toast.success("We'll reach out to you soon!");
+      let data;
+      switch (formType) {
+        case "fullServiceManagement":
+          data = {
+            fullName: values.fullName,
+            workEmail: values.workEmail,
+            phoneNumber: values.phoneNumber,
+            businessName: values.businessName,
+            monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
+            monthlyRevenue: values.monthlyRevenue,
+            additionalComments: values.message,
+          };
+          break;
+        case "footer":
+          data = {
+            fullName: values.fullName,
+            workEmail: values.workEmail,
+            phoneNumber: values.phoneNumber,
+            businessName: values.businessName,
+            amazonStoreUrl: values.amazonStoreUrl,
+            monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
+            primaryAdvertisingGoals: values.primaryAdvertisingGoals,
+            businessNeeds: values.businessNeeds,
+            hearAboutUs: values.hearAboutUs,
+          };
+          break;
+        case "advertising":
+          data = {
+            fullName: values.fullName,
+            workEmail: values.workEmail,
+            phoneNumber: values.phoneNumber,
+            businessName: values.businessName,
+            amazonStoreUrl: values.amazonStoreUrl,
+            monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
+            primaryAdvertisingGoals: values.primaryAdvertisingGoals,
+            businessNeeds: values.businessNeeds,
+            hearAboutUs: values.hearAboutUs,
+          };
+          break;
+      }
+      console.log(data);
+      const response = await axios.post("/api/verify-turnstile", { token });
+      console.log(response);
+      if (true || (token && response.data.success)) {
+        const response = await axios.post("/api/submit-form", {
+          ...data,
+          formType,
+        });
+        console.log(response);
+        toast.success("We'll reach out to you soon!");
+      } else {
+        toast.error("Invalid Captcha! Please try again later");
+      }
     } catch (err) {
       toast.error("Internal server error, Try again later!");
     } finally {
@@ -648,6 +761,7 @@ const Pricing = ({
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="brandPositioning"
@@ -1319,7 +1433,7 @@ const Pricing = ({
             siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
             onSuccess={setToken}
           />
-          <SendBtn type="submit" disabled={isSubmitting}>
+          <SendBtn type="submit" disabled={isSubmitting} onClick={onSubmit}>
             {reqAudit ? "Request a Audit" : "Get a Quote"}
           </SendBtn>
         </form>

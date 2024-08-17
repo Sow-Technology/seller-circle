@@ -373,6 +373,7 @@ const FullService = ({ IN }) => {
                   `${IN ? "₹500,000-₹1,500,000" : "$50,000-$100,000"}`,
                   `${IN ? ">₹1,500,000" : ">$100,000"}`,
                 ]}
+                formType="fullServiceManagement"
               />
             </div>{" "}
           </div>

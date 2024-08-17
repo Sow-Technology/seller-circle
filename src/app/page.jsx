@@ -74,7 +74,7 @@ const Home = () => {
         />
         <Growth />
       </div>
-      <LazyLoadComponent component={Approach} />
+      {/* <LazyLoadComponent component={Approach} /> */}
       <LazyLoadComponent component={Strategies} />
       <div className="relative my-10">
         <Image

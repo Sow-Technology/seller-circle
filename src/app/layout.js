@@ -13,12 +13,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <Suspense>
-        <body className={nunito.className}>
-          {children} <Toaster position={"top-center"} />
-        </body>
-      </Suspense>
+    <html lang="en" className="max-w-[100vw] overflow-x-hidden">
+      <body className={nunito.className}>
+        {children} <Toaster position={"top-center"} />
+      </body>
     </html>
   );
 }

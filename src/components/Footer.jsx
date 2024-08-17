@@ -73,6 +73,7 @@ const Footer = () => {
                 reqAudit
                 additionalInfo
                 ASIN={false}
+                formType="footer"
               />
             </div>
             <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
