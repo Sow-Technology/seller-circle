@@ -323,6 +323,7 @@ const Global = ({ IN }) => {
                 additionalInfo
                 quoteReq
                 ASIN={false}
+                formType="globalLaunch"
               />
             </div>{" "}
           </div>

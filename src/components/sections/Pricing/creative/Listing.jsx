@@ -319,6 +319,7 @@ const Listing = ({ IN }) => {
               {" "}
               <Pricing
                 businessName
+                formType="listingImageDesign"
                 ASIN={false}
                 services={[" 5 Image Package", " 7 Image Package"]}
               />

@@ -50,7 +50,6 @@ const Page = () => {
             <span className="text-[#039BE4]">preodic newsletter  </span>
           </motion.h2>
           <div className="mx-auto flex lg:flex-row flex-col-reverse flex-wrap  items-center justify-center gap-16">
-            s
             <div className="p-5">
               <Newsletter />
             </div>

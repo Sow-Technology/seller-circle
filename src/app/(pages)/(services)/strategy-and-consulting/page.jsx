@@ -179,6 +179,7 @@ const page = () => {
                   intrest
                   additionalInfo
                   quoteReq
+                  formType="strategyAndConsulting"
                   ASIN={false}
                 />
               </div>

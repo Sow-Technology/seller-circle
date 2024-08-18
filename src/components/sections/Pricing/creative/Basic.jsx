@@ -275,7 +275,7 @@ const Basic = ({ IN }) => {
                   {IN ? " ₹ 1200" : " $75"}
                 </span>
               </div>{" "}
-              <Pricing services={["Basic A+ Content"]} />
+              <Pricing services={["Basic A+ Content"]} formType="basicA+" />
             </div>{" "}
           </div>
         </div>

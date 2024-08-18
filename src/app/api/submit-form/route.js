@@ -46,6 +46,33 @@ export async function POST(req, res) {
     case "strategyAndConsulting":
       collectionId = "strategyAndConsulting";
       break;
+    case "globalLaunch":
+      collectionId = "globalLaunch";
+      break;
+    case "marketplacesExpansion":
+      collectionId = "marketplacesExpansion";
+      break;
+    case "basicA+":
+      collectionId = "basicA";
+      break;
+    case "premiumA+":
+      collectionId = "premiumA";
+      break;
+    case "brandStore":
+      collectionId = "brandStore";
+      break;
+    case "brandStory":
+      collectionId = "brandStory";
+      break;
+    case "brandVideo":
+      collectionId = "brandVideo";
+      break;
+    case "listingImageDesign":
+      collectionId = "listingImageDesign";
+      break;
+    case "newsletter":
+      collectionId = "newsletter";
+      break;
     // Add more cases for additional forms
     default:
       return NextResponse.json(

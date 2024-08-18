@@ -260,6 +260,7 @@ const Page = () => {
                 primaryAdvertisingGoals
                 businessName
                 additionalInfo
+                formType="advertising"
                 ASIN={false}
               />
             </div>

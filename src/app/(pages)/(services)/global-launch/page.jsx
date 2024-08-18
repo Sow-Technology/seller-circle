@@ -184,6 +184,7 @@ const page = () => {
                   interest2
                   additionalInfo
                   quoteReq
+                  formType="globalLaunch"
                   ASIN={false}
                 />
               </div>

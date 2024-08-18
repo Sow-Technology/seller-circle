@@ -46,6 +46,8 @@ const formSchema = z.object({
 
 const Newsletter = ({ footer }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [token, setToken] = useState("");
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -58,15 +60,10 @@ const Newsletter = ({ footer }) => {
       setIsSubmitting(true);
 
       const response = await axios.post("/api/verify-turnstile", { token });
-      if (response.data.success) {
-        const response = await axios.post("/api/sendEmail", {
-          fullName: values.fullName,
-          workEmail: values.workEmail,
-          phoneNumber: values.phoneNumber,
-          brandName: values.brandName,
-          service: values.service,
-          // service2: values.service2,
-          message: values.message,
+      if (token && response.data.success) {
+        const response = await axios.post("/api/submit-form", {
+          ...values,
+          formType: "newsletter",
         });
         toast.success("Thank you for subscribing us!");
       } else {
@@ -79,20 +76,6 @@ const Newsletter = ({ footer }) => {
     }
     console.log(values);
   };
-  const [token, setToken] = useState("");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const response = await fetch("/api/verify-turnstile", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ token }),
-    });
-  };
-  const pathname = usePathname();
 
   return (
     <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] max-w-[700px] w-auto relative mx-auto">

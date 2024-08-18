@@ -294,7 +294,7 @@ const Premium = ({ IN }) => {
             {" "}
             <div className="w-full">
               {" "}
-              <Pricing services={["Premium A+ Content"]} />
+              <Pricing services={["Premium A+ Content"]} formType="premiumA+" />
             </div>{" "}
           </div>
         </div>

@@ -390,6 +390,7 @@ const Videos = ({ IN }) => {
               <Pricing
                 businessName
                 ASIN={false}
+                formType="brandVideo"
                 services={["Brand Video", "Ad Video"]}
               />
             </div>{" "}

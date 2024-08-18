@@ -271,7 +271,7 @@ const Story = ({ IN }) => {
             {" "}
             <div className="w-full">
               {" "}
-              <Pricing services={[" Brand Story"]} />
+              <Pricing services={[" Brand Story"]} formType="brandStory" />
             </div>{" "}
           </div>
         </div>

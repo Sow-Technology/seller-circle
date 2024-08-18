@@ -242,7 +242,7 @@ const Store = ({ IN }) => {
             {" "}
             <div className="w-full">
               {" "}
-              <Pricing businessName nPage brandName />
+              <Pricing businessName nPage brandName formType="brandStore" />
             </div>{" "}
           </div>
         </div>
