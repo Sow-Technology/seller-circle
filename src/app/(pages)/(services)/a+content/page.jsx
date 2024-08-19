@@ -2,16 +2,9 @@
 import Navbar from "@/components/Navbar";
 import React, { Suspense } from "react";
 import { easeIn, motion } from "framer-motion";
-import AM1 from "@/components/sections/services/AM1";
-import Audit from "@/components/forms/Audit";
 import Image from "next/image";
 import Services from "@/components/sections/about/Services";
-import { approchItems } from "@/lib/data";
-import CTA from "@/components/pages/growth/CTA";
 import Footer from "@/components/Footer";
-import Marquee from "@/components/ui/marquee";
-import CycleCard from "@/components/cards/CycleCard";
-import { StickyScrollCards } from "@/components/pages/advertising/StickyScrollCards";
 import TabsSection from "@/components/pages/creative/TabsSection";
 import FAQ from "@/components/pages/creative/FAQ";
 import Awards from "@/components/sections/Awards";

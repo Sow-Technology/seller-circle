@@ -39,7 +39,7 @@ import { StickyScroll2 } from "@/components/pages/StickyScroll2";
 import { ReviewCard } from "@/components/sections/CustomerMarquee";
 import Pricing from "@/components/forms/Pricing";
 import { TargetIcon } from "@radix-ui/react-icons";
-const page = () => {
+const Page = () => {
   const [IN, setIN] = useState(null);
   useEffect(() => {
     async function fetchVisitorInfo() {
@@ -291,13 +291,13 @@ const page = () => {
             Conclusion
           </motion.h3>
           <p className="lg:text-lg text-gray-800">
-            SellerCircle's strategic approach, integrating advanced analytics
-            through AMC, effective timing with Day Parting, and rigorous SOV
-            tracking, successfully transformed Krishna Herbal and Ayurveda’s
-            Amazon performance. By addressing stagnation, scaling new product
-            lines, and increasing market share, the brand not only achieved
-            significant sales growth but also strengthened its position in the
-            competitive Ayurvedic herbal market.
+            SellerCircle&#39;s strategic approach, integrating advanced
+            analytics through AMC, effective timing with Day Parting, and
+            rigorous SOV tracking, successfully transformed Krishna Herbal and
+            Ayurveda’s Amazon performance. By addressing stagnation, scaling new
+            product lines, and increasing market share, the brand not only
+            achieved significant sales growth but also strengthened its position
+            in the competitive Ayurvedic herbal market.
           </p>
         </div>
         <div className="my-10 flex flex-col items-center justify-center gap-7">
@@ -350,4 +350,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
