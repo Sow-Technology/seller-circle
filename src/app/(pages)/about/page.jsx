@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Audit from "@/components/forms/Audit";
 import CustomerMaqrquee from "@/components/sections/CustomerMarquee";
+import Socials from "@/components/sections/Socials";
 import OurStory from "@/components/sections/Story";
 import Working from "@/components/sections/Working";
 import Services from "@/components/sections/about/Services";
@@ -215,62 +216,7 @@ const Page = () => {
             className="self-center"
           /> */}
         </div>
-        <div className="flex gap-7 flex-row mx-auto mb-16 flex-wrap items-center justify-center">
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-          >
-            <FaLinkedin className="text-[#0762C8] text-xl" />
-            LinkedIn
-          </motion.div>
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-          >
-            <FaInstagram className=" text-xl" />
-            Instagram
-          </motion.div>
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-          >
-            <FaFacebook className="text-[#0762C8] text-xl" />
-            Facebook
-          </motion.div>
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
-            className="flex items-center gap-3 text-base font-semibold cursor-pointer"
-          >
-            <FaPinterest className="text-[#E60023] text-xl" />
-            Pinterest
-          </motion.div>
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1 }}
-          >
-            <Image
-              src="/images/1.png"
-              alt=""
-              width={500}
-              height={500}
-              className="h-[150px] w-auto"
-            />
-          </motion.div>
-        </div>
+        <Socials />
         <Working />
         <Services />
         <motion.h2

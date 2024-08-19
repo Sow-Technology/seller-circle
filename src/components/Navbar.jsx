@@ -150,7 +150,7 @@ const NavItems = [
       },
       {
         name: "Case Study",
-        link: "/#",
+        link: "/case-studies",
         desc: "Celebrating strategy and success ",
       },
       {
