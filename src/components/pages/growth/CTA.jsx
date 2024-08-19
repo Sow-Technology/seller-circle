@@ -2,7 +2,7 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <section className="relative z-10 overflow-hidden bg-indigo-600 py-16 px-8 mt-40">
+    <section className="relative z-10 overflow-hidden bg-indigo-600 py-16 max-w-[100vw] mt-40">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">

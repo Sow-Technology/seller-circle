@@ -59,7 +59,7 @@ const Page = () => {
       <div className="w-full  bg-white  bg-grid-black/[0.05] relative flex items-center justify-center ">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <div className="max-w-7xl mx-auto my-20 z-[39] lg:px-5">
+        <div className="max-w-7xl mx-auto my-20 z-[39] lg:px-5 max-lg:max-w-[98vw]">
           <motion.h3
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
@@ -86,12 +86,12 @@ const Page = () => {
             effectively. The product discovery cycle highlights the path toward
             connecting with customers:
           </motion.p>
-          <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5  ">
+          <div className="flex flex-row flex-wrap justify-center  gap-10 relative z-10 my-20 max-lg:px-5 max-lg:max-w-[98vw] ">
             {cycle.map((item, idx) => (
               <CycleCard item={item} index={idx} key={idx} />
             ))}
           </div>
-          <div className="my-5 p-2">
+          <div className="my-5 p-2 max-lg:max-w-[98vw]">
             {" "}
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
@@ -112,7 +112,7 @@ const Page = () => {
               product and leveraging data to unlock the Amazon Flywheel.
             </motion.p>{" "}
           </div>
-          <div className="my-5 p-2">
+          <div className="my-5 p-2 max-lg:max-w-[98vw]">
             {" "}
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
@@ -136,7 +136,7 @@ const Page = () => {
               a meaningful impact, driving measurable results for your brand.
             </motion.p>{" "}
           </div>
-          <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center">
+          <div className="flex  flex-row flex-wrap px-5 gap-10 items-center justify-center max-lg:max-w-[98vw]">
             <Image
               src="/images/1.png"
               alt=""
@@ -153,7 +153,7 @@ const Page = () => {
             />
           </div>
           <StickyScrollCards />
-          <div className="my-10 p-4">
+          <div className="my-10 p-4 max-lg:max-w-[98vw]">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
@@ -176,7 +176,7 @@ const Page = () => {
               a meaningful impact, driving measurable results for your brand.
             </motion.p>
           </div>
-          <div className="">
+          <div className="max-lg:max-w-[98vw]">
             <motion.h2
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
@@ -206,8 +206,8 @@ const Page = () => {
               experience continuous and sustainable growth.
             </motion.p>
           </div>
-          <div className="flex flex-row flex-wrap gap-16 mt-16 px-4 pl-8 items-start">
-            <div className="flex sticky top-20 flex-row lg:max-w-[45%]">
+          <div className="flex max-lg:max-w-[98vw] flex-row flex-wrap lg:gap-16  mt-16 lg:px-4 lg:pl-8 items-start">
+            <div className="flex lg:sticky px-4 top-20 flex-row lg:max-w-[45%]">
               <div>
                 <div className="w-[2px] rounded-2xl h-[90%] justify-self-center self-center bg-[#A9A8A8] mt-[20px]" />
               </div>
@@ -248,7 +248,7 @@ const Page = () => {
                 ))}
               </div>
             </div>
-            <div className="mx-auto w-[450px]">
+            <div className="lg:mx-auto max-lg:max-w-[85vw] lg:w-[450px]">
               <Pricing
                 businessDetails
                 monthlyAdvertisingBudget={[

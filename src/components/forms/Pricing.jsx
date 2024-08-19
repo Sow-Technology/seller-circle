@@ -440,7 +440,7 @@ const Pricing = ({
     console.log(values);
   };
   return (
-    <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] max-w-[700px] w-full  relative">
+    <div className="bg-white shadow-2xl rounded-[19px] p-10 lg:min-w-[280px] min-w-[250px]   lg:max-w-[700px] lg:w-full m-2 max-lg:w-[98vw]  relative">
       <Form {...form}>
         <form className="space-y-5 z-[39] relative">
           <FormField
@@ -1788,10 +1788,13 @@ const Pricing = ({
               )}
             />
           )}
-          <Turnstile
-            siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
-            onSuccess={setToken}
-          />
+          <div className="max-w-[80vw] overflow-hidden">
+            {" "}
+            <Turnstile
+              siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
+              onSuccess={setToken}
+            />
+          </div>
         </form>
       </Form>
       <div className="z-10 relative mt-5">

@@ -125,7 +125,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full  bg-white  bg-grid-black/[0.05] relative flex items-center justify-center ">
+      <div className="w-full  bg-white  bg-grid-black/[0.05] relative p-2 flex items-center justify-center ">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center  bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
@@ -148,7 +148,7 @@ const Page = () => {
             Advertising Management
           </motion.h2>
           <AM1 />
-          <div className="flex gap-5 flex-row flex-wrap my-5  justify-center gap-y-10">
+          <div className="flex gap-5 flex-row flex-wrap my-5  justify-center gap-y-10 p-2">
             {data.map((item, index) => (
               <CycleCard item={item} index={index} key={index} />
             ))}
@@ -157,7 +157,7 @@ const Page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase"
+            className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase p-2"
           >
             Level Up Your Brand on Amazon with{" "}
             <span className="text-[#039BE4]">Full Service Management  </span>
@@ -166,7 +166,7 @@ const Page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
+            className="nunito p-2 text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
           >
             Our comprehensive Amazon Full-Service offering provides a dynamic
             solution designed to grow or launch your Amazon business. Our expert
@@ -194,7 +194,7 @@ const Page = () => {
                 whileInView={{ y: 0, opacity: 100 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: easeIn }}
-                className="min-w-[280px] max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
+                className="min-w-[280px] lg:max-w-[400px] p-10 flex flex-col gap-7 rounded-2xl cshad  relative z-10 bg-white "
               >
                 <h4 className="nunito font-extrabold text-2xl hover:text-background transition-all duration-300 hover:tracking-widest">
                   {item.title}
@@ -217,7 +217,7 @@ const Page = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             viewport={{ once: true }}
-            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 "
+            className="nunito  text-base lg:text-xl max-w-5xl mx-auto text-center my-7 p-2 "
           >
             At Seller Circle, we specialize in scaling sales for brands on
             Amazon and other marketplaces through a holistic approach and proven
@@ -311,7 +311,7 @@ const Page = () => {
             >
               Brands <span className="text-[#039BE4]">we work with  </span>
             </motion.h2>
-            <div className="my-10 overflow-hidden w-screen lg:max-w-7xl">
+            <div className="my-10 overflow-hidden max-w-[100vw] lg:max-w-7xl">
               <Marquee
                 pauseOnHover
                 className="flex items-center justify-center overflow-hidden max-w-6xl mx-auto"
