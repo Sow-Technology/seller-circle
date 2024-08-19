@@ -55,7 +55,7 @@ export async function POST(req, res) {
     case "basicA+":
       collectionId = "basicA";
       break;
-    case "premiumA+":
+    case "premiumA":
       collectionId = "premiumA";
       break;
     case "brandStore":

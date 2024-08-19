@@ -367,7 +367,7 @@ const Pricing = ({
             additionalComments: values.message,
           };
           break;
-        case "premiumA+":
+        case "premiumA":
           data = {
             fullName: values.fullName,
             workEmail: values.workEmail,
