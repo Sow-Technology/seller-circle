@@ -284,7 +284,7 @@ const Pricing = ({
             businessName: values.businessName,
             amazonStoreUrl: values.amazonStoreUrl,
             monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
-            primaryAdvertisingGoals: AGoals,
+            primaryAdvertisingGoal: AGoals,
             businessNeeds: values.businessNeeds,
             hearAboutUs: values.hearAboutUs,
           };
@@ -297,7 +297,7 @@ const Pricing = ({
             businessName: values.businessName,
             amazonStoreUrl: values.amazonStoreUrl,
             monthlyAdvertisingBudget: values.monthlyAdvertisingBudget,
-            primaryAdvertisingGoals: AGoals,
+            primaryAdvertisingGoal: AGoals,
             businessNeeds: values.businessNeeds,
             hearAboutUs: values.hearAboutUs,
           };
