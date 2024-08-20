@@ -74,7 +74,6 @@ const Newsletter = ({ footer }) => {
     } finally {
       setIsSubmitting(false);
     }
-    console.log(values);
   };
 
   return (

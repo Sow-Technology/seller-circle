@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
   const data = await req.json();
-  console.log(data);
   if (!data) {
     return NextResponse.json(
       {
@@ -21,12 +20,9 @@ export async function POST(req, res) {
 
   // Initialize Appwrite Databases
   const databases = new Databases(client);
-  console.log("before try");
 
   // Select the collection based on the form type
   let collectionId = "";
-  console.log("try");
-  console.log(data.formType);
   switch (data.formType) {
     case "contact":
       collectionId = "contact";
@@ -80,9 +76,6 @@ export async function POST(req, res) {
         { status: 400 }
       );
   }
-  console.log("here");
-  console.log(collectionId);
-  console.log({ ...data });
   // Save the form data to Appwrite
   const result = await databases.createDocument(
     "forms",
@@ -90,8 +83,12 @@ export async function POST(req, res) {
     ID.unique(), // Unique ID for the document
     { ...data }
   );
-  console.log(result);
-  console.log("result");
+  // const resultString = await databases.createDocument(
+  //   "forms",
+  //   "stringData",
+  //   ID.unique(), // Unique ID for the document
+  //   { data: JSON.stringify(data, null, "\n") }
+  // );
   if (result.$id) {
     return NextResponse.json(
       {

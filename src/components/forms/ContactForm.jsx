@@ -94,7 +94,6 @@ const ContactForm = () => {
     } finally {
       setIsSubmitting(false);
     }
-    console.log(values);
   };
   return (
     <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] max-w-[700px] w-auto relative">

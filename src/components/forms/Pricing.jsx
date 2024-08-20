@@ -117,7 +117,6 @@ const Pricing = ({
   advertisingFocus,
   formType,
 }) => {
-  console.log(services);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [AGoals, setAGoals] = useState([]);
   const [prefServices, setPrefServices] = useState([]);
@@ -232,7 +231,6 @@ const Pricing = ({
     },
   });
   const [token, setToken] = useState("");
-
   const onSubmit = async (e) => {
     e.preventDefault();
     const values = form.getValues();
@@ -240,23 +238,17 @@ const Pricing = ({
       values.otherMarketplaceInterest.length > 1 &&
       !marketplaceInterest.includes(values.otherMarketplaceInterest)
     ) {
-      setMarketplaceInterest([
-        ...marketplaceInterest,
+      setMarketplaceInterest((prev) => [
+        ...prev,
         values.otherMarketplaceInterest,
       ]);
     }
-    console.log(marketplaceInterest);
+
     if (
       values.otherAdvertisingGoal.length > 1 &&
       !AGoals.includes(values.otherAdvertisingGoal)
     ) {
-      setAGoals([...AGoals, values.otherAdvertisingGoal]);
-    }
-    if (
-      values.otherTargetMarkets.length > 1 &&
-      !tMarkets.includes(values.otherTargetMarkets)
-    ) {
-      setTMarkets([...tMarkets, values.otherTargetMarkets]);
+      setAGoals((prev) => [...prev, values.otherAdvertisingGoal]);
     }
     console.log(tMarkets);
     // console.log(getArrayData);
@@ -440,7 +432,7 @@ const Pricing = ({
     console.log(values);
   };
   return (
-    <div className="bg-white shadow-2xl rounded-[19px] p-10 lg:min-w-[280px] min-w-[250px]   lg:max-w-[700px] lg:w-full m-2 max-lg:w-[98vw]  relative">
+    <div className="bg-white shadow-2xl rounded-[19px] p-10 lg:min-w-[280px] min-w-[250px]   lg:max-w-[700px] lg:w-full m-2 max-lg:w-[98%]  relative">
       <Form {...form}>
         <form className="space-y-5 z-[39] relative">
           <FormField

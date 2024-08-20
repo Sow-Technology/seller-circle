@@ -12,10 +12,8 @@ export async function POST(req, res) {
         response: token,
       })
     );
-    console.log(response);
 
     if (response.status == 200) {
-      console.log(true);
       return NextResponse.json({ success: true }, { status: 200 });
     } else {
       return NextResponse.json({ success: false }, { status: 400 });

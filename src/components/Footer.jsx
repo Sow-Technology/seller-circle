@@ -20,7 +20,6 @@ const Footer = () => {
       const response = await fetch("https://ipapi.co/json/");
       const data = await response.json();
       // setVisitorInfo(data);
-      console.log(data);
       setIN(data.country);
     }
 
