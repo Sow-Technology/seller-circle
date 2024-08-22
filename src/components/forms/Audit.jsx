@@ -115,7 +115,7 @@ const Audit = ({ footer }) => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] lg:max-w-[500px] w-auto relative mx-auto">
+    <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] max-w-[100%] lg:max-w-[500px] w-auto relative lg:mx-auto">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -260,10 +260,13 @@ const Audit = ({ footer }) => {
               </FormItem>
             )}
           />
-          <Turnstile
-            siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
-            onSuccess={setToken}
-          />
+          <div className="overflow-hidden">
+            {" "}
+            <Turnstile
+              siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}
+              onSuccess={setToken}
+            />
+          </div>
 
           <SendBtn type="submit" disabled={isSubmitting}>
             {footer

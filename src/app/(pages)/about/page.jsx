@@ -176,7 +176,7 @@ const Page = () => {
               ))}
             </div>
           </div>
-          <div className="">
+          <div className="w-full">
             <Audit />
           </div>
         </div>

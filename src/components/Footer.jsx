@@ -57,7 +57,7 @@ const Footer = () => {
         </div> */}
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8">
-            <div className="lg:w-[60%]">
+            <div className="lg:w-[60%] w-full">
               {" "}
               <Pricing
                 businessDetails
