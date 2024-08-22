@@ -1,11 +1,14 @@
 "use client";
+import React from "react";
+import dynamic from "next/dynamic";
 import LazyLoadComponent from "@/components/LazyLoadComoponent";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import dynamic from "next/dynamic";
 import Image from "next/image";
-import React from "react";
+import useIsMobile from "@/hooks/useIsMobile";
+import HomeMobile from "@/components/HomeMobile";
 
+// Dynamic imports for desktop devices
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 const Approach = dynamic(() => import("@/components/sections/Approach"), {
   ssr: false,
@@ -32,15 +35,19 @@ const WeAre = dynamic(() => import("@/components/sections/WeAre"), {
   ssr: false,
 });
 const Why = dynamic(() => import("@/components/sections/Why"), { ssr: false });
-// const Blogs = dynamic(() => import("@/components/sections/Blogs"), {
-//   ssr: false,
-// });
-
+// const Blogs = dynamic(() => import("@/components/sections/Blogs"), { ssr: false });
 const Works = dynamic(() => import("@/components/sections/Works"), {
   ssr: false,
 });
 
 const Home = () => {
+  const isMobile = useIsMobile();
+
+  // Conditionally render based on device type
+  if (isMobile) {
+    return <HomeMobile />;
+  }
+
   return (
     <div className="relative z-10">
       <div className="relative">
@@ -74,7 +81,8 @@ const Home = () => {
         />
         <Growth />
       </div>
-      {/* <LazyLoadComponent component={Approach} /> */}
+      <LazyLoadComponent component={Approach} />
+
       <LazyLoadComponent component={Strategies} />
       <div className="relative my-10">
         <Image

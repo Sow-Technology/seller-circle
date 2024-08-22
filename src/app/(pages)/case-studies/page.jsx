@@ -4,18 +4,8 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import { motion } from "framer-motion";
 import BlogCard from "@/components/cards/BlogCard";
-const c1 = {
-  imageUrl: "/images/brands/1.png",
-  year: "April 2024",
-  date: "July 2024",
-  category: "Herbal Supplements and Juices",
-  title:
-    "How Sellercircle Advertising Strategic Campaigns Achieved a 2X Sales Increase and Boosted Brand Awareness in 3 months",
-  client: "Krishna Herbal & Ayurveda",
-  services: "DSP, PPC, Search, Sponsored Video, AMC",
-  link: "/case-studies/From-Stagnation-to-Growth-How-Krishna-Herbal-and-Ayurveda-Strategic-Campaigns-Achieved-a-2X-Sales-Increase-and-Boosted-Brand-Awareness-in-3-Months",
-  marketplace: "Amazon.in",
-};
+import { c1 } from "@/lib/data";
+
 const page = () => {
   return (
     <div>
