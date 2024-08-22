@@ -115,7 +115,7 @@ const Audit = ({ footer }) => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] max-w-[700px] w-auto relative mx-auto">
+    <div className="bg-white shadow-2xl rounded-[19px] p-10 min-w-[280px] lg:max-w-[500px] w-auto relative mx-auto">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

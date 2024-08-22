@@ -83,11 +83,37 @@ export async function POST(req, res) {
     ID.unique(), // Unique ID for the document
     { ...data }
   );
+  function formatObjectToReadableString(obj, indent = 2, level = 0) {
+    let result = "";
+    const indentation = " ".repeat(indent * level);
+
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        const value = obj[key];
+        if (Array.isArray(value)) {
+          result += `${indentation}${key}:\n${indentation}- ${value.join(
+            `\n${indentation}- `
+          )}\n`;
+        } else if (typeof value === "object" && value !== null) {
+          result += `${indentation}${key}:\n${formatObjectToReadableString(
+            value,
+            indent,
+            level + 1
+          )}`;
+        } else {
+          result += `${indentation}${key}: ${value}\n`;
+        }
+      }
+    }
+
+    return result;
+  }
+
   // const resultString = await databases.createDocument(
   //   "forms",
   //   "stringData",
   //   ID.unique(), // Unique ID for the document
-  //   { data: JSON.stringify(data, null, "\n") }
+  //   { data: formatObjectToReadableString(data) }
   // );
   if (result.$id) {
     return NextResponse.json(
