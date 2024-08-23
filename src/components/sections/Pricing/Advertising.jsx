@@ -310,7 +310,7 @@ const Advertising = ({ IN }) => {
               <span className="font-bold text-4xl">
                 {IN ? " ₹25,000 " : " $500"}
               </span>
-              +6% of sales
+              +6% of AD spends
             </div>
             <div className="w-full">
               {" "}
