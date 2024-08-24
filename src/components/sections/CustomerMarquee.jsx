@@ -14,7 +14,7 @@ import { reviews } from "@/lib/data";
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-export const ReviewCard = ({ img, name, username, body, className }) => {
+export const ReviewCard = ({ img, name, username, body, className, desig }) => {
   return (
     <figure
       className={cn(
@@ -26,7 +26,7 @@ export const ReviewCard = ({ img, name, username, body, className }) => {
         className
       )}
     >
-      <div className="flex flex-row items-center justify-center gap-2">
+      <div className="flex flex-row items-start justify-start py-2 gap-2">
         <Image
           className="rounded-full grayscale"
           width="114"
@@ -35,7 +35,17 @@ export const ReviewCard = ({ img, name, username, body, className }) => {
           src={img}
         />
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm text-slate-900">{body}</blockquote>
+      {name && (
+        <div className="ml-auto self-end  w-max font-bold text-slate-600 mt-3">
+          {name}
+        </div>
+      )}
+      {desig && (
+        <div className="ml-auto self-end  w-max font-bold text-slate-600 ">
+          {desig}
+        </div>
+      )}
     </figure>
   );
 };

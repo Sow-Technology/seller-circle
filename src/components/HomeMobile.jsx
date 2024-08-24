@@ -14,6 +14,7 @@ import WeAre from "@/components/sections/WeAre";
 import Why from "@/components/sections/Why";
 // import Blogs from "@/components/sections/Blogs";
 import Works from "@/components/sections/Works";
+import HorizontalTestimonials from "./HorizontalTestimonials";
 
 const HomeMobile = () => {
   return (
@@ -64,7 +65,7 @@ const HomeMobile = () => {
       <Retail />
       <Works />
       <Client />
-      <Customers />
+      <HorizontalTestimonials />
       <Creative />
       {/* <Blogs /> */}
       <Footer />

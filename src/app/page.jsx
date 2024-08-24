@@ -9,6 +9,10 @@ import useIsMobile from "@/hooks/useIsMobile";
 import HomeMobile from "@/components/HomeMobile";
 
 // Dynamic imports for desktop devices
+const HorizontalTestimonials = dynamic(
+  () => import("@/components/HorizontalTestimonials"),
+  { ssr: false }
+);
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 const Approach = dynamic(() => import("@/components/sections/Approach"), {
   ssr: false,
@@ -19,9 +23,7 @@ const Client = dynamic(() => import("@/components/sections/Client"), {
 const Creative = dynamic(() => import("@/components/sections/Creative"), {
   ssr: false,
 });
-const Customers = dynamic(() => import("@/components/sections/Customers"), {
-  ssr: false,
-});
+
 const Growth = dynamic(() => import("@/components/sections/Growth"), {
   ssr: false,
 });
@@ -97,7 +99,9 @@ const Home = () => {
       <LazyLoadComponent component={Retail} />
       <LazyLoadComponent component={Works} />
       <LazyLoadComponent component={Client} />
-      <LazyLoadComponent component={Customers} />
+      {/* <LazyLoadComponent component={Customers} /> */}
+      <HorizontalTestimonials />
+
       <LazyLoadComponent component={Creative} />
       {/* <LazyLoadComponent component={Blogs} /> */}
       <Footer />
