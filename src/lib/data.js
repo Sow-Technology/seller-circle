@@ -192,7 +192,7 @@ export const reviews = [
     name: "Brand Manager (Tribe Concept)",
   },
   {
-    body: "We extend sincere gratitude to SellerCircle for their invaluable partnership in amplifying our visionary journey. SellerCircle's expertise in e-commerce and deep understanding of the Amazon marketplace have played a pivotal role in our success. Their customized advertising strategy effectively addressed every stage of the buyer journey, resulting in increased visibility, engagement, and sales",
+    body: "We extend sincere gratitude to SellerCircle for their invaluable partnership in amplifying our visionary journey. SellerCircle's expertise in e-commerce and deep understanding of the Amazon marketplace have played a pivotal role in our success. Their customized advertising strategy effectively addressed every stage of the buyer journey, resulting in increased visibility, engagement, and sales.",
     img: "/images/cm2.webp",
     name: "Ramasamy S",
     desig: "General Manager (Vooki)",
@@ -203,7 +203,7 @@ export const reviews = [
     name: "Gaurav(Founder)",
   },
   {
-    body: "Since partnering with Seller Circle in April 2024, our sales have doubled and our Advertising Cost of Sale (ACOS) has decreased by 8%. Additionally, our Flipkart ad costs were reduced by 50%, with sales exceeding 2X. Seller Circle has expertly managed all aspects of our Amazon business, from Seller Central operations and creatives to DSP and search ads. Their holistic approach and deep understanding of Amazon's ecosystem have driven significant growth for Krishna Ayurveda and Herbal. Seller Circle is a great full-service team to work with, and I highly recommend them to any brand looking to scale their presence on Amazon. - Shrawan Daga ,Founder (Krishna Herbal And Ayurveda)",
+    body: "Since partnering with Seller Circle in April 2024, our sales have doubled and our Advertising Cost of Sale (ACOS) has decreased by 8%. Additionally, our Flipkart ad costs were reduced by 50%, with sales exceeding 2X. Seller Circle has expertly managed all aspects of our Amazon business, from Seller Central operations and creatives to DSP and search ads. Their holistic approach and deep understanding of Amazon's ecosystem have driven significant growth for Krishna Ayurveda and Herbal. Seller Circle is a great full-service team to work with, and I highly recommend them to any brand looking to scale their presence on Amazon.",
     img: "/images/brands/1.png",
     name: "Shrawan Daga (Founder)",
   },
