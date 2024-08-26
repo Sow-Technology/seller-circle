@@ -1,3 +1,4 @@
+import { sendEmail } from "@/lib/actions/mailer";
 import { Client, Databases, ID } from "appwrite";
 import { NextResponse } from "next/server";
 
@@ -83,25 +84,25 @@ export async function POST(req, res) {
     ID.unique(), // Unique ID for the document
     { ...data }
   );
-  function formatObjectToReadableString(obj, indent = 2, level = 0) {
+  function formatObjectToReadableHTML(obj, indent = 2, level = 0) {
     let result = "";
-    const indentation = " ".repeat(indent * level);
+    const indentation = "&nbsp;".repeat(indent * level * 4); // Replace spaces with &nbsp; for HTML indentation
 
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
         const value = obj[key];
         if (Array.isArray(value)) {
-          result += `${indentation}${key}:\n${indentation}- ${value.join(
-            `\n${indentation}- `
-          )}\n`;
+          result += `${indentation}<strong>${key}:</strong><br/>${indentation}&nbsp;- ${value.join(
+            `<br/>${indentation}&nbsp;- `
+          )}<br/>`;
         } else if (typeof value === "object" && value !== null) {
-          result += `${indentation}${key}:\n${formatObjectToReadableString(
+          result += `${indentation}<strong>${key}:</strong><br/>${formatObjectToReadableHTML(
             value,
             indent,
             level + 1
           )}`;
         } else {
-          result += `${indentation}${key}: ${value}\n`;
+          result += `${indentation}<strong>${key}:</strong> ${value}<br/>`;
         }
       }
     }
@@ -109,11 +110,18 @@ export async function POST(req, res) {
     return result;
   }
 
+  // Example usage
+
+  const htmlString = formatObjectToReadableHTML(data);
+  console.log(htmlString);
+
+  const stringData = formatObjectToReadableHTML(data);
   // const resultString = await databases.createDocument(
   //   "forms",
   //   "stringData",
   //   ID.unique(), // Unique ID for the document
   //   { data: formatObjectToReadableString(data) }
+  await sendEmail(stringData);
   // );
   if (result.$id) {
     return NextResponse.json(

@@ -1789,10 +1789,10 @@ const Pricing = ({
           </div>
         </form>
       </Form>
-      <div className="z-10 relative mt-5">
+      <div className="z-10 relative mt-5 uppercase">
         {" "}
         <SendBtn disabled={isSubmitting} type="button" onClick={onSubmit}>
-          {reqAudit ? "Request a Audit" : "Get a Quote"}
+          {reqAudit ? "Request an Audit" : "Get a Quote"}
         </SendBtn>
       </div>
       <BorderBeam size={250} />

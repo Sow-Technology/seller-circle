@@ -156,10 +156,10 @@ const Footer = () => {
                           OUR MAILBOX:
                         </div>
                       </div>
-                      <Link href="mailto:contact@sellercircle.in">
+                      <Link href="mailto:hello@sellercircle.in">
                         {" "}
                         <div className=" text-white flex-col flex text-base">
-                          contact@sellercircle.in
+                          Hello@Sellercircle.in
                         </div>
                       </Link>
                     </div>

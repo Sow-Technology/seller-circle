@@ -271,7 +271,7 @@ const Audit = ({ footer }) => {
           <SendBtn type="submit" disabled={isSubmitting}>
             {footer
               ? "Request a Audit"
-              : (pathname == "/" && "Contact us") ||
+              : (pathname == "/" && "CONTACT US") ||
                 (pathname == "/pricing" && "Request a quote") ||
                 (pathname == "/full-service-management" && "Request a audit") ||
                 (pathname == "/amazon-advertising" && "Request a audit") ||

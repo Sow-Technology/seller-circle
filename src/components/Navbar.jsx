@@ -71,11 +71,11 @@ const Navbar = () => {
               <FaLocationDot className="text-lg" />
               Kalyan Nagar, Bangalore
             </div> */}
-            <Link href="mailto:contact@sellercircle.in">
+            <Link href="mailto:hello@sellercircle.in">
               {" "}
-              <div className="flex text-white items-center gap-2 font-bold">
-                <IoMail className="text-lg" />
-                contact@sellercircle.in
+              <div className="flex text-white items-center gap-2 font-extrabold ">
+                <IoMail className="text-3xl" />
+                Hello@Sellercircle.in
               </div>
             </Link>
           </div>

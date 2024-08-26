@@ -312,7 +312,7 @@ const Advertising = ({ IN }) => {
               </span>
               +6% of AD spends
             </div>
-            <div className="w-full">
+            <div className="w-full" id="form">
               {" "}
               <Pricing
                 businessDetails

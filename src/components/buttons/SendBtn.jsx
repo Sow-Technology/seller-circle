@@ -18,7 +18,7 @@ export const SendBtn = ({ children, ...props }) => {
       <span className="absolute inset-0 flex items-center justify-center w-full h-full duration-500 -translate-x-full group-hover:translate-x-0 ease-out bg-background dark:bg-zinc-100 text-zinc-100 dark:text-zinc-800">
         <IoSend size="20" />
       </span>
-      <span className="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease">
+      <span className="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease uppercase">
         {children}
       </span>
       <span className="relative invisible">{children}</span>
