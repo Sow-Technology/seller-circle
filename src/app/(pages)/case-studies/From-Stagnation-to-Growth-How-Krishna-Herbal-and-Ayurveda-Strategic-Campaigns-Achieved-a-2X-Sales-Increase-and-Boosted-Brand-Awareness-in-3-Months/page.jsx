@@ -337,7 +337,7 @@ const Page = () => {
                 businessName
                 additionalInfo
                 ASIN={false}
-                formType="avertising"
+                formType="advertising"
               />
             </div>{" "}
           </div>

@@ -185,7 +185,7 @@ const Approach = () => {
                 {item.text}
               </motion.div>
             ))}
-            <Link href="/advertising" className="mt-10">
+            <Link href="/amazon-advertising" className="mt-10">
               {" "}
               <Button variant="cta" className="text-2xl px-10 py-8">
                 Request AN Audit
