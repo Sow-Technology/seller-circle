@@ -39,6 +39,7 @@ import CTA from "./CTA";
 import { BiBriefcase } from "react-icons/bi";
 import CycleCard from "@/components/cards/CycleCard";
 import CTA2 from "./CTA2";
+import Pricing from "@/components/forms/Pricing";
 const Items = [
   {
     title: "Informative Content",
@@ -244,7 +245,12 @@ const Videos = () => {
           </motion.h3>
         </div>
         <div className="">
-          <Audit />
+          <Pricing
+            businessName
+            ASIN={false}
+            formType="brandVideo"
+            services={["Brand Video", "Ad Video"]}
+          />{" "}
         </div>
         <div className="lg:w-1/2 w-[90%]">
           <NumberedDesign1 data={NumberedData} />

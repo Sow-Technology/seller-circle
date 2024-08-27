@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </div> */}
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8 relative">
             <div className="lg:w-[60%] w-full">
               {" "}
               <Pricing
@@ -75,153 +75,155 @@ const Footer = () => {
                 formType="footer"
               />
             </div>
-            <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
-              <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
-                <div className=" mr-4">
-                  <div className="flex flex-wrap flex-col ">
-                    <div className="basis-1/2 text-3xl font-bold mb-2">
-                      Services
-                    </div>
-                    {services.map((service, idx) => (
-                      <div className="basis-1/2  text-base mb-2" key={idx}>
-                        <Link href={service.link}>{service.name}</Link>
+            <div className="h-full ">
+              <div className="sticky top-20  p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
+                <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
+                  <div className=" mr-4">
+                    <div className="flex flex-wrap flex-col ">
+                      <div className="basis-1/2 text-3xl font-bold mb-2">
+                        Services
                       </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <div className="flex  flex-wrap flex-col">
-                    <div className="basis-1/3 text-3xl font-bold mb-2">
-                      Quick Links
-                    </div>
-                    <div className="basis-1/3 text-base mb-2">
-                      <Link href="/about">About Us</Link>
-                    </div>
-                    <div className="basis-1/3 text-base mb-2">
-                      <Link href="/#services">Our Services</Link>
-                    </div>
-                    <div className="basis-1/3 text-base mb-2">
-                      <Link href="#">Careers</Link>
-                    </div>
-                    <div className="basis-1/3 text-base mb-2">
-                      <Link href="/contact">Contact Us</Link>
-                    </div>
-                    <div className="basis-1/3 text-base mb-2">
-                      <Link href="/pricing">Pricing</Link>
+                      {services.map((service, idx) => (
+                        <div className="basis-1/2  text-base mb-2" key={idx}>
+                          <Link href={service.link}>{service.name}</Link>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                </div>
-                <div className="flex w-auto  flex-row">
-                  <div className="">
-                    <div className="basis-1/4  flex flex-wrap flex-col">
-                      <div className="basis-1/4 text-3xl font-bold mb-2">
-                        More
+                  <div>
+                    <div className="flex  flex-wrap flex-col">
+                      <div className="basis-1/3 text-3xl font-bold mb-2">
+                        Quick Links
                       </div>
-                      <div className="basis-1/4 text-base mb-2">
-                        <Link href="#"> Terms & Conditions</Link>
+                      <div className="basis-1/3 text-base mb-2">
+                        <Link href="/about">About Us</Link>
                       </div>
-                      <div className="basis-1/4 text-base mb-2">
-                        <Link href="/privacy-policy">Privacy Policy</Link>
+                      <div className="basis-1/3 text-base mb-2">
+                        <Link href="/#services">Our Services</Link>
                       </div>
-                      <div className="basis-1/4 text-base mb-2">
-                        <Link href="/faq">FAQ</Link>
+                      <div className="basis-1/3 text-base mb-2">
+                        <Link href="#">Careers</Link>
                       </div>
-                      <div className="basis-1/4 text-base mb-2">
-                        <Link href="/works"> Creative examples</Link>{" "}
+                      <div className="basis-1/3 text-base mb-2">
+                        <Link href="/contact">Contact Us</Link>
+                      </div>
+                      <div className="basis-1/3 text-base mb-2">
+                        <Link href="/pricing">Pricing</Link>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3 min-w-[300px]">
-                <div className="  text-white text-center w-full flex-col font-bold flex text-3xl">
-                  Our Contacts
-                </div>
-                <div className=" text-white flex-col flex text-sm">
-                  Give us a call or drop by anytime, we endeavor to answer all
-                  enquiries within 24 hours on business days. We will be happy
-                  to answer your questions.
+                  <div className="flex w-auto  flex-row">
+                    <div className="">
+                      <div className="basis-1/4  flex flex-wrap flex-col">
+                        <div className="basis-1/4 text-3xl font-bold mb-2">
+                          More
+                        </div>
+                        <div className="basis-1/4 text-base mb-2">
+                          <Link href="#"> Terms & Conditions</Link>
+                        </div>
+                        <div className="basis-1/4 text-base mb-2">
+                          <Link href="/privacy-policy">Privacy Policy</Link>
+                        </div>
+                        <div className="basis-1/4 text-base mb-2">
+                          <Link href="/faq">FAQ</Link>
+                        </div>
+                        <div className="basis-1/4 text-base mb-2">
+                          <Link href="/works"> Creative examples</Link>{" "}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex flex-row flex-wrap">
-                  <div className="flex flex-col lg:w-[30%] gap-5">
-                    {" "}
-                    <div className="">
-                      <div className=" text-white flex-col justify-center flex text-sm">
-                        <div className="text-white flex-row items-center flex text-base gap-3  font-bold">
-                          <div className=" text-2xl">
-                            <BiMailSend />
-                          </div>
-                          OUR MAILBOX:
-                        </div>
-                      </div>
-                      <Link href="mailto:hello@sellercircle.in">
-                        {" "}
-                        <div className=" text-white flex-col flex text-base">
-                          Hello@Sellercircle.in
-                        </div>
-                      </Link>
-                    </div>
-                    <div className="">
-                      <div className=" text-white flex-col flex text-sm font-bold">
-                        <div className="text-white flex-row gap-3 flex text-base ">
-                          <div className=" text-lg">
-                            <BsFillTelephoneInboundFill />
-                          </div>
-                          OUR PHONE:
-                        </div>
-                      </div>
-                      <Link href="tel:+9108041688315">
-                        <div className=" text-white flex-col flex text-base">
-                          +91 080 4168 8315
-                        </div>
-                      </Link>
-                    </div>
+                <div className="flex flex-col gap-3 min-w-[300px]">
+                  <div className="  text-white text-center w-full flex-col font-bold flex text-3xl">
+                    Our Contacts
                   </div>
-                  <div className="flex flex-wrap flex-row lg:gap-10 gap-5 max-lg:mt-5 lg:w-[65%] lg:items-center items-start lg:justify-center justify-start">
-                    <Link
-                      href="https://www.linkedin.com/company/seller-circle/"
-                      className=""
-                    >
-                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
-                        <div className=" text-3xl">
-                          <AiOutlineLinkedin />
+                  <div className=" text-white flex-col flex text-sm">
+                    Give us a call or drop by anytime, we endeavor to answer all
+                    enquiries within 24 hours on business days. We will be happy
+                    to answer your questions.
+                  </div>
+
+                  <div className="flex flex-row flex-wrap">
+                    <div className="flex flex-col lg:w-[30%] gap-5">
+                      {" "}
+                      <div className="">
+                        <div className=" text-white flex-col justify-center flex text-sm">
+                          <div className="text-white flex-row items-center flex text-base gap-3  font-bold">
+                            <div className=" text-2xl">
+                              <BiMailSend />
+                            </div>
+                            OUR MAILBOX:
+                          </div>
                         </div>
-                        <div className="">Linkedin</div>
+                        <Link href="mailto:hello@sellercircle.in">
+                          {" "}
+                          <div className=" text-white flex-col flex text-base">
+                            Hello@Sellercircle.in
+                          </div>
+                        </Link>
                       </div>
-                    </Link>
-                    <Link
-                      href="https://www.instagram.com/sellercircle.in?igsh=bXBqNGNuMzd3Z3Br"
-                      className=""
-                    >
-                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
-                        {" "}
-                        <div className="text-3xl">
-                          <AiOutlineInstagram />
+                      <div className="">
+                        <div className=" text-white flex-col flex text-sm font-bold">
+                          <div className="text-white flex-row gap-3 flex text-base ">
+                            <div className=" text-lg">
+                              <BsFillTelephoneInboundFill />
+                            </div>
+                            OUR PHONE:
+                          </div>
                         </div>
-                        <div className="">Instagram</div>
+                        <Link href="tel:+9108041688315">
+                          <div className=" text-white flex-col flex text-base">
+                            +91 080 4168 8315
+                          </div>
+                        </Link>
                       </div>
-                    </Link>
-                    <Link
-                      href="https://www.facebook.com/sellercircle.in"
-                      className=""
-                    >
-                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
-                        {" "}
-                        <div className="text-3xl">
-                          <MdOutlineFacebook />
+                    </div>
+                    <div className="flex flex-wrap flex-row lg:gap-10 gap-5 max-lg:mt-5 lg:w-[65%] lg:items-center items-start lg:justify-center justify-start">
+                      <Link
+                        href="https://www.linkedin.com/company/seller-circle/"
+                        className=""
+                      >
+                        <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                          <div className=" text-3xl">
+                            <AiOutlineLinkedin />
+                          </div>
+                          <div className="">Linkedin</div>
                         </div>
-                        <div className="">Facebook</div>
-                      </div>
-                    </Link>
-                    <div className="">
-                      <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
-                        {" "}
-                        <div className=" text-3xl">
-                          <RiPinterestFill />
+                      </Link>
+                      <Link
+                        href="https://www.instagram.com/sellercircle.in?igsh=bXBqNGNuMzd3Z3Br"
+                        className=""
+                      >
+                        <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                          {" "}
+                          <div className="text-3xl">
+                            <AiOutlineInstagram />
+                          </div>
+                          <div className="">Instagram</div>
                         </div>
-                        <div className="">Pinterest</div>
+                      </Link>
+                      <Link
+                        href="https://www.facebook.com/sellercircle.in"
+                        className=""
+                      >
+                        <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                          {" "}
+                          <div className="text-3xl">
+                            <MdOutlineFacebook />
+                          </div>
+                          <div className="">Facebook</div>
+                        </div>
+                      </Link>
+                      <div className="">
+                        <div className="text-white flex-row items-center justify-center flex text-base mr-1 gap-2">
+                          {" "}
+                          <div className=" text-3xl">
+                            <RiPinterestFill />
+                          </div>
+                          <div className="">Pinterest</div>
+                        </div>
                       </div>
                     </div>
                   </div>

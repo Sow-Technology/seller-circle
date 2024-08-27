@@ -15,6 +15,7 @@ import Works from "@/components/sections/Works";
 import Audit from "@/components/forms/Audit";
 import NumberedDesign1 from "@/components/Animations/NumberedDesign1";
 import { MdAssignment } from "react-icons/md";
+import Pricing from "@/components/forms/Pricing";
 const data = [
   {
     title: "Tailored Store Design",
@@ -237,7 +238,7 @@ const BrandStore = () => {
           Optimize, Engage, Convert – Your Amazon Store Redefined
         </motion.h3>
         <div className="">
-          <Audit />
+          <Pricing businessName nPage brandName formType="brandStore" />
         </div>
         <div className="lg:w-1/2 w-[90%]">
           <NumberedDesign1 data={NumberedData} />

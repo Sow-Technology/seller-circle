@@ -160,6 +160,8 @@ const page = () => {
             {" "}
             <BrandStore />
           </Suspense>
+          <TabsSection active={3} />
+
           <FAQ />
 
           <Services slice="2" />

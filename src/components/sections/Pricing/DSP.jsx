@@ -306,9 +306,6 @@ const DSP = ({ IN }) => {
                   to achieve your goals.
                 </p>
               </div>
-              <div className="text-xl font-bold mt-2 text-center">
-                Quote Request Form
-              </div>
             </div>
             <div className="w-full">
               {" "}

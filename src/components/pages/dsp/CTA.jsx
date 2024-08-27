@@ -20,10 +20,10 @@ const CTA = () => {
           <div className="w-full px-4 lg:w-1/3">
             <div className="text-center lg:text-right">
               <a
-                className="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
-                href="/contact"
+                className="font-bold rounded-lg mx-auto inline-flex items-center justify-center bg-white  hover:bg-opacity-90 text-3xl px-16  py-7 uppercase"
+                href="/pricing?s=DSP"
               >
-                Contact
+                Talk to us
               </a>
             </div>
           </div>

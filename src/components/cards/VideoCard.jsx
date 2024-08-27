@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Play } from "lucide-react";
 
 const VideoCard = ({ src, thumb }) => {
   return (
@@ -15,8 +16,11 @@ const VideoCard = ({ src, thumb }) => {
       <Dialog>
         <DialogTrigger>
           {" "}
-          <div className=" w-auto object-contain">
+          <div className=" w-auto object-contain relative">
             <Image src={thumb} width={500} height={250} alt="" />
+            <div className="absolute bg-white/80 top-1/2 left-1/2 -translate-x-1/2 p-4 rounded-full">
+              <Play />
+            </div>
           </div>
         </DialogTrigger>
         <DialogContent className="bg-white/80 backdrop-blur-xl flex w-full items-center justify-center flex-col h-[90vh] font-bold min-w-[70vw]">

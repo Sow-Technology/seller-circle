@@ -12,6 +12,7 @@ import CycleCard from "@/components/cards/CycleCard";
 import Works from "@/components/sections/Works";
 import Audit from "@/components/forms/Audit";
 import Image from "next/image";
+import Pricing from "@/components/forms/Pricing";
 const Items = [
   {
     title: "Enhanced Product Descriptions",
@@ -182,7 +183,7 @@ const AContent = () => {
           <Image src="/images/services/5.png" alt="" width="500" height="500" />
         </div>
         <div className="">
-          <Audit />
+          <Pricing services={["Basic A+ Content"]} formType="basicA+" />
         </div>
       </div>
     </div>

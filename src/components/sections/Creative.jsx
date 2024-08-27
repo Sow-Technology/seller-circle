@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Creative = () => {
   return (
@@ -31,7 +32,9 @@ const Creative = () => {
         className=" flex items-center justify-center"
       >
         {" "}
-        <Button variant="cta">VIEW OUR SUCCESS STORIES</Button>
+        <Link href="/case-studies">
+          <Button variant="cta">VIEW OUR SUCCESS STORIES</Button>
+        </Link>
       </motion.div>{" "}
     </div>
   );

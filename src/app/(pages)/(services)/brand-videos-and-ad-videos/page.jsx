@@ -178,6 +178,8 @@ const page = () => {
             {" "}
             <Videos />
           </Suspense>
+          <TabsSection active={5} />
+
           <FAQ />
 
           <Services slice="2" />

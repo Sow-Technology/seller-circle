@@ -8,6 +8,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { FaSearchPlus, FaSearchMinus } from "react-icons/fa";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { FaMagnifyingGlass, FaMagnifyingGlassPlus } from "react-icons/fa6";
 
 const WorkCard = ({ src }) => {
   const [zoom, setZoom] = useState(1);
@@ -60,7 +62,7 @@ const WorkCard = ({ src }) => {
   return (
     <div className="shadow-md p-4 px-10 rounded-md border border-gray-200 bg-white object-contain z-0">
       <Dialog>
-        <DialogTrigger>
+        <DialogTrigger className="relative">
           <Image
             alt=""
             width={1500}
@@ -68,6 +70,9 @@ const WorkCard = ({ src }) => {
             src={src}
             className="h-[400px] w-auto object-contain cursor-pointer"
           />
+          <div className="absolute bg-white/80 top-1/2 left-1/2 -translate-x-1/2 p-4 rounded-full">
+            <FaMagnifyingGlassPlus />
+          </div>
         </DialogTrigger>
         <DialogContent className="bg-white/80 backdrop-blur-xl flex items-center w-full min-w-[70vw] justify-center flex-col h-[90vh] font-bold">
           <DialogHeader>

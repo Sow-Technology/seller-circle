@@ -16,6 +16,7 @@ import Awards from "@/components/sections/Awards";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Pricing from "@/components/forms/Pricing";
+import HorizontalTestimonials from "@/components/HorizontalTestimonials";
 
 const cycle = [
   {
@@ -300,6 +301,7 @@ const Page = () => {
               </Marquee>
             </div>
           </div>
+          <HorizontalTestimonials />
         </div>
       </div>
       <Footer />

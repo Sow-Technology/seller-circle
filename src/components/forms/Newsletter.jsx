@@ -81,32 +81,35 @@ const Newsletter = ({ footer }) => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-5 z-[39] relative"
+          className="space-y-5 z-[39] relative "
         >
-          <FormField
-            control={form.control}
-            name="fullName"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Full Name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder=" Email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="flex gap-2 flex-wrap w-full flex-auto ">
+            {" "}
+            <FormField
+              control={form.control}
+              name="fullName"
+              render={({ field }) => (
+                <FormItem className="w-full lg:w-[49%]">
+                  <FormControl>
+                    <Input placeholder="Full Name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="w-full lg:w-[49%]">
+                  <FormControl>
+                    <Input placeholder=" Email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           <Turnstile
             siteKey={process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY}

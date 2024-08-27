@@ -14,6 +14,7 @@ import CycleCard from "@/components/cards/CycleCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Pricing from "@/components/forms/Pricing";
+import HorizontalTestimonials from "@/components/HorizontalTestimonials";
 const items = [
   {
     title: "Strategic Planning",
@@ -325,6 +326,7 @@ const Page = () => {
                 ))}
               </Marquee>
             </div>
+            <HorizontalTestimonials />
           </div>
         </div>
       </div>

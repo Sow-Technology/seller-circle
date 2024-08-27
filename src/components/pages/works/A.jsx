@@ -5,19 +5,20 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const apparel = [
+  "/images/work/a/Apparel/13.jpeg",
+  "/images/work/a/Apparel/7.png",
+  "/images/work/a/Apparel/10.jpeg",
+  "/images/work/a/Apparel/6.png",
+  "/images/work/a/Apparel/11.png",
+
   "/images/work/a/Apparel/1.png",
   "/images/work/a/Apparel/2.jpeg",
   "/images/work/a/Apparel/3.jpeg",
   "/images/work/a/Apparel/4.jpeg",
   "/images/work/a/Apparel/5.jpeg",
-  "/images/work/a/Apparel/6.png",
-  "/images/work/a/Apparel/7.png",
   "/images/work/a/Apparel/8.png",
   "/images/work/a/Apparel/9.png",
-  "/images/work/a/Apparel/10.jpeg",
-  "/images/work/a/Apparel/11.png",
   "/images/work/a/Apparel/12.png",
-  "/images/work/a/Apparel/13.jpeg",
 ];
 const consumable = [
   "/images/work/a/Consumable/1.png",
@@ -48,15 +49,15 @@ const consumable = [
   "/images/work/a/Consumable/26.jpeg",
 ];
 const beauty = [
+  "/images/work/a/Beauty/5.jpeg",
+  "/images/work/a/Beauty/7.png",
+  "/images/work/a/Beauty/9.png",
+  "/images/work/a/Beauty/8.png",
   "/images/work/a/Beauty/1.jpeg",
   "/images/work/a/Beauty/2.jpeg",
   "/images/work/a/Beauty/3.png",
   "/images/work/a/Beauty/4.png",
-  "/images/work/a/Beauty/5.jpeg",
   "/images/work/a/Beauty/6.jpeg",
-  "/images/work/a/Beauty/7.png",
-  "/images/work/a/Beauty/8.png",
-  "/images/work/a/Beauty/9.png",
   "/images/work/a/Beauty/10.jpeg",
   "/images/work/a/Beauty/11.jpeg",
   "/images/work/a/Beauty/12.png",

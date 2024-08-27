@@ -177,6 +177,8 @@ const page = () => {
             {" "}
             <Catalog />
           </Suspense>
+          <TabsSection active={4} />
+
           <FAQ />
 
           <Services slice="2" />

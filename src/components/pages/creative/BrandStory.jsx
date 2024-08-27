@@ -21,6 +21,7 @@ import { FaDraftingCompass } from "react-icons/fa";
 import Audit from "@/components/forms/Audit";
 import NumberedDesign1 from "@/components/Animations/NumberedDesign1";
 import CTA from "./CTA";
+import Pricing from "@/components/forms/Pricing";
 const Items = [
   {
     title: "Amazon Brand Story Design",
@@ -190,7 +191,7 @@ const BrandStory = () => {
           </motion.h3>
         </div>
         <div className="">
-          <Audit />
+          <Pricing services={[" Brand Story"]} formType="brandStory" />
         </div>
         <div className="lg:w-1/2 w-[90%]">
           <NumberedDesign1 data={NumberedData} />

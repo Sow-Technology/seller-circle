@@ -18,10 +18,10 @@ const CTA = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="text-center lg:text-right">
               <a
-                className="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
+                className="font-bold uppercase rounded-lg mx-auto inline-flex items-center justify-center bg-white  hover:bg-opacity-90 text-4xl px-20 lg:mr-20 py-7"
                 href="/amazon-advertising"
               >
-                Visit
+                learn more
               </a>
             </div>
           </div>

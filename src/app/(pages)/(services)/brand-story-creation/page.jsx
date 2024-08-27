@@ -159,6 +159,8 @@ const page = () => {
             {" "}
             <BrandStory />
           </Suspense>
+          <TabsSection active={2} />
+
           <FAQ />
 
           <Services slice="2" />
