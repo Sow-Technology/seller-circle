@@ -130,7 +130,7 @@ const NavItems = [
       },
       {
         name: "Careers",
-        link: "#",
+        link: "/careers",
         desc: " Join Us ",
       },
     ],

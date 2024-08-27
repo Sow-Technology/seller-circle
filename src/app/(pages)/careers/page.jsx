@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 const page = () => {
   return (
     <>
@@ -31,7 +33,7 @@ const page = () => {
             viewport={{ once: true }}
             className="font-[900] text-2xl lg:text-4xl text-[#039BE4] text-center max-w-4xl uppercase mx-auto mt-7"
           >
-            Let&#39;S CHAT
+            JOIN OUR TEAM
           </motion.h3>
           <motion.h2
             initial={{ y: 100, opacity: 0 }}
@@ -39,10 +41,15 @@ const page = () => {
             viewport={{ once: true }}
             className="nunito font-extrabold text-2xl lg:text-5xl max-w-5xl mx-auto text-center my-7 uppercase text-balance w-auto"
           >
-            No one-size-fits-all here,{" "}
-            <span className="text-[#039BE4]">only tailored strategies.  </span>
+            FIND OPPORTUNITIES TO{" "}
+            <span className="text-[#039BE4]">only WORK WITH US  </span>
           </motion.h2>
-          <div className="mx-auto flex lg:flex-row flex-col-reverse flex-wrap  items-center justify-center gap-16"></div>
+          <div className="mx-auto flex lg:flex-row flex-col-reverse flex-wrap  items-center justify-center gap-16">
+            <span className="dont-bold text-3xl"> Email: </span>
+            <Button variant="cta">
+              <Link href="mailto:hr@sellercircle.in">Hr@Sellercircle.in</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </>
