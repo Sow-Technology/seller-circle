@@ -55,7 +55,11 @@ const Newsletter = ({ footer }) => {
       email: "",
     },
   });
+
   const onSubmit = async (values) => {
+    const { firstName: fmFirstName, lastName: fmLastName } = splitFullName(
+      values.fullName
+    );
     try {
       setIsSubmitting(true);
 
@@ -63,6 +67,12 @@ const Newsletter = ({ footer }) => {
       if (token && response.data.success) {
         const response = await axios.post("/api/submit-form", {
           ...values,
+          zohoData: {
+            Full_Name: values.fullName,
+            Email: values.emaill,
+            First_Name: fmFirstName,
+            Last_Name: fmLastName,
+          },
           formType: "newsletter",
         });
         toast.success("Thank you for subscribing us!");

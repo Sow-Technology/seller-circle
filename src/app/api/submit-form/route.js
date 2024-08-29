@@ -1,5 +1,6 @@
 import { sendEmail } from "@/lib/actions/mailer";
 import { Client, Databases, ID } from "appwrite";
+import axios from "axios";
 import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
@@ -77,6 +78,8 @@ export async function POST(req, res) {
         { status: 400 }
       );
   }
+  const zohoData = data.zohoData;
+  data.zohoData = undefined;
   // Save the form data to Appwrite
   const result = await databases.createDocument(
     "forms",
@@ -121,8 +124,56 @@ export async function POST(req, res) {
   //   "stringData",
   //   ID.unique(), // Unique ID for the document
   //   { data: formatObjectToReadableString(data) }
-  await sendEmail(stringData);
   // );
+  await sendEmail(stringData);
+  async function getAccessTokenFromRefreshToken() {
+    const tokenEndpoint = "https://accounts.zoho.in/oauth/v2/token"; // Replace with your token endpoint if different
+    const clientId = process.env.ZOHO_CLIENT_ID; // Replace with your client ID
+    const clientSecret = process.env.ZOHO_CLIENT_SECRET; // Replace with your client secret
+    const refreshToken = process.env.ZOHO_REFRESH_TOKEN;
+
+    const params = new URLSearchParams({
+      refresh_token: refreshToken,
+      client_id: clientId,
+      client_secret: clientSecret,
+      grant_type: "refresh_token",
+    });
+
+    try {
+      const response = await fetch(tokenEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: params.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data.access_token;
+    } catch (error) {
+      console.error("Error fetching access token:", error);
+      throw error; // Re-throw the error to be handled by the caller
+    }
+  }
+
+  console.log(await getAccessTokenFromRefreshToken());
+  const oAuthToken = await getAccessTokenFromRefreshToken();
+  const response = await axios.post(
+    "https://www.zohoapis.in/crm/v2/Leads", // Replace with the correct endpoint or module
+    { data: [{ ...zohoData, Form_Type: data.formType }] },
+    {
+      headers: {
+        Authorization: `Zoho-oauthtoken ${oAuthToken}`, // OAuth token
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  console.log(response);
+  console.log("Form data sent to Zoho CRM successfully");
   if (result.$id) {
     return NextResponse.json(
       {

@@ -230,6 +230,12 @@ const Pricing = ({
       message: "",
     },
   });
+  function splitFullName(fullName) {
+    const [firstName, ...lastNameParts] = fullName.split(" ");
+    const lastName = lastNameParts.join(" ");
+    return { firstName, lastName };
+  }
+
   const [token, setToken] = useState("");
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -254,6 +260,7 @@ const Pricing = ({
     // console.log(getArrayData);
     console.log("button clicked");
     try {
+      toast.loading("Submitting...");
       setIsSubmitting(true);
       let data;
       switch (formType) {
@@ -411,15 +418,236 @@ const Pricing = ({
           };
           break;
       }
-      console.log(data);
+      let zohoData;
+      switch (formType) {
+        case "fullServiceManagement":
+          const { firstName: fmFirstName, lastName: fmLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: fmFirstName,
+            Last_Name: fmLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Monthly_Advertising_Budget: values.monthlyAdvertisingBudget,
+            Monthly_Revenue: values.monthlyRevenue,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "footer":
+          const { firstName: footerFirstName, lastName: footerLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: footerFirstName,
+            Last_Name: footerLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Website: values.amazonStoreUrl,
+            Monthly_Advertising_Budget: values.monthlyAdvertisingBudget,
+            Primary_Advertising_Goals: AGoals.join(",  "),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "advertising":
+          const { firstName: advFirstName, lastName: advLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: footerFirstName,
+            Last_Name: footerLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Website: values.amazonStoreUrl,
+            Monthly_Advertising_Budget: values.monthlyAdvertisingBudget,
+            Primary_Advertising_Goals: AGoals.join(",  "),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "DSP":
+          const { firstName: dspFirstName, lastName: dspLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: dspFirstName,
+            Last_Name: dspLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Website: values.amazonStoreUrl,
+            Monthly_Advertising_Budget: values.monthlyAdvertisingBudget,
+            Primary_Advertising_Goals: AGoals.join(",  "),
+            Preferred_Services: prefServices.join(", "),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "strategyAndConsulting":
+          const { firstName: stratFirstName, lastName: stratLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: stratFirstName,
+            Last_Name: stratLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Website: values.amazonStoreUrl,
+            Current_Challenges_Or_Goals: values.currentChallengesOrGoals,
+            Areas_Of_Interest: areasOfInterest.join(", "),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "globalLaunch":
+          const { firstName: globFirstName, lastName: globLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: globFirstName,
+            Last_Name: globLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Product_Details: values.productDetails,
+            Target_Markets: tMarkets.join(", "),
+            Current_Challenges_Or_Goals: values.currentChallengesOrGoals,
+            Areas_Of_Interest: areasOfInterest2.join(","),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "marketplacesExpansion":
+          const { firstName: marketFirstName, lastName: marketLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: marketFirstName,
+            Last_Name: marketLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Marketplace_Of_Interest: marketplaceInterest.join(", "),
+            Target_Markets: tMarkets,
+            Current_Challenges_Or_Goals: values.currentChallengesOrGoals,
+            Advertising_Focus_Area: advertisingFocusArea.join(", "),
+            Business_Needs: values.businessNeeds,
+            Hear_About_Us: values.hearAboutUs,
+          };
+          break;
+
+        case "basicA+":
+          const { firstName: basicAFirstName, lastName: basicALastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: basicAFirstName,
+            Last_Name: basicALastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            ASIN: +values.ASIN,
+            Service: values.service,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "premiumA":
+          const { firstName: premiumAFirstName, lastName: premiumALastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: premiumAFirstName,
+            Last_Name: premiumALastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            ASIN: +values.ASIN,
+            Service: values.service,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "brandStory":
+          const { firstName: brandFirstName, lastName: brandLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: brandFirstName,
+            Last_Name: brandLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            ASIN: +values.ASIN,
+            Service: values.service,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "brandStore":
+          const { firstName: storeFirstName, lastName: storeLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: storeFirstName,
+            Last_Name: storeLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Number_Of_Pages: +values.nPage,
+            Company: values.businessName,
+            Brand_Name: values.brandName,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "brandVideo":
+          const { firstName: videoFirstName, lastName: videoLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: videoFirstName,
+            Last_Name: videoLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Service: values.service,
+            Additional_Comments: values.message,
+          };
+          break;
+
+        case "listingImageDesign":
+          const { firstName: listingFirstName, lastName: listingLastName } =
+            splitFullName(values.fullName);
+          zohoData = {
+            Full_Name: values.fullName, // Full name for Zoho CRM
+            First_Name: listingFirstName,
+            Last_Name: listingLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.businessName,
+            Service: values.service,
+            Additional_Comments: values.message,
+          };
+          break;
+      }
+
       const response = await axios.post("/api/verify-turnstile", { token });
       console.log(response);
       if (token && response.data.success) {
         const response = await axios.post("/api/submit-form", {
           ...data,
           formType,
+          zohoData,
         });
-        console.log(response);
+        toast.dismiss();
         toast.success("We'll reach out to you soon!");
       } else {
         toast.error("Invalid Captcha! Please try again later");

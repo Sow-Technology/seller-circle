@@ -86,20 +86,37 @@ const Audit = ({ footer }) => {
       message: "",
     },
   });
+  function splitFullName(fullName) {
+    const [firstName, ...lastNameParts] = fullName.split(" ");
+    const lastName = lastNameParts.join(" ");
+    return { firstName, lastName };
+  }
   const onSubmit = async (values) => {
     try {
       setIsSubmitting(true);
-
+      const { firstName: fmFirstName, lastName: fmLastName } = splitFullName(
+        values.fullName
+      );
       const response = await axios.post("/api/verify-turnstile", { token });
       if (token && response.data.success) {
         const response = await axios.post("/api/submit-form", {
-          fullName: values.fullName,
+          full_Name: values.fullName,
           workEmail: values.workEmail,
           phoneNumber: values.phoneNumber,
           brandName: values.brandName,
           service: values.service,
           message: values.message,
           formType: "contact",
+          zohoData: {
+            Full_Name: values.fullName,
+            First_Name: fmFirstName,
+            Last_Name: fmLastName,
+            Email: values.workEmail,
+            Phone: values.phoneNumber,
+            Company: values.brandName,
+            Service: values.service,
+            Additional_Comments: values.message,
+          },
         });
         toast.success("We'll reach out to you soon!");
       } else {

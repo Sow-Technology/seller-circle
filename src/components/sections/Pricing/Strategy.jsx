@@ -333,11 +333,6 @@ const Strategy = ({ IN }) => {
           <div className="absolute -top-20" id="quote"></div>{" "}
           <div className="sticky top-24  bg-background/30 rounded-md flex flex-col gap-6  w-full justify-center ">
             {" "}
-            <div className="">
-              <div className="text-xl font-bold mt-2 text-center">
-                Quote Request Form
-              </div>
-            </div>
             <div className="w-full">
               {" "}
               <Pricing
