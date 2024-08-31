@@ -4,12 +4,27 @@ import { Toaster } from "@/components/ui/sonner";
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--nsans" });
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
 export const metadata = {
-  title: "Seller Circle",
-  description: "Seller Circle | Research | Growth | Accelerate",
+  title: "Seller Circle | Amazon Growth, Advertising & Creative Services",
+  description:
+    "Driving brand growth with holistic Amazon ads strategies, expert ad management, creative storytelling, and data-driven campaigns for maximum visibility and ROI.",
+  openGraph: {
+    title:
+      "Seller Circle | Advanced Amazon Ads Partner | Growth & Creative Services",
+    description:
+      "Boost your brand with Seller Circle’s advanced Amazon ads strategies. Our full-service management includes Amazon advertising, DSP, A+, and Brand Store creation.",
+    images: [
+      {
+        url: "https://sellercircle.in/logo-dark.svg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    url: "https://www.sellercircle.in",
+    type: "website",
+    siteName: "Seller Circle",
+  },
 };
-// export const runtime = "edge";
 
 export default function RootLayout({ children }) {
   return (

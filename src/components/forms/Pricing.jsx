@@ -650,9 +650,11 @@ const Pricing = ({
         toast.dismiss();
         toast.success("We'll reach out to you soon!");
       } else {
+        toast.dismiss();
         toast.error("Invalid Captcha! Please try again later");
       }
     } catch (err) {
+      toast.dismiss();
       toast.error("Internal server error, Try again later!");
     } finally {
       setIsSubmitting(false);
