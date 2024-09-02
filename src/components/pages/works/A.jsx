@@ -130,6 +130,15 @@ const pets = [
   "/images/work/a/Pets/5.png",
   "/images/work/a/Pets/6.jpeg",
 ];
+const allContent = [
+  ...apparel,
+  ...consumable,
+  ...beauty,
+  ...home,
+  ...others,
+  ...games,
+  ...pets,
+];
 
 const A = () => {
   return (
@@ -143,7 +152,7 @@ const A = () => {
       >
         A+ Content
       </motion.h3>
-      <Tabs defaultValue="apparel" className="">
+      <Tabs defaultValue="all" className="">
         <TabsList>
           <TabsTrigger value="apparel">
             {" "}
@@ -233,6 +242,14 @@ const A = () => {
             </motion.div>
           </TabsTrigger>
         </TabsList>
+        <TabsContent
+          value="all"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
+        >
+          {allContent.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
         <TabsContent
           value="apparel"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "

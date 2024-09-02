@@ -51,6 +51,16 @@ const babyProduct = [
 
 const electronics = ["/images/work/store/Electronics/1.jpeg"];
 const health = ["/images/work/store/Health/1.jpeg"];
+const allImages = [
+  ...accessories,
+  ...apparel,
+  ...babyProduct,
+  ...beauty,
+  ...home,
+  ...consumable,
+  ...electronics,
+  ...health,
+];
 
 const Store = () => {
   return (
@@ -64,7 +74,7 @@ const Store = () => {
       >
         BRAND STORE
       </motion.h3>
-      <Tabs defaultValue="accessories" className="">
+      <Tabs defaultValue="all" className="">
         <TabsList>
           <TabsTrigger value="accessories">
             {" "}
@@ -166,6 +176,14 @@ const Store = () => {
             </motion.div>
           </TabsTrigger>
         </TabsList>
+        <TabsContent
+          value="all"
+          className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
+        >
+          {allImages.map((image, index) => (
+            <WorkCard src={image} key={index} />
+          ))}{" "}
+        </TabsContent>
         <TabsContent
           value="accessories"
           className="flex flex-row flex-wrap gap-14 my-10 items-center justify-center "
