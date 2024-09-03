@@ -28,7 +28,7 @@ export const ReviewCard = ({ img, name, username, body, className, desig }) => {
     >
       <div className="flex flex-row items-start justify-start py-2 gap-2">
         <Image
-          className="rounded-full grayscale"
+          className="rounded-full "
           width="114"
           height="85"
           alt=""

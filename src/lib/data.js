@@ -188,18 +188,18 @@ export const reviews = [
   },
   {
     body: "Drawing on our comprehensive understanding of the Amazon landscape, we craft campaigns with precision, ensuring impactful strategies that drive success.",
-    img: "/images/cm1.webp",
+    img: "/images/brands/29.png",
     name: "Brand Manager (Tribe Concept)",
   },
   {
     body: "We extend sincere gratitude to SellerCircle for their invaluable partnership in amplifying our visionary journey. SellerCircle's expertise in e-commerce and deep understanding of the Amazon marketplace have played a pivotal role in our success. Their customized advertising strategy effectively addressed every stage of the buyer journey, resulting in increased visibility, engagement, and sales.",
-    img: "/images/cm2.webp",
+    img: "/images/brands/3.png",
     name: "Ramasamy S",
     desig: "General Manager (Vooki)",
   },
   {
     body: "With a strategic approach and in collaboration With SellerCircle Agency, We experienced explosive growth by harnessing the full potential of Amazon Ads' comprehensive full-funnel strategy. By effectively leveraging Amazon ads' SB (Sponsored Brands), SP (Sponsored Products), and SD (Sponsored Display), we unlocked the true power of Amazon Ads, propelling our investments to unparalleled heights. This cutting-edge feature empowered us to confidently expand our reach, accelerate growth, and establish ourselves as the undeniable category leader for several of our exceptional products.",
-    img: "/images/cm3.webp",
+    img: "/images/brands/2.png",
     name: "Gaurav(Founder)",
   },
   {
@@ -209,17 +209,17 @@ export const reviews = [
   },
   {
     body: "Seller Circle is beyond an agency - they have been a partner in Pink Moon's journey providing end to end support right from cataloging, strategy, content and ads. Their deep understanding of Amazon has helped us scale significantly in the last 2 years.",
-    img: "/images/cm4.webp",
+    img: "/images/brands/29.png",
     name: "Divya Goenka (Founder)",
   },
   {
     body: "We're pretty impressed with the work of Seller Circle. We onboarded them to help scale up Sadhev on Amazon. We were facing issues with ROAS while scaling up and the catalogue had to be fixed as well. The team at Seller Circle was hands-on and got the campaigns fixed within a couple Of weeks. We saw over 2X jump in ROAS since we on-boarded them. Our cataloguing issues were fixed within a month. The team at Seller Circle is available When needed and have a tried and tested method Of approach to scaling up brands. We're happy to have them as our growth partner.",
-    img: "/images/cm5.webp",
+    img: "/images/brands/6.png",
     name: "Gowarthanan Anandan (CEO)",
   },
   {
     body: "The team at seller circle is very efficient and have a great understanding of the amazon platform which is vey crucial to achieving scale and success here.",
-    img: "/images/cm6.webp",
+    img: "/images/brands/32.png",
     name: "Hema Nahata (Co- Founder)",
   },
 ];

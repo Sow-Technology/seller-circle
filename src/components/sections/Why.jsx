@@ -40,7 +40,7 @@ const Why = () => {
         <span className="text-[#039BE4]">
           Let’s get you Retail Ready <br />
         </span>
-        eo Crafting Amazon narratives that convert.
+        Crafting Amazon narratives that convert.
       </motion.h2>
       <motion.p
         initial={{ y: 100, opacity: 0 }}

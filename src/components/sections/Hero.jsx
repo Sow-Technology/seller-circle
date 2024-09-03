@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="max-w-7xl mx-auto flex items-center justify-center flex-col lg:px-20 px-8 overflow-hidden">
       <div className=" flex flex-row flex-wrap items-center justify-center gap-x-6 ">
-        <div className="lg:max-w-[42%] flex flex-col items-center py-5  min-w-[280px] ">
+        <div className="lg:max-w-[42%] lg:flex hidden flex-col items-center py-5  min-w-[280px] ">
           <video src="/hero.mp4" playsInline autoPlay muted loop>
             <source src="/hero.webm" type="video/webm" />
             <source src="/hero.mp4" type="video/mp4" />
@@ -29,7 +29,7 @@ const Hero = () => {
           className="lg:max-w-[55%] flex flex-col items-center min-w-[300px] text-center "
         >
           <h3 className="uppercase text-[21px] font-bold">seller circle</h3>
-          <h2 className="font-extrabold text-2xl md:text-4xl lg:text-5xl uppercase text-center max-w-xl">
+          <h2 className="font-extrabold text-[28px] leading-[33px] md:text-4xl lg:text-5xl uppercase text-center max-w-xl">
             driving growth with a{" "}
             <span className="text-[#039BE4]">proven holistic approach</span>
           </h2>
