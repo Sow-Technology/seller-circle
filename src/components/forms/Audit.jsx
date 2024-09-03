@@ -100,7 +100,7 @@ const Audit = ({ footer }) => {
       const response = await axios.post("/api/verify-turnstile", { token });
       if (token && response.data.success) {
         const response = await axios.post("/api/submit-form", {
-          full_Name: values.fullName,
+          fullName: values.fullName,
           workEmail: values.workEmail,
           phoneNumber: values.phoneNumber,
           brandName: values.brandName,

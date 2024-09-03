@@ -24,7 +24,7 @@ const Works = () => {
         viewport={{ once: true }}
         className="nunito font-extrabold text-4xl lg:text-6xl text-center my-14"
       >
-        Check Our <span className="text-[#039BE4]">Works</span>
+        Check Our <span className="text-[#039BE4]">Work</span>
       </motion.h2>
       {pathname == "/works" ? (
         <Tabs defaultValue={defaultVal || "a"} className="">
