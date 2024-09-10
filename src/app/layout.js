@@ -3,7 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--nsans" });
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 export const metadata = {
   title: "Seller Circle | Amazon Growth, Advertising & Creative Services",
   description:
