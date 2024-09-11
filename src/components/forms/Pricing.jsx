@@ -459,8 +459,8 @@ const Pricing = ({
             splitFullName(values.fullName);
           zohoData = {
             Full_Name: values.fullName, // Full name for Zoho CRM
-            First_Name: footerFirstName,
-            Last_Name: footerLastName,
+            First_Name: advFirstName,
+            Last_Name: advLastName,
             Email: values.workEmail,
             Phone: values.phoneNumber,
             Company: values.businessName,
@@ -659,7 +659,6 @@ const Pricing = ({
     } finally {
       setIsSubmitting(false);
     }
-    console.log(values);
   };
   return (
     <div className="bg-white shadow-2xl rounded-[19px] p-10 lg:min-w-[280px] min-w-[250px]   lg:max-w-[700px] lg:w-full m-2 max-lg:w-[98%]  relative">
