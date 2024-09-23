@@ -209,7 +209,7 @@ export const reviews = [
   },
   {
     body: "Seller Circle is beyond an agency - they have been a partner in Pink Moon's journey providing end to end support right from cataloging, strategy, content and ads. Their deep understanding of Amazon has helped us scale significantly in the last 2 years.",
-    img: "/images/brands/29.png",
+    img: "/images/brands/28.png",
     name: "Divya Goenka (Founder)",
   },
   {
