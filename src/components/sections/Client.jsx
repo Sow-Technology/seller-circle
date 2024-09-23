@@ -42,6 +42,11 @@ const clientLogos = [
   "/images/brands/37.png",
   // "/images/brands/38.png",
   "/images/brands/39.png",
+  "/images/brands/40.svg",
+  "/images/brands/41.png",
+  "/images/brands/42.png",
+  "/images/brands/43.png",
+  "/images/brands/44.png",
 ];
 const Client = () => {
   return (
