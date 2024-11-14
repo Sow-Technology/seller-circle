@@ -230,37 +230,7 @@ const Audit = ({ footer }) => {
               />
             </div>
           </div>
-          {/* <div className="flex flex-row flex-wrap gap-5">
-            <div className="min-w-[200px]">
-              {" "}
-              <FormField
-                control={form.control}
-                name="service2"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="service1">service1 </SelectItem>
-                          <SelectItem value="service2">service2</SelectItem>
-                          <SelectItem value="service3">service3</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-          </div> */}
+
           <FormField
             control={form.control}
             name="message"
