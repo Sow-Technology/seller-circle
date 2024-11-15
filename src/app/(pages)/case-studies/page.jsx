@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import { motion } from "framer-motion";
 import BlogCard from "@/components/cards/BlogCard";
-import { c1 } from "@/lib/data";
+import { caseStudies } from "@/lib/data";
 
 const page = () => {
   return (
@@ -27,7 +27,11 @@ const page = () => {
         >
           Our Work defines <span className="text-[#039BE4]">our success!</span>
         </motion.h2>
-        <BlogCard data={c1} />
+        <div className="flex gap-5 flex-col">
+          {caseStudies.map((item, idx) => (
+            <BlogCard key={idx} data={item} />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

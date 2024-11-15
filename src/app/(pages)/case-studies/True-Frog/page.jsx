@@ -59,7 +59,7 @@ const marketingStrategies = [
     heading: <>Third-Party Sites</>,
     description: (
       <>
-        On other sites, our creatives maintained TrueFrog's brand voice and
+        On other sites, our creatives maintained TrueFrog&#39;s brand voice and
         focused on creating brand awareness, with messages like &quot;Discover
         TrueFrog&#39;s Diwali Deals on Curly Hair Care&quot;, inviting new users
         to explore the brand.
@@ -95,7 +95,7 @@ const resultsData = [
     description: (
       <>
         {" "}
-        a <span className="text-[#039BE4] font-extrabold"> ₹20,704.31</span>,
+        <span className="text-[#039BE4] font-extrabold"> ₹20,704.31</span>,
         strategically allocated to reach high-intent audiences effectively.
       </>
     ),
@@ -130,7 +130,7 @@ const resultsData = [
     description: (
       <>
         {" "}
-        Achieved an impressive Return on Ad Spend (ROAS) of
+        Achieved an impressive Return on Ad Spend (ROAS) of{" "}
         <span className="text-[#039BE4] font-extrabold">6.56%</span>,
         highlighting the cost-efficiency & impact of the festive campaign
       </>

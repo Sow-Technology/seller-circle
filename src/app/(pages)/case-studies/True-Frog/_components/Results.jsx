@@ -5,7 +5,7 @@ import {
 } from "@/components/AnimatedElement";
 
 export const Results = ({ resultsData }) => (
-  <section className="lg:my-20">
+  <section className=" relative">
     <AnimatedElement>
       <div className="relative w-full gap-10 mx-auto mb-10 flex items-center justify-between">
         <div className="h-1.5 rounded-xl w-full bg-[#f48825]" />
@@ -14,16 +14,17 @@ export const Results = ({ resultsData }) => (
       </div>
     </AnimatedElement>
     <div>
-      <h3 className="lg:text-2xl font-bold text-slate-600 textlg">
-        SellerCircle&#39; targeted Diwali campaign delivered exceptional
+      <h3 className="lg:text-2xl font-bold text-slate-600 text-lg text-center">
+        SellerCircle&#39;s targeted Diwali campaign delivered exceptional
         results:
       </h3>
     </div>
-    <div className="p-5 w-full flex flex-col justify-between gap-5 relative py-10">
+    <div className="p-5 w-full flex flex-col justify-between gap-5 relative py-10 z-10">
       {resultsData.map((item, index) => (
         <AnimatedElement
           key={index}
           variant={index % 2 === 0 ? fadeInLeft : fadeInRight}
+          className="z-10"
           delay={index * 0.1}
         >
           <div
@@ -31,10 +32,10 @@ export const Results = ({ resultsData }) => (
               index % 2 === 0 ? "text-left" : "text-right ml-auto"
             }`}
           >
-            <h3 className="text-3xl text-black font-extrabold">
+            <h3 className="lg:text-4xl text-2xl text-black font-extrabold">
               {item.heading}
             </h3>
-            <p className="text-slate-700 text-xl font-semibold">
+            <p className="text-slate-700 lg:text-2xl text-lg font-bold">
               {item.description}
             </p>
           </div>

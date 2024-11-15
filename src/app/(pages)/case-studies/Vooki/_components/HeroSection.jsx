@@ -31,7 +31,7 @@ export const HeroSection = () => (
           className="w-[30%] h-auto"
         >
           <Image
-            src="/images/brands/11.png"
+            src="/images/brands/3.png"
             alt=""
             width="700"
             height={700}
@@ -45,26 +45,27 @@ export const HeroSection = () => (
       <AnimatedElement variant={scaleIn}>
         <div className="flex flex-col items-center justify-center !leading-[90px] z-10 relative">
           <h1 className="text-slate-800 lg:text-5xl text-2xl text-center max-w-5xl  font-extrabold">
-            How SellerCircle Drove TrueFrog&#39;s Diwali Success with targeted
+            How SellerCircle Drove Vooki&#39;s Festive Sales Surge with
           </h1>
           <h2 className=" lg:text-7xl text-5xl text-[#f48825]  font-[900]">
-            AMC Audience Solutions
+            AMC, DSP <span className="font-bold lg:text-6xl text-4xl">&</span>{" "}
+            AMS
           </h2>
           <div className="flex items-center my-10 justify-between gap-10">
             <AnimatedElement variant={fadeInLeft}>
               <h3 className="lg:text-2xl text-lg text-neutral-900 font-extrabold">
                 <span className="lg:text-5xl text-3xl text-[#039ce2] font-[900]">
-                  20%{" "}
+                  54.18%{" "}
                 </span>{" "}
-                increase in Brand Search
+                increase in NTB orders
               </h3>
             </AnimatedElement>
             <AnimatedElement variant={fadeInRight}>
               <h3 className="lg:text-2xl text-lg text-neutral-900 font-extrabold">
                 <span className="lg:text-5xl text-3xl text-[#039ce2] font-[900]">
-                  20%{" "}
+                  50.37%{" "}
                 </span>{" "}
-                increase in Brand Search
+                increase in Sales Growth
               </h3>
             </AnimatedElement>
           </div>
@@ -74,7 +75,7 @@ export const HeroSection = () => (
       <AnimatedElement variant={fadeInUp} delay={0.6}>
         <div className="w-full">
           <Image
-            src="/case-study/31.png"
+            src="/case-study/37.png"
             width={1000}
             height={1000}
             alt=""

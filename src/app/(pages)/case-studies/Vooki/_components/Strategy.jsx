@@ -10,23 +10,24 @@ import {
 export const Strategy = () => (
   <section className="my-10 px-2">
     <AnimatedElement>
-      <div className="relative w-max mx-auto mb-20">
+      <div className="relative w-max mx-auto mb-10">
         <h2 className="lg:text-5xl text-3xl font-extrabold mx-auto">
           Strategy
         </h2>
         <div className="h-1.5 rounded-xl mt-2 w-full bg-[#f48825]" />
       </div>
     </AnimatedElement>
+    <h3 className="text-slate-800 lg:text-4xl text-2xl text-center   font-extrabold mb-10">
+      To achieve these objectives, SellerCircle developed a multi-layered
+      strategy by integrating insights and ad placements across AMC, DSP, and
+      AMS channels:
+    </h3>
     <AnimatedElement variant={fadeInUp}>
-      <h3 className="lg:text-6xl text-4xl font-extrabold text-[#039BE4] text-center text-balance">
-        1. Retargeting Lapsed Shoppers with Festive Incentives{" "}
-      </h3>
-    </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Audience Segments
+      <h4 className="lg:text-6xl text-4xl font-extrabold text-[#039BE4] text-center text-balance">
+        Amazon Marketing Cloud (AMC)
       </h4>
     </AnimatedElement>
+
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
       <div className="flex gap-4 my-10">
         <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
@@ -35,16 +36,17 @@ export const Strategy = () => (
         <div>
           {" "}
           <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
-            Cart Abandoners (Last 90 Days):
+            Path to Purchase Mapping:
           </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            This segment included shoppers who had added TrueFrog products to
-            their cart but didn’t check out. They had shown clear interest,
-            making them more likely to{" "}
-            <span className="text-[#039BE4] font-extrabold">
-              complete a purchase
+            We analyzed customer journeys to identify the primary
+            <span className="text-[#f48825] font-extrabold">
+              {" "}
+              touchpoints{" "}
             </span>{" "}
-            with the right nudge.
+            &<span className="text-[#f48825] font-extrabold"> stages </span> in
+            the buying process. This allowed us to strategically place ads at
+            each phase.{" "}
           </p>
         </div>
       </div>
@@ -57,24 +59,24 @@ export const Strategy = () => (
         <div>
           {" "}
           <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
-            Past Customers (Last 365 Days but Not in Last 90 Days)
+            Audience Segmentation Based on Touchpoints:
           </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            These were previous buyers who hadn&#39;t returned recently.
-            Reaching out to them with{" "}
-            <span className="text-[#039BE4] font-extrabold">
-              special Diwali deals
+            Leveraged the{" "}
+            <span className="text-[#f48825] font-extrabold">
+              path-to-purchase
             </span>{" "}
-            was a great way to bring them back to TrueFrog.
+            insights to create custom audiences focused on first and second
+            touchpoints, allowing us to engage shoppers with{" "}
+            <span className="text-[#f48825] font-extrabold">
+              targeted DSP ads
+            </span>{" "}
+            featuring festive offers.
           </p>
         </div>
       </div>
     </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Targeting and Incentives
-      </h4>
-    </AnimatedElement>
+
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
       <div className="flex gap-4 my-10">
         <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
@@ -83,17 +85,15 @@ export const Strategy = () => (
         <div>
           {" "}
           <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
-            Cart Completion Offers:
+            Keyword Optimization:
           </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            We targeted cart abandoners with{" "}
-            <span className="text-[#039BE4] font-extrabold">
-              limited-time discounts
-            </span>{" "}
-            and{" "}
-            <span className="text-[#039BE4] font-extrabold">bundle deals</span>{" "}
-            , using messages likes &quot;Your Diwali Deal Awaits - Complete Your
-            Purchase Today!&quot; to rekindle their interest.
+            Used AMC&#39;s data to identify{" "}
+            <span className="text-[#f48825] font-extrabold">
+              high-performing keywords
+            </span>
+            , ensuring focused targeting for Sponsored Products and Sponsored
+            Brand ads.
           </p>
         </div>
       </div>
@@ -106,49 +106,24 @@ export const Strategy = () => (
         <div>
           {" "}
           <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
-            Loyalty Discounts for Past Buyers:
+            Abandoned Cart Retargeting:
           </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            Ads for previous customers featured messages like &quot;Celebrate
-            Diwali with TrueFrog! Special Savings Just for You&quot;,{" "}
-            <span className="text-[#039BE4] font-extrabold">
-              emphasizing festive savings
-            </span>{" "}
-            as a thank-you to loyal customers.
-          </p>
-        </div>
-      </div>
-    </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Channel Strategy
-      </h4>
-    </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <div className="flex gap-4 my-10">
-        <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
-          <div className="h-5 w-5 bg-white rounded-full" />
-        </div>
-        <div>
-          {" "}
-          <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            Ads were served on Amazon-owned platforms as well as third-party
-            sites, ensuring that TrueFrog stayed{" "}
-            <span className="text-[#039BE4] font-extrabold"> top-of-mind</span>{" "}
+            Targeted users who had previously abandoned Vooki products in their
+            carts, encouraging re-engagement with{" "}
+            <span className="text-[#f48825] font-extrabold">
+              special Diwali discounts.
+            </span>
           </p>
         </div>
       </div>
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp}>
-      <h3 className="lg:text-6xl text-4xl font-extrabold text-[#039BE4] text-center text-balance">
-        2. Keyword-Based Campaigns to Capture High-Intent Shoppers
-      </h3>
-    </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Audience Segment
+      <h4 className="lg:text-6xl text-4xl font-extrabold text-[#039BE4] text-center text-balance">
+        DSP Campaigns
       </h4>
     </AnimatedElement>
+
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
       <div className="flex gap-4 my-10">
         <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
@@ -156,26 +131,49 @@ export const Strategy = () => (
         </div>
         <div>
           {" "}
+          <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
+            Pre-Sales Lead-Up:
+          </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            This approach focused on users who had interacted with{" "}
-            <span className="text-[#039BE4] font-extrabold">
+            Launched
+            <span className="text-[#f48825] font-extrabold"> DSP ads </span> 10
+            days before the event, reaching in-market & category shoppers with a
+            foxus on Vooki&#39;s{" "}
+            <span className="text-[#f48825] font-extrabold">
               {" "}
-              specific keywords{" "}
+              key cleaning products.{" "}
             </span>{" "}
-            related to curly hair care but hadn&#39;t made a purchase yet. We
-            targeted keywords such as &quot;curly hair products&quot;,
-            &quot;curl care&quot;, &quot;leave-in conditioner&quot;, and
-            &quot;curl shampoo&quot; that resonated with TrueFrog&#39;
-            offerings.
           </p>
         </div>
       </div>
     </AnimatedElement>
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Targeting Strategy
+      <div className="flex gap-4 my-10">
+        <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
+          <div className="h-5 w-5 bg-white rounded-full" />
+        </div>
+        <div>
+          {" "}
+          <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
+            Competitor and Lifestyle Targeting:
+          </h5>
+          <p className="text-xl lg:text-3xl font-bold text-slate-600">
+            Targeted{" "}
+            <span className="text-[#f48825] font-extrabold">
+              competitor audiences
+            </span>{" "}
+            and users with lifestyle preferences aligned with eco-frienfly,
+            effective cleaning products.
+          </p>
+        </div>
+      </div>
+    </AnimatedElement>
+    <AnimatedElement variant={fadeInUp}>
+      <h4 className="lg:text-6xl text-4xl font-extrabold text-[#039BE4] text-center text-balance">
+        AMS Strategy
       </h4>
     </AnimatedElement>
+
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
       <div className="flex gap-4 my-10">
         <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
@@ -183,47 +181,39 @@ export const Strategy = () => (
         </div>
         <div>
           {" "}
+          <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
+            Top-of-Search Ads:
+          </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            Through Amazon DSP, we{" "}
-            <span className="text-[#039BE4] font-extrabold"> retargeted </span>{" "}
-            these shoppers with Diwali-themed creatives that echoed their search
-            intent. Ad copies included messages like:
+            Deployed Sponsored Product (SP) and Sponsored Brand (SB) ads at the
+            top of search results to secure
+            <span className="text-[#f48825] font-extrabold">
+              {" "}
+              maximum visibility{" "}
+            </span>{" "}
+            and click share.
           </p>
-          <ul className="text-lg mt-5 lg:text-2xl font-semibold text-slate-500">
-            <li> - &quot;Get your curls ready this festive season&quot;</li>
-            <li>
-              - &quot;Diwali curls with TrueFrog - Perfect for the
-              celebration&quot;
-            </li>
-            <li> - &quot;Nourish your curls this Diwali with TrueFrog&quot;</li>
-            <li>
-              - &quot;Celebrate Diwali with flawless curls - Try TrueFrog
-              today!&quot;
-            </li>
-          </ul>
         </div>
       </div>
     </AnimatedElement>
     <AnimatedElement variant={fadeInLeft} delay={0.2}>
-      <h4 className="lg:text-4xl text-2xl text-[#f48825] mt-10 font-extrabold ">
-        Festive Offers
-      </h4>
-    </AnimatedElement>
-    <AnimatedElement variant={fadeInLeft} delay={0.2}>
       <div className="flex gap-4 my-10">
         <div className="h-8 w-8 aspect-square bg-gradient-to-br from-violet-700 to-purple-700 via-pink-600 rounded-full inline-flex items-center justify-center">
           <div className="h-5 w-5 bg-white rounded-full" />
         </div>
         <div>
           {" "}
+          <h5 className="lg:text-4xl text-2xl font-extrabold text-slate-700">
+            Sponsored Brand Video (SBV) Ads:
+          </h5>
           <p className="text-xl lg:text-3xl font-bold text-slate-600">
-            The ads highlighted{" "}
-            <span className="text-[#039BE4] font-extrabold">
-              {" "}
-              limited-time Diwali promotions{" "}
-            </span>{" "}
-            , motivating interested shoppers to take advantageof the deals
-            before the festive period ended.
+            Utilized SBV ads targeting high-performing keywords to demonstrate
+            Vooki&#39;s product efficiency through{" "}
+            <span className="text-[#f48825] font-extrabold">
+              engaging video content
+            </span>
+            . This helped convey the effectiveness of Vooki&#39;s product &
+            incresed interaction with potential customers.
           </p>
         </div>
       </div>

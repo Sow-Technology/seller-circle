@@ -44,5 +44,19 @@ export const Results = ({ resultsData }) => (
       ))}
       <div className="bg-[url('/images/weare.webp')] bg-center bg-cover opacity-10 absolute inset-0 z-0" />
     </div>
+    <Image
+      src="/case-study/48.png"
+      alt=""
+      width={1500}
+      height={1000}
+      className="w-full h-auto"
+    />
+    <Image
+      src="/case-study/49.png"
+      alt=""
+      width={1500}
+      height={1000}
+      className="w-full h-auto"
+    />
   </section>
 );

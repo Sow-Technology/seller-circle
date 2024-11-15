@@ -15,16 +15,23 @@ export const Conclusion = () => (
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp} delay={0.2}>
       <p className="text-slate-700 font-bold lg:text-3xl text-xl lg:leading-[50px] my-10">
-        By harnessing Amazon Marketing Cloud&#39;s audience solutions,
-        SellerCircle crafted a strategic Diwali campaign that brought back
-        interested shoppers, encouraged loyal customers to return, and attracted
-        new users searching for curly hair care products. With a mix of{" "}
-        <span className="font-[900] text-[#039BE4]">timely discounts</span>,{" "}
-        <span className="font-[900] text-[#039BE4]">festive creatives</span>,
-        and{" "}
-        <span className="font-[900] text-[#039BE4]">targeted messaging</span>,
-        TrueFrog achieved exceptional results and strengthened brand recall
-        during one of India&#39;s most important shopping seasons.
+        SellerCircle&#39;s integrated approach using AMC, DSP, and AMS enabled
+        Vooki to capture the festive season&#39;s potential by{" "}
+        <span className="font-[900] text-[#039BE4]">
+          boosting brand visibility
+        </span>
+        ,{" "}
+        <span className="font-[900] text-[#039BE4]">
+          driving new customer acquisition
+        </span>
+        , and{" "}
+        <span className="font-[900] text-[#039BE4]">
+          achieving substantial sales growth
+        </span>{" "}
+        . With audience insights, touchpoint-based targeting, impactful video
+        ads, and engaging festive offers, Vooki emerged as a strong player in
+        the eco-friendly cleaning space, meeting and exceeding campaign
+        objectives with exceptional results.
       </p>
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp} delay={0.4}>
