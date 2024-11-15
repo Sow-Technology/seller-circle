@@ -53,8 +53,8 @@ export const Strategy = ({ retailData, dayparting }) => (
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp} delay={0.6}>
       <h3 className="lg:text-4xl text-2xl font-[900] text-[#039BE4] text-center mt-10">
-        "Achieving retail success through a fully optimized Brand Store &
-        premium A+ content."
+        &quot;Achieving retail success through a fully optimized Brand Store &
+        premium A+ content.&quot;
       </h3>
     </AnimatedElement>
     {retailData.map((item, idx) => (

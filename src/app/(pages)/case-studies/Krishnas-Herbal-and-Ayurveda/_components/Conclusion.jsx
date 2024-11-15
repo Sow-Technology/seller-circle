@@ -15,11 +15,11 @@ export const Conclusion = () => (
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp} delay={0.2}>
       <p className="text-slate-700 font-bold lg:text-3xl text-xl lg:leading-[50px] my-10">
-        By leveraging Amazon's advanced advertising technologies, SellerCircle
-        helped Krishna Ayurveda achieve exceptional growth across multiple
-        fronts. From scaling new product categories and growing hero product's
-        market share to optimizing ad spend and refining the customer journey,
-        our holistic and data-driven strategy resulted in a{" "}
+        By leveraging Amazon&#39;s advanced advertising technologies,
+        SellerCircle helped Krishna Ayurveda achieve exceptional growth across
+        multiple fronts. From scaling new product categories and growing hero
+        product&#39;s market share to optimizing ad spend and refining the
+        customer journey, our holistic and data-driven strategy resulted in a{" "}
         <span className="font-[900] text-[#039BE4]">90% sales increase</span>{" "}
         and a <span className="font-[900] text-[#039BE4]">20% reduction</span>{" "}
         in ACoS and maintain a Total ROAS of 5.15 during the period. These
