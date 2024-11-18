@@ -1,13 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
-import {
-  Merriweather,
-  Montserrat,
-  Montserrat_Alternates,
-  Noto_Sans_Georgian,
-  Poppins,
-  Roboto,
-  Roboto_Condensed,
-} from "next/font/google";
+import { Montserrat } from "next/font/google";
 export const metadata = {
   title: "Seller Circle | Case Study",
   description:
