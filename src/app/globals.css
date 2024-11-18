@@ -71,3 +71,40 @@
 .slick-slide:first-child(div) {
   height: 100%;
 }
+.swiper {
+  height: 100%; /* Matches parent height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the Swiper wrapper fills the height */
+.swiper-wrapper {
+  height: 100%; /* Matches the container height */
+  display: flex; /* Optional, for alignment */
+}
+
+/* Ensure all slides are the same height */
+.swiper-slide {
+  height: 100%; /* Matches the wrapper height */
+  display: flex;
+  align-items: stretch; /* Stretch child elements */
+  justify-content: center; /* Center the BlogCard */
+}
+.embla {
+  /* width: 100%; */
+  /* height: 100%; */
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  gap: 16px; /* Adjust gap between slides */
+}
+
+.embla__slide {
+  display: flex;
+  /* flex: 0 0 80%; Makes slides responsive */
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}

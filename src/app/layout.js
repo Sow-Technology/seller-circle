@@ -18,7 +18,7 @@ export const metadata = {
       "Boost your brand with Seller Circle’s advanced Amazon ads strategies. Our full-service management includes Amazon advertising, DSP, A+, and Brand Store creation.",
     images: [
       {
-        url: "https://sellercircle.in/logo-dark.svg",
+        url: "https://sellercircle.in/meta.png",
         width: 800,
         height: 600,
       },
