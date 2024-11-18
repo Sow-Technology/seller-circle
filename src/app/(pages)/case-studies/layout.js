@@ -1,5 +1,13 @@
 import { Toaster } from "@/components/ui/sonner";
-import { Montserrat_Alternates } from "next/font/google";
+import {
+  Merriweather,
+  Montserrat,
+  Montserrat_Alternates,
+  Noto_Sans_Georgian,
+  Poppins,
+  Roboto,
+  Roboto_Condensed,
+} from "next/font/google";
 export const metadata = {
   title: "Seller Circle | Case Study",
   description:
@@ -21,14 +29,15 @@ export const metadata = {
     siteName: "Seller Circle",
   },
 };
-const Montserrat = Montserrat_Alternates({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="max-w-[100vw] overflow-x-hidden">
-      <body className={Montserrat.className}>
+      <body className={montserrat.className}>
         {children} <Toaster position={"top-center"} />
       </body>
     </html>
