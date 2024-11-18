@@ -14,7 +14,7 @@ export const Conclusion = () => (
       </div>
     </AnimatedElement>
     <AnimatedElement variant={fadeInUp} delay={0.2}>
-      <p className="text-slate-700 font-bold lg:text-3xl text-xl lg:leading-[50px] my-10">
+      <p className="text-slate-700 font-bold lg:text-3xl text-xl lg:leading-[50px] my-10 z-10 relative">
         SellerCircle&#39;s integrated approach using AMC, DSP, and AMS enabled
         Vooki to capture the festive season&#39;s potential by{" "}
         <span className="font-[900] text-[#039BE4]">
