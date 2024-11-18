@@ -3,7 +3,7 @@ import React from "react";
 
 const BlogCard = ({ data }) => {
   return (
-    <article className="flex bg-white transition hover:shadow-xl shadow-2xl border-background border ">
+    <article className="flex bg-white transition hover:shadow-xl shadow-2xl border-background border h-full  ">
       <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
         <time
           dateTime="2022-10-10"
@@ -23,7 +23,7 @@ const BlogCard = ({ data }) => {
         />
       </div>
 
-      <div className="flex flex-1 flex-col justify-beteen">
+      <div className="flex flex-1 flex-col justify-between">
         <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
           {data.category && (
             <div className="bg-background rounded-full px-10 py-2 text-white font-medium w-max mb-2">

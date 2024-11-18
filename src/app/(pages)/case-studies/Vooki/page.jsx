@@ -9,6 +9,7 @@ import { Strategy } from "./_components/Strategy";
 import { Execution } from "./_components/Execution";
 import { Results } from "./_components/Results";
 import { Conclusion } from "./_components/Conclusion";
+import CaseStudyCarousel from "@/components/sections/CaseStudyCarousel";
 const data = [
   {
     icon: "/case-study/38.png",
@@ -212,6 +213,7 @@ export default function page() {
         <Execution marketingStrategies={marketingStrategies} />
         <Results resultsData={resultsData} />
         <Conclusion />
+        <CaseStudyCarousel />
       </div>
       <Footer />
     </div>

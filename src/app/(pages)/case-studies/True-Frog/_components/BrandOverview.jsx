@@ -13,7 +13,7 @@ export const BrandOverview = () => (
         <AnimatedElement variant={fadeInLeft}>
           <div>
             <Image
-              src="/images/brands/1.png"
+              src="/images/brands/11.png"
               alt=""
               width="700"
               height={700}

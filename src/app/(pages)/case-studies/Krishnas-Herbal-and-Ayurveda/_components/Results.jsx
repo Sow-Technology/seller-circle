@@ -14,12 +14,12 @@ export const Results = ({ resultsData }) => (
         <div className="h-1.5 rounded-xl w-full bg-[#f48825]" />
       </div>
     </AnimatedElement>
-    <div>
+    {/* <div>
       <h3 className="lg:text-2xl font-bold text-slate-600 text-lg text-center">
         The targeted festive campaign produced significant results for Vooki,
         aligning closely with the primary objectives:
       </h3>
-    </div>
+    </div> */}
     <div className="p-5 w-full flex flex-col justify-between gap-5 relative py-10 z-10">
       {resultsData.map((item, index) => (
         <AnimatedElement
