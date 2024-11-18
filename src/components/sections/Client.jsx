@@ -18,7 +18,7 @@ const clientLogos = [
   "/images/brands/13.png",
   // "/images/brands/14.png",
   "/images/brands/15.png",
-  "/images/brands/16.png",
+  // "/images/brands/16.png",
   // "/images/brands/17.png",
   "/images/brands/18.png",
   "/images/brands/19.png",

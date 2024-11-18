@@ -3,7 +3,7 @@ import { caseStudies } from "@/lib/data";
 import BlogCard from "../cards/BlogCard";
 import { AnimatedElement } from "../AnimatedElement";
 
-const CaseStudyCarousel = () => {
+const CaseStudyCarousel = ({ homePage = false }) => {
   const settings = {
     dots: true, // Show navigation dots
     infinite: true, // Enable infinite scrolling
@@ -32,15 +32,17 @@ const CaseStudyCarousel = () => {
 
   return (
     <section className="bg-gray-50 my-20">
-      <AnimatedElement>
-        <div className="relative w-full gap-10 mx-auto mb-10 flex items-center justify-between z-10">
-          <div className="h-1.5 rounded-xl w-full bg-[#039BE4]" />
-          <h2 className="lg:text-3xl text-xl text-center font-extrabold mx-auto w-full">
-            Read other Case Studies
-          </h2>
-          <div className="h-1.5 rounded-xl w-full bg-[#039BE4]" />
-        </div>
-      </AnimatedElement>
+      {!homePage && (
+        <AnimatedElement>
+          <div className="relative w-full gap-10 mx-auto mb-10 flex items-center justify-between z-10">
+            <div className="h-1.5 rounded-xl w-full bg-[#039BE4]" />
+            <h2 className="lg:text-3xl text-xl text-center font-extrabold mx-auto w-full">
+              Read other Case Studies
+            </h2>
+            <div className="h-1.5 rounded-xl w-full bg-[#039BE4]" />
+          </div>
+        </AnimatedElement>
+      )}
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:py-16 xl:py-24">
         <div className="grid grid-cols-1 gap-8 h-full lg:gap-16 ">
           <Slider {...settings} className="h-full">

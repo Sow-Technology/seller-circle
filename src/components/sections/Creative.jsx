@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import CaseStudyCarousel from "./CaseStudyCarousel";
 
 const Creative = () => {
   return (
-    <div className="mx-auto max-w-7xl flex flex-col my-20 lg:px-20 px-8">
+    <div className="mx-auto  flex flex-col my-20 lg:px-20 px-8">
       {" "}
       <motion.h3
         initial={{ y: 100, opacity: 0 }}
@@ -25,11 +26,12 @@ const Creative = () => {
         Elevating Creativity to Success:{" "}
         <span className="text-[#039BE4]">Your Roadmap to Achievements! </span>
       </motion.h2>
+      <CaseStudyCarousel homePage />
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         viewport={{ once: true }}
-        className=" flex items-center justify-center"
+        className=" flex items-center justify-center "
       >
         {" "}
         <Link href="/case-studies">
