@@ -62,9 +62,9 @@ export const HeroSection = () => (
             <AnimatedElement variant={fadeInRight}>
               <h3 className="lg:text-2xl text-lg text-neutral-900 font-extrabold">
                 <span className="lg:text-5xl text-3xl text-[#039ce2] font-[900]">
-                  20%{" "}
+                  6.56%{" "}
                 </span>{" "}
-                increase in Brand Search
+                ROAS Achieved
               </h3>
             </AnimatedElement>
           </div>
