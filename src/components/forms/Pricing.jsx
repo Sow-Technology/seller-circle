@@ -361,7 +361,7 @@ const Pricing = ({
             fullName: values.fullName,
             workEmail: values.workEmail,
             phoneNumber: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: parseInt(values.ASIN),
             service: values.service,
             additionalComments: values.message,
           };
@@ -371,7 +371,7 @@ const Pricing = ({
             fullName: values.fullName,
             workEmail: values.workEmail,
             phoneNumber: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: parseInt(values.ASIN),
             service: values.service,
             additionalComments: values.message,
           };
@@ -381,7 +381,7 @@ const Pricing = ({
             fullName: values.fullName,
             workEmail: values.workEmail,
             phoneNumber: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: parseInt(values.ASIN),
             service: values.service,
             additionalComments: values.message,
           };
@@ -391,7 +391,7 @@ const Pricing = ({
             fullName: values.fullName,
             workEmail: values.workEmail,
             phoneNumber: values.phoneNumber,
-            nPage: +values.nPage,
+            nPage: parseInt(values.nPage),
             businessName: values.businessName,
             brandName: values.brandName,
             additionalComments: values.message,
@@ -556,7 +556,7 @@ const Pricing = ({
             Last_Name: basicALastName,
             Email: values.workEmail,
             Phone: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: values.ASIN.toString(),
             Service: values.service,
             Additional_Comments: values.message,
           };
@@ -571,7 +571,7 @@ const Pricing = ({
             Last_Name: premiumALastName,
             Email: values.workEmail,
             Phone: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: values.ASIN.toString(),
             Service: values.service,
             Additional_Comments: values.message,
           };
@@ -586,7 +586,7 @@ const Pricing = ({
             Last_Name: brandLastName,
             Email: values.workEmail,
             Phone: values.phoneNumber,
-            ASIN: +values.ASIN,
+            ASIN: values.ASIN.toString(),
             Service: values.service,
             Additional_Comments: values.message,
           };
@@ -601,7 +601,7 @@ const Pricing = ({
             Last_Name: storeLastName,
             Email: values.workEmail,
             Phone: values.phoneNumber,
-            Number_Of_Pages: +values.nPage,
+            Number_Of_Pages: values.nPage.toString(),
             Company: values.businessName,
             Brand_Name: values.brandName,
             Additional_Comments: values.message,
@@ -639,20 +639,21 @@ const Pricing = ({
           break;
       }
 
-      const response = await axios.post("/api/verify-turnstile", { token });
+      // const response = await axios.post("/api/verify-turnstile", { token });
+      // console.log(response);
+      // if (token && response.data.success) {
+      const response = await axios.post("/api/submit-form", {
+        ...data,
+        formType,
+        zohoData,
+      });
+      toast.dismiss();
+      toast.success("We'll reach out to you soon!");
       console.log(response);
-      if (token && response.data.success) {
-        const response = await axios.post("/api/submit-form", {
-          ...data,
-          formType,
-          zohoData,
-        });
-        toast.dismiss();
-        toast.success("We'll reach out to you soon!");
-      } else {
-        toast.dismiss();
-        toast.error("Invalid Captcha! Please try again later");
-      }
+      // } else {
+      //   toast.dismiss();
+      //   toast.error("Invalid Captcha! Please try again later");
+      // }
     } catch (err) {
       toast.dismiss();
       toast.error("Internal server error, Try again later!");
