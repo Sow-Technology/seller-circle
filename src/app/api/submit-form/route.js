@@ -81,7 +81,7 @@ export async function POST(req) {
         .join("");
     };
 
-    await sendEmail(formatObjectToHTML(data));
+    await sendEmail(formatObjectToHTML(zohoData));
 
     // 6. Get Zoho access token
     const params = new URLSearchParams({
@@ -132,7 +132,8 @@ export async function POST(req) {
         biginData = JSON.parse(responseText);
         if (biginData.data?.[0]?.code === "MULTIPLE_OR_MULTI_ERRORS") {
           // Extract the duplicate contact ID from the error
-          const duplicateId = biginData.data[0].details.errors[0].details.duplicate_record.id;
+          const duplicateId =
+            biginData.data[0].details.errors[0].details.duplicate_record.id;
           contactId = duplicateId;
         } else {
           contactId = biginData.data?.[0]?.id;
