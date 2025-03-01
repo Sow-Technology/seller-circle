@@ -8,6 +8,7 @@ import { NextResponse } from "next/server";
  * - Stores data in Appwrite
  * - Sends notification email
  * - Creates contact in Zoho Bigin CRM
+ * - Moves leads into a pipeline
  */
 export async function POST(req) {
   try {
@@ -52,7 +53,7 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-    console.log(data);
+
     // 3. Remove zohoData if it exists
     const { zohoData, ...appwriteData } = data;
 
@@ -108,7 +109,13 @@ export async function POST(req) {
     const tokenData = await tokenResponse.json();
     const oAuthToken = tokenData.access_token;
 
-    // 8. Send to Zoho Bigin
+    // 7. Prepare Zoho Bigin contact data
+    const newZohoData = {
+      ...zohoData,
+      Lead_Source: "Website", // Tag the lead source
+    };
+
+    // 8. Send to Zoho Bigin (Contact creation)
     try {
       const biginResponse = await fetch(
         "https://www.zohoapis.in/bigin/v2/Contacts",
@@ -119,7 +126,7 @@ export async function POST(req) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            data: [{ ...zohoData }],
+            data: [{ ...newZohoData }],
           }),
         }
       );
@@ -132,9 +139,8 @@ export async function POST(req) {
         biginData = JSON.parse(responseText);
         if (biginData.data?.[0]?.code === "MULTIPLE_OR_MULTI_ERRORS") {
           // Extract the duplicate contact ID from the error
-          const duplicateId =
+          contactId =
             biginData.data[0].details.errors[0].details.duplicate_record.id;
-          contactId = duplicateId;
         } else {
           contactId = biginData.data?.[0]?.id;
         }
@@ -142,10 +148,12 @@ export async function POST(req) {
         console.error("Error parsing Bigin response:", responseText);
       }
 
+      console.log("Contact ID:", contactId);
+
       return NextResponse.json({
         message: "Form submitted successfully",
         appwriteId: result.$id,
-        biginId: contactId,
+        biginContactId: contactId,
       });
     } catch (error) {
       console.error("Submission error:", error);
