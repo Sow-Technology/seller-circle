@@ -1,6 +1,7 @@
 // pages/api/submit-form.js
+// import { sendEmail } from "@/lib/actions/mailer";
+// import { Client, Databases, ID } from "appwrite";
 import { sendEmail } from "@/lib/actions/mailer";
-import { Client, Databases, ID } from "appwrite";
 import { NextResponse } from "next/server";
 
 /**
@@ -21,49 +22,49 @@ export async function POST(req) {
     }
 
     // 1. Initialize Appwrite Client
-    const client = new Client()
-      .setEndpoint(process.env.APPWRITE_PROJECT_API)
-      .setProject(process.env.APPWRITE_PROJECT_ID);
+    // const client = new Client()
+    //   .setEndpoint(process.env.APPWRITE_PROJECT_API)
+    //   .setProject(process.env.APPWRITE_PROJECT_ID);
 
-    const databases = new Databases(client);
+    // const databases = new Databases(client);
 
     // 2. Collection mapping
-    const collectionMap = {
-      contact: "contact",
-      advertising: "advertising",
-      footer: "advertising",
-      fullServiceManagement: "fullServiceManagement",
-      DSP: "dsp",
-      strategyAndConsulting: "strategyAndConsulting",
-      globalLaunch: "globalLaunch",
-      marketplacesExpansion: "marketplacesExpansion",
-      "basicA+": "basicA",
-      premiumA: "premiumA",
-      brandStore: "brandStore",
-      brandStory: "brandStory",
-      brandVideo: "brandVideo",
-      listingImageDesign: "listingImageDesign",
-      newsletter: "newsletter",
-    };
+    // const collectionMap = {
+    //   contact: "contact",
+    //   advertising: "advertising",
+    //   footer: "advertising",
+    //   fullServiceManagement: "fullServiceManagement",
+    //   DSP: "dsp",
+    //   strategyAndConsulting: "strategyAndConsulting",
+    //   globalLaunch: "globalLaunch",
+    //   marketplacesExpansion: "marketplacesExpansion",
+    //   "basicA+": "basicA",
+    //   premiumA: "premiumA",
+    //   brandStore: "brandStore",
+    //   brandStory: "brandStory",
+    //   brandVideo: "brandVideo",
+    //   listingImageDesign: "listingImageDesign",
+    //   newsletter: "newsletter",
+    // };
 
-    const collectionId = collectionMap[data.formType];
-    if (!collectionId) {
-      return NextResponse.json(
-        { message: "Invalid form type" },
-        { status: 400 }
-      );
-    }
+    // const collectionId = collectionMap[data.formType];
+    // if (!collectionId) {
+    //   return NextResponse.json(
+    //     { message: "Invalid form type" },
+    //     { status: 400 }
+    //   );
+    // }
 
     // 3. Remove zohoData if it exists
     const { zohoData, ...appwriteData } = data;
 
     // 4. Save to Appwrite
-    const result = await databases.createDocument(
-      "forms",
-      collectionId,
-      ID.unique(),
-      appwriteData
-    );
+    // const result = await databases.createDocument(
+    //   "forms",
+    //   collectionId,
+    //   ID.unique(),
+    //   appwriteData
+    // );
 
     // 5. Email formatting and sending
     const formatObjectToHTML = (obj, indent = 2) => {
@@ -154,7 +155,7 @@ export async function POST(req) {
 
       return NextResponse.json({
         message: "Form submitted successfully",
-        appwriteId: result.$id,
+        // appwriteId: result.$id,
         biginContactId: contactId,
       });
     } catch (error) {
@@ -162,7 +163,7 @@ export async function POST(req) {
       return NextResponse.json(
         {
           message: "Form submitted successfully", // Still return success as data is saved in Appwrite
-          appwriteId: result.$id,
+          // appwriteId: result.$id,
           error: error.message,
         },
         { status: 200 } // Changed to 200 as it's not a critical error
