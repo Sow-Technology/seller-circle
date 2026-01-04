@@ -92,7 +92,7 @@ export async function POST(req) {
       `<strong>User IP Address:</strong> ${userIP}<br/><br/>` +
       formatObjectToHTML(zohoData)
     );
-
+    console.log("Testing before params");
     // 6. Get Zoho access token
     const params = new URLSearchParams({
       refresh_token: process.env.ZOHO_REFRESH_TOKEN,
@@ -110,14 +110,17 @@ export async function POST(req) {
         body: params,
       }
     );
-
+    console.log("Testing after params");
+    console.log(tokenResponse);
     if (!tokenResponse.ok) {
       throw new Error("Token fetch failed");
     }
 
     const tokenData = await tokenResponse.json();
     const oAuthToken = tokenData.access_token;
-
+    console.log("Testing after token");
+    console.log(tokenData);
+    console.log(oAuthToken);
     // 7. Prepare Zoho Bigin contact data
     const newZohoData = {
       ...zohoData,
