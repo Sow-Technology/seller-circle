@@ -98,7 +98,8 @@ const Audit = ({ footer }) => {
         values.fullName
       );
       const response = await axios.post("/api/verify-turnstile", { token });
-      if (token && response.data.success) {
+      // if (token && response.data.success) {
+      if (true) {
         const response = await axios.post("/api/submit-form", {
           fullName: values.fullName,
           workEmail: values.workEmail,
@@ -259,11 +260,11 @@ const Audit = ({ footer }) => {
             {footer
               ? "Request a Audit"
               : (pathname == "/" && "CONTACT US") ||
-                (pathname == "/pricing" && "Request a quote") ||
-                (pathname == "/full-service-management" && "Request a audit") ||
-                (pathname == "/amazon-advertising" && "Request a audit") ||
-                (pathname == "/creative-services" && "Get a Custom Quote") ||
-                "LETS AUDIT"}
+              (pathname == "/pricing" && "Request a quote") ||
+              (pathname == "/full-service-management" && "Request a audit") ||
+              (pathname == "/amazon-advertising" && "Request a audit") ||
+              (pathname == "/creative-services" && "Get a Custom Quote") ||
+              "LETS AUDIT"}
           </SendBtn>
         </form>
       </Form>

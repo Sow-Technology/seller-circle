@@ -5,7 +5,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaPinterest,
 } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { RiFacebookBoxLine, RiInstagramFill } from "react-icons/ri";
@@ -88,8 +87,13 @@ const Socials = () => {
         // transition={{ delay: 0.8 }}
         >
           <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
-            <FaPinterest className="text-[#E60023] text-xl" />
-            Pinterest
+            <Image
+              src="/images/finalist-logo.png"
+              alt="Finalist"
+              width={100}
+              height={100}
+              className="h-12 w-auto"
+            />
           </div>
         </div>
       </div>

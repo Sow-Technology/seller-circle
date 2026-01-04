@@ -13,6 +13,11 @@ import { NextResponse } from "next/server";
  */
 export async function POST(req) {
   try {
+    // Extract user IP address from headers
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    const realIp = req.headers.get("x-real-ip");
+    const userIP = forwardedFor?.split(",")[0]?.trim() || realIp || "Unknown";
+
     const data = await req.json();
     if (!data?.formType) {
       return NextResponse.json(
@@ -83,7 +88,10 @@ export async function POST(req) {
         .join("");
     };
 
-    await sendEmail(formatObjectToHTML(zohoData));
+    await sendEmail(
+      `<strong>User IP Address:</strong> ${userIP}<br/><br/>` +
+      formatObjectToHTML(zohoData)
+    );
 
     // 6. Get Zoho access token
     const params = new URLSearchParams({

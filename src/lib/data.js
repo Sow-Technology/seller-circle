@@ -171,13 +171,12 @@ export const marqueeItem = [
   "/images/brands/6.png",
   "/images/brands/7.png",
   // "/images/brands/8.png",
-  "/images/brands/9.png",
-  "/images/brands/10.png",
-  "/images/brands/11.png",
+  "/images/Sugarfit.png",
+  "/images/Soulflower.jpg",
   // "/images/brands/12.png",
   // "/images/brands/13.png",
   // "/images/brands/14.png",
-  "/images/brands/15.png",
+  "/images/okamoto.png",
 ];
 
 export const reviews = [

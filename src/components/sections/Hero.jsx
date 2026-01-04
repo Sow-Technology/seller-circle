@@ -5,7 +5,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaPinterest,
 } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";

@@ -155,9 +155,33 @@ const NavItems = [
         desc: "Celebrating strategy and success ",
       },
       {
+        name: "Testimony",
+        link: "/testimony",
+        desc: "Watch client video stories",
+      },
+      {
         name: "Newsletter",
         link: "/newsletter",
         desc: "Join our Tribe",
+      },
+      {
+        name: "Featured on Amazon",
+        link: "/featured",
+        desc: "Watch our featured videos",
+        subLinks: [
+          {
+            name: "Video 1",
+            link: "https://youtu.be/jTznNm7khck?si=-MNgNrbkSIRAhT1l",
+          },
+          {
+            name: "Video 2",
+            link: "https://youtu.be/3oXGsMFOxfM?si=ZmuK8qGfqbZBbEQF",
+          },
+          {
+            name: "Video 3",
+            link: "https://youtu.be/j8Xx5AUXU0w?si=9DgRz4GiNReGfZrB",
+          },
+        ],
       },
     ],
   },
@@ -179,24 +203,61 @@ const DesktopNav = () => {
                   <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
                     {item.name}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className=" font-bold text-sm uppercase ">
-                    <NavigationMenuList className="grid w-max text-left  p-6 ">
+                  <NavigationMenuContent className=" font-bold text-sm uppercase overflow-visible">
+                    <NavigationMenuList className="grid w-max text-left p-6 overflow-visible">
                       {item.subItems.map((subItem) => (
                         <NavigationMenuItem key={subItem.name}>
-                          <Link
-                            href={subItem.link}
-                            className="hover:bg-slate-100/70 block p-3"
-                          >
-                            {" "}
-                            <div
-                              className={cn("text-xl font-bold text-gray-700 ")}
-                            >
-                              {subItem.priority || subItem.name}
+                          {subItem.subLinks ? (
+                            <div className="relative">
+                              <div
+                                className="hover:bg-slate-100/70 block p-3 rounded-md cursor-pointer flex items-center justify-between peer"
+                              >
+                                <div>
+                                  <div
+                                    className={cn(
+                                      "text-xl font-bold text-gray-700 "
+                                    )}
+                                  >
+                                    {subItem.priority || subItem.name}
+                                  </div>
+                                  <p className="text-gray-600 text-sm capitalize">
+                                    {subItem.desc}
+                                  </p>
+                                </div>
+                                <svg className="w-4 h-4 text-gray-500 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </div>
+                              <div className="absolute left-[105%] top-0 invisible opacity-0 peer-hover:visible peer-hover:opacity-100 hover:visible hover:opacity-100 transition-all duration-200 bg-white shadow-2xl rounded-xl p-3 w-[200px] border border-slate-200 z-[9999]">
+                                {subItem.subLinks.map((link) => (
+                                  <Link
+                                    href={link.link}
+                                    key={link.name}
+                                    target="_blank"
+                                    className="block p-2.5 hover:bg-slate-100 rounded-lg text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap"
+                                  >
+                                    {link.name}
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                            <p className="text-gray-600 text-sm capitalize">
-                              {subItem.desc}
-                            </p>
-                          </Link>
+                          ) : (
+                            <Link
+                              href={subItem.link}
+                              className="hover:bg-slate-100/70 block p-3"
+                            >
+                              <div
+                                className={cn(
+                                  "text-xl font-bold text-gray-700 "
+                                )}
+                              >
+                                {subItem.priority || subItem.name}
+                              </div>
+                              <p className="text-gray-600 text-sm capitalize">
+                                {subItem.desc}
+                              </p>
+                            </Link>
+                          )}
                         </NavigationMenuItem>
                       ))}
                     </NavigationMenuList>
@@ -230,24 +291,59 @@ const SecDesktopNav = () => {
                 <NavigationMenuTrigger className="text-black bg-transparent font-bold text-base uppercase">
                   {item.name}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className=" font-bold text-sm uppercase ">
-                  <NavigationMenuList className="grid w-max text-left  p-6 ">
+                <NavigationMenuContent className=" font-bold text-sm uppercase overflow-visible">
+                  <NavigationMenuList className="grid w-max text-left p-6 overflow-visible">
                     {item.subItems.map((subItem) => (
                       <NavigationMenuItem key={subItem.name}>
-                        <Link
-                          href={subItem.link}
-                          className="hover:bg-slate-100/70 block p-3"
-                        >
-                          {" "}
-                          <div
-                            className={cn("text-xl font-bold text-gray-700 ")}
-                          >
-                            {subItem.priority || subItem.name}
+                        {subItem.subLinks ? (
+                          <div className="relative">
+                            <div
+                              className="hover:bg-slate-100/70 block p-3 rounded-md cursor-pointer flex items-center justify-between peer"
+                            >
+                              <div>
+                                <div
+                                  className={cn(
+                                    "text-xl font-bold text-gray-700 "
+                                  )}
+                                >
+                                  {subItem.priority || subItem.name}
+                                </div>
+                                <p className="text-gray-600 text-sm capitalize">
+                                  {subItem.desc}
+                                </p>
+                              </div>
+                              <svg className="w-4 h-4 text-gray-500 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </div>
+                            <div className="absolute left-[105%] top-0 invisible opacity-0 peer-hover:visible peer-hover:opacity-100 hover:visible hover:opacity-100 transition-all duration-200 bg-white shadow-2xl rounded-xl p-3 w-[200px] border border-slate-200 z-[9999]">
+                              {subItem.subLinks.map((link) => (
+                                <Link
+                                  href={link.link}
+                                  key={link.name}
+                                  target="_blank"
+                                  className="block p-2.5 hover:bg-slate-100 rounded-lg text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap"
+                                >
+                                  {link.name}
+                                </Link>
+                              ))}
+                            </div>
                           </div>
-                          <p className="text-gray-600 text-sm capitalize">
-                            {subItem.desc}
-                          </p>
-                        </Link>
+                        ) : (
+                          <Link
+                            href={subItem.link}
+                            className="hover:bg-slate-100/70 block p-3"
+                          >
+                            <div
+                              className={cn("text-xl font-bold text-gray-700 ")}
+                            >
+                              {subItem.priority || subItem.name}
+                            </div>
+                            <p className="text-gray-600 text-sm capitalize">
+                              {subItem.desc}
+                            </p>
+                          </Link>
+                        )}
                       </NavigationMenuItem>
                     ))}
                   </NavigationMenuList>
@@ -320,7 +416,10 @@ const MobileNav = ({ className }) => {
                     {isActive === index && (
                       <NavigationMenuList className="grid w-max text-left items-start  p-2 relative ">
                         {item.subItems.map((subItem) => (
-                          <NavigationMenuItem key={subItem.name}>
+                          <NavigationMenuItem
+                            key={subItem.name}
+                            className="flex flex-col"
+                          >
                             <ListItem
                               className="text-balance"
                               href={subItem.link}
@@ -328,6 +427,20 @@ const MobileNav = ({ className }) => {
                             >
                               {subItem.desc}
                             </ListItem>
+                            {subItem.subLinks && (
+                              <div className="pl-6 pb-2 border-l border-white/20 ml-3 mb-2">
+                                {subItem.subLinks.map((link) => (
+                                  <Link
+                                    href={link.link}
+                                    key={link.name}
+                                    target="_blank"
+                                    className="block py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
+                                  >
+                                    • {link.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </NavigationMenuItem>
                         ))}
                       </NavigationMenuList>
