@@ -50,7 +50,7 @@ const Footer = () => {
               alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
               width={480}
               height={240}
-              className="w-auto h-[100px] max-lg:h-[80px]"
+              className="w-auto h-[70px] max-lg:h-[50px]"
             />
           </div>
         </div>

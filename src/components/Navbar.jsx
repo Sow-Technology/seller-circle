@@ -168,20 +168,6 @@ const NavItems = [
         name: "Featured on Amazon",
         link: "/featured",
         desc: "Watch our featured videos",
-        subLinks: [
-          {
-            name: "Video 1",
-            link: "https://youtu.be/jTznNm7khck?si=-MNgNrbkSIRAhT1l",
-          },
-          {
-            name: "Video 2",
-            link: "https://youtu.be/3oXGsMFOxfM?si=ZmuK8qGfqbZBbEQF",
-          },
-          {
-            name: "Video 3",
-            link: "https://youtu.be/j8Xx5AUXU0w?si=9DgRz4GiNReGfZrB",
-          },
-        ],
       },
     ],
   },
