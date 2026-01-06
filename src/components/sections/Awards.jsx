@@ -12,7 +12,7 @@ const marqueeItem = [
   "/images/s8.webp",
   "/images/s9.webp",
   "/images/s10.webp",
-  "/images/finalist-logo.png",
+  "/images/APAC.png",
 ];
 const Awards = () => {
   return (

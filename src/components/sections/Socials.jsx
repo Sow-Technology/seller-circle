@@ -88,11 +88,11 @@ const Socials = () => {
         >
           <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
             <Image
-              src="/images/finalist-logo.png"
-              alt="Finalist"
-              width={100}
-              height={100}
-              className="h-12 w-auto"
+              src="/images/APAC.png"
+              alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
+              width={400}
+              height={200}
+              className="h-16 w-auto"
             />
           </div>
         </div>

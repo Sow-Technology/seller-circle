@@ -46,11 +46,11 @@ const Footer = () => {
           <div className="lg:w-[40%] flex flex-col items-center justify-center gap-3">
             <Image src="/logo.svg" alt="" width={350} height={200} />
             <Image
-              src="/images/finalist-logo.png"
-              alt="Amazon Ads Partner Awards Finalist"
+              src="/images/APAC.png"
+              alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
               width={480}
               height={240}
-              className="w-[340px] h-[100px] max-lg:w-[200px] max-lg:h-[120px]"
+              className="w-auto h-[100px] max-lg:h-[80px]"
             />
           </div>
         </div>
