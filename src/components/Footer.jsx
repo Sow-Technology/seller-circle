@@ -31,27 +31,36 @@ const Footer = () => {
       {" "}
       <div className="mx-auto lg:px-20 px-8 max-w-7xl   py-5">
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
-          <div className="lg:w-[50%] text-white font-bold flex-row lg:p-5 p-3 flex lg:text-2xl text-xs bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px] gap-4">
-            <div className="flex items-center gap-3 lg:gap-4">
+          <div className="lg:w-[45%] text-white font-bold flex flex-row lg:p-5 p-4 items-center justify-between bg-[#0BADFA] drop-shadow-xl rounded-2xl gap-4">
+            <div className="bg-white rounded-lg p-2 min-w-[120px] lg:min-w-[160px] flex items-center justify-center">
               <Image
                 src="/images/1.png"
                 alt="Amazon Ads Advanced Partner"
-                width={180}
-                height={140}
-                className="max-lg:w-[110px] w-[160px] h-[120px] max-lg:h-[80px]"
+                width={160}
+                height={120}
+                className="w-full h-auto object-contain"
               />
             </div>
-            <span className="text-left">Top 1%: A testament to our continued performance.</span>
+            <span className="text-left text-sm lg:text-xl leading-tight">Top 1%: A testament to our continued performance.</span>
           </div>
-          <div className="lg:w-[40%] flex flex-col items-center justify-center gap-3">
-            <Image src="/logo.svg" alt="" width={350} height={200} />
-            <Image
-              src="/images/APAC.png"
-              alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
-              width={480}
-              height={240}
-              className="w-auto h-[70px] max-lg:h-[50px]"
-            />
+
+          <div className="lg:w-[45%] flex flex-col items-center lg:items-end justify-center gap-4">
+            <div className="relative w-[280px] h-[60px] lg:w-[350px] lg:h-[80px]">
+              <Image
+                src="/logo.svg"
+                alt="Seller Circle"
+                fill
+                className="object-contain lg:object-right"
+              />
+            </div>
+            <div className="relative w-[300px] h-[80px] lg:w-[400px] lg:h-[100px]">
+              <Image
+                src="/images/APAC award white logo.png"
+                alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
+                fill
+                className="object-contain lg:object-right"
+              />
+            </div>
           </div>
         </div>
         <div className="h-0.5 w-full bg-white opacity-50 my-5"></div>
