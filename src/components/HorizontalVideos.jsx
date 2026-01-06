@@ -1,13 +1,14 @@
 import { useEffect } from "react";
+import Image from "next/image";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
 const videoSources = [
   { src: "/videos/Krishna.mp4", title: "Krishna" },
-  { src: "/videos/Amrutaam.mp4", title: "Amrutaam" },
   { src: "/videos/Born_Good_1.mp4", title: "Born Good" },
   { src: "/videos/GoodNess-Vanilla.mp4", title: "GoodNess Vanilla" },
   { src: "/videos/TechnoSport_TM .mp4", title: "TechnoSport" },
+  { src: "/videos/Amrutaam.mp4", title: "Amrutaam" },
 ];
 
 const HorizontalVideos = () => {
@@ -71,10 +72,16 @@ const HorizontalVideos = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Trusted by leading brands
             </h2>
-            <p className="mt-4 text-gray-700">
-              Explore a handful of recent campaign cuts and product reels. Press
-              play on any card to watch.
-            </p>
+            <div className="mt-4 flex justify-center lg:justify-center">
+              <Image
+                src="/images/arrow.gif"
+                unoptimized
+                alt="Arrow pointing right"
+                width={100}
+                height={100}
+                className="w-[100px] h-[100px] rotate-90"
+              />
+            </div>
             <div className="hidden lg:mt-8 lg:flex lg:gap-4">
               <button
                 aria-label="Previous slide"
