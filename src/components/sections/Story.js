@@ -171,7 +171,7 @@ const OurStory = () => {
           <Details
             year="2025"
             t1="Recognized by Startup India"
-            t2="E4M Awards 2024 Winner – Best PPC Campaign"
+            t2="E4M Awards 2025 Winner – Best PPC Campaign"
             t3="Retained Amazon Advanced Ads Partner Status"
             t4="Featured on Amazon Ads YouTube"
             id="1"

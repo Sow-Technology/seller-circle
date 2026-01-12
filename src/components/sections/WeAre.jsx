@@ -12,7 +12,7 @@ const marqueeItem = [
   "/images/brands/7.png",
   // "/images/brands/8.png",
   "/images/Sugarfit.png",
-  "/images/brands/46.jpg",
+  "/images/brands/46.png",
   // "/images/brands/12.png",
   // "/images/brands/13.png",
   // "/images/brands/14.png",

@@ -28,41 +28,43 @@ const Footer = () => {
 
   return (
     <div className="bg-background">
-      {" "}
-      <div className="mx-auto lg:px-20 px-8 max-w-7xl   py-5">
-        <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
-          <div className="lg:w-[45%] text-white font-bold flex flex-row lg:p-5 p-4 items-center justify-between bg-[#0BADFA] drop-shadow-xl rounded-2xl gap-4">
-            <div className="bg-white rounded-lg p-2 min-w-[120px] lg:min-w-[160px] flex items-center justify-center">
+      <div className="w-full bg-[#0BADFA] text-white font-bold">
+        <div className="mx-auto lg:px-20 px-8 max-w-7xl py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+          <div className="relative w-[200px] h-[50px] lg:w-[250px] lg:h-[60px]">
+            <Image
+              src="/logo.svg"
+              alt="Seller Circle"
+              fill
+              className="object-contain lg:object-left"
+            />
+          </div>
+
+          <div className="flex flex-row items-center justify-center gap-4 lg:border-x lg:border-white/30 lg:px-10">
+            <span className="text-center text-sm lg:text-lg leading-tight max-w-[260px]">
+              Top 1%: A testament to our continued performance.
+            </span>
+            <div className="min-w-[90px] lg:min-w-[110px] flex items-center justify-center">
               <Image
                 src="/images/1.png"
                 alt="Amazon Ads Advanced Partner"
-                width={160}
-                height={120}
+                width={110}
+                height={70}
                 className="w-full h-auto object-contain"
               />
             </div>
-            <span className="text-left text-sm lg:text-xl leading-tight">Top 1%: A testament to our continued performance.</span>
           </div>
 
-          <div className="lg:w-[45%] flex flex-col items-center lg:items-end justify-center gap-4">
-            <div className="relative w-[280px] h-[60px] lg:w-[350px] lg:h-[80px]">
-              <Image
-                src="/logo.svg"
-                alt="Seller Circle"
-                fill
-                className="object-contain lg:object-right"
-              />
-            </div>
-            <div className="relative w-[300px] h-[80px] lg:w-[400px] lg:h-[100px]">
-              <Image
-                src="/images/APAC award white logo.png"
-                alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
-                fill
-                className="object-contain lg:object-right"
-              />
-            </div>
+          <div className="relative w-[240px] h-[72px] lg:w-[380px] lg:h-[100px]">
+            <Image
+              src="/images/APAC award white logo.png"
+              alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
+              fill
+              className="object-contain lg:object-right"
+            />
           </div>
         </div>
+      </div>
+      <div className="mx-auto lg:px-20 px-8 max-w-7xl py-5">
         <div className="h-0.5 w-full bg-white opacity-50 my-5"></div>
         {/* <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
           <div className="lg:w-[55%] text-white font-bold flex-row p-5 flex text-3xl bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px]">
