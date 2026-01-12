@@ -41,7 +41,7 @@ const Footer = () => {
 
           <div className="flex flex-row items-center justify-center gap-4 lg:border-x lg:border-white/30 lg:px-10">
             <span className="text-center text-sm lg:text-lg leading-tight max-w-[260px]">
-              Top 1%: A testament to our continued performance.
+              Top 1%: A Testament To Our Continued Performance.
             </span>
             <div className="min-w-[90px] lg:min-w-[110px] flex items-center justify-center">
               <Image
