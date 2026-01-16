@@ -61,7 +61,7 @@ const Home = () => {
             height={2000}
             src="/images/bg1.webp"
             alt="background"
-            className="absolute inset-0 mix-blend-multiply opacity-10"
+            className="absolute inset-0 mix-blend-multiply opacity-10 pointer-events-none"
             width={2000}
           />
           <Navbar />
@@ -72,7 +72,7 @@ const Home = () => {
             height={2000}
             src="/images/weare.webp"
             alt="background"
-            className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20"
+            className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20 pointer-events-none"
             width={2000}
           />
           <WeAre />
