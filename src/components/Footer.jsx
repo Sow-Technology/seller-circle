@@ -193,9 +193,9 @@ const Footer = () => {
                             OUR PHONE:
                           </div>
                         </div>
-                        <Link href="tel:+9108041688315">
+                        <Link href="tel:+918123096999">
                           <div className=" text-white flex-col flex text-base">
-                            +91 080 4168 8315
+                            +91 812 309 6999
                           </div>
                         </Link>
                       </div>
