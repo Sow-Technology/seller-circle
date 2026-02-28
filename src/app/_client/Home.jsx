@@ -38,7 +38,9 @@ const WeAre = dynamic(() => import("@/components/sections/WeAre"), {
   ssr: false,
 });
 const Why = dynamic(() => import("@/components/sections/Why"), { ssr: false });
-// const Blogs = dynamic(() => import("@/components/sections/Blogs"), { ssr: false });
+const Blogs = dynamic(() => import("@/components/sections/Blogs"), {
+  ssr: false,
+});
 const Works = dynamic(() => import("@/components/sections/Works"), {
   ssr: false,
 });
@@ -59,7 +61,7 @@ const Home = () => {
             height={2000}
             src="/images/bg1.webp"
             alt="background"
-            className="absolute inset-0 mix-blend-multiply opacity-10"
+            className="absolute inset-0 mix-blend-multiply opacity-10 pointer-events-none"
             width={2000}
           />
           <Navbar />
@@ -70,7 +72,7 @@ const Home = () => {
             height={2000}
             src="/images/weare.webp"
             alt="background"
-            className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20"
+            className="absolute inset-0 mix-blend-multiply opacity-10 -mt-20 pointer-events-none"
             width={2000}
           />
           <WeAre />
@@ -105,7 +107,7 @@ const Home = () => {
         <HorizontalTestimonials />
 
         <LazyLoadComponent component={Creative} />
-        {/* <LazyLoadComponent component={Blogs} /> */}
+        <LazyLoadComponent component={Blogs} />
         <Footer />
       </div>
     </>

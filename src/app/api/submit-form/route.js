@@ -1,6 +1,7 @@
 // pages/api/submit-form.js
+// import { sendEmail } from "@/lib/actions/mailer";
+// import { Client, Databases, ID } from "appwrite";
 import { sendEmail } from "@/lib/actions/mailer";
-import { Client, Databases, ID } from "appwrite";
 import { NextResponse } from "next/server";
 
 /**
@@ -12,6 +13,11 @@ import { NextResponse } from "next/server";
  */
 export async function POST(req) {
   try {
+    // Extract user IP address from headers
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    const realIp = req.headers.get("x-real-ip");
+    const userIP = forwardedFor?.split(",")[0]?.trim() || realIp || "Unknown";
+
     const data = await req.json();
     if (!data?.formType) {
       return NextResponse.json(
@@ -21,49 +27,49 @@ export async function POST(req) {
     }
 
     // 1. Initialize Appwrite Client
-    const client = new Client()
-      .setEndpoint(process.env.APPWRITE_PROJECT_API)
-      .setProject(process.env.APPWRITE_PROJECT_ID);
+    // const client = new Client()
+    //   .setEndpoint(process.env.APPWRITE_PROJECT_API)
+    //   .setProject(process.env.APPWRITE_PROJECT_ID);
 
-    const databases = new Databases(client);
+    // const databases = new Databases(client);
 
     // 2. Collection mapping
-    const collectionMap = {
-      contact: "contact",
-      advertising: "advertising",
-      footer: "advertising",
-      fullServiceManagement: "fullServiceManagement",
-      DSP: "dsp",
-      strategyAndConsulting: "strategyAndConsulting",
-      globalLaunch: "globalLaunch",
-      marketplacesExpansion: "marketplacesExpansion",
-      "basicA+": "basicA",
-      premiumA: "premiumA",
-      brandStore: "brandStore",
-      brandStory: "brandStory",
-      brandVideo: "brandVideo",
-      listingImageDesign: "listingImageDesign",
-      newsletter: "newsletter",
-    };
+    // const collectionMap = {
+    //   contact: "contact",
+    //   advertising: "advertising",
+    //   footer: "advertising",
+    //   fullServiceManagement: "fullServiceManagement",
+    //   DSP: "dsp",
+    //   strategyAndConsulting: "strategyAndConsulting",
+    //   globalLaunch: "globalLaunch",
+    //   marketplacesExpansion: "marketplacesExpansion",
+    //   "basicA+": "basicA",
+    //   premiumA: "premiumA",
+    //   brandStore: "brandStore",
+    //   brandStory: "brandStory",
+    //   brandVideo: "brandVideo",
+    //   listingImageDesign: "listingImageDesign",
+    //   newsletter: "newsletter",
+    // };
 
-    const collectionId = collectionMap[data.formType];
-    if (!collectionId) {
-      return NextResponse.json(
-        { message: "Invalid form type" },
-        { status: 400 }
-      );
-    }
+    // const collectionId = collectionMap[data.formType];
+    // if (!collectionId) {
+    //   return NextResponse.json(
+    //     { message: "Invalid form type" },
+    //     { status: 400 }
+    //   );
+    // }
 
     // 3. Remove zohoData if it exists
     const { zohoData, ...appwriteData } = data;
 
     // 4. Save to Appwrite
-    const result = await databases.createDocument(
-      "forms",
-      collectionId,
-      ID.unique(),
-      appwriteData
-    );
+    // const result = await databases.createDocument(
+    //   "forms",
+    //   collectionId,
+    //   ID.unique(),
+    //   appwriteData
+    // );
 
     // 5. Email formatting and sending
     const formatObjectToHTML = (obj, indent = 2) => {
@@ -82,8 +88,11 @@ export async function POST(req) {
         .join("");
     };
 
-    await sendEmail(formatObjectToHTML(zohoData));
-
+    await sendEmail(
+      `<strong>User IP Address:</strong> ${userIP}<br/><br/>` +
+      formatObjectToHTML(zohoData)
+    );
+    console.log("Testing before params");
     // 6. Get Zoho access token
     const params = new URLSearchParams({
       refresh_token: process.env.ZOHO_REFRESH_TOKEN,
@@ -101,14 +110,17 @@ export async function POST(req) {
         body: params,
       }
     );
-
+    console.log("Testing after params");
+    console.log(tokenResponse);
     if (!tokenResponse.ok) {
       throw new Error("Token fetch failed");
     }
 
     const tokenData = await tokenResponse.json();
     const oAuthToken = tokenData.access_token;
-
+    console.log("Testing after token");
+    console.log(tokenData);
+    console.log(oAuthToken);
     // 7. Prepare Zoho Bigin contact data
     const newZohoData = {
       ...zohoData,
@@ -154,7 +166,7 @@ export async function POST(req) {
 
       return NextResponse.json({
         message: "Form submitted successfully",
-        appwriteId: result.$id,
+        // appwriteId: result.$id,
         biginContactId: contactId,
       });
     } catch (error) {
@@ -162,7 +174,7 @@ export async function POST(req) {
       return NextResponse.json(
         {
           message: "Form submitted successfully", // Still return success as data is saved in Appwrite
-          appwriteId: result.$id,
+          // appwriteId: result.$id,
           error: error.message,
         },
         { status: 200 } // Changed to 200 as it's not a critical error

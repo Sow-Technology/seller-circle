@@ -1,14 +1,11 @@
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--nsans" });
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import ReduxProvider from "@/providers/ReduxProvider";
-import SnackbarProvider from "@/providers/SnackbarProvider";
+import ClientProviders from "@/providers/ClientProviders";
 export const metadata = {
   title: "Seller Circle | Amazon Growth, Advertising & Creative Services",
   description:
@@ -34,13 +31,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="max-w-[100vw] overflow-x-hidden">
-      <body className={nunito.className}>
-      <ReduxProvider>
-        <GoogleAnalytics gaId="G-1ZL0JJHHX9" />
-        <SnackbarProvider>
-        {children} <Toaster position={"top-center"} />
-        </SnackbarProvider>
-        </ReduxProvider>
+      <body>
+        <ClientProviders>
+          <main className={nunito.className}>{children} </main>
+        </ClientProviders>
       </body>
     </html>
   );

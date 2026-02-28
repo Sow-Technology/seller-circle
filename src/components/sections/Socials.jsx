@@ -5,10 +5,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaPinterest,
 } from "react-icons/fa6";
-import { Pinterest } from "grommet-icons";
-import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { RiFacebookBoxLine, RiInstagramFill } from "react-icons/ri";
 import {
@@ -18,6 +15,7 @@ import {
 } from "react-icons/bi";
 import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 const Socials = () => {
   return (
     <div className="flex gap-7 flex-row mx-auto flex-wrap items-center justify-center max-lg:my-4 z-30 ">
@@ -89,8 +87,13 @@ const Socials = () => {
         // transition={{ delay: 0.8 }}
         >
           <div className="flex items-center gap-3 text-base font-semibold cursor-pointer">
-            <FaPinterest className="text-[#E60023] text-xl" />
-            Pinterest
+            <Image
+              src="/images/APAC.png"
+              alt="Amazon Ads Seasonal Sales Strategy Award Finalist 2025 | APAC"
+              width={400}
+              height={200}
+              className="h-16 w-auto"
+            />
           </div>
         </div>
       </div>

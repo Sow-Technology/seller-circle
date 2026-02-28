@@ -52,8 +52,8 @@ export async function PUT(req, { params }) {
 
       // Configure Appwrite client
       const client = new Client()
-        .setEndpoint(process.env.ProjectEndPoint) // Appwrite endpoint
-        .setProject(process.env.ProjectID); // Appwrite project ID
+        .setEndpoint(process.env.APPWRITE_PROJECT_API) // Appwrite endpoint
+        .setProject(process.env.APPWRITE_PROJECT_ID); // Appwrite project ID
 
       client.headers = {
         ...client.headers,
@@ -68,7 +68,7 @@ export async function PUT(req, { params }) {
         ID.unique(), // Generate unique file ID
         file
       );
-      const fileUrl = `${process.env.ProjectEndPoint}/storage/buckets/${process.env.Bucket_ID}/files/${response.$id}/view?project=${process.env.ProjectID}`;
+      const fileUrl = `${process.env.APPWRITE_PROJECT_API}/storage/buckets/${process.env.Bucket_ID}/files/${response.$id}/view?project=${process.env.APPWRITE_PROJECT_ID}`;
 
 
 
@@ -124,7 +124,6 @@ export async function GET(req, { params }) {
 
 export async function DELETE(req, { params }) {
   await connectDB();
-  console.log(params?.id);
   const { id } = await params; // Extract ID from route params
   try {
     const authData = await authModels.findById(id);

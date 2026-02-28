@@ -341,6 +341,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import { useSnackbar } from "notistack";
 import { deleteBlogById, getMyBlogsAction } from "@/store/slices/BlogSlice";
+import ConfirmationModal from "../confirmationmadal";
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:hover": {
     backgroundColor: theme.palette.action.hover,
@@ -355,21 +356,22 @@ export default function BlogManagementTable({
 }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [blogToDelete, setBlogToDelete] = useState(null);
+  const [isloading,setIsLoading]=useState(false)
   const rowsPerPage = 10;
   const { enqueueSnackbar } = useSnackbar();
   const router = useRouter();
   const dispatch = useDispatch();
   const { myBlogData, isLoadingBlog } = useSelector((state) => state.blog);
-  console.log(myBlogData, "myBlogData myBlogData myBlogData myBlogData ");
 
   useEffect(() => {
     dispatch(getMyBlogsAction())
       .unwrap()
       .then((data) => {
-        console.log(data, "my blogs data ");
+        // console.log(data, "my blogs data ");
       })
       .catch((error) => {
-        console.log(error, "error ");
       });
   }, [dispatch]);
 
@@ -398,23 +400,63 @@ export default function BlogManagementTable({
     router.push(`/admin/add-blog?${params.toString()}`, { scroll: false });
   };
 
+  // const handleDelete = (blogId) => {
+  //   const params = new URLSearchParams(window.location.search);
+  //   params.set("deleteblogId", blogId); // Set deleteblogId
+  //   params.delete("editblogId"); // Ensure editblogId is removed
+  //   router.push(`?${params.toString()}`, { scroll: false });
+  //   dispatch(deleteBlogById(blogId))
+  //     .unwrap()
+  //     .then((res) => {
+  //       if (res) {
+  //         params.delete("deleteblogId");
+  //         enqueueSnackbar("blog delete sucessfuly", { variant: "success" });
+  //         dispatch(getMyBlogsAction());
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log("couldnt delete blog", error);
+  //       enqueueSnackbar(error, { variant: "error" });
+  //     });
+  // };
+  // Function to open delete confirmation modal
   const handleDelete = (blogId) => {
+    setBlogToDelete(blogId);
+    setDeleteModalOpen(true);
+  };
+
+  // Close modal without deleting
+  const handleCloseDeleteModal = () => {
+    setDeleteModalOpen(false);
+    setBlogToDelete(null);
+  };
+
+  // Confirm deletion and process
+  const handleConfirmDelete = () => {
+    if (!blogToDelete) return;
+    setIsLoading(true)
     const params = new URLSearchParams(window.location.search);
-    params.set("deleteblogId", blogId); // Set deleteblogId
-    params.delete("editblogId"); // Ensure editblogId is removed
+    params.set("deleteblogId", blogToDelete);
+
+    params.delete("editblogId");
     router.push(`?${params.toString()}`, { scroll: false });
-    dispatch(deleteBlogById(blogId))
+    
+    dispatch(deleteBlogById(blogToDelete))
       .unwrap()
       .then((res) => {
         if (res) {
           params.delete("deleteblogId");
-          enqueueSnackbar("blog delete sucessfuly", { variant: "success" });
+          setIsLoading(false)
+          enqueueSnackbar("Blog deleted successfully", { variant: "success" });
           dispatch(getMyBlogsAction());
         }
       })
       .catch((error) => {
-        console.log("couldnt delete blog", error);
         enqueueSnackbar(error, { variant: "error" });
+      })
+      .finally(() => {
+        setDeleteModalOpen(false);
+        setBlogToDelete(null);
       });
   };
   return (
@@ -428,7 +470,7 @@ export default function BlogManagementTable({
         action={
           <Button
             variant="contained"
-            onClick={() => router.push("/blog/add-blog")}
+            onClick={() => router.push("/admin/add-blog")}
             startIcon={<PersonAdd />}
             sx={{ borderRadius: "20px", backgroundColor: "blue" }}
           >
@@ -480,6 +522,16 @@ export default function BlogManagementTable({
               </TableRow>
             </TableHead>
             <TableBody>
+            <ConfirmationModal
+        open={deleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete Blog"
+        message="Are you sure you want to delete this blog? This action cannot be undone."
+        confirmButtonText="Delete"
+        cancelButtonText="Cancel"
+        isloading={isloading}
+      />
               {isLoadingBlog && myBlogData?.length === 0
                 ? [...Array(10)].map((_, index) => (
                     <StyledTableRow key={index}>

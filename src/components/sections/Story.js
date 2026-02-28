@@ -19,9 +19,8 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
         className="lg:block hidden text-right ml-10   self-end justify-self-end "
       >
         <h3
-          className={`captalize font-[900] text-5xl max-sm:text-xl text-background text-right  ${
-            visible ? " lg:visible" : "lg:invisible"
-          }`}
+          className={`captalize font-[900] text-5xl max-sm:text-xl text-background text-right  ${visible ? " lg:visible" : "lg:invisible"
+            }`}
         >
           {year}
         </h3>
@@ -32,9 +31,8 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           </h3>
           {text && (
             <p
-              className={`font-medium w-full text-base md:text-xl flex gap-2 border items-start justify-start  mt-5 text-[#303f5b]  ${
-                !visible ? " lg:visible" : "lg:invisible"
-              }`}
+              className={`font-medium w-full text-base md:text-xl flex gap-2 border items-start justify-start  mt-5 text-[#303f5b]  ${!visible ? " lg:visible" : "lg:invisible"
+                }`}
             >
               {" "}
               <div className="text-xl  ml-auto border h-full w-max text-background ">
@@ -45,9 +43,8 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
           )}
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-xl mt-5  text-left items-start flex flex-col text-[#303f5b] ${
-                !visible ? " lg:visible" : "lg:invisible"
-              }`}
+              className={`font-medium w-full text-base md:text-xl mt-5  text-left items-start flex flex-col text-[#303f5b] ${!visible ? " lg:visible" : "lg:invisible"
+                }`}
             >
               <li className="flex gap-2 items-start  my-2">
                 <div className="text-xl mt-2 h-full w-max text-background ">
@@ -92,9 +89,8 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
         className="lg:ml-10 "
       >
         <h3
-          className={`captalize font-[900] text-5xl max-sm:text-xl text-background  ${
-            !visible ? " lg:visible" : "lg:invisible"
-          }`}
+          className={`captalize font-[900] text-5xl max-sm:text-xl text-background  ${!visible ? " lg:visible" : "lg:invisible"
+            }`}
         >
           {year}
         </h3>
@@ -105,17 +101,15 @@ const Details = ({ year, text, t1, t2, t3, t4, id, month }) => {
             {month}
           </h3>
           <p
-            className={`font-medium w-full text-base md:text-xl mt-5 text-[#303f5b] ${
-              visible ? " lg:visible" : "lg:invisible"
-            }`}
+            className={`font-medium w-full text-base md:text-xl mt-5 text-[#303f5b] ${visible ? " lg:visible" : "lg:invisible"
+              }`}
           >
             {text}
           </p>
           {t1 && (
             <ul
-              className={`font-medium w-full text-base md:text-xl mt-5  text-[#303f5b]  ${
-                visible ? " lg:visible" : "lg:invisible"
-              }`}
+              className={`font-medium w-full text-base md:text-xl mt-5  text-[#303f5b]  ${visible ? " lg:visible" : "lg:invisible"
+                }`}
             >
               <li className="flex gap-2 items-start my-2">
                 <div className="text-xl mt-2 h-full w-max text-background ">
@@ -175,91 +169,27 @@ const OurStory = () => {
         />
         <ul className="w-full flex-col flex items-start justify-between ml-4 xs:ml-2">
           <Details
-            year="2016"
-            t1="Started Consulting Amazon Initiative on Training online sellers"
+            year="2025"
+            t1="Recognized by Startup India"
+            t2="E4M Awards 2025 Winner – Best PPC Campaign"
+            t3="Retained Amazon Advanced Ads Partner Status"
+            t4="Featured on Amazon Ads YouTube"
             id="1"
           />
           <Details
-            year="2017"
-            month="JANUARY"
-            t1="Started Consulting and On-boarding for Amazon India with a Team of 10 Specialists"
+            year=""
+            t1="Delivered advanced training for Amazon Ads internal teams"
+            t2="Multi-city roadshow with Amazon Ads"
+            t3="Amazon Ads APAC Finalist – Amazon Global Awards (Unboxed)"
+            id="1"
+          />
+          <Details
+            year="2024"
+            t1="Amazon Ads Advanced Partner Status"
+            t2="150+ D2C brands scaled through full-service growth management"
+            t3="Amazon Ads Catalyst Winner – Q1, Q2 & H2"
+            t4="Launched Amazon DSP Self-Serve Campaign Management"
             id="2"
-          />
-          <Details
-            year=""
-            month="SEPTEMBER "
-            t1="Incorporated AJ Digi Media Private Limited"
-            id="2"
-          />
-          <Details
-            year=""
-            month="DECEMBER "
-            t1="Awarded Rising Star of the Year for Seller Management by Amazon"
-            id="4"
-          />
-          <Details
-            year="2018"
-            month="JANUARY"
-            t1="Expanded Catalogue as a service"
-            t2=" Expanded Onboarding Engagement with Amazon with a Team of 20 Specialists"
-            id="5"
-          />
-          <Details
-            year=""
-            month="DECEMBER"
-            t1="Awarded Most Valuable for Onboarding Amazon India"
-            id="5"
-          />
-          <Details
-            year="2019"
-            month="JANUARY"
-            t1="Awarded Best High-Value Seller Management by Amazon"
-            id="6"
-          />
-          <Details
-            year=""
-            month="August"
-            t1="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
-            id="6"
-          />
-          <Details
-            year=""
-            month="September"
-            t1="Expanded Operations in 2 States"
-            id="6"
-          />
-          <Details
-            year="2020"
-            month="March"
-            t1="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
-            id="9"
-          />
-          <Details
-            year=""
-            month="December"
-            t1="Started Creative Design Services"
-            id="9"
-          />
-          <Details
-            year="2021"
-            month="January"
-            t1="Expanded Total Team of 40 Trained Specialists"
-            id="12"
-          />
-          <Details
-            year=""
-            month="June"
-            t1="Amazon Gold Partner Award"
-            t2="Amazon High GMS Award"
-            t3="Amazon Reinstatement Champion Award"
-            id="12"
-          />
-          <Details
-            year="2022"
-            t1="100+ D2C Growth and Full-service management"
-            t2="500 Brand Stores Created on Amazon"
-            t3="30,000 A+ Catalogue creations"
-            id="13"
           />
           <Details
             year="2023"
@@ -267,7 +197,94 @@ const OurStory = () => {
             t2="E4M Awards 2023 Winner, Best PPC Campaign"
             t3="Amazon Ads Catalyst Winner for Q1, Q2, Q3 & Q4"
             t4="$100 Mn Advertising Spend managed"
-            id="14"
+            id="3"
+          />
+          <Details
+            year="2022"
+            t1="100+ D2C Growth and Full-service management"
+            t2="500 Brand Stores Created on Amazon"
+            t3="30,000 A+ Catalogue creations"
+            id="4"
+          />
+          <Details
+            year="2021"
+            month="January"
+            t1="Expanded Total Team of 40 Trained Specialists"
+            id="5"
+          />
+          <Details
+            year=""
+            month="June"
+            t1="Amazon Gold Partner Award"
+            t2="Amazon High GMS Award"
+            t3="Amazon Reinstatement Champion Award"
+            id="5"
+          />
+          <Details
+            year="2020"
+            month="March"
+            t1="Expanded Operation with Amazon Global Selling and Started Enabling sellers to sell from India to other Global Marketplaces"
+            id="6"
+          />
+          <Details
+            year=""
+            month="December"
+            t1="Started Creative Design Services"
+            id="6"
+          />
+          <Details
+            year="2019"
+            month="JANUARY"
+            t1="Awarded Best High-Value Seller Management by Amazon"
+            id="7"
+          />
+          <Details
+            year=""
+            month="August"
+            t1="Awarded Partner of the Year for Advertising Management by Amazon Service Provider Network (SPN)"
+            id="7"
+          />
+          <Details
+            year=""
+            month="September"
+            t1="Expanded Operations in 2 States"
+            id="7"
+          />
+          <Details
+            year="2018"
+            month="JANUARY"
+            t1="Expanded Catalogue as a service"
+            t2=" Expanded Onboarding Engagement with Amazon with a Team of 20 Specialists"
+            id="8"
+          />
+          <Details
+            year=""
+            month="DECEMBER"
+            t1="Awarded Most Valuable for Onboarding Amazon India"
+            id="8"
+          />
+          <Details
+            year="2017"
+            month="JANUARY"
+            t1="Started Consulting and On-boarding for Amazon India with a Team of 10 Specialists"
+            id="9"
+          />
+          <Details
+            year=""
+            month="SEPTEMBER "
+            t1="Incorporated AJ Digi Media Private Limited"
+            id="9"
+          />
+          <Details
+            year=""
+            month="DECEMBER "
+            t1="Awarded Rising Star of the Year for Seller Management by Amazon"
+            id="9"
+          />
+          <Details
+            year="2016"
+            t1="Started Consulting Amazon Initiative on Training online sellers"
+            id="10"
           />
         </ul>
       </div>

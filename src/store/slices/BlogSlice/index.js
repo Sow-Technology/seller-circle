@@ -6,15 +6,14 @@ import axios from "axios";
 export const getAllBlogsAction = createAsyncThunk(
   "blogs/all",
   async (_, thunkApi) => {
-    console.log("enter");
+  
     try {
       const res = await axios.get("/api/blog");
       if (res.status) {
-        console.log(res, "res");
+     
         return res.data.data;
       }
     } catch (error) {
-      console.log(error, "erroe while getting the data");
       return thunkApi.rejectWithValue(error.response?.data || error.message);
     }
   }
@@ -29,7 +28,6 @@ export const getBlogByIdAction = createAsyncThunk(
         return res.data;
       }
     } catch (error) {
-      console.log(error, "erroe while getting the data");
       return thunkApi.rejectWithValue(error);
     }
   }
@@ -45,7 +43,6 @@ export const getLatestBlogAction = createAsyncThunk(
         return res.data.data;
       }
     } catch (error) {
-      console.log(error, "erroe while getting the data");
       return thunkApi.rejectWithValue(error.response?.data || error.message);
     }
   }
@@ -58,19 +55,20 @@ export const getMyBlogsAction = createAsyncThunk(
       const authData = await getLocalStorage("authData");
       // console.log("token", authData.token);
 
-      const res = await axios.get("/api/blogOf", {
-        headers: {
-          Authorization: `Bearer ${authData.token}`,
-        },
-      });
+      const res = await axios.get("/api/blog") 
+      //   {
+      //   // headers: {
+      //   //   Authorization: `Bearer ${authData.token}`,
+      //   // },
+      // });
 
+      
       if (res.status === 200) {
         // console.log(res, "res")
         // console.log(res.data?.data, "res.data?.data")
         return res.data?.data;
       }
     } catch (error) {
-      console.log(error, "error getting one's blogs");
       return thunkApi.rejectWithValue(error.response?.data || error.message);
     }
   }
@@ -85,7 +83,7 @@ export const fetchCategoriesAction = createAsyncThunk(
         return res.data?.data;
       }
     } catch (error) {
-      console.log(error, "error while getting the data");
+     
       return thunkApi.rejectWithValue(error.response?.data || error.message);
     }
   }
@@ -101,7 +99,6 @@ export const createCategoryAction = createAsyncThunk(
         return thunkApi.rejectWithValue("Authentication required");
       }
 
-      console.log("Attempting to create category:", categoryName);
 
       const formData = new FormData();
       formData.append("catName", categoryName);
@@ -112,7 +109,6 @@ export const createCategoryAction = createAsyncThunk(
         },
       });
 
-      console.log("API Response:", res);
       return res.data;
     } catch (error) {
       console.error("API Error:", {
@@ -134,7 +130,6 @@ export const deleteCategoryAction = createAsyncThunk(
       // Make the API call to delete the category
       const response = await axios.delete(`/api/cat/${id}`);
 
-      console.log(response, " response response response response")
 
      
       // Return the categoryId to update the state in case of success
@@ -152,7 +147,6 @@ export const addblog = createAsyncThunk(
   "blogs/addblog",
   async (formData, thunkApi) => {
     const authData = await getLocalStorage("authData");
-    console.log(authData.token, ...formData);
     try {
       const res = await axios.post(`/api/blog`, formData, {
         headers: {
@@ -160,7 +154,6 @@ export const addblog = createAsyncThunk(
         },
       }); // Use the axiosInstance with Bearer token in headers
       if (res.status === 200) {
-        console.log(res, "res");
         return res.data;
       }
       return null;
@@ -175,14 +168,11 @@ export const editblog = createAsyncThunk(
   "blog/editblog",
   async ({ editId, formData }, thunkApi) => {
     try {
-      console.log(editId, formData, "######data for update in slice");
       const res = await axios.put(`/api/blog/${editId}`, formData);
-      console.log(res);
       if (res.status === 200) {
         return res.data;
       }
     } catch (error) {
-      console.log(error, "error in catch of edit slice 63");
       return thunkApi.rejectWithValue(error.response?.data || error.message);
     }
   }
@@ -225,18 +215,14 @@ export const UpdateBlogAction = createAsyncThunk(
   async ({ editId, formData }, { rejectWithValue }) => {
     try {
       const authData = await getLocalStorage("authData");
-      console.log(editId, ...formData);
-      console.log(editId, "new edit new edit new edit new edit ");
 
       const response = await axios.put(`/api/blog/${editId}`, formData, {
         headers: {
           Authorization: `Bearer ${authData.token}`, // Replace yourToken with the actual token
         },
       });
-      console.log(response, "response data in update blog");
       return response.data;
     } catch (error) {
-      console.log(error);
       return rejectWithValue(error.response?.data || "Update failed");
     }
   }

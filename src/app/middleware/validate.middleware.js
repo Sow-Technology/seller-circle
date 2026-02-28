@@ -3,7 +3,6 @@ import JWT from 'jsonwebtoken'
 const secret = process.env.SECRET
 
 export function createToken(admin) {
-    console.log(admin,"token")
     const payload = {
         id: admin._id,
         name: admin.name,
@@ -12,7 +11,7 @@ export function createToken(admin) {
         role: admin.authType 
     }
 
-    const token = JWT.sign(payload, secret, { expiresIn: "1d" })
+    const token = JWT.sign(payload, secret, { expiresIn: "60d" })
     return token
 }
 

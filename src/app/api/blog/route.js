@@ -3,7 +3,7 @@ import authModels from "@/app/lib/models/auth.models";
 import { BlogModel } from "@/app/lib/models/blog.models.js";
 import { validateToken } from "@/app/middleware/validate.middleware.js";
 // import ResponseUtil from "@/app/utility/response.utility.js"
-import { Client, Storage, ID } from "appwrite";  // Ensure Appwrite SDK is imported
+import { Client, Storage, ID } from "appwrite"; // Ensure Appwrite SDK is imported
 import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
@@ -41,6 +41,7 @@ export const POST = async (req) => {
       const slug = data.get("slug");
       const file = data.get("file");
       const category = data.get("category");
+      const metaDescription = data.get("metaDescription");
       const blogType = data.get("blogType");
       const position = data.get("position");
 
@@ -53,12 +54,12 @@ export const POST = async (req) => {
 
       // Configure Appwrite client
       const client = new Client()
-        .setEndpoint(process.env.ProjectEndPoint) // Appwrite endpoint
-        .setProject(process.env.ProjectID); // Appwrite project ID
-      
+        .setEndpoint(process.env.APPWRITE_PROJECT_API) // Appwrite endpoint
+        .setProject(process.env.APPWRITE_PROJECT_ID); // Appwrite project ID
+
       client.headers = {
         ...client.headers,
-        'X-Appwrite-Key': process.env.API_KEY, // API key for authentication
+        "X-Appwrite-Key": process.env.API_KEY, // API key for authentication
       };
 
       const storage = new Storage(client);
@@ -69,7 +70,7 @@ export const POST = async (req) => {
         ID.unique(), // Generate unique file ID
         file
       );
-      const fileUrl = `${process.env.ProjectEndPoint}/storage/buckets/${process.env.Bucket_ID}/files/${response.$id}/view?project=${process.env.ProjectID}`;
+      const fileUrl = `${process.env.APPWRITE_PROJECT_API}/storage/buckets/${process.env.Bucket_ID}/files/${response.$id}/view?project=${process.env.APPWRITE_PROJECT_ID}`;
 
       const newBlog = new BlogModel({
         title,
@@ -80,6 +81,7 @@ export const POST = async (req) => {
         imageBase64: fileUrl, // Save the constructed URL
         authID: id,
         category,
+        metaDescription,
         blogType: blogType || "simple",
         position: position || "right",
       });
@@ -99,28 +101,22 @@ export const POST = async (req) => {
   }
 };
 
-
 export const GET = async () => {
   try {
     await connectDB();
 
-    const getData = await BlogModel.find().populate(
-      "authID",
-      "-token -email -password"
-    );
-    // console.log(getData, "blog resposnse");
+    const getData = await BlogModel.find()
+      .populate("authID", "-token -email -password")
+      .sort({ createdAt: -1 }); // Add sorting by creation date
+
     if (!getData || getData.length === 0) {
       return NextResponse.json({ error: "Not Found" }, { status: 404 });
     }
 
-    // Calculate the size of the `getData` object
     const getDataSize = Buffer.byteLength(JSON.stringify(getData));
-    console.log(`Size of the blog data: ${getDataSize} bytes`);
 
     return NextResponse.json({ success: true, data: getData }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 };
-
-
